@@ -17,27 +17,27 @@
 ---
 <table align="center">
 <tr ><td>
-<h1> 计算机视觉实战演练：算法与应用<sup>📌</sup>
+<h1> 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
 <br><em>Computer Vision in Action</em></h1>
 
 作者：张伟（Charmve）
 
 <p align="center">
 <a href="https://github.com/Charmve"><img src="https://img.shields.io/badge/👓-Charmve-blue" alt="GitHub"></a>
-<a href="https://github.com/Charmve"><img src="https://img.shields.io/github/license/Charmve/computer-vision-in-action" alt="License"></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a>
 <a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/stars/Charmve/computer-vision-in-action?style=social" alt="Stars"></a>
 <a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/forks/Charmve/computer-vision-in-action?style=social" alt="Forks"></a>
 </p>
 
 <div id="outputFigDisplay" align="center">
-	<img src="./res/maiwei.png" width="260px" alt="logo:maiwei">
+	<img src="./res/maiwei.png" width="240px" alt="logo:maiwei">
 </div>
 
 > <h3>在线阅读（内容实时更新）</h3>
-> - 地址：https://datawhalechina.github.io/pumpkin-book
+> - 地址：https://charmve.github.io/computer-vision-in-action
 
 > <h3>最新版PDF下载</h3>
-> - 地址：https://github.com/datawhalechina/pumpkin-book/releases
+> - 地址：https://github.com/charmve/computer-vision-in-action/releases
 
 ### 目录
 - 第1章 [绪论](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
@@ -70,7 +70,8 @@
 <img src="https://user-images.githubusercontent.com/29084184/116501908-a63da600-a8e4-11eb-827c-7772655e0079.png" width = "250" height = "270" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
 </div>
 
-- 若南瓜书里没有你想要查阅的公式，或者你发现本书哪个地方有错误，请毫不犹豫地去我们GitHub的Issues（ 地址：https://github.com/charmve/computer-vision-in-action/issues ）进行反馈，在对应版块提交你希望补充的内容或者勘误信息，我们通常会在24小时以内给您回复，超过24小时未回复的话可以邮件联系我们（微信：MaiweiE_com）；
+- 若本书里没有你想要理论和实战项目，或者你发现本书哪个地方有错误，请毫不犹豫地去我们GitHub的Issues（ 地址：https://github.com/charmve/computer-vision-in-action/issues ）进行反馈，在对应版块提交你希望补充的内容或者勘误信息，我们通常会在24小时以内给您回复，超过24小时未回复的话可以邮件联系我们（微信：MaiweiE_com）；
+- 同时，我也欢迎大家加入本项目的建设中来，欢迎[pull request](https://github.com/charmve/computer-vision-in-action/pulls)！
 
 ## LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
