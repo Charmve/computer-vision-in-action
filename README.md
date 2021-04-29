@@ -1,5 +1,6 @@
 # Computer Vision in Action
-《计算机视觉实战演练：算法与应用》电子书、源码、读者交流社区
+《计算机视觉实战演练：算法与应用》
+
 作者：张伟（Charmve）
 
 ### 在线阅读（内容实时更新）
@@ -27,15 +28,15 @@
 - 第16章 [强化学习](https://charmve.github.io/computer-vision-in-action/#/chapter16/chapter16)
 
 ## 致谢
-特别感谢[@awyd234](https://github.com/awyd234)、[@feijuan](https://github.com/feijuan)、[@Ggmatch](https://github.com/Ggmatch)、[@Heitao5200](https://github.com/Heitao5200)、[@huaqing89](https://github.com/huaqing89)、[@LongJH](https://github.com/LongJH)、[@LilRachel](https://github.com/LilRachel)、[@LeoLRH](https://github.com/LeoLRH)、[@Nono17](https://github.com/Nono17)、[@spareribs](https://github.com/spareribs)、[@sunchaothu](https://github.com/sunchaothu)、[@StevenLzq](https://github.com/StevenLzq) 在最早期的时候对南瓜书所做的贡献。
+
 
 ## 关注我们
 <div align=center>
-<p>扫描下方二维码，然后回复关键词“南瓜书”，即可加入“南瓜书读者交流群”</p>
-<img src="https://user-images.githubusercontent.com/29084184/116501908-a63da600-a8e4-11eb-827c-7772655e0079.png" width = "250" height = "270" alt="Datawhale是一个专注AI领域的开源组织，以“for the learner，和学习者一起成长”为愿景，构建对学习者最有价值的开源学习社区。关注我们，一起学习成长。">
+<p>扫描下方二维码，然后回复关键词“计算机视觉实战教程”，即可加入“读者交流群”</p>
+<img src="https://user-images.githubusercontent.com/29084184/116501908-a63da600-a8e4-11eb-827c-7772655e0079.png" width = "250" height = "270" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
 </div>
 
-- 若南瓜书里没有你想要查阅的公式，或者你发现南瓜书哪个地方有错误，请毫不犹豫地去我们GitHub的Issues（ 地址：https://github.com/datawhalechina/pumpkin-book/issues ）进行反馈，在对应版块提交你希望补充的公式编号或者勘误信息，我们通常会在24小时以内给您回复，超过24小时未回复的话可以邮件联系我们（微信：at-Sm1les）；
+- 若南瓜书里没有你想要查阅的公式，或者你发现本书哪个地方有错误，请毫不犹豫地去我们GitHub的Issues（ 地址：https://github.com/charmve/computer-vision-in-action/issues）进行反馈，在对应版块提交你希望补充的内容或者勘误信息，我们通常会在24小时以内给您回复，超过24小时未回复的话可以邮件联系我们（微信：MaiweiE_com）；
 
 ## LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
