@@ -1,5 +1,6 @@
 # Computer Vision in Action
 《计算机视觉实战演练：算法与应用》电子书、源码、读者交流社区
+作者：张伟（Charmve）
 
 ### 在线阅读（内容实时更新）
 地址：https://datawhalechina.github.io/pumpkin-book
@@ -31,7 +32,7 @@
 ## 关注我们
 <div align=center>
 <p>扫描下方二维码，然后回复关键词“南瓜书”，即可加入“南瓜书读者交流群”</p>
-<img src="https://raw.githubusercontent.com/datawhalechina/pumpkin-book/master/res/qrcode.jpeg" width = "250" height = "270" alt="Datawhale是一个专注AI领域的开源组织，以“for the learner，和学习者一起成长”为愿景，构建对学习者最有价值的开源学习社区。关注我们，一起学习成长。">
+<img src="https://user-images.githubusercontent.com/29084184/116501908-a63da600-a8e4-11eb-827c-7772655e0079.png" width = "250" height = "270" alt="Datawhale是一个专注AI领域的开源组织，以“for the learner，和学习者一起成长”为愿景，构建对学习者最有价值的开源学习社区。关注我们，一起学习成长。">
 </div>
 
 - 若南瓜书里没有你想要查阅的公式，或者你发现南瓜书哪个地方有错误，请毫不犹豫地去我们GitHub的Issues（ 地址：https://github.com/datawhalechina/pumpkin-book/issues ）进行反馈，在对应版块提交你希望补充的公式编号或者勘误信息，我们通常会在24小时以内给您回复，超过24小时未回复的话可以邮件联系我们（微信：at-Sm1les）；
