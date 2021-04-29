@@ -30,7 +30,7 @@
 </p>
 
 <div id="outputFigDisplay" align="center">
-	<img src="./res/maiwei.png" width="28px" alt="logo:maiwei">
+	<img src="./res/maiwei.png" width="280px" alt="logo:maiwei">
 </div>
 
 > <h3>在线阅读（内容实时更新）</h3>
@@ -74,3 +74,27 @@
 
 ## LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+
+<!--
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Charmve/computer-vision-in-action.svg)](https://starchart.cc/Charmve/computer-vision-in-action)
+-->
+
+<br>
+<p align="center">Feel free to ask any questions, open a PR if you feel something can be done differently!</p>
+<h2 align="center">🌟Star this repository🌟</h2>
+<p align="center">Created by <a href="https://github.com/Charmve">Charmve</a> & <a href="https://github.com/MaiweiAI">maiwei.ai</a> Community | Deployed on <a href="https://app.gitbook.com/@charmve/s/computer-vision-in-action/">GitBook</a></p>
+
+<br>
+* <i>Update on Apr 21，2021 @<a href="https://github.com/Charmve" target="_blank">Charmve</a>, 
+    <a class="github-button"
+        href="https://github.com/Charmve/Surface-Defect-Detection"
+        data-icon="octicon-star" data-show-count="true"
+        aria-label="Star Charmve/Surface-Defect-Detection on GitHub">Star</a> 
+    and 
+    <a class="github-button"
+        href="https://github.com/Charmve/Surface-Defect-Detection/fork"
+        data-icon="octicon-repo-forked" data-show-count="true"
+        aria-label="Fork Charmve/Surface-Defect-Detection on GitHub">Fork</a>
+</i>
