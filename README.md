@@ -1,13 +1,42 @@
-# Computer Vision in Action
-《计算机视觉实战演练：算法与应用》
+<div id="outputFigDisplay" class="fig">
+    <pre id="taag_output_text" style="left;" class="flag" contenteditable="true">
+    <code>
+    __  ___      _               _ ___    ____                             
+   /  |/  /___ _(_)      _____  (_)   |  /  _/    _________  ____ ___      
+  / /|_/ / __ `/ / | /| / / _ \/ / /| |  / /_____/ ___/ __ \/ __ `__ \     
+ / /  / / /_/ / /| |/ |/ /  __/ / ___ |_/ /_____/ /__/ /_/ / / / / / /     
+/_/  /_/\__,_/_/ |__/|__/\___/_/_/  |_/___/     \___/\____/_/ /_/ /_/      
+    </code>
+    </pre>
+</div>
+## PaperWeeklyAI - 迈微AI研习社
+
+作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。
+
+---
+<table>
+<tr>
+# 计算机视觉实战演练：算法与应用》<sup>📌</sup>
+# <br>Computer Vision in Action
 
 作者：张伟（Charmve）
 
-### 在线阅读（内容实时更新）
-地址：https://datawhalechina.github.io/pumpkin-book
+<p align="center">
+<a href="https://github.com/Charmve"><img src="https://img.shields.io/badge/👓-Charmve-blue" alt="GitHub"></a>
+[![License](https://img.shields.io/github/license/Charmve/computer-vision-in-action)](LICENSE)
+[![Forks](https://img.shields.io/github/forks/Charmve/computer-vision-in-action?style=social)](https://github.com/Charmve/computer-vision-in-action/edit/master/README.md)
+[![Stars](https://img.shields.io/github/stars/Charmve/computer-vision-in-action?style=social)](https://github.com/Charmve/computer-vision-in-action/edit/master/README.md)
+</p>
 
-### 最新版PDF下载
-地址：https://github.com/datawhalechina/pumpkin-book/releases
+<div id="outputFigDisplay" align="center">
+	<img src="./res/maiwei.png" alt="logo:maiwei">
+</div>
+
+> <h3>在线阅读（内容实时更新）</h3>
+> - 地址：https://datawhalechina.github.io/pumpkin-book
+
+> <h3>最新版PDF下载</h3>
+> - 地址：https://github.com/datawhalechina/pumpkin-book/releases
 
 ### 目录
 - 第1章 [绪论](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
@@ -27,12 +56,15 @@
 - 第15章 [规则学习](https://charmve.github.io/computer-vision-in-action/#/chapter15/chapter15)
 - 第16章 [强化学习](https://charmve.github.io/computer-vision-in-action/#/chapter16/chapter16)
 
+</tr>
+</table>
+
 ## 致谢
 
 
 ## 关注我们
 <div align=center>
-<p>扫描下方二维码，然后回复关键词“计算机视觉实战教程”，即可加入“读者交流群”</p>
+<p>扫描下方二维码，然后回复关键词“<b>计算机视觉实战教程</b>”，即可加入“读者交流群”</p>
 <img src="https://user-images.githubusercontent.com/29084184/116501908-a63da600-a8e4-11eb-827c-7772655e0079.png" width = "250" height = "270" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
 </div>
 
