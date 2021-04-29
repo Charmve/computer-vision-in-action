@@ -30,7 +30,7 @@
 </p>
 
 <div id="outputFigDisplay" align="center">
-	<img src="./res/maiwei.png" width="280px" alt="logo:maiwei">
+	<img src="./res/maiwei.png" width="260px" alt="logo:maiwei">
 </div>
 
 > <h3>在线阅读（内容实时更新）</h3>
