@@ -10,7 +10,7 @@
     </pre>
 </div>
 
-## PaperWeeklyAI - 迈微AI研习社
+## Maiwei AI Lab - 迈微AI研习社
 
 <a href="https://www.github.com/Charmve" target="_blank"><img src="https://img.shields.io/badge/作者-@Charmve-000000.svg?style=flat-square&logo=GitHub"></a>  [![CircleCI](https://circleci.com/gh/facebookresearch/pytorch3d.svg?style=svg)](https://circleci.com/gh/Charmve/computer-vision-in-action)
 
