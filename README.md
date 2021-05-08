@@ -140,7 +140,7 @@
   - 第 6 章 [跨界模型 Transformer](https://blog.csdn.net/charmve/category_10954850.html)
   - 第 7 章 [Normalization 模型]()
   - 第 8 章 [知识蒸馏]()
-  - 第 9 章 [注意力机制 Attention is All You Need]()
+  - 第 9 章 [注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
 
 - <b>更新中 ...</b>
 
