@@ -37,14 +37,14 @@
 	<img src="./res/maiwei.png" width="240px" alt="logo:maiwei">
 </div>
 
-> <h3>在线阅读（内容实时更新）</h3>
+> <h4>在线阅读（内容实时更新）</h4>
 > - 地址：https://charmve.github.io/computer-vision-in-action
 
-> <h3>最新版PDF下载</h3>
+> <h4>最新版PDF下载</h4>
 > - 地址：https://github.com/charmve/computer-vision-in-action/releases
 
 ### 目录
-- [<b>绪论</b>](https://charmve.github.io/computer-vision-in-action/#/chapter0/chapter0)
+- [<b><h4>绪论</h4></b>](https://charmve.github.io/computer-vision-in-action/#/chapter0/chapter0)
   1. 概述
   2. 计算机视觉基本概念
   3. 典型的计算机视觉任务
@@ -55,7 +55,7 @@
   4. 发展历史回顾
   5. 小练习
   6. 本书编写逻辑
-- <b>理论篇</b>
+- <b><h4>理论篇</h4></b>
   - 第 1 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
     - 数据驱动方法
     - k 最近邻算法
@@ -79,7 +79,7 @@
     - 递归神经网络 RNN
     - 长短期记忆人工神经网络 LSTM
     - 门控循环单元（GRU） 
-- <b>实战篇</b>
+- <b><h4>实战篇</h4></b>
   - 第 1 章 [深度学习环境搭建](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
     - PyTorch
     - OpenCV
@@ -117,7 +117,7 @@
       - 实战项目 9
     - [镜面检测](https://github.com/Charmve/Mirror-Glass-Detection)
     - [图像抠图 Matting](https://github.com/Charmve/TimeWarp)
-- <b>进阶篇</b>
+- <b><h4>进阶篇</h4></b>
   - 第 1 章 [卷积神经网络进化](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
 
   - 第 2 章 [可视化和理解](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)
@@ -137,10 +137,10 @@
     - 方法梯度，硬性关注
     - Q - 学习，评价器
   - 第 5 章 [迁移学习]()
-  - 第 6 章 [跨界模型 Transformer](https://blog.csdn.net/charmve/category_10954850.html)
-  - 第 7 章 [Normalization 模型]()
+  - 第 6 章 [注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
+  - 第 7 章 [跨界模型 Transformer](https://blog.csdn.net/charmve/category_10954850.html)
   - 第 8 章 [知识蒸馏]()
-  - 第 9 章 [注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
+  - 第 9 章 [Normalization 模型]()
 
 - <b>更新中 ...</b>
 
@@ -149,9 +149,7 @@
 </table>
 
 ## 致谢
-<a href="https://maiweiai.github.io/"><img src="./res/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a> 
-
-
+<a href="https://maiweiai.github.io/"><img src="./res/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a> 
 
 
 ## 关注我们
