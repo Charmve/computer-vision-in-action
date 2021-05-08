@@ -18,3 +18,7 @@ If you're viewing the notebook on Goole Colaboratory then follow these instructi
 - If you follow the *Notebook PR* instruction above you won't add any additional whitespace. But if you do add any whitespace, please remove it.
 
 - Don't treat a submitted PR as your development environment. If more changes are needed just close the current PR and start a new one.
+
+## Code of Conduct
+
+Please pay attention to [the code of conduct](CODE_OF_CONDUCT.md)
