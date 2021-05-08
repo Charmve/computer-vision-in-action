@@ -136,10 +136,11 @@
   - 第 4 章 [深度增强学习](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 方法梯度，硬性关注
     - Q - 学习，评价器
-  - 第 5 章 [迁移学习](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-  - 第 6 章 [Normalization 模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-  - 第 7 章 [注意力机制 Attention is All You Need](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-  - 第 8 章 [跨界模型 Transformer](https://blog.csdn.net/charmve/category_10954850.html)
+  - 第 5 章 [迁移学习]()
+  - 第 6 章 [跨界模型 Transformer](https://blog.csdn.net/charmve/category_10954850.html)
+  - 第 7 章 [Normalization 模型]()
+  - 第 8 章 [知识蒸馏]()
+  - 第 9 章 [注意力机制 Attention is All You Need]()
 
 - <b>更新中 ...</b>
 
