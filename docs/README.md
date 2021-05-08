@@ -14,7 +14,7 @@
 </p>
 
 <div id="outputFigDisplay" align="center">
-	<img src="./res/maiwei.png" width="240px" alt="logo:maiwei">
+	<img src="../res/maiwei.png" width="240px" alt="logo:maiwei">
 </div>
 
 > <h3>在线阅读（内容实时更新）</h3>
@@ -51,4 +51,4 @@
 
 ## 参考文献
 
---> [reference.md](reference.md)
+--> [reference.md](REFERENCE.md)
