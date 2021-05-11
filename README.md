@@ -57,95 +57,107 @@
   6. 本书编写逻辑
 - <b><h4>理论篇</h4></b>
   - 第 1 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
-    - 数据驱动方法
-    - k 最近邻算法
-    - 线性分类
-    - 逻辑回归 LR 
-    - [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
+    - 1.1 数据驱动方法
+    - 1.2 k 最近邻算法
+    - 1.3 线性分类
+    - 1.4 逻辑回归 LR 
+    - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
   - 第 2 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
-    - Softmax 回归
-    - 反向传播算法
-    - 多层感知器
-    - 神经学观点
-    - 实战项目 2
+    - 2.1 Softmax 回归
+    - 2.2 反向传播算法
+    - 2.3 多层感知器
+    - 2.4 神经学观点
+    - 2.5 实战项目 2
   - 第 3 章 [卷积神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
-    - 概述
-    - 卷积和池化
-    - 损失函数和优化
-    - 线性分类Ⅱ
-    - 进阶模型表示与图像特征
-    - 优化，随机梯度下降
-    - [实战项目 3 - 动手搭建一个卷积神经网络](https://blog.csdn.net/Charmve/article/details/106076844)
+    - 3.1 概述
+    - 3.2 卷积和池化
+    - 3.3 损失函数和优化
+    - 3.4 线性分类Ⅱ
+    - 3.5 进阶模型表示与图像特征
+    - 3.6 优化，随机梯度下降
+    - 3.7 [实战项目 3 - 动手搭建一个卷积神经网络](https://blog.csdn.net/Charmve/article/details/106076844)
   - 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
-    - 递归神经网络 RNN
-    - 长短期记忆人工神经网络 LSTM
-    - 门控循环单元（GRU） 
+    - 4.1 递归神经网络 RNN
+    - 4.2 循环神经网络的从零开始实现
+    - 4.3 循环神经网络的简洁实现
+    - 4.4 长短期记忆人工神经网络 LSTM
+    - 4.5 门控循环单元（GRU） 
+  - 第 5 章 [优化算法]()
+    - 5.1 优化与深度学习
+    - 5.2 梯度下降和随机梯度下降
+    - 5.3 小批量随机梯度下降
+    - 5.4 动量法
+    - 5.5 AdaGrad算法
+    - 5.6 RMSProp算法
+    - 5.7 AdaDelta算法
+    - 5.8 Adam算法
 - <b><h4>实战篇</h4></b>
-  - 第 1 章 [深度学习环境搭建](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
-    - PyTorch
-    - OpenCV
-    - Numpy
-  - 第 2 章 [经典卷积神经网络架构：原理与PyTorch实现](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)
-    - 2.01 [卷积神经网络（LeNet）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_1-卷积神经网络（LeNet）.md)
-    - 2.02 [深度卷积神经网络（AlexNet）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_2-深度卷积神经网络（AlexNet）.md)
-    - 2.03 使用重复元素的网络（VGG）
-    - 2.04 含并行连结的网络（GoogLeNet）
-    - 2.05 残差网络（ResNet）
-    - 2.06 二阶网络编码解码（U-Net）
-    - 2.07 实例分割网络（SegNet）
-    - 2.08 Mask-RCNN
-    - 2.09 [区域卷积神经网络（R-CNN）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_9-区域卷积神经网络（R-CNN）.md)
-    - 2.10 全卷积网络（FCN）
-    - 2.11 [实战Kaggle比赛：图像分类（CIFAR-10）]()
-    - 2.12 [实战Kaggle比赛：狗的品种识别（ImageNet Dogs）]()
-  - 第 3 章 [著名数据集](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-    - ImageNet
-    - COCO
-    - CIFAR-10
-  - 第 4 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-    - 语义分割
-      - [语义分割 PyTorch 版](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
-      - 实战项目 6
-    - 目标检测
-      - 常用网络
-      - 实战项目 7
-    - 实例分割 
-      - 常用网络 
-      - 实战项目 8
-      - 新方法：滑动窗口
-  - 第 5 章 [图像分类项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-    - [手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
-    - [文本检测](https://github.com/Charmve/Scene-Text-Detection)
-    - [车道线检测](https://github.com/Charmve/Awesome-Lane-Detection)
-      - 常用网络 
-      - 实战项目 9
-    - [镜面检测](https://github.com/Charmve/Mirror-Glass-Detection)
-    - [图像抠图 Matting](https://github.com/Charmve/TimeWarp)
+  - 第 6 章 [深度学习环境搭建](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
+    - 6.1 PyTorch
+    - 6.2 OpenCV
+    - 6.3 Numpy
+    - 6.4 Pandas
+  - 第 7 章 [经典卷积神经网络架构：原理与PyTorch实现](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)
+    - 7.1 [卷积神经网络（LeNet）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_1-卷积神经网络（LeNet）.md)
+    - 7.2 [深度卷积神经网络（AlexNet）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_2-深度卷积神经网络（AlexNet）.md)
+    - 7.3 使用重复元素的网络（VGG）
+    - 7.4 含并行连结的网络（GoogLeNet）
+    - 7.5 残差网络（ResNet）
+    - 7.6 二阶网络编码解码（U-Net）
+    - 7.7 实例分割网络（SegNet）
+    - 7.8 Mask-RCNN
+    - 7.9 [区域卷积神经网络（R-CNN）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_9-区域卷积神经网络（R-CNN）.md)
+    - 7.10 全卷积网络（FCN）
+    - 7.11 [实战Kaggle比赛：图像分类（CIFAR-10）]()
+    - 7.12 [实战Kaggle比赛：狗的品种识别（ImageNet Dogs）]()
+  - 第 8 章 [著名数据集](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+    - 8.1 ImageNet
+    - 8.2 COCO
+    - 8.3 CIFAR-10
+  - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+    - 9.1 语义分割
+      - 9.1.1 [语义分割 PyTorch 版](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
+      - 9.1.2 实战项目 6
+    - 9.2 目标检测
+      - 9.2.1 常用网络
+      - 9.2.2 实战项目 7
+    - 9.3 实例分割 
+      - 9.3.1 常用网络 
+      - 9.3.2 实战项目 8
+      - 9.3.3 新方法：滑动窗口, PointRend, PolarMask
+  - 第 10 章 [图像分类项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+    - 10.1 [手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
+    - 10.2 [文本检测](https://github.com/Charmve/Scene-Text-Detection)
+    - 10.3 [车道线检测](https://github.com/Charmve/Awesome-Lane-Detection)
+      - 10.3.1 常用网络 
+      - 10.3.2 实战项目 9
+    - 10.4 [镜面检测](https://github.com/Charmve/Mirror-Glass-Detection)
+    - 10.5 [图像抠图 Matting](https://github.com/Charmve/TimeWarp)
 - <b><h4>进阶篇</h4></b>
-  - 第 1 章 [卷积神经网络进化](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
+  - 第 11 章 [卷积神经网络进化](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
 
-  - 第 2 章 [可视化和理解](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)
-    - 表征可视化
-    - 对抗实例
-    - DeepDream 和风格迁移
-    - 实战项目 10
-  - 第 3 章 [生成对抗模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-    - Pixel RNN/CNN
-    - 自编码器 Auto-encoder
-    - 生成对抗网络 GAN
-      - 原理
-      - 项目实战
+  - 第 12 章 [可视化和理解](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)
+    - 12.1 表征可视化
+    - 12.2 对抗实例
+    - 12.3 DeepDream 和风格迁移
+    - 12.4 实战项目 10
+  - 第 13 章 [生成对抗模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+    - 13.1 Pixel RNN/CNN
+    - 13.2 自编码器 Auto-encoder
+    - 13.3 生成对抗网络 GAN
+      - 13.3.1 原理
+      - 13.3.2 项目实战
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
-  - 第 4 章 [深度增强学习](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-    - 方法梯度，硬性关注
-    - Q - 学习，评价器
-  - 第 5 章 [迁移学习]()
-  - 第 6 章 [注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
-  - 第 7 章 [跨界模型 Transformer](https://blog.csdn.net/charmve/category_10954850.html)
-  - 第 8 章 [知识蒸馏]()
-  - 第 9 章 [Normalization 模型]()
-
+  - 第 14 章 [深度增强学习](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+    - 14.1 方法梯度，硬性关注
+    - 14.2 Q - 学习，评价器
+  - 第 15 章 [迁移学习]()
+  - 第 16 章 [注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
+  - 第 17 章 [跨界模型 Transformer](https://blog.csdn.net/charmve/category_10954850.html)
+  - 第 18 章 [知识蒸馏]()
+  - 第 19 章 [Normalization 模型]()
+<br>
 - <b>更新中 ...</b>
 
 </tr>
