@@ -63,6 +63,7 @@
     - 逻辑回归 LR 
     - [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
   - 第 2 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
+    - Softmax 回归
     - 反向传播算法
     - 多层感知器
     - 神经学观点
@@ -85,15 +86,18 @@
     - OpenCV
     - Numpy
   - 第 2 章 [经典卷积神经网络架构：原理与PyTorch实现](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)
-    - AlexNet
-    - VGG
-    - GoogleNet
-    - ResNet 
-    - U-Net 
-    - SegNet 
-    - Mask-RCNN
-    - Full-CNN
-    - 实战项目 4
+    - 2.01 [卷积神经网络（LeNet）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_1-卷积神经网络（LeNet）.md)
+    - 2.02 [深度卷积神经网络（AlexNet）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_2-深度卷积神经网络（AlexNet）.md)
+    - 2.03 使用重复元素的网络（VGG）
+    - 2.04 含并行连结的网络（GoogLeNet）
+    - 2.05 残差网络（ResNet）
+    - 2.06 二阶网络编码解码（U-Net）
+    - 2.07 实例分割网络（SegNet）
+    - 2.08 Mask-RCNN
+    - 2.09 [区域卷积神经网络（R-CNN）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_9-区域卷积神经网络（R-CNN）.md)
+    - 2.10 全卷积网络（FCN）
+    - 2.11 [实战Kaggle比赛：图像分类（CIFAR-10）]()
+    - 2.12 [实战Kaggle比赛：狗的品种识别（ImageNet Dogs）]()
   - 第 3 章 [著名数据集](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - ImageNet
     - COCO

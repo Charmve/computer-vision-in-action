@@ -42,6 +42,8 @@
     - 线性分类
     - 逻辑回归 LR 
     - [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
+    - [实战Kaggle比赛：图像分类（CIFAR-10）]()
+    - [实战Kaggle比赛：狗的品种识别（ImageNet Dogs）]()
   - 第 2 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
     - 反向传播算法
     - 多层感知器
