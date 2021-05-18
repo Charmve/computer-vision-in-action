@@ -184,6 +184,23 @@
       - 17.1 
   - 第 18 章 [知识蒸馏]()
   - 第 19 章 [Normalization 模型]()
+    - 19.1 [思想和框图](#一-思想和框图)
+    - 19.2 [实现细节](#二-实现细节)
+      - [2.1 Encoder](#2-1-Encoder)
+      - [2.2 Decoder](#2-2-Decoder)
+      - [2.3 Self-Attention](#2-3-Self-Attention)
+      - [2.4 Multi-Headed Attention](#2-4-Multi-Headed-Attention)
+      - [2.5 Positional Encoding](#2-5-Positional-Encoding)
+    - 19.3 [应用任务和结果](#三-应用任务和结果)
+      - [3.1 NLP领域](#3-1-NLP领域)
+      - [3.2 CV领域](#3-2-CV领域)
+        - [3.2.1 检测DETR](#3-2-1-检测DETR)
+        - [3.2.2 分类ViT](#3-2-2-分类ViT)
+        - [3.2.3 分割SETR](#3-2-3-分割SETR)
+        - [3.2.4 Deformable-DETR](#3-2-4-Deformable-DETR)
+    - 19.4 [优点及分析](#四-优点及分析)
+    - 19.5 [缺点及分析](五-缺点及分析)
+    - [参考文献](#六-参考文献)
   - <b><h4>附录</h4></b>
     - A 矩阵
     - B 梯度下降法
