@@ -53,7 +53,7 @@
         - 目标识别与目标检测
         - 实例分割与语义分割
         - 3D 建模
-    - 4. 发展历史回顾
+    - 4. [发展历史回顾](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/0_绪论/4_发展历史回顾.md)
     - 5. 小练习
     - 参考文献
 - <b><h4>理论篇</h4></b>
