@@ -57,28 +57,28 @@
     - 5. 小练习
     - 参考文献
 - <b><h4>理论篇</h4></b>
-  - 第 1 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
-    - 1.1 数据驱动方法
-    - 1.2 k 最近邻算法
-    - 1.3 线性分类
-    - 1.4 逻辑回归 LR 
+  - 第 1 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
+    - 1.1 Softmax 回归
+    - 1.2 反向传播算法
+    - 1.3 多层感知器
+    - 1.4 神经学观点
     - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
     - 参考文献
-  - 第 2 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
-    - 2.1 Softmax 回归
-    - 2.2 反向传播算法
-    - 2.3 多层感知器
-    - 2.4 神经学观点
-    - 2.5 实战项目 2
+  - 第 2 章 [卷积神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
+    - 2.1 概述
+    - 2.2 卷积和池化
+    - 2.3 损失函数和优化
+    - 2.4 线性分类Ⅱ
+    - 2.5 进阶模型表示与图像特征
+    - 2.6 优化，随机梯度下降
+    - 2.7 [实战项目 2 - 动手搭建一个卷积神经网络](https://blog.csdn.net/Charmve/article/details/106076844)
     - 参考文献
-  - 第 3 章 [卷积神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
-    - 3.1 概述
-    - 3.2 卷积和池化
-    - 3.3 损失函数和优化
-    - 3.4 线性分类Ⅱ
-    - 3.5 进阶模型表示与图像特征
-    - 3.6 优化，随机梯度下降
-    - 3.7 [实战项目 3 - 动手搭建一个卷积神经网络](https://blog.csdn.net/Charmve/article/details/106076844)
+  - 第 3 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
+    - 3.1 数据驱动方法
+    - 3.2 k 最近邻算法
+    - 3.3 线性分类
+    - 3.4 逻辑回归 LR 
+    - 3.5 [实战项目 3 - 表情识别]()
     - 参考文献
   - 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
     - 4.1 递归神经网络 RNN
@@ -173,9 +173,24 @@
     - 参考文献
   - 第 15 章 [迁移学习]()
   - 第 16 章 [注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
+    - 16.1 Attention with RNNs
+    - 16.2 通用注意力
+      - 16.2.1 Self-attention 自注意力
+      - 16.2.2 Positional encoding
+      - 16.2.3 Masked attention
+      - 16.2.4 Multi-head attention
+    - 参考文献
   - 第 17 章 [跨界模型 Transformer](https://blog.csdn.net/charmve/category_10954850.html)
+      - 17.1 
   - 第 18 章 [知识蒸馏]()
   - 第 19 章 [Normalization 模型]()
+  - <b><h4>附录</h4></b>
+    - A 矩阵
+    - B 梯度下降法
+    - C 模型压缩与裁剪
+  - <b><h4>后记</h4></b>
+  - <b><h4>参考文献</h4></b>
+
 <br>
 - <b>更新中 ...</b>
 
@@ -188,7 +203,7 @@
 
 ## 参考文献
 
---> [<b>REFERENCE.md</b>](docs/REFERENCE.md), &nbsp; 感谢前人的杰出工作，我才得以写出此书。
+--> Go to see [<b>REFERENCE.md</b>](docs/REFERENCE.md), &nbsp; 感谢前人的杰出工作，我才得以写出此书。
 
 ## 关注我们
 <div align=center>
