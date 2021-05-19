@@ -1,29 +1,29 @@
 # 第 7 章 跨界模型 Transformer
 
 作者: 张伟 (Charmve)
+
 日期: 2021/05/18
 
 # Transformer讲解以及在CV领域的应用
-- 一、[思想和框图](#一思想和框图)
-- 二、[实现细节](#二实现细节)
+- 17.1 [思想和框图](#一思想和框图)
+- 17.2 [实现细节](#二实现细节)
   - [2.1 Encoder](#21-encoder)
   - [2.2 Decoder](#22-decoder)
   - [2.3 Self-Attention](#23-self-attention)
   - [2.4 Multi-Headed Attention](#24-Multi-headed-attention)
   - [2.5 Positional Encoding](#25-positional-encoding)
-- 三、[应用任务和结果](#三应用任务和结果)
+- 17.3 [应用任务和结果](#三应用任务和结果)
   - [3.1 NLP领域](#31-nlp领域)
   - [3.2 CV领域](#32-cv领域)
     - [3.2.1 检测DETR](#321-检测detr)
     - [3.2.2 分类ViT](#322-分类vit)
     - [3.2.3 分割SETR](#323-分割setr)
     - [3.2.4 Deformable-DETR](#324-deformable-detr)
-- 四、[优点及分析](#四优点及分析)
-- 五、[缺点及分析](#五缺点及分析)
-- 六、[参考文献](#六参考文献)
+- 17.4 [优点及分析](#四优点及分析)
+- 17.5 [缺点及分析](五缺点及分析)
+- [参考文献](#六参考文献)
 
-
-
+<br>
 
 ## 一、思想和框图
 
@@ -34,6 +34,7 @@ Transformer是由谷歌于2017年提出的具有里程碑意义的模型，同�
 Transformer采用Encoder-Decoder架构，下图就是Transformer的结构。其中左半部分是encoder，右半部分是decoder [1]：
 
 ![img1](https://img-blog.csdnimg.cn/img_convert/fe8cd6186c930b00292af1ced8347645.png#pic_center)
+
 图1 Transformer结构图
 
 现有的各种基于Transformer的模型基本只是与NLP任务有关。然而，最近一些文章开创性地将Transformer模型跨领域地引用到了计算机视觉任务中，并取得了不错地成果。这也被许多AI学者认为是开创了CV领域的新时代，甚至可能完全取代传统的卷积操作。
@@ -74,16 +75,18 @@ self-Attention是Transformer用来找到并重点关注与当前单词相关的�
 这里描述self-attention的具体过程如下图所示：
 
 ![img2](https://img-blog.csdnimg.cn/img_convert/4d51c9a6f5b04251ddff9d9bb7a4c2fa.png#pic_center)
+
 图2 self-attention的具体过程
 
 从上图可以看出，attention机制中主要涉及三个向量Q(Query),K(Key),V(Value)，这三个向量的计算过程如下图所示：
 
 ![img3](https://img-blog.csdnimg.cn/img_convert/351f6c256f9f54bd9f84034681d1423b.png#pic_center)
+
 图3 三个向量的计算过程
 
 图中，WQ,WV,WK是三个随机初始化的矩阵，每个特征词的向量计算公式如下所示：
 
-<center>表1 每个特征词的向量计算公式</center>
+<center>表1 每个特征词的向量计算公式</center><br>
 
 |特征词的向量|	计算公式1	|计算公式2|
 |:--|--|--|
@@ -135,6 +138,7 @@ $$ PE(pos,2 * i + 1) = cos(pos / 100002i/dmodel)$$
 其中pos指当前词在句子中的位置，i是指向量中每个值的index,从公式中可以看出，句子中偶数位置的词用正弦编码，奇数位置的词用余弦编码。最后把positional encoding的值与embedding的值相加作为输入传进transformer结构中，如下图所示：
 
 ![img6](https://img-blog.csdnimg.cn/img_convert/5d21a85ca0141414aa6427757d640331.png#pic_center)
+
 图5 Positional Encoding
 
 ### 2.6 Layer normalization
@@ -147,7 +151,9 @@ $$ PE(pos,2 * i + 1) = cos(pos / 100002i/dmodel)$$
 Normalize层的目的就是对输入数据进行归一化，将其转化成均值为0方差为1的数据。LN是在每一个样本上都计算均值和方差，如下图所示：
 
 ![img8](https://img-blog.csdnimg.cn/img_convert/ee25a4aa76130cf589ea61ccf22b857b.png#pic_center)
+
 图7 数据归一化
+
 
 LN的公式如下：
 
@@ -156,6 +162,7 @@ $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 以上是encoder层的全部内容，最后再展示一下将两个encoder叠加在一起的内部图：
 
 ![img9](https://img-blog.csdnimg.cn/img_convert/2549f7262843d0be58d2481276a563f3.png#pic_center)
+
 图8 两个encoder叠加
 
 ## 三、应用任务和结果
@@ -173,6 +180,7 @@ $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 这篇文章用完整的transformer构建了一个end-to-end的目标检测模型，除此外该模型舍弃了手工设计anchor的方法，还提出了一个新的loss function。但讨论重点还是在模型结构上。模型结构如下图：
 
 ![img10](https://img-blog.csdnimg.cn/img_convert/96139ba69c0578884554763aa4fef96a.png)
+
 图9 检测DETR
 
 这篇文章有如下亮点：
@@ -191,6 +199,7 @@ $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 在此基础上，作者提出了Vision Transformer模型。
 
 ![img11](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9CblNORWFmaWNGQWF6ZGgyamdCY0ZWWjhYMHVQbWJ4N29RS1B4M2VtOW1hMXdDYUI3ZWpOU0pOOUUwTGZJS2lhSThQZ29OdWpGbm4xeURtMVppYUVKNkpMdy82NDA?x-oss-process=image/format,png)
+
 图10 Vision Transformer模型
 
 这篇文章首先尝试在几乎不做改动的情况下将Transformer模型应用到图像分类任务中，在 ImageNet 得到的结果相较于 ResNet 较差，这是因为Transformer模型缺乏归纳偏置能力，例如并不具备CNN那样的平移不变性和局部性，因此在数据不足时不能很好的泛化到该任务上。
@@ -203,6 +212,7 @@ $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 > Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers
 
 ![img12](https://img-blog.csdnimg.cn/img_convert/0fb6fb5bc0288e6f196563c45af55ac1.png)
+
 图11 分割SETR
 
 用ViT作为的图像的encoder，然后加一个CNN的decoder来完成语义图的预测。
@@ -215,6 +225,7 @@ $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 对之前DETR的改进。
 
 ![img13](https://img-blog.csdnimg.cn/img_convert/9462131db3436a563c86b5d5a47341aa.png)
+
 图12 Deformable-DETR
 
 
@@ -265,3 +276,4 @@ Transformer的特性不仅让其在NLP领域大获成功，也提供了将其迁
 [4] Sixiao Zheng, Jiachen Lu, Hengshuang Zhao, Xiatian Zhu, Zekun Luo, Yabiao Wang, Yanwei Fu, Jianfeng Feng, Tao Xiang, Philip H.S. Torr, Li Zhang. Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers. Fudan University, University of Oxford, University of Surrey, Tencent Youtu Lab, Facebook AI. https://fudan-zvg.github.io/SETR
 
 [5] Xizhou Zhu, Weijie Su2, Lewei Lu, Bin Li , Xiaogang Wang, Jifeng Dai. DEFORMABLE DETR: DEFORMABLE TRANSFORMERS FOR END-TO-END OBJECT DETECTION. SenseTime Research, University of Science and Technology of China, The Chinese University of Hong Kong
+

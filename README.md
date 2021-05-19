@@ -121,6 +121,7 @@
   - 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 8.1 数据集
         - ImageNet
+        - [MNIST](http://yann.lecun.com/exdb/mnist/)
         - COCO
         - CIFAR-10
     - 8.2 基准
@@ -161,7 +162,8 @@
       - 12.3.2 项目实战
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
-      - 参考文献
+    - 12.4 [变分自编码器 Variational Auto-encoder, VAE](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
+    - 参考文献
   - 第 13 章 [深度增强学习](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 13.1 方法梯度，硬性关注
     - 13.2 Q - 学习，评价器
@@ -181,8 +183,8 @@
       - 16.2.4 Multi-head attention
     - 参考文献
   - 第 17 章 [跨界模型 Transformer](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md)
-    - 17.1 [思想和框图](#一-思想和框图)
-    - 17.2 [实现细节](#二-实现细节)
+    - 17.1 [思想和框图](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#%E4%B8%80%E6%80%9D%E6%83%B3%E5%92%8C%E6%A1%86%E5%9B%BE)
+    - 17.2 [实现细节](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#二实现细节)
       - [2.1 Encoder](#2-1-Encoder)
       - [2.2 Decoder](#2-2-Decoder)
       - [2.3 Self-Attention](#2-3-Self-Attention)
@@ -200,10 +202,10 @@
     - [参考文献](#六-参考文献)
   - 第 18 章 [知识蒸馏]()
     - 18.1 概述
-    - [参考文献]()
+    - [参考文献](#六-参考文献)
   - 第 19 章 [Normalization 模型]()
     - 19.1 概述
-    - [参考文献]()
+    - [参考文献](#六-参考文献)
     
   - <b><h4>附录</h4></b>
     - A 矩阵
