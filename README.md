@@ -19,7 +19,9 @@
 
 ---
 <table align="center">
-<tr ><td>
+<tr>
+<td>
+<code>全面</code>&nbsp;<code>前沿</code>&nbsp;<code>免费</code>
 <h1> 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
 <br><em>Computer Vision in Action</em></h1>
 
