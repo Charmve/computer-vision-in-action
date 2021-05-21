@@ -38,10 +38,9 @@
 <div align="center">
 	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/maiwei.png" width="240px" alt="logo:maiwei">
 </div>
-
 <h5>有疑问，跑起来就会变成一朵花 ❀ </5>
 
-<br>
+<br><br>
 
 > <h4>在线阅读（内容实时更新）</h4>
 > - 地址：https://charmve.github.io/computer-vision-in-action
