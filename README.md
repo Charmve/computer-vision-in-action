@@ -40,8 +40,6 @@
 	<h5 align="left">有疑问，跑起来就会变成一朵花 ❀ </5>
 </div>
 
-<br><br>
-
 > <h4>在线阅读（内容实时更新）</h4>
 > - 地址：https://charmve.github.io/computer-vision-in-action
 
