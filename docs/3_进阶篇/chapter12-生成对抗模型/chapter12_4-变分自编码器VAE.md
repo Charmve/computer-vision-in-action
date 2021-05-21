@@ -12,7 +12,16 @@
       - 12.3.2 项目实战
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
-    - 12.4 [变分自编码器 Variational Auto-encoder, VAE](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
+    - 12.4 [变分自编码器 Variational Auto-encoder, VAE](#124-变分自编码器-variational-auto-encoder-vae)
+      - [12.4.1 概述](#1241-概述)    
+      - [12.4.2 基本原理](#1242-基本原理)        
+        - [12.4.2.1 定义](#1-定义)        
+        - [12.4.2.2 理论基础：三要素](#2-理论基础三要素) 
+        - [12.4.2.3 推导过程](#3-推导过程)            
+      - [12.4.3 VAE v.s. AE 区别与联系](#1243-vae-vs-ae-区别与联系)    
+      - [12.4.4 变分自编码器的代码实现](#1244-变分自编码器的代码实现)    
+      - [12.4.5 卷积变分自编码器的实现与简单应用](#1245-卷积变分自编码器的实现与简单应用)             
+      - [参考文献](#参考文献) 
     - 参考文献
 
 ------
