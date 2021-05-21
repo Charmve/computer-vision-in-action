@@ -38,7 +38,9 @@
 <div align="center">
 	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/maiwei.png" width="240px" alt="logo:maiwei">
 </div>
-有疑问，跑起来就会变成**一朵花** ❀
+
+有疑问，跑起来就会变成<b花</b> ❀
+<br>
 <br>
 
 > <h4>在线阅读（内容实时更新）</h4>
