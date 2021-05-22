@@ -6,15 +6,18 @@
 
 ## 目录
 
-  - 第 15 章 [迁移学习](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
-    - 15.1 概述
-    - 15.2 基于实例的迁移
-    - 15.3 基于特征的迁移
-    - 15.4 基于共享参数的迁移
-    - 15.5 深度学习和迁移学习结合
-    - 15.7 [实战项目 2 - 蚂蚁和蜜蜂的分类问题](chapter15_迁移学习的应用.md)
-    - 小结
-    - 参考文献
+  - [第 15 章 迁移学习](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
+    - [15.1 概述](#151-迁移学习概述)
+      - [15.1.1 背景](#1511-背景)
+      - [15.1.2 定义及分类](#1512-定义及分类)
+      - [15.1.3 关键点](#1513-关键点)
+    - [15.2 基于实例的迁移](#152-基于实例的迁移)
+    - [15.3 基于特征的迁移](#153-基于特征的迁移)
+    - [15.4 基于共享参数的迁移](#154-基于共享参数的迁移)
+    - [15.5 深度学习和迁移学习结合](#155-深度学习和迁移学习结合)
+    - [15.7 实战项目 2 - 蚂蚁和蜜蜂的分类问题](chapter15_迁移学习的应用.md)
+    - [小结](#小结)
+    - [参考文献](#参考文献)
 
 ## 15.1 迁移学习概述
 ### 15.1.1 背景
@@ -36,6 +39,7 @@
 
 基于这样的问题，所以就有了对于``迁移学习``的研究
 
+![image](https://user-images.githubusercontent.com/29084184/119219725-8a12da80-bb19-11eb-9381-eaf6b999e384.png)
 
 
 ### 15.1.2 定义及分类
@@ -49,14 +53,17 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 #### 主要思想
 从相关领域中迁移标注数据或者知识结构、完成或改进目标领域或任务的学习效果。
 
+![image](https://user-images.githubusercontent.com/29084184/119219729-8da66180-bb19-11eb-8b51-31c2a2ff0364.png)
 
 
 人在实际生活中有很多迁移学习，比如学会骑自行车，就比较容易学摩托车，学会了C语言，在学一些其它编程语言会简单很多。那么机器是否能够像人类一样举一反三呢？
+![image](https://user-images.githubusercontent.com/29084184/119219733-91d27f00-bb19-11eb-930e-9e56804273c3.png)
 
 
 上图是一个商品评论情感分析的例子，图中包含两个不同的产品领域：books 图书领域和 furniture 家具领域；在图书领域，通常用“broad”、“quality fiction”等词汇来表达正面情感，而在家具领域中却由“sharp”、“light weight”等词汇来表达正面情感。可见此任务中，不同领域的不同情感词多数不发生重叠、存在领域独享词、且词汇在不同领域出现的频率显著不同，因此会导致领域间的概率分布失配问题。
 
 **迁移学习的形式定义及一种分类方式**
+![image](https://user-images.githubusercontent.com/29084184/119219737-94cd6f80-bb19-11eb-93ea-c984824bc446.png)
 
 
 迁移学习里有两个非常重要的概念
@@ -66,6 +73,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 
 ### 15.1.3 关键点
 
+![image](https://user-images.githubusercontent.com/29084184/119219739-972fc980-bb19-11eb-934f-89b22b998beb.png)
 
 1. 研究可以用哪些知识在不同的领域或者任务中进行迁移学习，即不同领域之间有哪些共有知识可以迁移。
 
@@ -83,6 +91,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 
 因为，迁移学习中源领域与目标领域的数据分布是不一致，所以源领域中所有有标记的数据实例不一定都对目标领域有用。戴文渊等人提出的TrAdaBoost算法就是典型的基于实例的迁移。
 
+![image](https://user-images.githubusercontent.com/29084184/119219743-9e56d780-bb19-11eb-8569-f54d6f491e9a.png)
 
 ## 15.3 基于特征的迁移
 ### 15.3.1 特征选择
@@ -94,12 +103,13 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 
 这样，在该空间中，源领域数据与的目标领域的数据分布相同，从而可以在新的空间中，更好地利用源领域已有的有标记数据样本进行分类训练，最终对目标领域的数据进行分类测试。
 
-
+![image](https://user-images.githubusercontent.com/29084184/119219747-a4e54f00-bb19-11eb-8737-01f3ccef08b4.png)
 
 ## 15.4 基于共享参数的迁移
 基于共享参数的迁移研究的是如何找到源数据和目标数据的空间模型之间的共同参数或者先验分布，从而可以通过进一步处理，达到知识迁移的目的，假设前提是，学习任务中的的每个相关模型会共享一些相同的参数或者先验分布。
 
 ## 15.5 深度学习和迁移学习结合
+![image](https://user-images.githubusercontent.com/29084184/119219751-a878d600-bb19-11eb-9c04-cd32dcc2cec1.png)
 
 
 深度学习需要大量的高质量标注数据，Pre-training + fine-tuning 是现在深度学习中一个非常流行的trick，尤其是以图像领域为代表，很多时候会选择预训练的ImageNet对模型进行初始化。
@@ -116,21 +126,23 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 - Domain B上前n层使用BaseB的参数初始化（后续有frozen和fine-tuning两种方式）
 - Domain B上前n层使用BaseA的参数初始化（后续有frozen和fine-tuning两种方式）
 
+![image](https://user-images.githubusercontent.com/29084184/119219756-ab73c680-bb19-11eb-9e02-6759e8a4ca42.png)
 
 将深度学习应用在图像处理领域中时，会观察到第一层（first-layer）中提取的features基本上是类似于Gabor滤波器(Gabor filters)和色彩斑点(color blobs)之类的。
 
 通常情况下第一层与具体的图像数据集关系不是特别大，而网络的最后一层则是与选定的数据集及其任务目标紧密相关的；文章中将第一层feature称之为一般(general)特征，最后一层称之为特定(specific)特征。
 
-
+![image](https://user-images.githubusercontent.com/29084184/119219757-ae6eb700-bb19-11eb-821c-5aace83b6521.png)
 
 - 特征迁移使得模型的泛化性能有所提升，即使目标数据集非常大的时候也是如此。
 - 随着参数被固定的层数n的增长，两个相似度小的任务之间的transferability gap的增长速度比两个相似度大的两个任务之间的transferability gap增长更快 两个数据集越不相似特征迁移的效果就越差
 - 即使从不是特别相似的任务中进行迁移也比使用随机filters（或者说随机的参数）要好
 - 使用迁移参数初始化网络能够提升泛化性能，即使目标task经过了大量的调整依然如此。
 
-### 15.5.2 DANN (Domain-Adversarial Neural Network)
-这篇paper将近两年流行的对抗网络思想引入到迁移学习中，从而提出了DANN
+### 15.5.2 DANN ([Domain-Adversarial Neural Network](https://arxiv.org/abs/1505.07818))
+这篇paper<sup>3</sup>将近两年流行的对抗网络思想引入到迁移学习中，从而提出了DANN
 
+![image](https://user-images.githubusercontent.com/29084184/119219761-b2023e00-bb19-11eb-9778-28a68e74bccf.png)
 
 图中所展示的即为DANN的结构图，框架由feature extractor、label predictor和domain classifier三个部分组成，并且在feature extractor和domain classifier 之间有一个gradient reversal layer；其中domain classifier只在训练过程中发挥作用
 
@@ -140,6 +152,6 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 ## 参考文献
 [1] How transferable are features in deep neural networks（NIPS2014 Bengio et al.）
 [2] Learning and Transferring Mid-Level Image Representations using Convolutional Neural Networks（CVPR2014 Oquab.et al.）
-[3] Domain Adaptation for Large-Scale Sentiment Classification: A Deep Learning Approach（ICML2011 Glorot. Bengio.et al.）
+[3] Domain Adaptation for Large-Scale Sentiment Classification: A Deep Learning Approach（ICML2011 Glorot. Bengio.et al.） https://arxiv.org/abs/1505.07818
 [4] Marginalized denoising autoencoders for domain adaptation (ICML2012 Chen et al.)
 [5] Domain-Adversarial Training of Neural Networks（JMLR2016 Ganin.et al.）
