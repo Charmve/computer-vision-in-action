@@ -27,8 +27,7 @@
     - [参考文献](#参考文献)
 
 <br>
-
-<p align="center"><a target=\"_blank\" href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/chapter15_迁移学习:蚂蚁和蜜蜂的分类问题/"><img src="https://colab.research.google.com/assets/colab-badge.svg" align="center"></a>
+<p align="center"><a target=\"_blank\" href="https://github.com/Charmve/computer-vision-in-action/tree/main/notebooks/17_TL-ants-bees-classification.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" align="center"></a>
 </p>
 <br>
 
@@ -450,12 +449,12 @@ model.load_state_dict(torch.load('model.pt', map_location=device))
 <table class="tfo-notebook-buttons\" align="left\">
 <td>
   <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/15_TL-ants-bees-classification.ipynb\">
-  <img src=\"https://www.tensorflow.org/images/colab_logo_32px.png\" />
+  <img src="https://www.tensorflow.org/images/colab_logo_32px.png\">
   Run in Google Colab</a>
 </td>
 <td>
-  <a target=\"_blank\" href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/chapter15_迁移学习:蚂蚁和蜜蜂的分类问题/">
-  <img src=\"https://www.tensorflow.org/images/GitHub-Mark-32px.png\" />
+  <a target="_blank\" href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/chapter15_迁移学习:蚂蚁和蜜蜂的分类问题/">
+  <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png\">
   View source on GitHub</a>
 </td>
 </table>
