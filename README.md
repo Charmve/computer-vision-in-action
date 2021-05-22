@@ -48,6 +48,8 @@
 > - 地址：https://github.com/charmve/computer-vision-in-action/releases
 
 ### 目录
+- <b><h4>前言</h4></b>
+- <b><h4>主要符号表</h4></b>
 - <b><h4>绪论篇</h4></b>
   - 第 0 章  [计算机视觉概述](https://charmve.github.io/computer-vision-in-action/#/chapter0/chapter0)
     - 1. 概述
@@ -248,13 +250,16 @@
 <img src="https://user-images.githubusercontent.com/29084184/116501908-a63da600-a8e4-11eb-827c-7772655e0079.png" width = "250" height = "270" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
 </div>
 
-- 若本书里没有你想要理论和实战项目，或者你发现本书哪个地方有错误，请毫不犹豫地去我们 GitHub 的 Issues（ 地址 https://github.com/charmve/computer-vision-in-action/issues ）进行反馈，在对应版块提交你希望补充的内容或者勘误信息，我们通常会在 24 小时以内给您回复，超过 24 小时未回复的话可以邮件联系我们（微信 MaiweiE_com）；
+- 若本书里没有你想要理论和实战项目，或者你发现本书哪个地方有错误，请毫不犹豫地去本仓库的 Issues（ 地址 https://github.com/charmve/computer-vision-in-action/issues ）进行反馈，在对应版块提交你希望补充的内容或者勘误信息，作者通常会在 24 小时以内给您回复，超过 24 小时未回复的话可以邮件联系我（微信 MaiweiE_com）；
 - 同时，我也欢迎大家加入本项目的建设中来，欢迎 [pull request](https://github.com/charmve/computer-vision-in-action/pulls)！
 
 ## LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可。
 
 ## CONTRIBUTION
+
+作者会尽最大努力来确保书中内容的准确性，但难免会存在疏漏与不妥之处。欢迎您将发现的问题反馈给我们，帮助提升本开放资源的质量。
+
 <table>
 <tr>
 <td>
