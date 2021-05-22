@@ -289,15 +289,18 @@ fine-tuning就是使用已用于其他目标、预训练好模型的权重或者
 ### 3.5 常用框架
 
 **Caffe**
+
 - 源于Berkeley的主流CV工具包，支持C++,python,matlab
 - Model Zoo中有大量预训练好的模型供使用
 　
 **PyTorch**
+
 - Facebook用的卷积神经网络工具包
 - 通过时域卷积的本地接口，使用非常直观
 - 定义新网络层简单
 　
 **TensorFlow**
+
 - Google的深度学习框架
 - TensorBoard可视化很方便
 - 数据和模型并行化好，速度快
@@ -325,8 +328,8 @@ CNN一个非常重要的特点就是头重脚轻（越往输入权值越小，�
 
 <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/maiwei.png" width="220px" alt="logo:maiwei" title="有疑问，跑起来就会变成一朵花 ❀"></a>
 
-<br><font size = 2> 计算机视觉实战演练：算法与应用 </font>
-<br>
+<h3>《计算机视觉实战演练：算法与应用》 <br>Computer Vision in Action</h3>
+<br><br>
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200310232242296.png#pic_center)
 
 </div>
