@@ -1,5 +1,20 @@
 # 第 6 章 注意力机制 Attention is All You Need
 
+## 目录
+
+  - [第 6 章 注意力机制 Attention is All You Need](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
+    - [6.1 Attention 是一种注意力机制](#1-Attention-是一种注意力机制)
+    - [6.2 Attention是一种加权平均](#2-Attention是一种加权平均)
+    - [6.3 自然语言处理中，Attention is all you need](#3-自然语言处理中，attention-is-all-you-need)
+    - [6.4 BERT系列大规模无监督学习将Attention推到了新的高度](#4-bert系列大规模无监督学习将attention推到了新的高度)
+    - [6.5 计算机视觉中，Attention是有效的非局域信息融合技术](#5-计算机视觉中，attention是有效的非局域信息融合技术)
+    - [6.6 计算机视觉中，Attention will be all you need](#6-计算机视觉中，attention-will-be-all-you-need)
+    - [6.7 结构化数据中，Attention是辅助GNN的利器](#7-结构化数据中，attention是辅助gnn的利器)
+    - [6.8 逻辑可解释性与Attention的关系](#8-逻辑可解释性与attention的关系)
+    - [6.9 Attention的多种变种及他们的内在关联](#9-attention的多种变种及他们的内在关联)
+    - [参考文献](#参考文献)
+
+
 # Attention九层塔 - 注意力机制的九重理解
 
 本文作者：<i>电光幻影炼金术</i>
@@ -30,7 +45,7 @@ Attention九层塔——理解Attention的九层境界目录如下:
 </code>
 </pre>
 
-## 1. Attention是一种注意力机制
+## 1. Attention 是一种注意力机制
 顾名思义，attention的本意是生物的注意力机制在人工智能中的应用。注意力机制有什么好处呢？简单地说，可以关注到完成目标场景中所需要的特征。比如说有一系列的特征 ![Image](https://www.zhihu.com/equation?tex=f_1%2C+f_2%2C+...%2C+f_n) 。可能目标场景仅仅需要 ![Image](https://www.zhihu.com/equation?tex=f_2%2C+f_3)，那么attention可以有效地“注意到”这两个特征，而忽略其他的特征。attention最早出现在了递归神经网络（RNN）中[1]，作者Sukhbaatar举了这样的例子：
 
 <div align=center>
