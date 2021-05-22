@@ -18,6 +18,8 @@
 - [04 如何选择合适的激活函数？](#04-如何选择合适的激活函数)
 - [参考资料](#参考文献)
 
+<br>
+
 ### 引言
 
 学习神经网络的时候我们总是听到激活函数这个词，而且很多资料都会提到常用的激活函数，比如Sigmoid函数、tanh函数、Relu函数。那么我们就来详细了解下激活函数方方面面的知识。
@@ -88,7 +90,7 @@ sigmoid函数曾经被使用的很多，不过近年来，用它的人越来越�
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmV0U2VoT0FnY0EycEduSHRpYlZNajdISG9JSE04VkRTaGFKTnZXSko3amREYkVoOTlaN2p0UWljUS82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图3 Sigmoid函数的导数
+    <br>图3 Sigmoid函数的导数
 </div>
 <br>
 
@@ -130,7 +132,7 @@ Relu函数及其导数的图像如下图所示：
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVMaWE2c1g3NmljWUpvaWJLUncxWk5yZE1SMWFGdmlhNGliSnNZV1lncHduWFRJbDJWT2UzVVlQSXczUS82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图5 Relu函数及其导数的图像
+    <br>图5 Relu函数及其导数的图像
 </div>
 <br>
 
@@ -171,7 +173,7 @@ Leaky Relu 函数及其导数的图像如下图所示：
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVzcUxCY0xCTmhsU3I3U3FUYmdUWVRRREhNemFpYmN5b1VCemI0dUdCaWM0NnVtV2c1aWNpYVluS2NnLzY0MA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    <br> 图1 单一神经元模型
+    <br> 图6 Leaky Relu 函数及其导数
 </div>
 <br> 
 
@@ -194,7 +196,7 @@ $$
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVXUkp6dWljdWVQMU9EMkxhR1dXbTA4NG5GYjhyYXhpYXZYNzNZM2E5RFViaWJxeGV1RnRyODA3M1EvNjQw?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图7 ELU 函数及其导数的图像
+    <br> 图7 ELU 函数及其导数的图像
 </div>
 <br>
 
@@ -210,7 +212,7 @@ ELU也是为解决ReLU存在的问题而提出，显然，ELU有ReLU的基本所
 
 <div align=center>
     <img src="https://user-images.githubusercontent.com/29084184/119217078-554b5700-bb0a-11eb-8ed8-e25ac33ed4ba.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图8 LReLU、PReLU与RReLU对比
+    <br> 图8 LReLU、PReLU与RReLU对比
 </div>
 <br>
 
@@ -225,9 +227,13 @@ $$
 
 - **LReLU** 当ai比较小而且固定的时候，我们称之为LReLU。LReLU最初的目的是为了避免梯度消失。但在一些实验中，我们发现LReLU对准确率并没有太大的影响。很多时候，当我们想要应用LReLU时，我们必须要非常小心谨慎地重复训练，选取出合适的a，LReLU的表现出的结果才比ReLU好。因此有人提出了一种自适应地从数据中学习参数的PReLU。
 
-- **参数化修正线性单元（PReLU）** PReLU是LReLU的改进，可以自适应地从数据中学习参数。PReLU具有收敛速度快、错误率低的特点。PReLU可以用于反向传播的训练，可以与其他层同时优化。\
+- **参数化修正线性单元（PReLU）** PReLU是LReLU的改进，可以自适应地从数据中学习参数。PReLU具有收敛速度快、错误率低的特点。PReLU可以用于反向传播的训练，可以与其他层同时优化。
 
-![image](https://user-images.githubusercontent.com/29084184/119216886-f507e580-bb08-11eb-97d8-45d401ea461f.png)
+<div align=center>
+    <img src="https://user-images.githubusercontent.com/29084184/119216886-f507e580-bb08-11eb-97d8-45d401ea461f.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
+    <br> 图9 PReLU与ReLU对比
+</div>
+<br>
 
 - **随机纠正线性单元（RReLU）**
 在RReLU中，我们有
@@ -241,7 +247,11 @@ $$
 
 其中，$a_{ji}$是一个保持在给定范围内取样的随机变量，在测试中是固定的。RReLU在一定程度上能起到正则效果。
 
-![image](https://user-images.githubusercontent.com/29084184/119216925-38faea80-bb09-11eb-912d-25f504026abe.png)
+<div align=center>
+    <img src="https://user-images.githubusercontent.com/29084184/119216925-38faea80-bb09-11eb-912d-25f504026abe.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
+    <br> 图10 LReLU、PReLU与RReLU对比
+</div>
+<br>
 
 
 在论文Empirical Evaluation of Rectified Activations in Convolution Network中，作者对比了RReLU、LReLU、PReLU、ReLU 在CIFAR-10、CIFAR-100、NDSB网络中的效果。
@@ -250,7 +260,7 @@ $$
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVpYVZqaHlUZDBwbUliRmljelhSaWE3Vm1pYnNheVF6NXlueDJGRFRNZENzZ3JFU2lhaWNMTktkRm9JT3cvNjQw?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图9 ELU负值部分在何时饱和
+    图11 ELU负值部分在何时饱和
 </div>
 <br>
 
@@ -269,16 +279,20 @@ $$
 
 权重w是一个大小为(d,m,k)三维矩阵，b是一个大小为(m,k)的二维矩阵，这两个就是我们需要学习的参数。如果我们设定参数k=1，那么这个时候，网络就类似于以前我们所学普通的MLP网络。
 
-我们可以这么理解，本来传统的MLP算法在第i层到第i+1层，参数只有一组，然而现在我们不这么干了，我们在这一层同时训练n组的w、b参数，然后选择激活值Z最大的作为下一层神经元的激活值，这个  函数即充当了激活函数。
+我们可以这么理解，本来传统的MLP算法在第i层到第i+1层，参数只有一组，然而现在我们不这么干了，我们在这一层同时训练n组的w、b参数，然后选择激活值Z最大的作为下一层神经元的激活值，这个  函数即充当了激活函数。
+
+<br>
+
+----
 
 表1 常用激活函数汇总表
-
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVNb3daaWFDNGRTVXFkMUVjVjJ2TTFRcHg0bG9wQWlhWUZsTkZFQ3k3ODhsYkdEWGlhWnc1VjZTUHcvNjQw?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
 </div>
 <br>
+来源：维基百科
 
--- 来源：维基百科
+----
 
 接下来是我们在实际操作中最关心的问题，如何选择合适的激活函数？
 
@@ -292,6 +306,7 @@ $$
 
 3）最好不要用 sigmoid，你可以试试 tanh，不过可以预期它的效果会比不上 ReLU 和 Maxout.
 
+<br>
 
 ### 参考资料
 
