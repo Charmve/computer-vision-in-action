@@ -60,6 +60,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <div align=center>
 <img src="https://user-images.githubusercontent.com/29084184/119219729-8da66180-bb19-11eb-8b51-31c2a2ff0364.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="66%">
 </div>
+
 图2 迁移学习的"举一反三"
 
 
@@ -68,7 +69,8 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <div align=center>
 <img src="https://user-images.githubusercontent.com/29084184/119219733-91d27f00-bb19-11eb-930e-9e56804273c3.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="86%">
 </div>
-图4 跨领域情感分类的概率分配问题
+
+图3 跨领域情感分类的概率分配问题
 
 
 上图是一个商品评论情感分析的例子，图中包含两个不同的产品领域：books 图书领域和 furniture 家具领域；在图书领域，通常用“broad”、“quality fiction”等词汇来表达正面情感，而在家具领域中却由“sharp”、“light weight”等词汇来表达正面情感。可见此任务中，不同领域的不同情感词多数不发生重叠、存在领域独享词、且词汇在不同领域出现的频率显著不同，因此会导致领域间的概率分布失配问题。
@@ -78,7 +80,8 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <div align=center>
 <img src="https://user-images.githubusercontent.com/29084184/119219737-94cd6f80-bb19-11eb-93ea-c984824bc446.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="86%">
 </div>
-图5 迁移学习的形式定义及一种分类方式
+
+图4 迁移学习的形式定义及一种分类方式
 
 
 迁移学习里有两个非常重要的概念
@@ -92,7 +95,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <img src="https://user-images.githubusercontent.com/29084184/119219739-972fc980-bb19-11eb-934f-89b22b998beb.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="86%">
 </div>
 
-图6 迁移学习的关键点
+图5 迁移学习的关键点
 
 
 1. 研究可以用哪些知识在不同的领域或者任务中进行迁移学习，即不同领域之间有哪些共有知识可以迁移。
@@ -115,7 +118,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <img src="https://user-images.githubusercontent.com/29084184/119219743-9e56d780-bb19-11eb-8569-f54d6f491e9a.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="86%">
 </div>
 
-图7 基于实例的迁移
+图6 基于实例的迁移
 
 
 ## 15.3 基于特征的迁移
@@ -132,7 +135,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <img src="https://user-images.githubusercontent.com/29084184/119219747-a4e54f00-bb19-11eb-8737-01f3ccef08b4.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="86%">
 </div>
 
-图8 特征映射
+图7 特征映射
 
 ## 15.4 基于共享参数的迁移
 基于共享参数的迁移研究的是如何找到源数据和目标数据的空间模型之间的共同参数或者先验分布，从而可以通过进一步处理，达到知识迁移的目的，假设前提是，学习任务中的的每个相关模型会共享一些相同的参数或者先验分布。
@@ -142,7 +145,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <img src="https://user-images.githubusercontent.com/29084184/119219751-a878d600-bb19-11eb-9c04-cd32dcc2cec1.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="86%">
 </div>
 
-图9 预训练模型
+图8 预训练模型
 
 深度学习需要大量的高质量标注数据，Pre-training + fine-tuning 是现在深度学习中一个非常流行的trick，尤其是以图像领域为代表，很多时候会选择预训练的ImageNet对模型进行初始化。
 
@@ -162,7 +165,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <img src="https://user-images.githubusercontent.com/29084184/119219756-ab73c680-bb19-11eb-9e02-6759e8a4ca42.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="86%">
 </div>
 
-图10 Pre-training+Fine-tuning
+图9 Pre-training+Fine-tuning
 
 将深度学习应用在图像处理领域中时，会观察到第一层（first-layer）中提取的features基本上是类似于Gabor滤波器(Gabor filters)和色彩斑点(color blobs)之类的。
 
@@ -172,7 +175,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <img src="https://user-images.githubusercontent.com/29084184/119219757-ae6eb700-bb19-11eb-821c-5aace83b6521.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="86%">
 </div>
 
-图11 影响迁移学习能力的两个主要问题
+图10 影响迁移学习能力的两个主要问题
 
 - 特征迁移使得模型的泛化性能有所提升，即使目标数据集非常大的时候也是如此。
 - 随着参数被固定的层数n的增长，两个相似度小的任务之间的transferability gap的增长速度比两个相似度大的两个任务之间的transferability gap增长更快 两个数据集越不相似特征迁移的效果就越差
@@ -187,7 +190,7 @@ Ability of a system to recognize and apply knowledge and skills learned in previ
 <img src="https://user-images.githubusercontent.com/29084184/119219761-b2023e00-bb19-11eb-9778-28a68e74bccf.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。" width="86%">
 </div>
 
-图12 Domain-Adversarial Neural Network 框架
+图11 Domain-Adversarial Neural Network 框架
 
 图中所展示的即为DANN的结构图，框架由feature extractor、label predictor和domain classifier三个部分组成，并且在feature extractor和domain classifier 之间有一个gradient reversal layer；其中domain classifier只在训练过程中发挥作用
 
