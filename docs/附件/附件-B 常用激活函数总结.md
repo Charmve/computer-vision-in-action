@@ -16,7 +16,7 @@
   - [3.5 ELU 函数](#35-elu-exponential-linear-units-函数)
   - [3.6 MaxOut 函数](#36-maxout函数)
 - [04 如何选择合适的激活函数？](#04-如何选择合适的激活函数)
-- 参考资料
+- [参考资料](#参考文献)
 
 ### 引言
 
@@ -44,7 +44,7 @@
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmU5WTdDVHhQRG43U2pmYUZhT2ZBVEVOWlMwSjM5amlhcmJGUTM0Z3dRVWliQ0ZhRXM0aWFKaWFCZGliZy82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图1 单一神经元模型
+    <br>图1 单一神经元模型
 </div>
 <br>
 
@@ -57,7 +57,6 @@
 ### 03 有哪些激活函数
 
 早期研究神经网络主要采用sigmoid函数或者tanh函数，输出有界，很容易充当下一层的输入。近些年Relu函数及其改进型（如Leaky-ReLU、P-ReLU、R-ReLU等）在多层神经网络中应用比较多。
-
 
 下面我们来总结下这些激活函数：
 
@@ -95,7 +94,7 @@ sigmoid函数曾经被使用的很多，不过近年来，用它的人越来越�
 
 如果我们初始化神经网络的权值为[0,1] 之间的随机值，由反向传播算法的数学推导可知，梯度从后向前传播时，每传递一层梯度值都会减小为原来的0.25倍，如果神经网络隐层特别多，那么梯度在穿过多层后将变得非常小接近于0，即出现梯度消失现象；当网络权值初始化为 (1,+∞)区间内的值，则会出现梯度爆炸情况。
 
-详细数学分析见文章：http://neuralnetworksanddeeplearning.com/chap5.html 中文译文：深度神经网络为何很难训练。关于反向传播BP算法我也会在之后的文章中，给大家详细介绍。
+详细数学分析见文章：[Why are deep neural networks hard to train? 深度神经网络为何很难训练?](http://neuralnetworksanddeeplearning.com/chap5.html), 关于反向传播BP算法在 [](../../1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md) 给大家详细介绍。
 
 缺点2：Sigmoid 的 output 不是0均值（即zero-centered）。这是不可取的，因为这会导致后一层的神经元将得到上一层输出的非0均值的信号作为输入。 产生的一个结果就是：如x>0,   ,那么对w求局部梯度则都为正，这样在反向传播的过程中w要么都往正方向更新，要么都往负方向更新，导致有一种捆绑的效果，使得收敛缓慢。 当然了，如果按batch去训练，那么那个batch可能得到不同的信号，所以这个问题还是可以缓解一下的。因此，非0均值这个问题虽然会产生一些不好的影响，不过跟上面提到的梯度消失问题相比还是要好很多的。
 
@@ -109,8 +108,8 @@ $$ tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}} $$
 tanh函数及其导数的几何图像如下图：
 
 <div align=center>
-    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVWQTNJNDU3RHlzV05JVVRnSzhBSUc2OVVKNTcwQWhPZTlma3V5QkxJV0pFNDJrMkNrVHhGamcvNjQw?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图4 tanh函数及其导数的几何图像
+    <img src="https://user-images.githubusercontent.com/29084184/119217028-0d2c3480-bb0a-11eb-8cdb-ce26c8a0920d.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
+    <br>图4 tanh函数及其导数的几何图像
 </div>
 <br>
 
@@ -161,17 +160,18 @@ ReLU也有几个需要特别注意的问题：
 #### 3.4 Leaky ReLU函数（PReLU）
 函数表达式：
 
-<div align=center>
-    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmU5WTdDVHhQRG43U2pmYUZhT2ZBVEVOWlMwSjM5amlhcmJGUTM0Z3dRVWliQ0ZhRXM0aWFKaWFCZGliZy82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图1 单一神经元模型
-</div>
-<br> 
+$$
+y_i=\begin{cases}
+x_i& if(x_i>=0)\\
+\frac{x_i}{a_i}& if(x_i<0)
+\end{cases}
+$$
 
 Leaky Relu 函数及其导数的图像如下图所示：
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVzcUxCY0xCTmhsU3I3U3FUYmdUWVRRREhNemFpYmN5b1VCemI0dUdCaWM0NnVtV2c1aWNpYVluS2NnLzY0MA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图1 单一神经元模型
+    <br> 图1 单一神经元模型
 </div>
 <br> 
 
@@ -183,13 +183,12 @@ Leaky Relu 函数及其导数的图像如下图所示：
 #### 3.5 ELU (Exponential Linear Units) 函数
 函数表达式：
 
-  
-<div align=center>
-    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmU5WTdDVHhQRG43U2pmYUZhT2ZBVEVOWlMwSjM5amlhcmJGUTM0Z3dRVWliQ0ZhRXM0aWFKaWFCZGliZy82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图1 单一神经元模型
-</div>
-<br>
- 
+$$
+f(x)=\begin{cases} 
+a(e^x-1)& if(x<0)\ 
+x& if(0\le x) 
+\end{cases}
+$$
 
 函数及其导数的图像如下图所示：
 
@@ -210,10 +209,11 @@ ELU也是为解决ReLU存在的问题而提出，显然，ELU有ReLU的基本所
 **LReLU、PReLU与RReLU对比**
 
 <div align=center>
-    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVES1R4eGliS3hTSVREVENYWWRSZUgzOGRUQ3ZaTXk1c1plRTNucFdiR3NBQXpwZ2hJdFlpY0Z5dy82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
+    <img src="https://user-images.githubusercontent.com/29084184/119217078-554b5700-bb0a-11eb-8ed8-e25ac33ed4ba.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
     图8 LReLU、PReLU与RReLU对比
 </div>
 <br>
+
 
 通常在LReLU和PReLU中，我们定义一个激活函数为：
 
@@ -225,11 +225,11 @@ $$
 
 - **LReLU** 当ai比较小而且固定的时候，我们称之为LReLU。LReLU最初的目的是为了避免梯度消失。但在一些实验中，我们发现LReLU对准确率并没有太大的影响。很多时候，当我们想要应用LReLU时，我们必须要非常小心谨慎地重复训练，选取出合适的a，LReLU的表现出的结果才比ReLU好。因此有人提出了一种自适应地从数据中学习参数的PReLU。
 
-- **PReLU** PReLU是LReLU的改进，可以自适应地从数据中学习参数。PReLU具有收敛速度快、错误率低的特点。PReLU可以用于反向传播的训练，可以与其他层同时优化。\
+- **参数化修正线性单元（PReLU）** PReLU是LReLU的改进，可以自适应地从数据中学习参数。PReLU具有收敛速度快、错误率低的特点。PReLU可以用于反向传播的训练，可以与其他层同时优化。\
 
 ![image](https://user-images.githubusercontent.com/29084184/119216886-f507e580-bb08-11eb-97d8-45d401ea461f.png)
 
-- **RReLU**
+- **随机纠正线性单元（RReLU）**
 在RReLU中，我们有
 
 $$
@@ -242,8 +242,6 @@ $$
 其中，$a_{ji}$是一个保持在给定范围内取样的随机变量，在测试中是固定的。RReLU在一定程度上能起到正则效果。
 
 ![image](https://user-images.githubusercontent.com/29084184/119216925-38faea80-bb09-11eb-912d-25f504026abe.png)
-![image](https://user-images.githubusercontent.com/29084184/119216926-3dbf9e80-bb09-11eb-8c77-bec0a6daa388.png)
-![image](https://user-images.githubusercontent.com/29084184/119216927-4021f880-bb09-11eb-9a8c-a0e3de89fca1.png)
 
 
 在论文Empirical Evaluation of Rectified Activations in Convolution Network中，作者对比了RReLU、LReLU、PReLU、ReLU 在CIFAR-10、CIFAR-100、NDSB网络中的效果。
