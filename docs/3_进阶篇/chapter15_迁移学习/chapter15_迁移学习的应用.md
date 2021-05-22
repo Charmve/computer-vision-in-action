@@ -18,14 +18,19 @@
     - [15.7 实战项目 2 - 蚂蚁和蜜蜂的分类问题](chapter15_迁移学习的应用.md)
       - [15.7.1 迁移学习在计算机视觉领域的应用](#1571-迁移学习在计算机视觉领域的应用)
         - [15.7.1.1 为何用迁移学习](#15711-为何用迁移学习)
-	      - [15.7.1.2 迁移学习的优点](#15712-迁移学习的优点)
-	      - [15.7.1.3 迁移学习的方法](#15713-迁移学习的方法)
-	      - [15.7.1.4 迁移方法的选择](#15714-迁移方法的选择)
+        - [15.7.1.2 迁移学习的优点](#15712-迁移学习的优点)
+        - [15.7.1.3 迁移学习的方法](#15713-迁移学习的方法)
+        - [15.7.1.4 迁移方法的选择](#15714-迁移方法的选择)
       - [15.7.2 实战项目: 蚂蚁和蜜蜂的分类问题](#1572-实战项目-蚂蚁和蜜蜂的分类问题)
         - [完整代码](#完整代码)
     - [小结](#小结)
     - [参考文献](#参考文献)
 
+<br>
+
+<p align="center"><a target=\"_blank\" href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/chapter15_迁移学习:蚂蚁和蜜蜂的分类问题/"><img src="https://colab.research.google.com/assets/colab-badge.svg" align="center"></a>
+</p>
+<br>
 
 ## 15.7.1 迁移学习在计算机视觉领域的应用
 
@@ -441,3 +446,16 @@ model.load_state_dict(torch.load('model.pt', map_location=device))
 ### 完整代码
 
 📁 <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/chapter15_迁移学习:蚂蚁和蜜蜂的分类问题">``code/chapter15_迁移学习:蚂蚁和蜜蜂的分类问题/``</a>
+
+<table class="tfo-notebook-buttons\" align="left\">
+<td>
+  <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/15_TL-ants-bees-classification.ipynb\">
+  <img src=\"https://www.tensorflow.org/images/colab_logo_32px.png\" />
+  Run in Google Colab</a>
+</td>
+<td>
+  <a target=\"_blank\" href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/chapter15_迁移学习:蚂蚁和蜜蜂的分类问题/">
+  <img src=\"https://www.tensorflow.org/images/GitHub-Mark-32px.png\" />
+  View source on GitHub</a>
+</td>
+</table>
