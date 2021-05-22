@@ -1,6 +1,7 @@
 # 第 2 章 卷积神经网络
 
 作者: 张伟 (Charmve)
+
 日期: 2021/04/29
 
 ## 目录
@@ -13,26 +14,26 @@
     - 2.5 进阶模型表示与图像特征
     - 2.6 优化，随机梯度下降
     - <b>2.7 实战项目 2 - 动手搭建一个卷积神经网络</b>
-      - 2.7.1 卷积神经网络的前向传播
-        1. 输入层---->卷积层
-        2. 卷积层---->池化层
-        3. 池化层---->全连接层
-        4. 全连接层---->输出层
-      - 2.7.2 卷积神经网络的反向传播
-        1. 卷积层的反向传播
-        2. 池化层的反向传播
-      - 2.7.3 手写一个卷积神经网络
-        1. 定义一个卷积层
-        2. 构造一个激活函数
-        3. 定义一个类，保存卷积层的参数和梯度
-        4. 卷积层的前向传播
-        5. 卷积层的反向传播
-        6. MaxPooling层的训练
-      - 2.7.4 PaddlePaddle卷积神经网络源码解析
+      - [2.7.1 卷积神经网络的前向传播](#271-卷积神经网络的前向传播)
+        [1. 输入层---->卷积层](#1-输入层----卷积层)
+        [2. 卷积层---->池化层](#2-卷积层----池化层)
+        [3. 池化层---->全连接层](#3-池化层----全连接层)
+        [4. 全连接层---->输出层](#4-全连接层----输出层)
+      - [2.7.2 卷积神经网络的反向传播](272-卷积神经网络的反向传播)
+        [1. 卷积层的反向传播](#1-卷积层的反向传播)
+        [2. 池化层的反向传播](#2-池化层的反向传播)
+      - [2.7.3 手写一个卷积神经网络](273-手写一个卷积神经网络)
+        [1. 定义一个卷积层](#1-定义一个卷积层)
+        [2. 构造一个激活函数](#2-构造一个激活函数)
+        [3. 定义一个类，保存卷积层的参数和梯度](#3-定义一个类保存卷积层的参数和梯度)
+        [4. 卷积层的前向传播](#4-卷积层的前向传播)
+        [5. 卷积层的反向传播](#5-卷积层的反向传播)
+        [6. MaxPooling层的训练](#6-MaxPooling层的训练)
+      - [2.7.4 PaddlePaddle卷积神经网络源码解析](274-PaddlePaddle卷积神经网络源码解析)
     - 小结
     - 参考文献
 
-----
+<h2></h2>
 
 # 实战项目 2 - 动手搭建一个卷积神经网络
 
@@ -49,7 +50,7 @@
 
 ### 1. 输入层---->卷积层
 
-以上一节的例子为例，输入是一个$4*4$ 的image，经过两个2*2的卷积核进行卷积运算后，变成两个$3*3$的feature_map
+以上一节的例子为例，输入是一个 $4×4$ 的image，经过两个2×2的卷积核进行卷积运算后，变成两个$3×3$的 feature_map
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512133946117.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
 
@@ -57,25 +58,21 @@
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512133955874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
 
- 
-
 计算第一个卷积层神经元$o_{11}$的输入:　
 
 
-$neto11 =conv(input,filter)\\
+$$neto11 =conv(input,filter)\\
 \qquad \quad=i11×h11+i12×h12+i21×h21+i22×h22\\
 \qquad \quad =1×1+0×(−1)+1×1+1×(−1)\\
-\qquad \quad =1\qquad \qquad\qquad \qquad(1)$
+\qquad \quad =1\qquad \qquad\qquad \qquad(1)$$
 
 神经元o11的输出:(此处使用Relu激活函数)
 
-$outo11=activators(neto11)\\
+$$outo11=activators(neto11)\\
 \qquad \quad=max(0,neto11)\\
-\qquad \quad=1\qquad \qquad\qquad \qquad(2)$
+\qquad \quad=1\qquad \qquad\qquad \qquad(2)$$
 　　
 其他神经元计算方式相同
-
- 
 
 ### 2. 卷积层---->池化层
 
@@ -1124,6 +1121,6 @@ def img_conv_layer(input,
 
 ## 参考文章
 
-1.https://www.cnblogs.com/pinard/p/6494810.html
+1. 卷积神经网络(CNN)反向传播算法 https://www.cnblogs.com/pinard/p/6494810.html
 
-2.https://www.zybuluo.com/hanbingtao/note/476663  
+2. 零基础入门深度学习(3) - 神经网络和反向传播算法 https://www.zybuluo.com/hanbingtao/note/476663  
