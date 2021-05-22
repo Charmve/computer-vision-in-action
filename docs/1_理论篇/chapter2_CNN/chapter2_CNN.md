@@ -2,7 +2,7 @@
 
 作者: 张伟 (Charmve)
 
-日期: 2021/04/29
+日期: 2021/05/22
 
 ## 目录
 
@@ -325,13 +325,11 @@ CNN一个非常重要的特点就是头重脚轻（越往输入权值越小，�
 <br>
 
 <div align="center">
+  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/maiwei.png" width="220px" alt="logo:maiwei" title="有疑问，跑起来就会变成一朵花 ❀"></a>
 
-<a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/maiwei.png" width="220px" alt="logo:maiwei" title="有疑问，跑起来就会变成一朵花 ❀"></a>
-
-<h3>《计算机视觉实战演练：算法与应用》 <br>Computer Vision in Action</h3>
-<br><br>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200310232242296.png#pic_center)
-
+  <h3 align="left">《计算机视觉实战演练：算法与应用》 <br>Computer Vision in Action</h3>
+  <br><br>
+  <img src="https://img-blog.csdnimg.cn/20200310232242296.png">
 </div>
 
 
