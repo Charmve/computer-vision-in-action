@@ -1,20 +1,21 @@
 #  附件-B 常用激活函数总结
 
 作者: 张伟 (Charmve)
+
 日期: 2021/04/29
 
 ## 目录
-- 引言
-- 01 什么是激活函数？
-- 02 为什么需要激活函数？
-- 03 有哪些激活函数
-  - 3.1 Sigmoid函数
-  - 3.2 tanh 函数
-  - 3.3 Relu 函数
-  - 3.4 Leaky ReLU 函数
-  - 3.5 ELU 函数
-  - 3.6 MaxOut 函数 
-- 04 如何选择合适的激活函数？ 
+- [引言](#引言)
+- [01 什么是激活函数？](#01-什么是激活函数)
+- [02 为什么需要激活函数？](#02-为什么需要激活函数)
+- [03 有哪些激活函数](#03-有哪些激活函数)
+  - [3.1 Sigmoid函数](#31-sigmoid函数)
+  - [3.2 tanh 函数](#32-tanh-函数)
+  - [3.3 Relu 函数](#33-relu-函数)
+  - [3.4 Leaky ReLU 函数](#34-leaky-relu函数prelu)
+  - [3.5 ELU 函数](#35-elu-exponential-linear-units-函数)
+  - [3.6 MaxOut 函数](#36-maxout函数)
+- [04 如何选择合适的激活函数？](#04-如何选择合适的激活函数)
 - 参考资料
 
 ### 引言
@@ -60,16 +61,17 @@
 
 下面我们来总结下这些激活函数：
 
-### 3.1 Sigmoid函数
+### 3.1 Sigmoid 函数
 Sigmoid 是常用的非线性的激活函数，它的数学形式如下：
 
-  
+$$ f(x)=\frac{1}{1+e^{-x}} $$ 
 
 Sigmoid的几何图像如下：
 
 <div align=center>
-    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVrM3piV0ZZNHBTNlVDUk5DRlExRFVaR3dLTmRHaWFKVWh4UmljaWJKNnpwcHBvbnlOUWljeFhGYm5nLzY0MA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图2 Sigmoid的几何图像
+    <img src="https://user-images.githubusercontent.com/29084184/119216800-63987380-bb08-11eb-8e1f-5c5411dbc648.png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
+    <br> 图2 Sigmoid 函数的几何图像
+
 </div>
 <br>
 
@@ -102,11 +104,7 @@ sigmoid函数曾经被使用的很多，不过近年来，用它的人越来越�
 #### 3.2 tanh 函数
 tanh函数解析式：
 
-<div align=center>
-    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmU5WTdDVHhQRG43U2pmYUZhT2ZBVEVOWlMwSjM5amlhcmJGUTM0Z3dRVWliQ0ZhRXM0aWFKaWFCZGliZy82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图4 单一神经元模型
-</div>
-<br>
+$$ tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}} $$
 
 tanh函数及其导数的几何图像如下图：
 
@@ -121,10 +119,13 @@ tanh读作Hyperbolic Tangent，它解决了Sigmoid函数的不是zero-centered�
 #### 3.3 Relu 函数
 Relu函数的解析式：
 
-<div align=center>
-    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVMaWE2c1g3NmljWUpvaWJLUncxWk5yZE1SMWFGdmlhNGliSnNZV1lncHduWFRJbDJWT2UzVVlQSXczUS82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-</div>
-<br>  
+$$
+y=
+\begin{cases}
+0& (x\le0)\\
+x& (x>0)
+\end{cases}
+$$
 
 Relu函数及其导数的图像如下图所示：
 
@@ -200,13 +201,13 @@ Leaky Relu 函数及其导数的图像如下图所示：
 
 ELU也是为解决ReLU存在的问题而提出，显然，ELU有ReLU的基本所有优点，以及：
 
-不会有Dead ReLU问题
+- 不会有Dead ReLU问题
 
-输出的均值接近0，zero-centered
+- 输出的均值接近0，zero-centered
 
-它的一个小问题在于计算量稍大。类似于Leaky ReLU，理论上虽然好于ReLU，但在实际使用中目前并没有好的证据ELU总是优于ReLU。
+- 它的一个小问题在于计算量稍大。类似于Leaky ReLU，理论上虽然好于ReLU，但在实际使用中目前并没有好的证据ELU总是优于ReLU。
 
-LReLU、PReLU与RReLU对比
+**LReLU、PReLU与RReLU对比**
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVES1R4eGliS3hTSVREVENYWWRSZUgzOGRUQ3ZaTXk1c1plRTNucFdiR3NBQXpwZ2hJdFlpY0Z5dy82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
@@ -216,15 +217,36 @@ LReLU、PReLU与RReLU对比
 
 通常在LReLU和PReLU中，我们定义一个激活函数为：
 
-<div align=center>
-    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmU5WTdDVHhQRG43U2pmYUZhT2ZBVEVOWlMwSjM5amlhcmJGUTM0Z3dRVWliQ0ZhRXM0aWFKaWFCZGliZy82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图1 单一神经元模型
-</div>
-<br>  
+$$ f(y_i)=\begin{cases}
+y_i& if(y_i>0)\\
+a_iy_i& if(y_i\le0)
+\end{cases}
+$$ 
 
-**LReLU** 当ai比较小而且固定的时候，我们称之为LReLU。LReLU最初的目的是为了避免梯度消失。但在一些实验中，我们发现LReLU对准确率并没有太大的影响。很多时候，当我们想要应用LReLU时，我们必须要非常小心谨慎地重复训练，选取出合适的a，LReLU的表现出的结果才比ReLU好。因此有人提出了一种自适应地从数据中学习参数的PReLU。
+- **LReLU** 当ai比较小而且固定的时候，我们称之为LReLU。LReLU最初的目的是为了避免梯度消失。但在一些实验中，我们发现LReLU对准确率并没有太大的影响。很多时候，当我们想要应用LReLU时，我们必须要非常小心谨慎地重复训练，选取出合适的a，LReLU的表现出的结果才比ReLU好。因此有人提出了一种自适应地从数据中学习参数的PReLU。
 
-**PReLU** PReLU是LReLU的改进，可以自适应地从数据中学习参数。PReLU具有收敛速度快、错误率低的特点。PReLU可以用于反向传播的训练，可以与其他层同时优化。
+- **PReLU** PReLU是LReLU的改进，可以自适应地从数据中学习参数。PReLU具有收敛速度快、错误率低的特点。PReLU可以用于反向传播的训练，可以与其他层同时优化。\
+
+![image](https://user-images.githubusercontent.com/29084184/119216886-f507e580-bb08-11eb-97d8-45d401ea461f.png)
+
+- **RReLU**
+在RReLU中，我们有
+
+$$
+y_{ji}=\begin{cases} 
+x_{ji}& if(x_{ji}>0)\ 
+a_{ji}x_{ji}& if(x_{ji}\le0) 
+\end{cases}
+$$
+
+其中，$a_{ji}$是一个保持在给定范围内取样的随机变量，在测试中是固定的。RReLU在一定程度上能起到正则效果。
+
+![image](https://user-images.githubusercontent.com/29084184/119216925-38faea80-bb09-11eb-912d-25f504026abe.png)
+![image](https://user-images.githubusercontent.com/29084184/119216926-3dbf9e80-bb09-11eb-8c77-bec0a6daa388.png)
+![image](https://user-images.githubusercontent.com/29084184/119216927-4021f880-bb09-11eb-9a8c-a0e3de89fca1.png)
+
+
+在论文Empirical Evaluation of Rectified Activations in Convolution Network中，作者对比了RReLU、LReLU、PReLU、ReLU 在CIFAR-10、CIFAR-100、NDSB网络中的效果。
 
 如图所示，其中α是一个可调整的参数，它控制着ELU负值部分在何时饱和。
 
@@ -235,7 +257,7 @@ LReLU、PReLU与RReLU对比
 <br>
 
 #### 3.6 MaxOut函数
-这个函数可以参考论文《maxout networks》https://arxiv.org/pdf/1302.4389v4.pdf，Maxout是深度学习网络中的一层网络，就像池化层、卷积层一样等，我们可以把maxout 看成是网络的激活函数层，我们假设网络某一层的输入特征向量为：X=（x1,x2,……xd），也就是我们输入是d个神经元。Maxout隐藏层每个神经元的计算公式如下：
+这个函数可以参考论文[《maxout networks》](https://arxiv.org/pdf/1302.4389v4.pdf) <sup>4</sup>，Maxout是深度学习网络中的一层网络，就像池化层、卷积层一样等，我们可以把maxout 看成是网络的激活函数层，我们假设网络某一层的输入特征向量为：X=（x1,x2,……xd），也就是我们输入是d个神经元。Maxout隐藏层每个神经元的计算公式如下：
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVUME9MQUJqeGN4WEs2bDhKRU9GR3d2Y0RvenlvSWRjSUg3VlBRMk53dElpYjFGNkt4S25mN05nLzY0MA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
@@ -243,18 +265,15 @@ LReLU、PReLU与RReLU对比
 
 上面的公式就是maxout隐藏层神经元i的计算公式。其中，k就是maxout层所需要的参数了，由我们人为设定大小。就像dropout一样，也有自己的参数p(每个神经元dropout概率)，maxout的参数是k。公式中Z的计算公式为：
 
-<div align=center>
-    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmU5WTdDVHhQRG43U2pmYUZhT2ZBVEVOWlMwSjM5amlhcmJGUTM0Z3dRVWliQ0ZhRXM0aWFKaWFCZGliZy82NDA?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
-    图1 单一神经元模型
-</div>
-<br>  
+$$
+z_{ij} = x^{T}W_{...ij}+b_{ij}
+$$
 
 权重w是一个大小为(d,m,k)三维矩阵，b是一个大小为(m,k)的二维矩阵，这两个就是我们需要学习的参数。如果我们设定参数k=1，那么这个时候，网络就类似于以前我们所学普通的MLP网络。
 
 我们可以这么理解，本来传统的MLP算法在第i层到第i+1层，参数只有一组，然而现在我们不这么干了，我们在这一层同时训练n组的w、b参数，然后选择激活值Z最大的作为下一层神经元的激活值，这个  函数即充当了激活函数。
 
 表1 常用激活函数汇总表
-
 
 <div align=center>
     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9aTmRoV05pYjNJUkFERkU5QlBleHF0elZGWUp0WWpZQmVNb3daaWFDNGRTVXFkMUVjVjJ2TTFRcHg0bG9wQWlhWUZsTkZFQ3k3ODhsYkdEWGlhWnc1VjZTUHcvNjQw?x-oss-process=image/format,png" alt="迈微AI研习社是一个专注AI领域的开源组织，作者系CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。">
@@ -275,7 +294,6 @@ LReLU、PReLU与RReLU对比
 
 3）最好不要用 sigmoid，你可以试试 tanh，不过可以预期它的效果会比不上 ReLU 和 Maxout.
 
-另外，关于这方面的经验，之前发布Gray大佬的Kaggle经验总结本科生晋升GM记录：Kaggle比赛进阶技巧分享中也有很值得推荐的方法，非常实用有效。
 
 ### 参考资料
 
@@ -285,4 +303,4 @@ LReLU、PReLU与RReLU对比
 
 [3]  maxout简单理解-tornadomeet
 
-[4] 《maxout networks》
+[4] Goodfellow, Ian, et al. "Maxout networks." International conference on machine learning. PMLR, 2013.
