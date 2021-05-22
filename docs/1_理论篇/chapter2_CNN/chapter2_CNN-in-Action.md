@@ -52,11 +52,11 @@
 
 以上一节的例子为例，输入是一个 $4×4$ 的image，经过两个2×2的卷积核进行卷积运算后，变成两个$3×3$的 feature_map
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512133946117.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512133946117.png#pic_center)
 
 以卷积核filter1为例(stride = 1 )：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512133955874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512133955874.png#pic_center)
 
 计算第一个卷积层神经元$o_{11}$的输入:　
 
@@ -76,7 +76,7 @@ $$outo11=activators(neto11)\\
 
 ### 2. 卷积层---->池化层
 
-　　![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512134358870.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+　　![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512134358870.png#pic_center)
 
 计算池化层$m_{11}$ 的输入(取窗口为$2 * 2$),池化层没有激活函数　　
 
