@@ -323,14 +323,41 @@ CNN一个非常重要的特点就是头重脚轻（越往输入权值越小，�
 [2] Nair, Vinod, and Geoffrey E. Hinton. "Rectified linear units improve restricted boltzmann machines." Icml. 2010.
 
 <br>
+<br>
+
+<table align="center">
+<tr>
+<td>
+<code>全面</code>&nbsp;<code>前沿</code>&nbsp;<code>免费</code>
+<h1> 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
+<br><em>Computer Vision in Action</em></h1>
+
+作者：张伟（Charmve）
+
+<p align="center">
+<a href="https://github.com/Charmve"><img src="https://img.shields.io/badge/👓-Charmve-blue&logo=GitHub" alt="GitHub"></a>
+<a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://img.shields.io/badge/CV-Action-yellow" alt="CV-Action"></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a>
+<a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/stars/Charmve/computer-vision-in-action?style=social" alt="Stars"></a>
+<a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/forks/Charmve/computer-vision-in-action?style=social" alt="Forks"></a>
+</p>
 
 <div align="center">
-  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/maiwei.png" width="220px" alt="logo:maiwei" title="有疑问，跑起来就会变成一朵花 ❀"></a>
-
-  <h3 align="left">《计算机视觉实战演练：算法与应用》 <br>Computer Vision in Action</h3>
-  <br><br>
-  <img src="https://img-blog.csdnimg.cn/20200310232242296.png">
+	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/maiwei.png" width="220px" alt="logo:maiwei" title="有疑问，跑起来就会变成一朵花 ❀">
 </div>
+
+<br>
+
+> <h4>在线阅读（内容实时更新）</h4>
+> - 地址：https://charmve.github.io/computer-vision-in-action
+
+> <h4>最新版PDF下载</h4>
+> - 地址：https://github.com/charmve/computer-vision-in-action/releases
+
+</td>
+</tr>
+</table>
+<img src="https://img-blog.csdnimg.cn/20200310232242296.png">
 
 
 
