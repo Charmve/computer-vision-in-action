@@ -44,7 +44,7 @@
 
 首先我们来看一个最简单的卷积神经网络：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512133929473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512133929473.png)
 
  
 
@@ -219,10 +219,12 @@ $\qquad  \ +\frac{∂E}{∂net_{o_{21}}}\frac{∂net_{o_{21}}}{∂w_b}+\frac{∂
 ### 2. 池化层的反向传播
 
 池化层的反向传播就比较好求了，看着下面的图，左边是上一层的输出，也就是卷积层的输出feature_map，右边是池化层的输入，还是先根据前向传播，把式子都写出来，方便计算：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020051214564040.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2020051214564040.png)
 
 假设上一层这个滑动窗口的最大值是$out_{o_{11}}$
 ![∵netm11=max(outo11,outo12,outo21,outo22)∴∂netm11∂outo11=1∂netm11∂outo12=∂netm11∂outo21=∂netm11∂outo22=0∴δl−111=∂E∂outo11=∂E∂netm11⋅∂netm11∂outo11=δl11δl−112=δl−121=δl−122=0(16)](https://img-blog.csdnimg.cn/20200512145630428.png#pic_center)
+
 这样就求出了池化层的误差敏感项矩阵。同理可以求出每个神经元的梯度并更新权重。
 
  
@@ -618,7 +620,7 @@ class MaxPoolingLayer(object):
                         sensitivity_array[d,i,j]
 ```
 
-<font color = red >完整代码请见：[cnn.py](../../code/chapter2_CNN)</font>
+<font color = red >完整代码请见：[cnn.py](../../../code/chapter2_CNN)</font>
 
  
 
