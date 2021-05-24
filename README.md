@@ -42,10 +42,10 @@
 <br>
 
 > <h4>在线阅读（内容实时更新）</h4>
-> - 地址：https://charmve.github.io/computer-vision-in-action
+> - 地址：~~https://charmve.github.io/computer-vision-in-action~~ (正在开发中。。。)
 
 > <h4>最新版PDF下载</h4>
-> - 地址：https://github.com/charmve/computer-vision-in-action/releases
+> - 地址：~~https://github.com/charmve/computer-vision-in-action/releases~~
 
 ### 目录
 - <b><h4>前言</h4></b>
@@ -70,14 +70,19 @@
     - 1.4 神经学观点
     - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
     - 参考文献
-  - 第 2 章 [卷积神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
+  - 第 2 章 [卷积神经网络](./docs/1_理论篇/chapter2_CNN/chapter2_CNN.md)
     - 2.1 概述
     - 2.2 卷积和池化
     - 2.3 损失函数和优化
     - 2.4 线性分类Ⅱ
     - 2.5 进阶模型表示与图像特征
     - 2.6 优化，随机梯度下降
-    - 2.7 [实战项目 2 - 动手搭建一个卷积神经网络](https://blog.csdn.net/Charmve/article/details/106076844)
+    - 2.7 [实战项目 2 - 动手搭建一个卷积神经网络](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
+      - [2.7.1 卷积神经网络的前向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#271-卷积神经网络的前向传播)
+      - [2.7.2 卷积神经网络的反向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md272-卷积神经网络的反向传播)
+      - [2.7.3 手写一个卷积神经网络](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md273-手写一个卷积神经网络)
+      - [2.7.4 PaddlePaddle卷积神经网络源码解析](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md274-PaddlePaddle卷积神经网络源码解析)
+    - 小结
     - 参考文献
   - 第 3 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
     - 3.1 数据驱动方法
@@ -189,18 +194,18 @@
     - 14.2 行为理解
     - 14.3 主流方法
     - 参考文献
-  - 第 15 章 [迁移学习](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
-    - [15.1 概述](#151-迁移学习概述)
-      - [15.1.1 背景](#1511-背景)
-      - [15.1.2 定义及分类](#1512-定义及分类)
-      - [15.1.3 关键点](#1513-关键点)
-    - [15.2 基于实例的迁移](#152-基于实例的迁移)
-    - [15.3 基于特征的迁移](#153-基于特征的迁移)
-    - [15.4 基于共享参数的迁移](#154-基于共享参数的迁移)
-    - [15.5 深度学习和迁移学习结合](#155-深度学习和迁移学习结合)
-    - [15.7 实战项目 2 - 蚂蚁和蜜蜂的分类问题](chapter15_迁移学习的应用.md)
-      - [15.7.1 迁移学习在计算机视觉领域的应用](chapter15_迁移学习的应用.md#1571-迁移学习在计算机视觉领域的应用)
-      - [15.7.2 实战项目: 蚂蚁和蜜蜂的分类问题](chapter15_迁移学习的应用.md#1572-实战项目-蚂蚁和蜜蜂的分类问题)
+  - 第 15 章 [迁移学习](./docs/3_进阶篇/chapter15_迁移学习)
+    - [15.1 概述](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#151-迁移学习概述)
+      - [15.1.1 背景](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#1511-背景)
+      - [15.1.2 定义及分类](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#1512-定义及分类)
+      - [15.1.3 关键点](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#1513-关键点)
+    - [15.2 基于实例的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#152-基于实例的迁移)
+    - [15.3 基于特征的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#153-基于特征的迁移)
+    - [15.4 基于共享参数的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#154-基于共享参数的迁移)
+    - [15.5 深度学习和迁移学习结合](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#155-深度学习和迁移学习结合)
+    - [15.7 实战项目 2 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
+      - [15.7.1 迁移学习在计算机视觉领域的应用](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1571-迁移学习在计算机视觉领域的应用)
+      - [15.7.2 实战项目: 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1572-实战项目-蚂蚁和蜜蜂的分类问题)
     - [小结](#小结)
     - [参考文献](#参考文献)
   - 第 16 章 [注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
