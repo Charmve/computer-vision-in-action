@@ -258,25 +258,39 @@
 
 ## 如何食用
 
-### 🔍 Browse Folders
-- 📄 <code>README.md</code>
-- 📄 <code>copying.txt</code> - WTFPL
-- 📁 <code>stego/</code>
-  - 📄 <code>image_layer_analysis.html</code> - Analyse an image's bit layers
-  - 📄 <code>iterative_encoding.html</code> - Encode an exploit onto a JPG or PNG image
-  - 📄 <code>imagedecoder.html</code> - Decode a steganographically encoded image
-  - 📄 <code>imagedecode.js</code>
-  - 📄 <code>histogram.js</code>
-  - 📄 <code>md5.js</code>
-  - 📄 <code>base64.js</code>
-- 📁 <code>exploits/</code>
+1. Install
+```
+pip3 install -r requirements.txt
+```
+2. Set up
+```
+python setup.py
+```
+3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> 在线测试。
 
-1. Set up
-```
-pip install requirement.txt
-```
-2. 
-3. 
+### 🔍 Browse Folders
+- 📁 <code>code/</code> - Analyse an image's bit layers
+- 📁 <code>datasets/</code> - datasets you need in this book
+  - 📁 <code>images/</code> - classic image-processing images
+- 📁 <code>docs/</code> - 全书按照一下几个篇目进行编写
+  - 📁 <code>0_绪论/</code> - 全书绪论
+  - 📁 <code>1_理论篇/</code> - 基本理论和算法基础
+  - 📁 <code>2_实战篇/</code> - 项目实战教程
+  - 📁 <code>3_进阶篇/</code> - 最新CV模型和算法
+  - 📁 <code>附件/</code> - 所需数学和统计学知识
+- 📁 <code>notebooks/</code> - 全书重要模型的Colab notebook，可在线测试
+  - 📄 <code>01_Notebooks.ipynb</code> - Notebooks 基本介绍和使用
+  - 📄 <code>02_Python.ipynb</code> - Python 编程简明教程
+  - 📄 <code>03_NumPy.ipynb</code> - NumPy 的使用
+  - 📄 <code>04_Pandas.ipynb</code> - Pandas 的使用
+  - 📄 <code>05_PyTorch.ipynb</code> - PyTorch 的使用
+  - 📄 <code>06_Linear_Regression.ipynb</code>  - 线性回归
+  - ...
+  - 📄 <code>16_CVAE.ipynb</code> - 卷积变分自编码器
+  - 📄 <code>17_TL-ants-bees-classification.ipynb</code>  - 迁移学习的应用：蚂蚁和蜜蜂的分类问题
+- 📁 <code>res/</code> - ui 图片
+- 📄 <code>README.md</code> - 全书介绍及目录
+
 
 ## 致谢
 <a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a> 
