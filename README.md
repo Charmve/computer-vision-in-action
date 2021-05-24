@@ -266,12 +266,12 @@ pip3 install -r requirements.txt
 ```
 python setup.py
 ```
-3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> 在线测试。
+3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup>在线测试。
 
 ### 🔍 Browse Folders
-- 📁 <code>code/</code> - Analyse an image's bit layers
-- 📁 <code>datasets/</code> - datasets you need in this book
-  - 📁 <code>images/</code> - classic image-processing images
+- 📁 <code>code/</code> - 书中完整代码
+- 📁 <code>datasets/</code> - 本书所用数据集
+  - 📁 <code>images/</code> - 经典图像处理图片
 - 📁 <code>docs/</code> - 全书按照一下几个篇目进行编写
   - 📁 <code>0_绪论/</code> - 全书绪论
   - 📁 <code>1_理论篇/</code> - 基本理论和算法基础
