@@ -27,6 +27,9 @@
     - [参考文献](#参考文献)
 
 <br>
+
+# 15.7 实战项目 2 - 蚂蚁和蜜蜂的分类问题
+
 <p align="center"><a target="_blank" href="colab.research.google.com/github/Charmve/computer-vision-in-action/blob/master/notebooks/17_TL-ants-bees-classification.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" align="center"></a>
 </p>
 
