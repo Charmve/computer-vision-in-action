@@ -61,6 +61,7 @@
         - 3D 建模
     - 4. [发展历史回顾](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/0_绪论/4_发展历史回顾.md)
     - 5. 小练习
+    - 小结
     - 参考文献
 - <b><h4>理论篇</h4></b>
   - 第 1 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
@@ -69,6 +70,7 @@
     - 1.3 多层感知器
     - 1.4 神经学观点
     - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
+    - 小结
     - 参考文献
   - 第 2 章 [卷积神经网络](./docs/1_理论篇/chapter2_CNN/chapter2_CNN.md)
     - 2.1 概述
@@ -90,6 +92,7 @@
     - 3.3 线性分类
     - 3.4 逻辑回归 LR 
     - 3.5 [实战项目 3 - 表情识别]()
+    - 小结
     - 参考文献
   - 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
     - 4.1 递归神经网络 RNN
@@ -97,6 +100,7 @@
     - 4.3 循环神经网络的简洁实现
     - 4.4 长短期记忆人工神经网络 LSTM
     - 4.5 门控循环单元（GRU）
+    - 小结
     - 参考文献
   - 第 5 章 [模型拟合与优化算法]()
     - 5.1 优化与深度学习
@@ -107,13 +111,15 @@
     - 5.6 RMSProp算法
     - 5.7 AdaDelta算法
     - 5.8 Adam算法
+    - 小结
     - 参考文献
 - <b><h4>实战篇</h4></b>
   - 第 6 章 [深度学习环境搭建](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
-    - 6.1 PyTorch
-    - 6.2 OpenCV
-    - 6.3 Numpy
-    - 6.4 Pandas
+    - [6.1 PyTorch](./notebooks/05_PyTorch.ipynb)
+    - [6.2 OpenCV](./notebooks/02_Python.ipynb)
+    - [6.3 Numpy](./notebooks/03_NumPy.ipynb)
+    - [6.4 Pandas](./notebooks/04_Pandas.ipynb)
+    - 小结
     - 参考文献
   - 第 7 章 [经典卷积神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
     - 7.1 [卷积神经网络（LeNet）](./docs/2_实战篇/chapter2_经典卷积神经网络架构-原理与PyTorch实现/chapter2_1-卷积神经网络（LeNet）.md)
@@ -129,6 +135,7 @@
     - 7.11 全卷积网络（FCN）
     - 7.12 [实战Kaggle比赛：图像分类（CIFAR-10）]()
     - 7.13 [实战Kaggle比赛：狗的品种识别（ImageNet Dogs）]()
+    - 小结
     - 参考文献
   - 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 8.1 数据集
@@ -137,18 +144,20 @@
         - COCO
         - CIFAR-10
     - 8.2 基准
+    - 小结
     - 参考文献
   - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 9.1 语义分割
       - 9.1.1 [语义分割 PyTorch 版](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
-      - 9.1.2 实战项目 6
+      - 9.1.2 实战项目 6 
     - 9.2 目标检测
       - 9.2.1 常用网络
-      - 9.2.2 实战项目 7
+      - 9.2.2 实战项目 7 
     - 9.3 实例分割 
       - 9.3.1 常用网络 
       - 9.3.2 实战项目 8
       - 9.3.3 新方法：滑动窗口, PointRend, PolarMask
+    - 小结
     - 参考文献
   - 第 10 章 [图像分类项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 10.1 [手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
@@ -158,13 +167,15 @@
       - 10.3.2 实战项目 9
     - 10.4 [镜面检测](https://github.com/Charmve/Mirror-Glass-Detection)
     - 10.5 [图像抠图 Matting](https://github.com/Charmve/TimeWarp)
+    - 小结
     - 参考文献
 - <b><h4>进阶篇</h4></b>
   - 第 11 章 [可视化和理解](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)
     - 11.1 表征可视化
     - 11.2 对抗实例
     - 11.3 DeepDream 和风格迁移
-    - 11.4 实战项目 10
+    - 11.4 实战项目 10: PyTorch 如何使用TensorBoard
+    - 小结
     - 参考文献
   - 第 12 章 [生成对抗模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 12.1 Pixel RNN/CNN
@@ -182,17 +193,20 @@
         - [12.4.2.3 推导过程](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#3-推导过程)            
       - [12.4.3 VAE v.s. AE 区别与联系](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1243-vae-vs-ae-区别与联系)    
       - [12.4.4 变分自编码器的代码实现](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)    
-      - [12.4.5 卷积变分自编码器的实现与简单应用](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)             
+      - [12.4.5 卷积变分自编码器的实现与简单应用](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)        
+      - 小结     
       - [参考文献](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#参考文献) 
     - 参考文献
   - 第 13 章 [深度增强学习](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 13.1 方法梯度，硬性关注
     - 13.2 Q - 学习，评价器
+    - 小结
     - 参考文献
   - 第 14 章 [视频理解](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
     - 14.1 概述
     - 14.2 行为理解
     - 14.3 主流方法
+    - 小结
     - 参考文献
   - 第 15 章 [迁移学习](./docs/3_进阶篇/chapter15_迁移学习)
     - [15.1 概述](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#151-迁移学习概述)
@@ -203,7 +217,7 @@
     - [15.3 基于特征的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#153-基于特征的迁移)
     - [15.4 基于共享参数的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#154-基于共享参数的迁移)
     - [15.5 深度学习和迁移学习结合](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#155-深度学习和迁移学习结合)
-    - [15.7 实战项目 2 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
+    - [15.7 实战项目 11 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
       - [15.7.1 迁移学习在计算机视觉领域的应用](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1571-迁移学习在计算机视觉领域的应用)
       - [15.7.2 实战项目: 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1572-实战项目-蚂蚁和蜜蜂的分类问题)
     - [小结](#小结)
@@ -215,6 +229,7 @@
       - 16.2.2 Positional encoding
       - 16.2.3 Masked attention
       - 16.2.4 Multi-head attention
+    - 小结
     - 参考文献
   - 第 17 章 [跨界模型 Transformer](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md)
     - 17.1 [思想和框图](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#%E4%B8%80%E6%80%9D%E6%83%B3%E5%92%8C%E6%A1%86%E5%9B%BE)
@@ -233,19 +248,45 @@
         - [17.3.2.4 Deformable-DETR](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#3-2-4-Deformable-DETR)
     - 17.4 [优点及分析](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#四-优点及分析)
     - 17.5 [缺点及分析](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#五-缺点及分析)
+    - 小结
     - [参考文献](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#六-参考文献)
   - 第 18 章 [知识蒸馏]()
     - 18.1 概述
+    - ...
+    - 小结
+    - [实战项目 12 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
     - [参考文献](#六-参考文献)
   - 第 19 章 [Normalization 模型]()
     - 19.1 概述
+    - ...
+    - 小结
     - [参考文献](#六-参考文献)
-    
+  - 第 20 章 [模型压缩与裁剪](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA) 
+    - 20.1 概述
+    - 20.2 模型压缩
+      - 20.2.1 线性或非线性量化（1990~2014 - 至今）
+      - 20.2.2 结构或非结构剪枝（1989~2014 - 至今
+      - 20.2.3 网络结构搜索（2016 - 至今）
+      - 20.2.4 权重矩阵的低秩分解（）
+      - 20.2.5 知识蒸馏（2014-至今）
+    - 20.3 模型优化加速
+      - 20.3.1 Op-Level 的快速算法
+      - 20.3.2 Layer0-level 的快速算法
+      - 20.3.3 硬件计算单元优化算法
+      	- CPU、GPU和NPU
+      	- ASIC 和 FPGA
+      	- PIM（NDP）
+    - 20.4 优化工具与库
+      - 20.4.1 TensorRT Nvidia)
+      - 20.4.2 TVM (Tensor Virtual Machine)
+      - 20.4.3 Tensor Comprehension  (Facebook)
+      - 20.4.4 Distiller (Intel)
+    - 小结
+    - [参考文献](#六-参考文献)
   - <b><h4>附录</h4></b>
     - A 矩阵
     - B 常用激活函数总结
     - C 梯度下降法
-    - D 模型压缩与裁剪
   - <b><h4>后记</h4></b>
   - <b><h4>参考文献</h4></b>
 
