@@ -12,7 +12,7 @@
       - 12.3.2 项目实战
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
-    - 12.4 [变分自编码器 Variational Auto-encoder, VAE](#124-变分自编码器-variational-auto-encoder-vae)
+    - [12.4 变分自编码器 Variational Auto-encoder, VAE](#124-变分自编码器-variational-auto-encoder-vae)
       - [12.4.1 概述](#1241-概述)    
       - [12.4.2 基本原理](#1242-基本原理)        
         - [12.4.2.1 定义](#1-定义)        
@@ -666,15 +666,15 @@ https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational
 | | |P(z) 是正态分布，μ(z), o(z) 是将被估计的参数|
 | | Maximizing the likelihood of the observed x | 最大化x的似然估计 | 
 | | Tunning the parameters to maximize likelihood L | 调整参数以使似然L最大化 |
-| | We need another distribution q(z\|x) | 我们需要另外一个分布 q(z|x) | 
+| | We need another distribution q(z\|x) | 我们需要另外一个分布 q(z\|x) | 
 | \ | \ | \ |
 | 图12.4 | Maximizing Likelihood | 最大似然估计 |
 | | q(z\|x) can be any distribution | q(z\|x)可以是任何一种分布 |
 | | lower bound Lb | 取 Lb 的下界|
 | \ | \ | \ |
 | 图12.5 | Maximizing Likelihood | 最大似然估计 |
-| | Find P(x|z) and q(z\|x) maximizing Lb | 寻找 P(x|z) 和 q(z|x) 使得 Lb 最大 |
-| | q(z|x) will be an approximation of p(z|x) in the end | q(z|x) 最终将会被 p(z|x) 近似化 |
+| | Find P(x\|z) and q(z\|x) maximizing Lb | 寻找 P(x\|z) 和 q(z\|x) 使得 Lb 最大 |
+| | q(z\|x) will be an approximation of p(z|x) in the end | q(z\|x) 最终将会被 p(z\|x) 近似化 |
 | \ | \ | \ |
 | 图12.7 | Connection with network | 连接网络 |
 | | Refer to the Appendix B of the original VAE paper | 请参考附件B中的论文原文 |
