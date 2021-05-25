@@ -68,18 +68,18 @@ VAE 可以从神经网络的角度或者概率图模型的角度来解释。
 
 ### 1. 定义
 
-VAE 全名叫 **变分自编码器**，是从之前的 auto-encoder 演变过来的，auto-encoder 也就是自编码器，自编码器，顾名思义，就是可以自己对自己进行编码，重构。所以 AE 模型一般都由两部分的网络构成，一部分称为 encoder, 从一个高维的输入映射到一个低维的隐变量上，另外一部分称为 decoder, 从低维的隐变量再映射回高维的输入：
+VAE 全名叫 **变分自编码器**，是从之前的 auto-encoder 演变过来的，auto-encoder 也就是自编码器，自编码器，顾名思义，就是可以自己对自己进行编码，重构。所以 AE 模型一般都由两部分的网络构成，一部分称为 encoder, 从一个高维的输入映射到一个低维的隐变量上，另外一部分称为 decoder, 从低维的隐变量再映射回高维的输入，如图12.1所示。
 
 <div align="center">
 	<p align="center">
-	<img src="https://pic2.zhimg.com/80/v2-c2acba45269364fcfd460d37848f441d_720w.jpg" alt="图1 VAE模型">
+	<img src="https://pic2.zhimg.com/80/v2-c2acba45269364fcfd460d37848f441d_720w.jpg" alt="图12.1 VAE模型">
 	<br>(a) VAE模型
 	</p>
 	<p align="center">
 	<img src="https://img-blog.csdnimg.cn/20181103081537493.JPG">
 	<br>(b) 编码与重构
 	</p>
-	图1 VAE模型
+	图12.1 VAE模型
 </div><br>
 
 如上图所示，我们能观测到的数据是 $x$ ，而 $x$ 由隐变量 $z$ 产生，由 $z->x$ 是生成模型 $p_{\phi}(x|z)$ ，从自编码器（auto-encoder）的角度来看，就是 **解码器 decoder**；而由 $x->z$ 是识别模型（recognition model）$ q_{\theta}(z|x)$ ，类似于自编码器的 **编码器 encoder**。
@@ -128,11 +128,11 @@ $$ P(X) = \int_z{P(X|z)P(z)} \,{\rm d}z (1)$$
 其中，用 $P(X|z)$ 替代了 $f(z)$ ，这样可以用概率公式明确表示 X 对 Z 的依赖性；$P(z)$ 即高斯分布；其中 $X|z $ ~ $\mu N((z),\sigma(z))$，其中的均值 $\mu (z)$ 和 方差 $\sigma(z)$ 需要通过运算获得。
 
 <p align="center">
-	<img src="https://img-blog.csdnimg.cn/20200923170440697.png#pic_center" alt="图2 VAE模型的一个图模型">
-	<br>图2 VAE模型的一个图模型
+	<img src="https://img-blog.csdnimg.cn/20200923170440697.png#pic_center" alt="图12.2 VAE模型的一个图模型">
+	<br>图12.2 VAE模型的一个图模型
 </p>
 
-如图所示，标准的VAE模型是一个图模型，注意明显缺乏任何结构，甚至没有 **“编码器”** 路径：可以在不输入的情况下从模型中采样。这里，矩形是 **“板符号”**，这意味着我们可以在模型参数 $\theta$ 保持不变的情况下，从 $z$ 和 $X$ 中采样N次。
+如图12.2所示，标准的VAE模型是一个图模型，注意明显缺乏任何结构，甚至没有 **“编码器”** 路径：可以在不输入的情况下从模型中采样。这里，矩形是 **“板符号”**，这意味着我们可以在模型参数 $\theta$ 保持不变的情况下，从 $z$ 和 $X$ 中采样N次。
 
 #### Step 2 - Decoder 过程
 上面也曾讲过，VAE 模型中同样有 Encoder 与 Decoder 过程，也就是说模型对于相同的输入时，也应该有尽可能相同的输出。所以这里再次遇到 Maximum likelihood（极大似然）。
@@ -158,8 +158,8 @@ $$L = \sum_x{log P(X)}  $$
 这里的网络称为 **推断网络**。
 
 <p align="center">
-	<img src="https://img-blog.csdnimg.cn/20200923211822920.png#pic_center" alt="图3 最大似然估计">
-	<br>图3 最大似然估计
+	<img src="https://img-blog.csdnimg.cn/20200923211822920.png#pic_center" alt="图12.3 最大似然估计">
+	<br>图12.3 最大似然估计
 </p>
 
 #### Step 4 - ELBO
@@ -170,7 +170,7 @@ $$ \log P(X) = \int_z{q(z|x)\log P(x)} \,{\rm d}z $$
 
 在公式3中， $q(z|x)$ 可以是任意分布。
 
-为了让 Encode 过程也参与进来，这里引入 $q(z|x)$，推导步骤如下：
+为了让 Encode 过程也参与进来，这里引入 $q(z|x)$，推导步骤如下（具体过程也可参考如下图12.4所示过程）：
 
 $$\log P(X) = \int_z{q(z|x)\log P(x)} \,{\rm d}z \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ = \int_z{q(z|x)\log ({P(z,x)\over P(z|x)})} \,{\rm d}z \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ = \int_z{q(z|x)\log ({P(z,x)\over q(z|x)}{q(z|x)\over P(z|x)})} \,{\rm d}z \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ = \int_z{q(z|x)\log ({P(z,x)\over q(z|x)})} \,{\rm d}z + \int_z{q(z|x)\log ({q(z|x)\over P(z|x)})} \,{\rm d}z 
 $$
@@ -187,8 +187,8 @@ $$L_b = \int_z{q(z|x)\log ({P(z,x)\over q(z|x)})} \,{\rm d}z$$
 <p align="right"> 式（5）</p>
 
 <p align="center">
-	<img src="https://img-blog.csdnimg.cn/20200923214724344.png#pic_center" alt="图5 最大似然估计推导">
-	<br>图5 最大似然估计推导
+	<img src="https://img-blog.csdnimg.cn/20200923214724344.png#pic_center" alt="图12.4 最大似然估计推导">
+	<br>图12.4 最大似然估计推导
 </p>
 
 #### Step 5 - 消除 KL 项
@@ -203,11 +203,11 @@ $$\log P(X) = L_b + KL(q(z|x)\ ||\ P(z|x)) $$
 
 所以可以通过调 $q(z|x)$ 让 $ KL(q(z|x)\ ||\ P(z|x))$ 尽可能小（调整为0），再通过调 $ELBO$ 来实现最大化 $P(X)$。
 
-调整的最终结果是使得 $q(z|x)$ 尽可能接近 $p(z|x)$，换句话说，最终的 $ KL(q(z|x)\ ||\ P(z|x)) \approx 0$ 。所以这个步骤我们消除了这个 KL 项，剩下 $ELBO$ 等待解决。
+调整的最终结果是使得 $q(z|x)$ 尽可能接近 $p(z|x)$，换句话说，最终的 $ KL(q(z|x)\ ||\ P(z|x)) \approx 0$ 。所以这个步骤我们消除了这个 KL 项，剩下 $ELBO$ 等待解决，如图12.5所示。
 
 <p align="center">
-	<img src="https://img-blog.csdnimg.cn/20200924153534286.png#pic_center" alt="图6 最大似然概率估计">
-	<br>图6 最大似然概率估计
+	<img src="https://img-blog.csdnimg.cn/20200924153534286.png#pic_center" alt="图12.5 最大似然概率估计">
+	<br>图12.5 最大似然概率估计
 </p>
 
 #### Step 6 - 解决 ELBO
@@ -222,13 +222,13 @@ $$\log AB = \log A + \log B \\$$
 
 接下来需要 Minimize $ KL(q(z|x)\ || \ P(z))$，也就是调整$q(z|x)$ 来最小化，这里交给 NN 吧。
 
-并且需要最大化另外一项，即$\int_z{q(z|x)\log ({P(x|z)})} \,{\rm d}z$，同样这份苦差事也交给 NN 去完成。
+并且需要最大化另外一项，即$\int_z{q(z|x)\log ({P(x|z)})} \,{\rm d}z$，同样这份苦差事也交给 NN 去完成，如图12.6和12.7所示。
 
 <p align="center">
-	<img src="https://img-blog.csdnimg.cn/20200924180813767.png#pic_center" alt="图7 最大似然估计推导">
-	<br>图7 最大似然估计推导
-	<img src="https://img-blog.csdnimg.cn/20200924155823608.png?#pic_center" alt="图8 与NN连接">
-	<br>图8 与NN连接
+	<img src="https://img-blog.csdnimg.cn/20200924180813767.png#pic_center" alt="图12.6 最大似然估计推导">
+	<br>图12.6 最大似然估计推导
+	<img src="https://img-blog.csdnimg.cn/20200924155823608.png?#pic_center" alt="图12.7 与NN连接">
+	<br>图12.7 与NN连接
 </p>
 
 #### 推导结果
@@ -580,14 +580,14 @@ for epoch in range(1, epochs + 1):
   generate_and_save_images(model, epoch, test_sample)
 ```
 
-一百次循环后，生成的图片如下：
+一百次循环后，生成的图片如下图 12.8 所示。
 
 <p align="center">
-	<img src="https://img-blog.csdnimg.cn/2020101009492281.png#pic_center" alt="图9 生成图像">
-	<br>图9 生成图像
+	<img src="https://img-blog.csdnimg.cn/2020101009492281.png#pic_center" alt="图12.8 生成图像">
+	<br>图12.8 生成图像
 </p>
 
-同时可以生化 gif 图片来方便查看生成过程。
+同时可以生成 gif 图片来方便查看生成过程，如图12.9所示。
 
 ```python
 anim_file = 'cvae.gif'
@@ -610,16 +610,16 @@ embed.embed_file(anim_file)
 ```
 
 <p align="center">
-	<img src="https://img-blog.csdnimg.cn/20201010101327220.gif#pic_center" alt="图10 展示 gif 图片">
-	<br>图10 展示 gif 图片
+	<img src="https://img-blog.csdnimg.cn/20201010101327220.gif#pic_center" alt="图12.9 展示 gif 图片">
+	<br>图12.9 展示 gif 图片
 </p>
 
 
 #### 6. 生成过渡图像
-
+最终生成的过度图像如下图 12.10 所示。
 <p align="center">
-	<img src="https://img-blog.csdnimg.cn/20201010102938870.png#pic_center" alt="图9 生成图像">
-	<br>图11 生成图像
+	<img src="https://img-blog.csdnimg.cn/20201010102938870.png#pic_center" alt="图12.10 生成图像">
+	<br>图12.10 生成图像
 </p>
 
 
@@ -627,15 +627,15 @@ embed.embed_file(anim_file)
 
 > **扩展阅读** - VAE均值与方差的故事
 > <br>很久以前，有个叫VAE的生产车间，车间主任雇佣了 $\mu$ 与 $\sigma$ 。两个小伙，但并没有直接给他们安排工作任务，只告诉他们：好好干，如果你们做得不好，那就扣你们的工资。
-> 刚开始。 $\mu$ 与 $\sigma$ 有些懵逼：连任务都不说清楚，就叫我们好好干？
-> 第一天扣的工资最多，因为懵逼了一天。
-> 第二天俩小伙对车间生产流程，生产目标熟悉了，扣得少了一些。
-> 第三天他们更加谨慎了，毕竟谁都害怕扣工资，就这么点钱。
-> 第四天、第五天．．．．．．后来 $\mu$ 和 $\sigma$ 都摸清楚了套路，懂得怎么增加收入。
-> 终于有一天车间主任满意了，看着漂漂亮亮的产品，决定给 $\mu$ 和 $\sigma$ 评职称。众所周知，评上职称的工资一般都比较高。
-> 最终被评为"车间最优均值"称号。
-> 那 $\sigma$ 最终是不是就被评为"车间最美方差"呢？不是的，他被评为"车间最美标准差''。后来他们这个生产小组被评为''正态分布"，再后来车间主任用同样的手段忽悠更多的无业游民（随机数），通过很多次勤奋工作与调整（训练），组成一组又一组"正态分布"（隐变量）。
-> 从此，VAE车间的萨与 $\sigma$ 勤勤恳恳干活，为 VAE 车间创造了很多产品，为大家所喜爱，而他们在车间勤奋努力不断调整自己的故事，也一时传为佳话。
+> <br>刚开始。 $\mu$ 与 $\sigma$ 有些懵逼：连任务都不说清楚，就叫我们好好干？
+> <br>第一天扣的工资最多，因为懵逼了一天。
+> <br>第二天俩小伙对车间生产流程，生产目标熟悉了，扣得少了一些。
+> <br>第三天他们更加谨慎了，毕竟谁都害怕扣工资，就这么点钱。
+> <br>第四天、第五天．．．．．．后来 $\mu$ 和 $\sigma$ 都摸清楚了套路，懂得怎么增加收入。
+> <br>终于有一天车间主任满意了，看着漂漂亮亮的产品，决定给 $\mu$ 和 $\sigma$ 评职称。众所周知，评上职称的工资一般都比较高。
+> <br>最终被评为"车间最优均值"称号。
+> <br>那 $\sigma$ 最终是不是就被评为"车间最美方差"呢？不是的，他被评为"车间最美标准差''。后来他们这个生产小组被评为''正态分布"，再后来车间主任用同样的手段忽悠更多的无业游民（随机数），通过很多次勤奋工作与调整（训练），组成一组又一组"正态分布"（隐变量）。
+> <br>从此，VAE车间的萨与 $\sigma$ 勤勤恳恳干活，为 VAE 车间创造了很多产品，为大家所喜爱，而他们在车间勤奋努力不断调整自己的故事，也一时传为佳话。
 
 <br> --> [Back to Menu](#124-变分自编码器-variational-auto-encoder-vae)
 
