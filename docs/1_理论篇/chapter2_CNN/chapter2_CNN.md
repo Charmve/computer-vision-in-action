@@ -39,9 +39,6 @@
 ### 2.1.1 定义
 简而言之，卷积神经网络（Convolutional Neural Networks,CNN）是一种深度学习模型或类似于人工神经网络的多层感知器，常用来分析视觉图像。卷积神经网络的创始人是着名的计算机科学家 Yann LeCun <sup>1</sup>，目前在 Facebook 工作，他是第一个通过卷积神经网络在 MNIST 数据集上解决手写数字问题的人。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200315015829577.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200315015834600.png#pic_center)<center><font size =2 color = gray >Yann LeCunn</font> </center>
-
 ### 2.1.2 卷积神经网络的架构
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200315015847839.png#pic_center)
@@ -167,10 +164,17 @@ K 是过滤器尺寸，那么输入和输出内容就总能保持一致的空间
 
 下面的动态图形象地展示了卷积层的计算过程：
 
+
+![image](https://user-images.githubusercontent.com/29084184/119461753-95147780-bd72-11eb-93d9-c12db5fbdfc5.png)
+(a)
+![image](https://user-images.githubusercontent.com/29084184/119461650-7e6e2080-bd72-11eb-989f-60f3ae3e423c.png)
+(b)
+![image](https://user-images.githubusercontent.com/29084184/119461671-84640180-bd72-11eb-9cc3-3fea23b201ca.png)
+(c)
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200315020043502.gif#pic_center)
 
 图11 卷积层的计算过程
-
 
 #### (2) 参数共享机制
 
@@ -234,11 +238,12 @@ CNN采用的激活函数一般为ReLU(The Rectified Linear Unit/修正线性单�
 
 图17 全连接层
 
-一般CNN结构依次为
-    1. INPUT
-    2. [[CONV -> RELU]N -> POOL?]M
-    3. [FC -> RELU]*K
-    4. FC
+一般CNN结构依次为:
+
+1. INPUT
+2. [[CONV -> RELU]N -> POOL?]M
+3. [FC -> RELU]*K
+4. FC
 
 
 ## 3. 卷积神经网络的几点说明
@@ -248,17 +253,16 @@ CNN采用的激活函数一般为ReLU(The Rectified Linear Unit/修正线性单�
 2.找到最小化损失函数的W和b， CNN中用的算法是SGD（随机梯度下降）。
 
 ### 3.2 优缺点
-（1）优点
-　　- 共享卷积核，对高维数据处理无压力
-　　- 无需手动选取特征，训练好权重，即得特征分类效果好
-（2）缺点
-　　- 需要调参，需要大样本量，训练最好要GPU
-　　- 物理含义不明确（也就说，我们并不知道没个卷积层到底提取到的是什么特征，而且神经网络本身就是一种难以解释的“黑箱模型”）
-
+- 优点
+  - 共享卷积核，对高维数据处理无压力
+  - 无需手动选取特征，训练好权重，即得特征分类效果好
+- 缺点
+  - 需要调参，需要大样本量，训练最好要GPU
+  - 物理含义不明确（也就说，我们并不知道没个卷积层到底提取到的是什么特征，而且神经网络本身就是一种难以解释的“黑箱模型”）
 
 ## 3.3 典型CNN
 
-这部分将在 [第7章 经典卷积神经网络架构：原理与PyTorch实现](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)详细讲解。
+这部分将在 [第7章 经典卷积神经网络架构：原理与PyTorch实现](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现) 详细讲解。
 
 - LeNet，这是最早用于数字识别的CNN
 
@@ -290,32 +294,25 @@ fine-tuning就是使用已用于其他目标、预训练好模型的权重或者
 ### 3.5 常用框架
 
 **Caffe**
-
 - 源于Berkeley的主流CV工具包，支持C++,python,matlab
 - Model Zoo中有大量预训练好的模型供使用
-　
-**PyTorch**
 
+**PyTorch**
 - Facebook用的卷积神经网络工具包
 - 通过时域卷积的本地接口，使用非常直观
 - 定义新网络层简单
-　
-**TensorFlow**
 
+**TensorFlow**
 - Google的深度学习框架
 - TensorBoard可视化很方便
 - 数据和模型并行化好，速度快
-
-
 ## 小结
-
 
 卷积网络在本质上是一种输入到输出的映射，它能够学习大量的输入与输出之间的映射关系，而不需要任何输入和输出之间的精确的数学表达式，只要用已知的模式对卷积网络加以训练，网络就具有输入输出对之间的映射能力。
 
 CNN一个非常重要的特点就是头重脚轻（越往输入权值越小，越往输出权值越多），呈现出一个倒三角的形态，这就很好地避免了BP神经网络中反向传播的时候梯度损失得太快。
 
 卷积神经网络CNN主要用来识别位移、缩放及其他形式扭曲不变性的二维图形。由于CNN的特征检测层通过训练数据进行学习，所以在使用CNN时，避免了显式的特征抽取，而隐式地从训练数据中进行学习；再者由于同一特征映射面上的神经元权值相同，所以网络可以并行学习，这也是卷积网络相对于神经元彼此相连网络的一大优势。卷积神经网络以其局部权值共享的特殊结构在语音识别和图像处理方面有着独特的优越性，其布局更接近于实际的生物神经网络，权值共享降低了网络的复杂性，特别是多维输入向量的图像可以直接输入网络这一特点避免了特征提取和分类过程中数据重建的复杂度。
-
 
 ## 参考文献
 
