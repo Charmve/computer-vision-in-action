@@ -187,13 +187,13 @@ K 是过滤器尺寸，那么输入和输出内容就总能保持一致的空间
 <table>
  <tr>
     <td>
-      <img src="https://user-images.githubusercontent.com/29084184/119461753-95147780-bd72-11eb-93d9-c12db5fbdfc5.png" width="75%"/>
+      <img src="https://user-images.githubusercontent.com/29084184/119461753-95147780-bd72-11eb-93d9-c12db5fbdfc5.png"/>
     </td>
     <td>
-      <img src="https://user-images.githubusercontent.com/29084184/119461650-7e6e2080-bd72-11eb-989f-60f3ae3e423c.png" width="75%"/>
+      <img src="https://user-images.githubusercontent.com/29084184/119461650-7e6e2080-bd72-11eb-989f-60f3ae3e423c.png"/>
     </td>
     <td>
-      <img src="https://user-images.githubusercontent.com/29084184/119461671-84640180-bd72-11eb-9cc3-3fea23b201ca.png" width="75%"/>
+      <img src="https://user-images.githubusercontent.com/29084184/119461671-84640180-bd72-11eb-9cc3-3fea23b201ca.png"/>
     </td>
  </tr>
  <tr>
