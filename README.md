@@ -72,26 +72,68 @@
     - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
     - 小结
     - 参考文献
-  - 第 2 章 [卷积神经网络](./docs/1_理论篇/chapter2_CNN/chapter2_CNN.md)
-    - 2.1 概述
-    - 2.2 卷积和池化
-    - 2.3 损失函数和优化
-    - 2.4 线性分类Ⅱ
-    - 2.5 进阶模型表示与图像特征
-    - 2.6 优化，随机梯度下降
-    - 2.7 [实战项目 2 - 动手搭建一个卷积神经网络](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
-      - [2.7.1 卷积神经网络的前向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#271-卷积神经网络的前向传播)
-      - [2.7.2 卷积神经网络的反向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md272-卷积神经网络的反向传播)
-      - [2.7.3 手写一个卷积神经网络](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md273-手写一个卷积神经网络)
-      - [2.7.4 PaddlePaddle卷积神经网络源码解析](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md274-PaddlePaddle卷积神经网络源码解析)
-    - 小结
-    - 参考文献
+  - 第 2 章 [卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md)
+    - [2.1 从神经网络到卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#21-从神经网络到卷积神经网络)
+      - [2.1.1 定义](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#211-定义)
+      - [2.1.2 卷积神经网络的架构](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#212-卷积神经网络的架构)
+    - 2.2 卷积网络的层级结构
+      - [2.2.1 数据输入层](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#221-数据输入层)
+      - [2.2.2 卷积计算层](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#222-卷积计算层)
+        - (1) 卷积的计算
+        - (2) 参数共享机制
+      - [2.2.3 非线性层（或激活层）](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#223-非线性层或激活层)
+      - [2.2.4 池化层](#224-池化层)
+      - [2.2.5 全连接层](#225-全连接层)
+    - [2.3 卷积神经网络的几点说明](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#23-卷积神经网络的几点说明)
+      - [2.3.1 训练算法](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#231-训练算法)
+      - [2.3.2 优缺点](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#232-优缺点)
+      - [2.3.3 典型CNN](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#233-典型CNN)
+      - [2.3.4 fine-tuning](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#234-fine-tuning)
+      - [2.3.5 常用框架](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#235-常用框架)
+    - 2.4 [实战项目 2 - 动手搭建一个卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md)
+      - [2.4.1 卷积神经网络的前向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md#271-卷积神经网络的前向传播)
+      - [2.4.2 卷积神经网络的反向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md#272-卷积神经网络的反向传播)
+      - [2.4.3 手写一个卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md#273-手写一个卷积神经网络)
+        - [1. 定义一个卷积层](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md#1-定义一个卷积层)
+        - [2. 构造一个激活函数](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md#2-构造一个激活函数)
+        - [3. 定义一个类，保存卷积层的参数和梯度](#3-定义一个类保存卷积层的参数和梯度)
+        - [4. 卷积层的前向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md#4-卷积层的前向传播)
+        - [5. 卷积层的反向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md#5-卷积层的反向传播)
+        - [6. MaxPooling层的训练](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md#6-MaxPooling层的训练)
+      - [2.4.4 PaddlePaddle卷积神经网络源码解析](/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN-in-Action.md#274-PaddlePaddle卷积神经网络源码解析)
+    - [小结](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#小结)
+    - [参考文献](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇
+/chapter2_CNN/chapter2_CNN.md#参考文献)
   - 第 3 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
     - 3.1 数据驱动方法
     - 3.2 k 最近邻算法
     - 3.3 线性分类
     - 3.4 逻辑回归 LR 
-    - 3.5 [实战项目 3 - 表情识别]()
+    - 3.5 [实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
     - 小结
     - 参考文献
   - 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
