@@ -76,11 +76,11 @@
     - [2.1 从神经网络到卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#21-从神经网络到卷积神经网络)
       - [2.1.1 定义](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#211-定义)
       - [2.1.2 卷积神经网络的架构](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#212-卷积神经网络的架构)
-    - 2.2 卷积网络的层级结构
+    - [2.2 卷积网络的层级结构](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#22-卷积网络的层级结构)
       - [2.2.1 数据输入层](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#221-数据输入层)
       - [2.2.2 卷积计算层](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#222-卷积计算层)
-        - (1) 卷积的计算
-        - (2) 参数共享机制
+        - [(1) 卷积的计算](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#1-卷积的计算)
+        - [(2) 参数共享机制](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#2-参数共享机制)
       - [2.2.3 非线性层（或激活层）](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#223-非线性层或激活层)
       - [2.2.4 池化层](#224-池化层)
       - [2.2.5 全连接层](#225-全连接层)
@@ -90,7 +90,7 @@
       - [2.3.3 典型CNN](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#233-典型CNN)
       - [2.3.4 fine-tuning](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#234-fine-tuning)
       - [2.3.5 常用框架](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#235-常用框架)
-    - 2.4 [实战项目 2 - 动手搭建一个卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
+    - [2.4 实战项目 2 - 动手搭建一个卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
       - [2.4.1 卷积神经网络的前向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#271-卷积神经网络的前向传播)
       - [2.4.2 卷积神经网络的反向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#272-卷积神经网络的反向传播)
       - [2.4.3 手写一个卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#273-手写一个卷积神经网络)
