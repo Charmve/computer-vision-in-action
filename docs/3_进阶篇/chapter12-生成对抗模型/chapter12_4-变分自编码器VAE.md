@@ -22,6 +22,7 @@
       - [12.4.4 变分自编码器的代码实现](#1244-变分自编码器的代码实现)    
       - [12.4.5 卷积变分自编码器的实现与简单应用](#1245-卷积变分自编码器的实现与简单应用)             
       - [参考文献](#参考文献) 
+    - 小结
     - 参考文献
 
 ------
@@ -53,6 +54,7 @@
 	- [5. 训练模型与生成图片](#5-训练模型与生成图片)            
 	- [6. 生成过渡图像](#6-生成过渡图像)    
 - [参考文献](#参考文献)
+- 附录： 图中英文翻译
 
 <br>
 
@@ -615,7 +617,6 @@ embed.embed_file(anim_file)
 	<br>图12.9 展示 gif 图片
 </p>
 
-
 #### 6. 生成过渡图像
 最终生成的过度图像如下图 12.10 所示。
 <p align="center">
@@ -654,3 +655,26 @@ https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational
 [5] 机器学习：VAE(Variational Autoencoder) 模型 https://blog.csdn.net/matrix_space/article/details/83683811
 
 [6] TensorFlow. Convolutional Variational Autoencoder. https://tensorflow.google.cn/tutorials/generative/cvae
+
+## 附录： 图中英文翻译
+
+| 图序号 | 英文原文 | 中文翻译 | 
+| :--: | - | - |
+| 图12.3 | Maximizing Likelihood | 最大似然估计 | 
+| | |P(z) 是正态分布，μ(z), o(z) 是将被估计的参数|
+| | Maximizing the likelihood of the observed x | 最大化x的似然估计 | 
+| | Tunning the parameters to maximize likelihood L | 调整参数以使似然L最大化 |
+| | We need another distribution q(z|x) | 我们需要另外一个分布 q(z|x) | 
+| \ | \ | \ |
+| 图12.4 | Maximizing Likelihood | 最大似然估计 |
+| | q(z|x) can be any distribution | q(z|x)可以是任何一种分布 |
+| | lower bound Lb | 取 Lb 的下界|
+| \ | \ | \ |
+| 图12.5 | Maximizing Likelihood | 最大似然估计 |
+| | Find P(x|z) and q(z|x) maximizing Lb | 寻找 P(x|z) 和 q(z|x) 使得 Lb 最大 |
+| | q(z|x) will be an approximation of p(z|x) in the end | q(z|x) 最终将会被 p(z|x) 近似化 |
+| \ | \ | \ |
+| 图12.7 | Connection with network | 连接网络 |
+| | Refer to the Appendix B of the original VAE paper | 请参考附件B中的论文原文 |
+| | this is the auto-encoder | 这就是自编码器 |
+
