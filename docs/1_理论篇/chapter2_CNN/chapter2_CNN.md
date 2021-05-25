@@ -184,14 +184,30 @@ K 是过滤器尺寸，那么输入和输出内容就总能保持一致的空间
 
 
 下面的动态图形象地展示了卷积层的计算过程：
-
-
-![image](https://user-images.githubusercontent.com/29084184/119461753-95147780-bd72-11eb-93d9-c12db5fbdfc5.png)
-(a)
-![image](https://user-images.githubusercontent.com/29084184/119461650-7e6e2080-bd72-11eb-989f-60f3ae3e423c.png)
-(b)
-![image](https://user-images.githubusercontent.com/29084184/119461671-84640180-bd72-11eb-9cc3-3fea23b201ca.png)
-(c)
+<table>
+ <tr>
+    <td>
+      <img src="https://user-images.githubusercontent.com/29084184/119461753-95147780-bd72-11eb-93d9-c12db5fbdfc5.png" width="50%"/>
+    </td>
+    <td>
+      <img src="https://user-images.githubusercontent.com/29084184/119461650-7e6e2080-bd72-11eb-989f-60f3ae3e423c.png" width="50%"/>
+    </td>
+    <td>
+      <img src="https://user-images.githubusercontent.com/29084184/119461671-84640180-bd72-11eb-9cc3-3fea23b201ca.png" width="50%"/>
+    </td>
+ </tr>
+ <tr>
+    <td>
+      (a)
+    </td>
+    <td>
+      (b)
+    </td>
+    <td>
+      (c)
+    </td>
+ </tr>
+</table>
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200315020043502.gif#pic_center)
 
