@@ -1,10 +1,10 @@
-# 第 7 章 跨界模型 Transformer
+# 第 17 章 跨界模型 Transformer
 
 作者: 张伟 (Charmve)
 
 日期: 2021/05/18
 
-# Transformer讲解以及在CV领域的应用
+# Transformer 讲解以及在CV领域的应用
 - 17.1 [思想和框图](#一思想和框图)
 - 17.2 [实现细节](#二实现细节)
   - [17.2.1 Encoder](#21-encoder)
@@ -21,21 +21,22 @@
     - [17.3.2.4 Deformable-DETR](#324-deformable-detr)
 - 17.4 [优点及分析](#四优点及分析)
 - 17.5 [缺点及分析](五缺点及分析)
+- 小结
 - [参考文献](#六参考文献)
 
 <br>
 
-## 一、思想和框图
+## 17.1 思想和框图
 
 Transformer是由谷歌于2017年提出的具有里程碑意义的模型，同时也是语言AI革命的关键技术。在此之前的SOTA模型都是以循环神经网络为基础（RNN, LSTM等）。从本质上来讲，RNN是以<b>串行</b>的方式来处理数据，对应到NLP任务上，即按照句中词语的先后顺序，每一个时间步处理一个词语。
 
 相较于这种串行模式，Transformer的巨大创新便在于并行化的语言处理：文本中的所有词语都可以在同一时间进行分析，而不是按照序列先后顺序。为了支持这种并行化的处理方式，Transformer依赖于注意力机制。注意力机制可以让模型考虑任意两个词语之间的相互关系，且不受它们在文本序列中位置的影响。通过分析词语之间的两两相互关系，来决定应该对哪些词或短语赋予更多的注意力。
 
-Transformer采用Encoder-Decoder架构，下图就是Transformer的结构。其中左半部分是encoder，右半部分是decoder [1]：
+Transformer采用Encoder-Decoder架构，就是Transformer的结构，如图17.1所示。其中左半部分是encoder，右半部分是decoder <sup>[1]</sup>：
 
 ![img1](https://img-blog.csdnimg.cn/img_convert/fe8cd6186c930b00292af1ced8347645.png#pic_center)
 
-图1 Transformer结构图
+图17.1 Transformer结构图
 
 现有的各种基于Transformer的模型基本只是与NLP任务有关。然而，最近一些文章开创性地将Transformer模型跨领域地引用到了计算机视觉任务中，并取得了不错地成果。这也被许多AI学者认为是开创了CV领域的新时代，甚至可能完全取代传统的卷积操作。
 
@@ -44,13 +45,13 @@ Transformer采用Encoder-Decoder架构，下图就是Transformer的结构。其�
 - 将self-attention机制与常见的CNN架构结合
 - 用self-attention机制完全替代CNN
 
-其中，ICLR 2021 under review 的 **《An Image Is Worth 16X16 Words: Transformers for Image Recognition at Scale》**[2] 采用的是第二种思路。
+其中，ICLR 2021 under review 的 **《An Image Is Worth 16X16 Words: Transformers for Image Recognition at Scale》** <sup>[2]</sup> 采用的是第二种思路。
 
-## 二、实现细节
-### 2.1 Encoder
+## 17.2 实现细节
+### 17.2.1 Encoder
 Encoder层中有6个一模一样的层结构，每个层结构包含了两个子层，第一个子层是多头注意力层（Multi-Head Attention,橙色部分），第二个子层是前馈连接层（Feed Forward，浅蓝色部分）。除此之外，还有一个残差连接，直接将input embedding传给第一个Add & Norm层（黄色部分）以及第一个Add & Norm层传给第二个Add & Norm层（即图中的粉色-黄色1，黄色1-黄色2部分运用了残差连接）。
 
-### 2.2 Decoder
+### 17.2.2 Decoder
 Decoder层中也有6个一模一样的层结构，但是比Endoer层稍微复杂一点，它有三个子层结构，第一个子层结构是遮掩多头注意力层（Masked Multi-Head Attention，橙色部分），第二个子层是多头注意力结构(Multi-Head Attenion，橙色部分)，第三个子层是前馈连接层（Feed Forward,浅蓝色部分）。
 
 说明：
@@ -65,24 +66,24 @@ Decoder层中也有6个一模一样的层结构，但是比Endoer层稍微复杂
 - decoder层中中间的多头自注意力机制的输入是两个参数——encoder层的输出和decoder层中第一层masked多头自注意力机制的输出，作用在本层时是：q=encoder的输出，k=v=decoder的输出。
 - encoder的输入包含两个，是一个序列的token embedding + positional embedding，用正余弦函数对序列中的位置进行计算（偶数位置用正弦，技术位置用余弦）
 
-### 2.3 Self-Attention
+### 17.2.3 Self-Attention
 self-Attention是Transformer用来找到并重点关注与当前单词相关的词语的一种方法。如下述例子：
 
 > The animal didn’t cross the street because it was too tired.
 
 这里的it究竟是指animal还是street，对于算法来说是不容易判断的，但是self-attention是能够把it和animal联系起来的，达到消歧的目的。
 
-这里描述self-attention的具体过程如下图所示：
+这里描述self-attention的具体过程，如下图17.2所示：
 
 ![img2](https://img-blog.csdnimg.cn/img_convert/4d51c9a6f5b04251ddff9d9bb7a4c2fa.png#pic_center)
 
-图2 self-attention的具体过程
+图17.2 self-attention的具体过程
 
-从上图可以看出，attention机制中主要涉及三个向量Q(Query),K(Key),V(Value)，这三个向量的计算过程如下图所示：
+从上图可以看出，attention机制中主要涉及三个向量Q(Query),K(Key),V(Value)，这三个向量的计算过程如下图17.3所示：
 
 ![img3](https://img-blog.csdnimg.cn/img_convert/351f6c256f9f54bd9f84034681d1423b.png#pic_center)
 
-图3 三个向量的计算过程
+图17.3 三个向量的计算过程
 
 图中，WQ,WV,WK是三个随机初始化的矩阵，每个特征词的向量计算公式如下所示：
 
@@ -118,70 +119,70 @@ self-Attention是Transformer用来找到并重点关注与当前单词相关的�
 
 - 没法捕捉位置信息，即没法学习序列中的顺序关系。这点可以通过加入位置信息，如通过位置向量来改善，具体如bert模型。
 
-### 2.4 Multi-Headed Attention
-多头注意力机制是指有多组Q,K,V矩阵，一组Q,K,V矩阵代表一次注意力机制的运算，transformer使用了8组，所以最终得到了8个矩阵，将这8个矩阵拼接起来后再乘以一个参数矩阵WO,即可得出最终的多注意力层的输出。全部过程如下图所示：
+### 17.2.4 Multi-Headed Attention
+多头注意力机制是指有多组Q,K,V矩阵，一组Q,K,V矩阵代表一次注意力机制的运算，transformer使用了8组，所以最终得到了8个矩阵，将这8个矩阵拼接起来后再乘以一个参数矩阵WO,即可得出最终的多注意力层的输出。全部过程如下图17.4所示。
 
 ![img5](https://img-blog.csdnimg.cn/img_convert/b152a4813667746387d28c07dabba191.png#pic_center)
 
-图4 多头注意力机制
+图17.4 多头注意力机制
 
 左图表示使用多组Q,K,V矩阵，右图表示8组Q,K,V矩阵计算会得出8个矩阵，最终我们还需将8个矩阵经过计算后输出为1个矩阵，才能作为最终多注意力层的输出。如下图所示，其中WO是随机初始化的参数矩阵。
 
 
-### 2.5 Positional Encoding
+### 17.2.5 Positional Encoding
 在图figure 1中，还有一个向量positional encoding，它是为了解释输入序列中单词顺序而存在的，维度和embedding的维度一致。这个向量决定了当前词的位置，或者说是在一个句子中不同的词之间的距离。论文中的计算方法如下：
 
 $$ PE(pos,2 * i) = sin(pos / 100002i/dmodel)$$
 
 $$ PE(pos,2 * i + 1) = cos(pos / 100002i/dmodel)$$ 
 
-其中pos指当前词在句子中的位置，i是指向量中每个值的index,从公式中可以看出，句子中偶数位置的词用正弦编码，奇数位置的词用余弦编码。最后把positional encoding的值与embedding的值相加作为输入传进transformer结构中，如下图所示：
+其中pos指当前词在句子中的位置，i是指向量中每个值的index,从公式中可以看出，句子中偶数位置的词用正弦编码，奇数位置的词用余弦编码。最后把positional encoding的值与embedding的值相加作为输入传进transformer结构中，如下图17.5所示：
 
 ![img6](https://img-blog.csdnimg.cn/img_convert/5d21a85ca0141414aa6427757d640331.png#pic_center)
 
-图5 Positional Encoding
+图17.5 Positional Encoding
 
-### 2.6 Layer normalization
-在transformer中，每一个子层（自注意力层，全连接层）后都会有一个Layer normalization层，如下图所示：
+### 17.2.6 Layer normalization
+在transformer中，每一个子层（自注意力层，全连接层）后都会有一个Layer normalization层，如下图17.6所示：
 
 ![img7](https://img-blog.csdnimg.cn/img_convert/892ce726e4ca2d427c0990058234a46e.png#pic_center)
 
-图6 Layer normalization
+图17.6 Layer normalization
 
-Normalize层的目的就是对输入数据进行归一化，将其转化成均值为0方差为1的数据。LN是在每一个样本上都计算均值和方差，如下图所示：
+Normalize层的目的就是对输入数据进行归一化，将其转化成均值为0方差为1的数据。LN是在每一个样本上都计算均值和方差，如下图17.7所示：
 
 ![img8](https://img-blog.csdnimg.cn/img_convert/ee25a4aa76130cf589ea61ccf22b857b.png#pic_center)
 
-图7 数据归一化
+图17.7 数据归一化
 
 
 LN的公式如下：
 
 $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 
-以上是encoder层的全部内容，最后再展示一下将两个encoder叠加在一起的内部图：
+以上是encoder层的全部内容，最后再展示一下将两个encoder叠加在一起的内部图，如下图17.8所示。
 
 ![img9](https://img-blog.csdnimg.cn/img_convert/2549f7262843d0be58d2481276a563f3.png#pic_center)
 
-图8 两个encoder叠加
+图17.8 两个encoder叠加
 
-## 三、应用任务和结果
-### 3.1 NLP领域
+## 17.3 应用任务和结果
+### 17.3.1 NLP领域
 在机器翻译， NLP领域， 基于attention机制的transformer模型取得了很好的结果，因侧重点在CV领域，所以这里不详细阐述。
 
-### 3.2 CV领域
-#### 3.2.1 检测DETR
+### 17.3.2 CV领域
+#### 17.3.2.1 检测DETR
 第一篇用transformer做端到端目标检测的论文：
 
 > End to End Object Detection With Transformer [3]
 
 先用CNN提取特征，然后把最后特征图的每个点看成word，这样特征图就变成了a sequence words，而检测的输出恰好是a set objects，所以transformer正好适合这个任务。
 
-这篇文章用完整的transformer构建了一个end-to-end的目标检测模型，除此外该模型舍弃了手工设计anchor的方法，还提出了一个新的loss function。但讨论重点还是在模型结构上。模型结构如下图：
+这篇文章用完整的transformer构建了一个end-to-end的目标检测模型，除此外该模型舍弃了手工设计anchor的方法，还提出了一个新的loss function。但讨论重点还是在模型结构上。模型结构如下图17.9所示。
 
-![img10](https://img-blog.csdnimg.cn/img_convert/96139ba69c0578884554763aa4fef96a.png)
+![img9](https://user-images.githubusercontent.com/29084184/119442194-f2e89580-bd59-11eb-9b5e-e847b5608157.png)
 
-图9 检测DETR
+图17.9 检测DETR
 
 这篇文章有如下亮点：
 
@@ -191,16 +192,16 @@ $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 
 实验表明，该模型可达到与经过严格调整的Faster R-CNN基线相当的结果。DETR模型简洁直接，但缺点是训练时间过长，对小目标的检测效果不好。
 
-#### 3.2.2 分类ViT
-> An Image Is Worth 16X16 Words: Transformers for Image Recognition at Scale[2]
+#### 17.3.2.2 分类ViT
+> An Image Is Worth 16X16 Words: Transformers for Image Recognition at Scale [2]
 
 <b>文章不同于以往工作的地方，就是尽可能地将NLP领域的transformer不作修改地搬到CV领域来。但是NLP处理的语言数据是序列化的，而CV中处理的图像数据是三维的（height、width和channels）。所以需要通过某种方法将图像这种三维数据转化为序列化的数据。</b>文章中，图像被切割成一个个patch，这些patch按照一定的顺序排列，就成了序列化的数据。
 
-在此基础上，作者提出了Vision Transformer模型。
+在此基础上，作者提出了Vision Transformer模型，如下图17.10所示。
 
-![img11](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9CblNORWFmaWNGQWF6ZGgyamdCY0ZWWjhYMHVQbWJ4N29RS1B4M2VtOW1hMXdDYUI3ZWpOU0pOOUUwTGZJS2lhSThQZ29OdWpGbm4xeURtMVppYUVKNkpMdy82NDA?x-oss-process=image/format,png)
+![img10](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9CblNORWFmaWNGQWF6ZGgyamdCY0ZWWjhYMHVQbWJ4N29RS1B4M2VtOW1hMXdDYUI3ZWpOU0pOOUUwTGZJS2lhSThQZ29OdWpGbm4xeURtMVppYUVKNkpMdy82NDA?x-oss-process=image/format,png)
 
-图10 Vision Transformer模型
+图17.10 Vision Transformer模型
 
 这篇文章首先尝试在几乎不做改动的情况下将Transformer模型应用到图像分类任务中，在 ImageNet 得到的结果相较于 ResNet 较差，这是因为Transformer模型缺乏归纳偏置能力，例如并不具备CNN那样的平移不变性和局部性，因此在数据不足时不能很好的泛化到该任务上。
 
@@ -208,25 +209,25 @@ $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 
 **在实验中，作者发现，在中等规模的数据集上（例如ImageNet），transformer模型的表现不如ResNets；而当数据集的规模扩大，transformer模型的效果接近或者超过了目前的一些SOTA结果。** 作者认为是大规模的训练可以鼓励transformer学到CNN结构所拥有的translation equivariance 和locality.
 
-#### 3.2.3 分割SETR
+#### 17.3.2.3 分割SETR
 > Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers
 
-![img12](https://img-blog.csdnimg.cn/img_convert/0fb6fb5bc0288e6f196563c45af55ac1.png)
+![img11](https://user-images.githubusercontent.com/29084184/119442119-d3ea0380-bd59-11eb-8fd3-4b8538eccf6d.png)
 
-图11 分割SETR
+图17.11 分割SETR的框架
 
-用ViT作为的图像的encoder，然后加一个CNN的decoder来完成语义图的预测。
+如图17.11 所示，分割 SETR 用 ViT 作为的图像的 encoder，然后加一个 CNN 的 decoder 来完成语义图的预测。
 
 大量实验表明，SETR在ADE20K（50.28%mIoU）、Pascal上下文（55.83%mIoU）和城市景观上取得了新的水平。特别是在竞争激烈的ADE20K测试服务器排行榜上，取得了第一名（44.42%mIoU）的位置。
 
-#### 3.2.4 Deformable-DETR
+#### 17.3.2.4 Deformable-DETR
 > DEFORMABLE DETR: DEFORMABLE TRANSFORMERS FOR END-TO-END OBJECT DETECTION[5]
 
-对之前DETR的改进。
+Deformable-DETR 是对之前 DETR 的改进，其模型框架如图17.12所示。
 
-![img13](https://img-blog.csdnimg.cn/img_convert/9462131db3436a563c86b5d5a47341aa.png)
+![image12](https://user-images.githubusercontent.com/29084184/119442381-5246a580-bd5a-11eb-81a8-2fb7cfa35c5a.png)
 
-图12 Deformable-DETR
+图17.12 Deformable-DETR
 
 
 亮点有：
@@ -237,7 +238,7 @@ $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 实验结果：训练时间减少，性能又高
 
 
-## 四、优点及分析
+## 17.4 优点及分析
 1、相较于RNN必须按时间顺序进行计算，Transformer**并行处理机制的显著好处便在于更高的计算效率**，可以通过并行计算来大大加快训练速度，从而能在更大的数据集上进行训练。
 
 - 例如GPT-3（Transformer的第三代）的训练数据集大约包含5000亿个词语，并且模型参数量达到1750亿，远远超越了现有的任何基于RNN的模型。
@@ -257,7 +258,7 @@ $$LN(xi) = α * (xi - μL / √(σ2L + ε)) + β$$
 
 Transformer的特性不仅让其在NLP领域大获成功，也提供了将其迁移到其他任务上的潜力。
 
-## 五、缺点及分析
+## 17.5 缺点及分析
 1、Transformer模型缺乏归纳偏置能力，例如并不具备CNN那样的平移不变性和局部性，因此在数据不足时不能很好的泛化到该任务上。
 
 然而，当训练数据量得到提升时，归纳偏置的问题便能得到缓解，即如果在足够大的数据集上进行与训练，便能很好地迁移到小规模数据集上。
@@ -265,7 +266,7 @@ Transformer的特性不仅让其在NLP领域大获成功，也提供了将其迁
 
 3、Transformer失去的位置信息其实在NLP中非常重要，而论文中在特征向量中加入Position Embedding也只是一个权宜之计，并没有改变Transformer结构上的固有缺陷。
 
-## 六、参考文献
+## 17.6 参考文献
 
 [1] Ashish Vaswani,Noam Shazeer,Niki Parmar,Jakob Uszkoreit,Llion Jones,Aidan N. Gomez,Łukasz Kaiser,Illia Polosukhin. Attention Is All You Need. 31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA.
 
