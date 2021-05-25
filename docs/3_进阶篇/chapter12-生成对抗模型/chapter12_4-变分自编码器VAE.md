@@ -58,9 +58,9 @@
 
 ## 12.4.1 概述
 
-VAE 模型是一种有趣的生成模型，与GAN相比，VAE 有更加完备的数学理论（引入了隐变量），理论推导更加显性，训练相对来说更加容易。
+变分自编码器（Variational auto-encoder，VAE）是一类重要的生成模型（generative model），它于2013年由Diederik P.Kingma和Max Welling提出[1]。2016年Carl Doersch写了一篇VAEs的tutorial[2]，对VAEs做了更详细的介绍，比文献[1]更易懂。VAE 模型与GAN相比，VAE 有更加完备的数学理论（引入了隐变量），理论推导更加显性，训练相对来说更加容易。
 
-VAE 可以从神经网络的角度或者概率图模型的角度来解释。
+VAE 可以从**神经网络**的角度或者**概率图模型**的角度来解释，本文主要从概率图模型的角度尽量通俗地讲解其原理，并给出代码实现。
 
 --> [Back to Menu](#124-变分自编码器-variational-auto-encoder-vae)
 
