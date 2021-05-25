@@ -674,7 +674,7 @@ https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational
 | \ | \ | \ |
 | 图12.5 | Maximizing Likelihood | 最大似然估计 |
 | | Find P(x\|z) and q(z\|x) maximizing Lb | 寻找 P(x\|z) 和 q(z\|x) 使得 Lb 最大 |
-| | q(z\|x) will be an approximation of p(z|x) in the end | q(z\|x) 最终将会被 p(z\|x) 近似化 |
+| | q(z\|x) will be an approximation of p(z\|x) in the end | q(z\|x) 最终将会被 p(z\|x) 近似化 |
 | \ | \ | \ |
 | 图12.7 | Connection with network | 连接网络 |
 | | Refer to the Appendix B of the original VAE paper | 请参考附件B中的论文原文 |
