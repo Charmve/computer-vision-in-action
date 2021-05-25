@@ -656,6 +656,8 @@ https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational
 
 [6] TensorFlow. Convolutional Variational Autoencoder. https://tensorflow.google.cn/tutorials/generative/cvae
 
+<br>
+
 ## 附录： 图中英文翻译
 
 | 图序号 | 英文原文 | 中文翻译 | 
@@ -664,14 +666,14 @@ https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational
 | | |P(z) 是正态分布，μ(z), o(z) 是将被估计的参数|
 | | Maximizing the likelihood of the observed x | 最大化x的似然估计 | 
 | | Tunning the parameters to maximize likelihood L | 调整参数以使似然L最大化 |
-| | We need another distribution q(z|x) | 我们需要另外一个分布 q(z|x) | 
+| | We need another distribution q(z\|x) | 我们需要另外一个分布 q(z|x) | 
 | \ | \ | \ |
 | 图12.4 | Maximizing Likelihood | 最大似然估计 |
-| | q(z|x) can be any distribution | q(z|x)可以是任何一种分布 |
+| | q(z\|x) can be any distribution | q(z\|x)可以是任何一种分布 |
 | | lower bound Lb | 取 Lb 的下界|
 | \ | \ | \ |
 | 图12.5 | Maximizing Likelihood | 最大似然估计 |
-| | Find P(x|z) and q(z|x) maximizing Lb | 寻找 P(x|z) 和 q(z|x) 使得 Lb 最大 |
+| | Find P(x|z) and q(z\|x) maximizing Lb | 寻找 P(x|z) 和 q(z|x) 使得 Lb 最大 |
 | | q(z|x) will be an approximation of p(z|x) in the end | q(z|x) 最终将会被 p(z|x) 近似化 |
 | \ | \ | \ |
 | 图12.7 | Connection with network | 连接网络 |
