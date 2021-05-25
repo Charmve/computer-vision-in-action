@@ -132,8 +132,8 @@ self-Attention是Transformer用来找到并重点关注与当前单词相关的�
 ### 17.2.5 Positional Encoding
 在图figure 1中，还有一个向量positional encoding，它是为了解释输入序列中单词顺序而存在的，维度和embedding的维度一致。这个向量决定了当前词的位置，或者说是在一个句子中不同的词之间的距离。论文中的计算方法如下：
 
-![](http://latex.codecogs.com/svg.latex?PE(pos,2 * i) = sin(pos / 100002i/dmodel))
-![](http://latex.codecogs.com/svg.latex?PE(pos,2 * i + 1) = cos(pos / 100002i/dmodel)))
+$$ PE(pos,2 * i) = sin(pos / 100002i/dmodel) $$
+$$ PE(pos,2 * i + 1) = cos(pos / 100002i/dmodel)) $$
 
 其中pos指当前词在句子中的位置，i是指向量中每个值的index,从公式中可以看出，句子中偶数位置的词用正弦编码，奇数位置的词用余弦编码。最后把positional encoding的值与embedding的值相加作为输入传进transformer结构中，如下图17.5所示：
 
