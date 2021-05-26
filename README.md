@@ -50,8 +50,8 @@
 ### 目录
 - <b><h4>前言</h4></b>
 - <b><h4>主要符号表</h4></b>
-- <details><summary><b><h4>绪论篇</h4></b></summary> 
-  - <details><summary>第 0 章  [计算机视觉概述](https://charmve.github.io/computer-vision-in-action/#/chapter0/chapter0)</summary>
+- <b><h4>绪论篇</h4></b>
+  - 第 0 章  [计算机视觉概述](https://charmve.github.io/computer-vision-in-action/#/chapter0/chapter0)
     - 1. 概述
     - 2. 计算机视觉基本概念
     - 3. 典型的计算机视觉任务
@@ -62,8 +62,7 @@
     - 4. [发展历史回顾](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/0_绪论/4_发展历史回顾.md)
     - 5. 小练习
     - 小结
-    - 参考文献</details>
-</details>
+    - 参考文献
 - <b><h4>理论篇</h4></b>
   - 第 1 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
     - 1.1 Softmax 回归
@@ -323,9 +322,9 @@ pip3 install -r requirements.txt
 ```
 2. Set up
 ```
-python setup.py
+python3 setup.py
 ```
-3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup>在线测试。
+3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
 
 ### 🔍 Browse Folders
 - 📁 <code>code/</code> - 书中完整代码
