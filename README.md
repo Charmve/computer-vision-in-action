@@ -57,10 +57,11 @@
 
 <p align="center">
   <img width="200"  src="static/frontpage/_images/notebook.gif">
-</p> :label:`fig_book_org`
+</p> 
 
 <p align="right">
-	<a href="计算机视觉实战演练：算法与应用_脑图.pdf">全书详细脑图</a>
+  :label: `fig_book_org`
+  <a href="计算机视觉实战演练：算法与应用_脑图.pdf">全书详细脑图</a>
 </p>
 
 本开源项目代表了我们的一种尝试：我们将教给读者概念、背景知识和代码；我们将在同一个地方阐述剖析问题所需的批判性思维、解决问题所需的数学知识，以及实现解决方案所需的工程技能。
