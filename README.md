@@ -48,7 +48,7 @@
 > - 地址：~~https://github.com/charmve/computer-vision-in-action/releases~~
 
 ### 目录
-- <b><h4>前言</h4></b>
+- <b><h4>[前言](/docs/book_preface.md)</h4></b>
 - <b><h4>主要符号表</h4></b>
 - <b><h4>绪论篇</h4></b>
   - 第 0 章  [计算机视觉概述](https://charmve.github.io/computer-vision-in-action/#/chapter0/chapter0)
@@ -304,7 +304,7 @@
     - A 矩阵
     - B 常用激活函数总结
     - C 梯度下降法
-  - <b><h4>后记</h4></b>
+  - <b><h4>[后记](/docs/book_postscript.md)</h4></b>
   - <b><h4>参考文献</h4></b>
 
 <br>
