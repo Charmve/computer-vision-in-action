@@ -50,8 +50,9 @@
 :label:`fig_book_org`
 
 <table>
-  <tr>
-    <td>
+<tr>
+<td>
+
 ### 🔍 Browse Folders
 - 📁 <code>code/</code> - 书中完整代码
 - 📁 <code>datasets/</code> - 本书所用数据集
@@ -75,8 +76,9 @@
   - 📄 <code>17_TL-ants-bees-classification.ipynb</code>  - 迁移学习的应用：蚂蚁和蜜蜂的分类问题
 - 📁 <code>res/</code> - ui 图片
 - 📄 <code>README.md</code> - 全书介绍及目录
-</td>
+
 </tr>
+</td>
 </table>
 
 * 第一部分包括基础知识和预备知识。
