@@ -336,7 +336,7 @@ python3 setup.py
   - 📁 <code>2_实战篇/</code> - 项目实战教程
   - 📁 <code>3_进阶篇/</code> - 最新CV模型和算法
   - 📁 <code>附件/</code> - 所需数学和统计学知识
-- 📁 <code>L0CV/</code> - L0CV package built in this book
+- 📁 <code>L0CV/</code> - 专为本项目建立的 L0CV 包 
 - 📁 <code>notebooks/</code> - 全书重要模型的Colab notebook，可在线测试
   - 📄 <code>01_Notebooks.ipynb</code> - Notebooks 基本介绍和使用
   - 📄 <code>02_Python.ipynb</code> - Python 编程简明教程
