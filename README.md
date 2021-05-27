@@ -53,10 +53,9 @@
 
 <br>
 
+### 全书结构
+
 <p align="center">
-  <img width="200"  src="static/frontpage/_images/eq.jpg">
-  <img width="200"  src="static/frontpage/_images/figure.jpg">
-  <img width="200"  src="static/frontpage/_images/code.jpg">
   <img width="200"  src="static/frontpage/_images/notebook.gif">
 </p> :label:`fig_book_org`
 
