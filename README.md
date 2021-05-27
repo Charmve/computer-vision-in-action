@@ -47,6 +47,39 @@
 > <h4>最新版PDF下载</h4>
 > - 地址：~~https://github.com/charmve/computer-vision-in-action/releases~~
 
+<br>
+
+
+<p align="center">
+  <img width="200"  src="static/frontpage/_images/eq.jpg">
+  <img width="200"  src="static/frontpage/_images/figure.jpg">
+  <img width="200"  src="static/frontpage/_images/code.jpg">
+  <img width="200"  src="static/frontpage/_images/notebook.gif">
+</p>
+
+:label:`fig_book_org`
+
+<p align="center">
+	全书详细脑图
+</p>
+
+本开源项目代表了我们的一种尝试：我们将教给读者概念、背景知识和代码；我们将在同一个地方阐述剖析问题所需的批判性思维、解决问题所需的数学知识，以及实现解决方案所需的工程技能。
+
+我们的目标是创建一个为实现以下目标的统一资源：
+1. 所有人均可在网上免费获取；
+2. 提供足够的技术深度，从而帮助读者实际成为深度学习应用科学家：既理解数学原理，又能够实现并不断改进方法；
+3. 包含可运行的代码，为读者展示如何在实际中解决问题。这样不仅直接将数学公式对应成实际代码，而且可以修改代码、观察结果并及时获取经验；
+4. 允许我们和整个[社区](https://github.com/Charmve/computer-vision-in-action/discussions)不断快速迭代内容，从而紧跟仍在高速发展的深度学习领域；
+5. 由包含有关技术细节问答的论坛作为补充，使大家可以相互答疑并交换经验。
+
+</tr>
+</td>
+</table>
+
+<table align="center">
+<tr>
+<td>
+
 ### 目录
 - <b><h4>[前言](/docs/book_preface.md)</h4></b>
 - <b><h4>主要符号表</h4></b>
