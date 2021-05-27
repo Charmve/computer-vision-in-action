@@ -10,6 +10,10 @@ requirements = [
     'pandas'
 ]
 
+# requirements = open('requirements.txt').readlines() # 更全依赖文件
+
+print(L0CV.__version__)
+
 setup(
     name='L0CV',
     version=L0CV.__version__,
