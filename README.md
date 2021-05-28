@@ -53,14 +53,14 @@
 
 <br>
 
-### 全书结构
+### 全书组织
+:label: `fig_book_org`
 
 <p align="center">
-  <img width="200"  src="static/frontpage/_images/notebook.gif">
+  <img src="res/book_org.png" alt="book_org.png">
 </p> 
 
 <p align="right">
-  :label: `fig_book_org`
   <a href="计算机视觉实战演练：算法与应用_脑图.pdf">全书详细脑图</a>
 </p>
 
@@ -68,9 +68,9 @@
 
 我们的目标是创建一个为实现以下目标的统一资源：
 1. 所有人均可在网上免费获取；
-2. 提供足够的技术深度，从而帮助读者实际成为深度学习应用科学家：既理解数学原理，又能够实现并不断改进方法；
+2. 提供足够的技术深度，从而帮助读者实际成为计算机视觉应用科学家：既理解数学原理，又能够实现并不断改进方法；
 3. 包含可运行的代码，为读者展示如何在实际中解决问题。这样不仅直接将数学公式对应成实际代码，而且可以修改代码、观察结果并及时获取经验；
-4. 允许我们和整个[社区](https://github.com/Charmve/computer-vision-in-action/discussions)不断快速迭代内容，从而紧跟仍在高速发展的深度学习领域；
+4. 允许我们和整个[社区](https://github.com/Charmve/computer-vision-in-action/discussions)不断快速迭代内容，从而紧跟仍在高速发展的计算机视觉领域；
 5. 由包含有关技术细节问答的论坛作为补充，使大家可以相互答疑并交换经验。
 
 
