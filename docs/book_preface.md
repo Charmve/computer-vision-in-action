@@ -51,11 +51,11 @@
 :label: `fig_book_org`
 
 <p align="center">
-  <img src="res/book_org.png" alt="book_org.png">
+  <img src="../res/book_org.png" alt="book_org.png">
 </p> 
 
 <p align="right">
-  <a href="res/计算机视觉实战演练：算法与应用_思维导图.pdf">全书详细思维导图</a>
+  <a href="../res/计算机视觉实战演练：算法与应用_思维导图.pdf">全书详细思维导图</a>
 </p>
 
 * 第一部分包括基础知识和预备知识。
