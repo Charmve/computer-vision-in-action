@@ -47,39 +47,16 @@
 ### 内容和结构
 
 全书大致可分为三个部分，在 :numref:`fig_book_org` 中用不同的颜色呈现：
-:label:`fig_book_org`
 
-<table>
-<tr>
-<td>
+:label: `fig_book_org`
 
-### 🔍 Browse Folders
-- 📁 <code>code/</code> - 书中完整代码
-- 📁 <code>datasets/</code> - 本书所用数据集
-  - 📁 <code>images/</code> - 经典图像处理图片
-- 📁 <code>docs/</code> - 全书按照一下几个篇目进行编写
-  - 📁 <code>0_绪论/</code> - 全书绪论
-  - 📁 <code>1_理论篇/</code> - 基本理论和算法基础
-  - 📁 <code>2_实战篇/</code> - 项目实战教程
-  - 📁 <code>3_进阶篇/</code> - 最新CV模型和算法
-  - 📁 <code>附件/</code> - 所需数学和统计学知识
-- 📁 <code>L0CV/</code> - 专为本项目建立的 L0CV 包 
-- 📁 <code>notebooks/</code> - 全书重要模型的Colab notebook，可在线测试
-  - 📄 <code>01_Notebooks.ipynb</code> - Notebooks 基本介绍和使用
-  - 📄 <code>02_Python.ipynb</code> - Python 编程简明教程
-  - 📄 <code>03_NumPy.ipynb</code> - NumPy 的使用
-  - 📄 <code>04_Pandas.ipynb</code> - Pandas 的使用
-  - 📄 <code>05_PyTorch.ipynb</code> - PyTorch 的使用
-  - 📄 <code>06_Linear_Regression.ipynb</code>  - 线性回归
-  - ...
-  - 📄 <code>16_CVAE.ipynb</code> - 卷积变分自编码器
-  - 📄 <code>17_TL-ants-bees-classification.ipynb</code>  - 迁移学习的应用：蚂蚁和蜜蜂的分类问题
-- 📁 <code>res/</code> - ui 图片
-- 📄 <code>README.md</code> - 全书介绍及目录
+<p align="center">
+  <img src="res/book_org.png" alt="book_org.png">
+</p> 
 
-</tr>
-</td>
-</table>
+<p align="right">
+  <a href="res/计算机视觉实战演练：算法与应用_思维导图.pdf">全书详细思维导图</a>
+</p>
 
 * 第一部分包括基础知识和预备知识。
 :numref:`chap_introduction` 提供深度学习的入门课程。然后在 :numref:`chap_preliminaries` 中，我们将快速向你介绍实践深度学习所需的前提条件，例如如何存储和处理数据，以及如何应用基于线性代数、微积分和概率基本概念的各种数值运算。 :numref:`chap_linear` 和 :numref:`chap_perceptrons` 涵盖了深度学习的最基本概念和技术，例如线性回归、多层感知机和正则化。
