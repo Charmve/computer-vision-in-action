@@ -80,7 +80,7 @@
 <tr>
 <td>
 
-- <b><h4>[前言](/docs/book_preface.md)</h4></b>
+- <b><h4>[序言](/docs/book_preface.md)</h4></b>
 - <b><h4>主要符号表</h4></b>
 - <b><h4>绪论篇</h4></b>
   - 第 0 章  [计算机视觉概述](https://charmve.github.io/computer-vision-in-action/#/chapter0/chapter0)
