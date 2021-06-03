@@ -272,13 +272,18 @@
       - [15.7.2 实战项目: 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1572-实战项目-蚂蚁和蜜蜂的分类问题)
     - [小结](#小结)
     - [参考文献](#参考文献)
-  - 第 16 章 [注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
-    - 16.1 Attention with RNNs
-    - 16.2 通用注意力
-      - 16.2.1 Self-attention 自注意力
-      - 16.2.2 Positional encoding
-      - 16.2.3 Masked attention
-      - 16.2.4 Multi-head attention
+  - 第 16 章 [计算机视觉中的注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
+    - 16.1 概述
+    - 16.2 Attention with RNNs
+    - 16.3 [Self-attention 自注意力](https://mp.weixin.qq.com/s/nUd7YtCci1_AwQ4nOwK9bA)
+    - 16.4 软注意力（soft-attention）
+      - 16.4.1 空间域注意力
+      - 16.4.2 通道注意力
+      - 16.4.3 Positional encoding
+      - 16.4.4 混合域模型
+      - 16.4.5 Masked attention
+      - 16.4.6 Multi-head attention
+    - 16.5 强注意力（hard attention）
     - 小结
     - 参考文献
   - 第 17 章 [跨界模型 Transformer](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md)
@@ -318,13 +323,13 @@
       - 19.3.1 前向神经网络中的BN
       - 19.3.2 CNN网络中的BN
       - 19.3.3 Batch Norm的四大罪状
-    - 19.3 Layer Normalization、Instance Normalization及Group Normalization
+    - 19.4 Layer Normalization、Instance Normalization及Group Normalization
       - 19.4.1 Layer Normalization
       - 19.4.2 Instance Normalization
       - 19.4.3 Group Normalization
       - 19.4.4 用一个故事来总结
-    - 19.3 Normalization操作的Re-Scaling不变性
-    - 19.3 Batch Normalization为何有效
+    - 19.5 Normalization操作的Re-Scaling不变性
+    - 19.6 Batch Normalization为何有效
     - 小结
     - [参考文献](#参考文献)
   - 第 20 章 [模型压缩与裁剪](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA) 
