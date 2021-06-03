@@ -142,8 +142,8 @@
     - 3.4 逻辑回归 LR 
     - 3.5 [实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
     - 3.6 [实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
-    - [小结](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/)
-    - [参考文献](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/Reference.md)
+    - [小结](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/chapter3_Image-Classification.md#小结)
+    - [参考文献](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/chapter3_Image-Classification.md#参考文献)
   - 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
     - 4.1 递归神经网络 RNN
     - 4.2 循环神经网络的从零开始实现
@@ -272,13 +272,18 @@
       - [15.7.2 实战项目: 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1572-实战项目-蚂蚁和蜜蜂的分类问题)
     - [小结](#小结)
     - [参考文献](#参考文献)
-  - 第 16 章 [注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
-    - 16.1 Attention with RNNs
-    - 16.2 通用注意力
-      - 16.2.1 Self-attention 自注意力
-      - 16.2.2 Positional encoding
-      - 16.2.3 Masked attention
-      - 16.2.4 Multi-head attention
+  - 第 16 章 [计算机视觉中的注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
+    - 16.1 概述
+    - 16.2 Attention with RNNs
+    - 16.3 [Self-attention 自注意力](https://mp.weixin.qq.com/s/nUd7YtCci1_AwQ4nOwK9bA)
+    - 16.4 软注意力（soft-attention）
+      - 16.4.1 空间域注意力
+      - 16.4.2 通道注意力
+      - 16.4.3 Positional encoding
+      - 16.4.4 混合域模型
+      - 16.4.5 Masked attention
+      - 16.4.6 Multi-head attention
+    - 16.5 强注意力（hard attention）
     - 小结
     - 参考文献
   - 第 17 章 [跨界模型 Transformer](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md)
@@ -300,17 +305,33 @@
     - 17.5 [缺点及分析](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#五-缺点及分析)
     - 小结
     - [参考文献](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#六-参考文献)
-  - 第 18 章 [知识蒸馏]()
-    - 18.1 概述
-    - ...
+  - 第 18 章 [知识蒸馏](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA)
+    - 18.1 概要
+    - 18.2 KD主要方法
+      - 18.2.1 Logits(Response)-based Knowledge
+      - 18.2.2 Feature-based Knowledge
+      - 18.2.3 Relation-based Knowledge
+    - 18.3 知识蒸馏的应用 NLP-BERT
+    - 18.4 常见疑问解答
     - 小结
     - [实战项目 12 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
-    - [参考文献](#六-参考文献)
-  - 第 19 章 [Normalization 模型]()
-    - 19.1 概述
-    - ...
+    - [参考文献](#参考文献)
+  - 第 19 章 [Normalization 模型](https://blog.csdn.net/Charmve/article/details/107650487)
+    - 19.1 从Mini-Batch SGD说起
+    - 19.2 Normalization到底是在做什么
+    - 19.3 Batch Normalization如何做
+      - 19.3.1 前向神经网络中的BN
+      - 19.3.2 CNN网络中的BN
+      - 19.3.3 Batch Norm的四大罪状
+    - 19.4 Layer Normalization、Instance Normalization及Group Normalization
+      - 19.4.1 Layer Normalization
+      - 19.4.2 Instance Normalization
+      - 19.4.3 Group Normalization
+      - 19.4.4 用一个故事来总结
+    - 19.5 Normalization操作的Re-Scaling不变性
+    - 19.6 Batch Normalization为何有效
     - 小结
-    - [参考文献](#六-参考文献)
+    - [参考文献](#参考文献)
   - 第 20 章 [模型压缩与裁剪](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA) 
     - 20.1 概述
     - 20.2 模型压缩
