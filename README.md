@@ -300,17 +300,33 @@
     - 17.5 [缺点及分析](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#五-缺点及分析)
     - 小结
     - [参考文献](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter7-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter7_Transformer.md#六-参考文献)
-  - 第 18 章 [知识蒸馏]()
-    - 18.1 概述
-    - ...
+  - 第 18 章 [知识蒸馏](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA)
+    - 18.1 概要
+    - 18.2 KD主要方法
+      - 18.2.1 Logits(Response)-based Knowledge
+      - 18.2.2 Feature-based Knowledge
+      - 18.2.3 Relation-based Knowledge
+    - 18.3 知识蒸馏的应用 NLP-BERT
+    - 18.4 常见疑问解答
     - 小结
     - [实战项目 12 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
-    - [参考文献](#六-参考文献)
-  - 第 19 章 [Normalization 模型]()
-    - 19.1 概述
-    - ...
+    - [参考文献](#参考文献)
+  - 第 19 章 [Normalization 模型](https://blog.csdn.net/Charmve/article/details/107650487)
+    - 19.1 从Mini-Batch SGD说起
+    - 19.2 Normalization到底是在做什么
+    - 19.3 Batch Normalization如何做
+      - 19.3.1 前向神经网络中的BN
+      - 19.3.2 CNN网络中的BN
+      - 19.3.3 Batch Norm的四大罪状
+    - 19.3 Layer Normalization、Instance Normalization及Group Normalization
+      - 19.4.1 Layer Normalization
+      - 19.4.2 Instance Normalization
+      - 19.4.3 Group Normalization
+      - 19.4.4 用一个故事来总结
+    - 19.3 Normalization操作的Re-Scaling不变性
+    - 19.3 Batch Normalization为何有效
     - 小结
-    - [参考文献](#六-参考文献)
+    - [参考文献](#参考文献)
   - 第 20 章 [模型压缩与裁剪](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA) 
     - 20.1 概述
     - 20.2 模型压缩
