@@ -51,9 +51,10 @@
 </td>
 </table>
 
+<br>
+
 ### 一种结合了代码、数据集和HTML的数字学习媒介
 
-<br>
 
 ### 全书组织
 :label: `fig_book_org`
