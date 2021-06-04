@@ -184,7 +184,7 @@
     - [7.10 区域卷积神经网络（R-CNN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.9%20区域卷积神经网络（R-CNN）.md)
     - [7.11 全卷积网络（FCN）]()
     - [7.12 实战Kaggle比赛：图像分类（CIFAR-10）]()
-    - [7.13 实战Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet Dogs）.md)
+    - [7.13 实战Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
     - 参考文献
   - 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
