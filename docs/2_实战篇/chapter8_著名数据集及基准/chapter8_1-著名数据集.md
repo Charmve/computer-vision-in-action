@@ -59,7 +59,6 @@ CIFAR-10是一个更接近普适物体的彩色图像数据集。CIFAR-10 是由
 | cifar10_train.py | 使用单个 GPU 或 CPU 训练模型 |
 | cifar10_train_mutil_gpu.py | 使用多个 GPU 训练模型 |
 | cifar10_cval.py | 在测试集上测试模型的性能 |
- 
 
 (3) CIFAR-10 数据集的数据文件名及用途
 
@@ -71,7 +70,7 @@ CIFAR-10是一个更接近普适物体的彩色图像数据集。CIFAR-10 是由
 | -- | -- |
 | batches.meta. bet | 文件存储了每个类别的英文名称。可以用记事本或其他文本文件阅读器打开浏览查看 | 
 | data batch 1.bin、data batch 2.bin 、……、data batch 5.bin | 这5 个文件是CIFAR- 10 数据集中的训练数据。每个文件以二进制格式存储了10000 张32 × 32 的彩色图像和这些图像对应的类别标签。一共50000 张训练图像 |
-| test batch.bin | 这个文件存储的是测试图像和测试图像的标签。一共10000 张 |
+| test batch.bin | 这个文件存储的是测试图像和测试图像的标签。一共10000 张。 |
 | readme.html | 数据集介绍文件|
 
 
