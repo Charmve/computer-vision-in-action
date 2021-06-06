@@ -15,9 +15,13 @@
 
 <a href="https://www.github.com/Charmve" target="_blank"><img src="https://img.shields.io/badge/创始人-@Charmve-000000.svg?style=flat-square&logo=GitHub"></a>  [![CircleCI](https://circleci.com/gh/Charmve/computer-vision-in-action.svg?style=svg)](https://circleci.com/gh/Charmve/computer-vision-in-action)
 
-作者系迈微AI研习社创始人、CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。底部有菜单分类，关注我们，一起学习成长。
+作者系迈微AI研习社创始人、CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。公众号底部有菜单分类，关注我们，一起学习成长。
 
 ---
+
+### 一种结合了代码、数据集和HTML的数字学习媒介
+<br>
+
 <table align="center">
 <tr>
 <td>
@@ -51,8 +55,6 @@
 </td>
 </table>
 
-<br>
-
 ### 全书组织
 :label: `fig_book_org`
 
@@ -63,6 +65,8 @@
 <p align="right">
   <a href="res/计算机视觉实战演练：算法与应用_思维导图.pdf">全书详细思维导图</a>
 </p>
+
+本书详细介绍，请移步 [<b>序言</b>](/docs/book_preface.md)
 
 本开源项目代表了我们的一种尝试：我们将教给读者概念、背景知识和代码；我们将在同一个地方阐述剖析问题所需的批判性思维、解决问题所需的数学知识，以及实现解决方案所需的工程技能。
 
@@ -175,16 +179,16 @@
     - [7.1 卷积神经网络（LeNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.1%20卷积神经网络（LeNet）.md)
     - [7.2 深度卷积神经网络（AlexNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.2%20深度卷积神经网络（AlexNet）.md)
     - [7.3 使用重复元素的网络（VGG）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.3%20使用重复元素的网络（VGG）.md)
-    - [7.4 含并行连结的网络（GoogLeNet）]()
-    - [7.5 残差网络（ResNet）]()
-    - [7.6 二阶网络编码解码（U-Net）]()
-    - [7.7 稠密连接网络（DenseNet）]()
-    - [7.8 实例分割网络（SegNet）]()
-    - [7.9 Mask-RCNN]()
+    - [7.4 含并行连结的网络（GoogLeNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.4%20含并行连结的网络（GoogLeNet）.md)
+    - [7.5 残差网络（ResNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
+    - [7.6 二阶网络编码解码（U-Net）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
+    - [7.7 稠密连接网络（DenseNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
+    - [7.8 实例分割网络（SegNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
+    - [7.9 Mask-RCNN](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
     - [7.10 区域卷积神经网络（R-CNN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.9%20区域卷积神经网络（R-CNN）.md)
-    - [7.11 全卷积网络（FCN）]()
-    - [7.12 实战Kaggle比赛：图像分类（CIFAR-10）]()
-    - [7.13 实战Kaggle比赛：狗的品种识别（ImageNet Dogs）]()
+    - [7.11 全卷积网络（FCN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
+    - [7.12 实战Kaggle比赛：图像分类（CIFAR-10）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
+    - [7.13 实战Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
     - 参考文献
   - 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
