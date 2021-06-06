@@ -210,7 +210,7 @@
     - 9.3 实例分割 
       - 9.3.1 常用网络 
       - 9.3.2 实战项目 8
-      - 9.3.3 新方法：滑动窗口, PointRend, PolarMask
+      - 9.3.3 新方法：[滑动窗口](https://blog.csdn.net/Charmve/article/details/108915225), [PointRend](https://blog.csdn.net/Charmve/article/details/108892076), PolarMask
     - 小结
     - 参考文献
   - 第 10 章 [图像分类项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
