@@ -1,13 +1,12 @@
-# Chapter1 
+# 第 6 章 深度学习环境搭建
 
 作者: 张伟 (Charmve)
-日期: 2021/04/29
+日期: 2021/06/06
 
-## 目录
-- 第 1 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
-  - 数据驱动方法
-  - k 最近邻算法
-  - 线性分类
-  - 逻辑回归 LR 
-  - [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
-
+- 第 6 章 [深度学习环境搭建](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+    - [6.1 PyTorch](./notebooks/05_PyTorch.ipynb)
+    - [6.2 OpenCV](./notebooks/02_Python.ipynb)
+    - [6.3 Numpy](./notebooks/03_NumPy.ipynb)
+    - [6.4 Pandas](./notebooks/04_Pandas.ipynb)
+    - 小结
+    - 参考文献

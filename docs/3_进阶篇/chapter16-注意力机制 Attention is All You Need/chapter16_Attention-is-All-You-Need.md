@@ -1,21 +1,39 @@
-# 第 6 章 注意力机制 Attention is All You Need
+# 第 16 章 注意力机制 Attention is All You Need
 
 ## 目录
 
-  - [第 6 章 注意力机制 Attention is All You Need](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
-    - [6.1 Attention 是一种注意力机制](#1-Attention-是一种注意力机制)
-    - [6.2 Attention是一种加权平均](#2-Attention是一种加权平均)
-    - [6.3 自然语言处理中，Attention is all you need](#3-自然语言处理中，attention-is-all-you-need)
-    - [6.4 BERT系列大规模无监督学习将Attention推到了新的高度](#4-bert系列大规模无监督学习将attention推到了新的高度)
-    - [6.5 计算机视觉中，Attention是有效的非局域信息融合技术](#5-计算机视觉中，attention是有效的非局域信息融合技术)
-    - [6.6 计算机视觉中，Attention will be all you need](#6-计算机视觉中，attention-will-be-all-you-need)
-    - [6.7 结构化数据中，Attention是辅助GNN的利器](#7-结构化数据中，attention是辅助gnn的利器)
-    - [6.8 逻辑可解释性与Attention的关系](#8-逻辑可解释性与attention的关系)
-    - [6.9 Attention的多种变种及他们的内在关联](#9-attention的多种变种及他们的内在关联)
+  - [第 16 章 注意力机制 Attention is All You Need](https://charmve.github.io/computer-vision-in-action/#/chapter16/chapter16)
+    - 16.1 概述
+    - 16.2 Attention with RNNs
+    - 16.3 [Self-attention 自注意力](https://mp.weixin.qq.com/s/nUd7YtCci1_AwQ4nOwK9bA)
+    - 16.4 软注意力（soft-attention）
+      - 16.4.1 空间域注意力
+      - 16.4.2 通道注意力
+      - 16.4.3 Positional encoding
+      - 16.4.4 混合域模型
+      - 16.4.5 Masked attention
+      - 16.4.6 Multi-head attention
+    - 16.5 强注意力（hard attention）
+    - 16.6 Attention九层塔 - 注意力机制的九重理解
+    - 小结
+    - 参考文献
+
+    <br>
+
+  - 16.6 Attention九层塔 - 注意力机制的九重理解
+    - [16.6.1 Attention 是一种注意力机制](#1-Attention-是一种注意力机制)
+    - [16.6.2 Attention是一种加权平均](#2-Attention是一种加权平均)
+    - [16.6.3 自然语言处理中，Attention is all you need](#3-自然语言处理中，attention-is-all-you-need)
+    - [16.6.4 BERT系列大规模无监督学习将Attention推到了新的高度](#4-bert系列大规模无监督学习将attention推到了新的高度)
+    - [16.6.5 计算机视觉中，Attention是有效的非局域信息融合技术](#5-计算机视觉中，attention是有效的非局域信息融合技术)
+    - [16.6.6 计算机视觉中，Attention will be all you need](#6-计算机视觉中，attention-will-be-all-you-need)
+    - [16.6.7 结构化数据中，Attention是辅助GNN的利器](#7-结构化数据中，attention是辅助gnn的利器)
+    - [16.6.8 逻辑可解释性与Attention的关系](#8-逻辑可解释性与attention的关系)
+    - [16.6.9 Attention的多种变种及他们的内在关联](#9-attention的多种变种及他们的内在关联)
     - [参考文献](#参考文献)
 
 
-# Attention九层塔 - 注意力机制的九重理解
+# 16.6 Attention九层塔 - 注意力机制的九重理解
 
 本文作者：<i>电光幻影炼金术</i>
 
