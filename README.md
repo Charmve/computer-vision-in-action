@@ -191,16 +191,16 @@
     - [7.13 实战Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
     - 参考文献
-  - 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-    - 8.1 数据集
-        - ImageNet
+  - 第 8 章 [著名数据集及基准](docs/2_实战篇/chapter8_著名数据集及基准/chapter8_1-著名数据集.md)
+    - 8.1 [数据集](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8_1-著名数据集.md)
+        - [ImageNet](https://image-net.org/)
         - [MNIST](http://yann.lecun.com/exdb/mnist/)
-        - COCO
-        - CIFAR-10
+        - [COCO](https://cocodataset.org/)
+        - [CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar.html)
     - 8.2 基准
     - 小结
     - 参考文献
-  - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+  - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter9/chapter9)
     - 9.1 语义分割
       - 9.1.1 [语义分割 PyTorch 版](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
       - 9.1.2 实战项目 6 
@@ -213,7 +213,7 @@
       - 9.3.3 新方法：滑动窗口, PointRend, PolarMask
     - 小结
     - 参考文献
-  - 第 10 章 [图像分类项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+  - 第 10 章 [图像分类项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
     - 10.1 [手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
     - 10.2 [文本检测](https://github.com/Charmve/Scene-Text-Detection)
     - 10.3 [车道线检测](https://github.com/Charmve/Awesome-Lane-Detection)
@@ -228,7 +228,14 @@
     - 11.1 表征可视化
     - 11.2 对抗实例
     - 11.3 DeepDream 和风格迁移
-    - 11.4 实战项目 10: PyTorch 如何使用TensorBoard
+    - 11.4 [实战项目 10: PyTorch 如何使用TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
+      - 11.4.1 [创建 TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1141-创建-tensorboard)
+      - 11.4.2 [写入 TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1142-写入-tensorboard)
+      - 11.4.3 [使用 TensorBoard 检查模型](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1143-使用-tensorboard-检查模型)
+      - 11.4.4 [向 TensorBoard 添加 "Projector"](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1144-向-tensorboard-添加-projector)
+      - 11.4.5 [使用 TensorBoard 跟踪模型训练](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1145-使用-tensorboard-跟踪模型训练)
+      - 11.4.6 [使用 TensorBoard 评估训练好的模型](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1146-使用-tensorboard-评估训练好的模型)
+      - [小结](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#小结)
     - 小结
     - 参考文献
   - 第 12 章 [生成对抗模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
@@ -288,7 +295,7 @@
       - 16.4.5 Masked attention
       - 16.4.6 Multi-head attention
     - 16.5 强注意力（hard attention）
-    - 16.6 [Attention九层塔 - 注意力机制的九重理解](/docs/3_进阶篇/chapter6-注意力机制%20Attention%20is%20All%20You%20Need/chapter6_Attention-is-All-You-Need.md)
+    - 16.6 [Attention九层塔 - 注意力机制的九重理解](/docs/3_进阶篇/chapter16-注意力机制%20Attention%20is%20All%20You%20Need/chapter16_Attention-is-All-You-Need.md)
     - 小结
     - 参考文献
   - 第 17 章 [跨界模型 Transformer](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md)
