@@ -51,7 +51,7 @@
 :label: `fig_book_org`
 
 <p align="center">
-  <img src="../res/book_org.png" alt="book_org.png">
+  <img src="../res/ui/book_org.png" alt="book_org.png">
 </p> 
 
 <p align="right">
