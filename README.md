@@ -102,8 +102,8 @@
 - <b><h4>理论篇</h4></b>
   - 第 1 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
     - 1.1 Softmax 回归
-    - 1.2 反向传播算法
-    - 1.3 多层感知器
+    - 1.2 [反向传播算法](./docs/1_理论篇/chapter1_Neural-Networks/chapter1_2-Back-Propagation.md)
+    - 1.3 [多层感知器](./docs/1_理论篇/chapter1_Neural-Networks/chapter1_3-多层感知器MLP.md)
     - 1.4 神经学观点
     - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
     - 小结
@@ -241,7 +241,7 @@
     - 参考文献
   - 第 12 章 [生成对抗模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 12.1 Pixel RNN/CNN
-    - 12.2 自编码器 Auto-encoder
+    - 12.2 [自编码器 Auto-encoder](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12_2-自编码器Auto-encoder.md)
     - 12.3 生成对抗网络 GAN
       - 12.3.1 原理
       - 12.3.2 项目实战
@@ -370,7 +370,7 @@
     - [参考文献](#六-参考文献)
   - <b><h4>附录</h4></b>
     - A 矩阵
-    - B 常用激活函数总结
+    - B [常用激活函数总结](https://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw==&mid=2247484495&idx=1&sn=0bbb2094d93169baf20eedb284bc668f)
     - C 梯度下降法
   - <b><h4>[后记](/docs/book_postscript.md)</h4></b>
   - <b><h4>[参考文献](#参考文献-1)</h4></b>
