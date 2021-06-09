@@ -48,19 +48,19 @@
 
 其实应用挺广的，在图像识别，文本分类等等都会用到，我会专门再写一篇Auto-Encoder的文章来说明，包括一些变种之类的。如果你的输出和原始输入不一样，那么就是很常见的人工神经网络了，相当于让原始数据通过一个映射来得到我们想要的输出数据，也就是我们今天要讲的话题。
 
-本文直接举一个例子，带入数值演示反向传播法的过程，公式的推导等到下次写Auto-Encoder的时候再写，其实也很简单，感兴趣的同学可以自己推导下试试：）（注：本文假设你已经懂得基本的神经网络构成，如果完全不懂，可以参考Poll写的笔记：[Mechine Learning & Algorithm] 神经网络基础）
+本文直接举一个例子，带入数值演示反向传播法的过程，公式的推导等到下次写Auto-Encoder的时候再写，其实也很简单，感兴趣的同学可以自己推导下试试。
 
 假设，你有这样一个网络层，如图1.2所示。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020052923220268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![image](https://user-images.githubusercontent.com/29084184/121332556-8faa5600-c94a-11eb-817a-fb7b74becde2.png)
 
-图1.2 神经网络的网络层
+图1.2 神经网络的网络层 [4]
 
 第一层是输入层，包含两个神经元i1，i2，和截距项b1；第二层是隐含层，包含两个神经元h1,h2和截距项b2，第三层是输出o1,o2，每条线上标的wi是层与层之间连接的权重，激活函数我们默认为 [sigmoid函数](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw==&mid=2247484495&idx=1&sn=0bbb2094d93169baf20eedb284bc668f&chksm=97befee5a0c977f332a4381ffc9b4285c94acc544317dd39c44a0c2ec58c86b7b0e3a5933d9c&scene=21#wechat_redirect)，更多激活函数详解可在本书附件中查看。
 
 现在对他们赋上初值，如下图1.3所示。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232210143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![image](https://user-images.githubusercontent.com/29084184/121332619-9e910880-c94a-11eb-822e-c666718d0cb7.png)
 
 图1.3 网络层增加权重
 
@@ -92,7 +92,7 @@
 #### 1.2.2.2 隐含层---->输出层：
 
 计算输出层神经元o1和o2的值：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232622747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232622747.png)
 
 
 这样前向传播的过程就结束了，我们得到输出值为[0.75136079 , 0.772928465]，与实际值[0.01 , 0.99]相差还很远，现在我们对误差进行反向传播，更新权值，重新计算输出。
@@ -116,7 +116,7 @@
 
 如图1.4 所示，可以更直观的看清楚误差是怎样反向传播的：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232651449.png)
+![image](https://user-images.githubusercontent.com/29084184/121332670-a81a7080-c94a-11eb-9264-e695bedde68e.png)
 
 图1.4 误差的反向传播
 
@@ -129,59 +129,61 @@
 
 计算 $\frac{\partial out_{o1}}{\partial net_{o1}}$  ：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232842179.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232842179.png)
 
 （这一步实际上就是对sigmoid函数求导，比较简单，可以自己推导一下）
 
 计算 $\frac{\partial net_{o1}}{\partial w_{5}}$  ：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232850387.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232850387.png)
 
 
 最后三者相乘：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232856845.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232856845.png)
 
 这样我们就计算出整体误差$E(total)$对$w5$的偏导值。
 
 回过头来再看看上面的公式，我们发现：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232902266.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232902266.png)
 
 为了表达方便，用 $\delta_{o1}$ 来表示输出层的误差：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202005292329076.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/202005292329076.png)
 
 因此，整体误差E(total)对w5的偏导公式可以写成：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232930326.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232930326.png)
 
 如果输出层误差计为负的话，也可以写成：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232938102.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232938102.png)
 
 
 最后我们来更新$w5$的值：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232943758.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232943758.png)
 
 （其中，$\eta$  是学习速率，这里我们取0.5）
 
 同理，可更新w6,w7,w8:
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233004225.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233004225.png)
 
 #### 1.2.3.3 隐含层---->隐含层的权值更新：
 
-方法其实与上面说的差不多，但是有个地方需要变一下，在上文计算总误差对w5的偏导时，是从out(o1)---->net(o1)---->w5,但是在隐含层之间的权值更新时，是out(h1)---->net(h1)---->w1,而out(h1)会接受E(o1)和E(o2)两个地方传来的误差，所以这个地方两个都要计算。
+方法其实与上面说的差不多，但是有个地方需要变一下，在上文计算总误差对w5的偏导时，是从out(o1)---->net(o1)---->w5,但是在隐含层之间的权值更新时，是out(h1)---->net(h1)---->w1,而out(h1)会接受E(o1)和E(o2)两个地方传来的误差，所以这个地方两个都要计算，如图1.5所示。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233013526.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![image](https://user-images.githubusercontent.com/29084184/121332725-b6688c80-c94a-11eb-8c25-d167475f3dfc.png)
 
-计算$\frac{\partial E_{total}}{\partial out_{h1}}$  ：
+图1.5 隐含层---->隐含层的权值更新
+
+计算 $\frac{\partial E_{total}}{\partial out_{h1}}$  ：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233020502.png#pic_center)
 
-先计算$\frac{\partial E_{o1}}{\partial out_{h1}}$  ：
+先计算 $\frac{\partial E_{o1}}{\partial out_{h1}}$  ：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233025870.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233025870.png)
 
 同理，计算出：
 
@@ -191,7 +193,7 @@
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233044548.png#pic_center)
 
 
-再计算$\frac{\partial out_{h1}}{\partial net_{h1}}$  ：
+再计算 $\frac{\partial out_{h1}}{\partial net_{h1}}$  ：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020052923303965.png#pic_center)
 
 
@@ -203,9 +205,9 @@
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233056940.png#pic_center)
 
 
-为了简化公式，用sigma(h1)表示隐含层单元h1的误差：
+为了简化公式，用$sigma(h1)$表示隐含层单元h1的误差：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233103731.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233103731.png)
 
 最后，更新$w1$的权值：
 
@@ -213,9 +215,9 @@
 
 同理，额可更新$w2,w3,w4$的权值：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233112721.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJtdmU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233112721.png)
 
-这样误差反向传播法就完成了，最后我们再把更新的权值重新计算，不停地迭代，在这个例子中第一次迭代之后，总误差E(total)由0.298371109下降至0.291027924。迭代10000次后，总误差为0.000035085，输出为[0.015912196,0.984065734](原输入为[0.01,0.99]),证明效果还是不错的。
+这样误差反向传播法就完成了，最后我们再把更新的权值重新计算，不停地迭代，在这个例子中第一次迭代之后，总误差E(total)由0.298371109下降至0.291027924。迭代10000次后，总误差为0.000035085，输出为[0.015912196, 0.984065734]（原输入为[0.01, 0.99]）,证明效果还是不错的。
 
 ### 1.2.4 Python源代码
 
@@ -451,7 +453,7 @@ for i in range(10000):
 ```
 
 
-稳重使用的是sigmoid激活函数，实际还有几种不同的激活函数可以选择，具体的可以参考文献[3]，最后推荐一个在线演示神经网络变化的网址：http://www.emergentmind.com/neural-network，可以自己填输入输出，然后观看每一次迭代权值的变化，很好玩。
+稳重使用的是sigmoid激活函数，实际还有几种不同的激活函数可以选择，具体的可以参考文献[3]，最后推荐一个在线演示神经网络变化的网址：http://www.emergentmind.com/neural-network ，可以自己填输入输出，然后观看每一次迭代权值的变化，很好玩。
 
 
 ### 小结
@@ -459,11 +461,11 @@ for i in range(10000):
 
 ### 参考文献
 
-1.Poll的笔记：[Mechine Learning & Algorithm] 神经网络基础（http://www.cnblogs.com/maybe2030/p/5597716.html#3457159 ）
+1. Poll的笔记：[Mechine Learning & Algorithm]神经网络基础. http://www.cnblogs.com/maybe2030/p/5597716.html#3457159
 
-2.Rachel_Zhang:http://blog.csdn.net/abcjennifer/article/details/7758797
+2. Rachel_Zhang. Stanford机器学习---第五讲. 神经网络的学习 Neural Networks learning. http://blog.csdn.net/abcjennifer/article/details/7758797
 
-3.http://www.cedar.buffalo.edu/%7Esrihari/CSE574/Chap5/Chap5.3-BackProp.pdf
+3. Sargur Srihari. Backpropagation. http://www.cedar.buffalo.edu/%7Esrihari/CSE574/Chap5/Chap5.3-BackProp.pdf
 
-4.https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/
+4. Matt Mazur. A Step by Step Backpropagation Example. https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/
 
