@@ -48,10 +48,10 @@
 如图4.4所示，门控循环单元中的重置门和更新门的输入均为当前时间步输入$\boldsymbol{X}_t$与上一时间步隐藏状态$\boldsymbol{H}_{t-1}$，输出由激活函数为sigmoid函数的全连接层计算得到。
 
 <div align=center>
-<img width="500" src="../../imgs/chapter04/4.7_gru_1.svg"/>
+  <img width="500" src="../../imgs/chapter04/4.7_gru_1.svg"/>
+  <br>图4.4 门控循环单元中重置门和更新门的计算
 </div>
-<div align=center>图4.4 门控循环单元中重置门和更新门的计算</div>
-
+<br>
 
 具体来说，假设隐藏单元个数为$h$，给定时间步$t$的小批量输入$\boldsymbol{X}_t \in \mathbb{R}^{n \times d}$（样本数为$n$，输入个数为$d$）和上一时间步隐藏状态$\boldsymbol{H}_{t-1} \in \mathbb{R}^{n \times h}$。重置门$\boldsymbol{R}_t \in \mathbb{R}^{n \times h}$和更新门$\boldsymbol{Z}_t \in \mathbb{R}^{n \times h}$的计算如下：
 
@@ -70,8 +70,9 @@ $$
 
 <div align=center>
   <img width="500" src="../../imgs/chapter04/4.7_gru_2.svg"/>
-  图4.5 门控循环单元中候选隐藏状态的计算
+  <br>图4.5 门控循环单元中候选隐藏状态的计算
 </div>
+<br>
 
 具体来说，时间步$t$的候选隐藏状态$\tilde{\boldsymbol{H}}_t \in \mathbb{R}^{n \times h}$的计算为
 
@@ -87,8 +88,9 @@ $$\boldsymbol{H}_t = \boldsymbol{Z}_t \odot \boldsymbol{H}_{t-1}  + (1 - \boldsy
 
 <div align=center>
   <img width="500" src="../../imgs/chapter04/4.7_gru_3.svg"/>
-  图4.6 门控循环单元中隐藏状态的计算
+  <br>图4.6 门控循环单元中隐藏状态的计算
 </div>
+<br>
 
 值得注意的是，更新门可以控制隐藏状态应该如何被包含当前时间步信息的候选隐藏状态所更新，如图4.6所示。假设更新门在时间步$t'$到$t$（$t' < t$）之间一直近似1。那么，在时间步$t'$到$t$之间的输入信息几乎没有流入时间步$t$的隐藏状态$\boldsymbol{H}_t$。实际上，这可以看作是较早时刻的隐藏状态$\boldsymbol{H}_{t'-1}$一直通过时间保存并传递至当前时间步$t$。这个设计可以应对循环神经网络中的梯度衰减问题，并更好地捕捉时间序列中时间步距离较大的依赖关系。
 
