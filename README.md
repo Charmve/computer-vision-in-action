@@ -405,6 +405,7 @@ python3 setup.py
 3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
 
 ### 🔍 Browse Folders
+- 📁 <code>L0CV/</code> - 专为本项目建立的 L0CV 包 
 - 📁 <code>code/</code> - 书中完整代码
 - 📁 <code>datasets/</code> - 本书所用数据集
   - 📁 <code>images/</code> - 经典图像处理图片
@@ -414,8 +415,8 @@ python3 setup.py
   - 📁 <code>2_实战篇/</code> - 项目实战教程
   - 📁 <code>3_进阶篇/</code> - 最新CV模型和算法
   - 📁 <code>附件/</code> - 所需数学和统计学知识
-- 📁 <code>L0CV/</code> - 专为本项目建立的 L0CV 包 
-- 📁 <code>notebooks/</code> - 全书重要模型的Colab notebook，可在线测试
+- 📁 <code>models/</code> - 封装可用的网络模型
+- 📁 <code>notebooks/</code> - 全书 Colab notebook，可在线测试
   - 📄 <code>01_Notebooks.ipynb</code> - Notebooks 基本介绍和使用
   - 📄 <code>02_Python.ipynb</code> - Python 编程简明教程
   - 📄 <code>03_NumPy.ipynb</code> - NumPy 的使用
@@ -446,6 +447,7 @@ python3 setup.py
 - **公式无法正常显示解决办法**：
 
     GitHub中的Markdown原生是不支持LATEX公式显示的，如果你喜欢在本项目中直接浏览教程，可以安装Chrome的`MathJax Plugin for Github`插件让大部分公式正常显示。而docs文件夹已经利用docsify被部署到了GitHub Pages上，包含公式的章节强力建议使用 [《计算机视觉实战演练：算法与应用》 在线阅读](https://charmve.github.io/computer-vision-in-action) 进行学习。
+    
     当然如果你还想跑一下运行相关代码的话还是得把本项目clone下来，然后运行code文件夹下相关代码。
 
 ## 致谢
