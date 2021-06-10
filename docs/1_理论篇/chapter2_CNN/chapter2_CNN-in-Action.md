@@ -40,6 +40,12 @@
 
 <h2></h2>
 
+<p align="center">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/11_Convolutional_Neural_Networks.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+    </a>
+</p>
+
 # 实战项目 2 - 动手搭建一个卷积神经网络
 
 上篇文章中我们讲解了[**卷积神经网络的基本原理**](chapter2_CNN.md)，包括几个基本层的定义、运算规则等。本文主要写卷积神经网络如何进行一次完整的训练，包括前向传播和反向传播，并自己手写一个卷积神经网络。如果不了解基本原理的，可以先看看上篇文章：[卷积神经网络CNN原理详解——基本原理](chapter2_CNN.md)
