@@ -6,28 +6,28 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-
-# 第 9 章 检测与分割实战项目
+# 第 8 章 著名数据集及基准
 
 作者: 张伟 (Charmve)
 
-日期: 2021/06/10
+日期: 2021/06/06
 
-  - 9.1 语义分割
-    - 9.1.1 [语义分割 PyTorch 版](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
-    - 9.1.2 实战项目 6 
-  - 9.2 目标检测
-    - 9.2.1 常用网络
-    - 9.2.2 实战项目 7 
-  - 9.3 实例分割 
-    - 9.3.1 常用网络 
-    - 9.3.2 实战项目 8
-    - 9.3.3 新方法：滑动窗口, PointRend, PolarMask
-  - 小结
-  - 参考文献
+- 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+    - 8.1 数据集
+        - 8.1.1 常见数据集
+          - 8.1.1 [ImageNet](https://image-net.org/)
+          - 8.1.2 [MNIST](http://yann.lecun.com/exdb/mnist/)
+          - 8.1.3 [COCO](https://cocodataset.org/)
+          - 8.1.4 [CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar.html)
+        - 8.1.2 Pytorch数据集及读取方法简介
+        - 8.1.3 数据增强简介
+        - 总结
+    - 8.2 基准
+    - 小结
+    - 参考文献
+    
 
+## 8.2 基准
 
-## 9.1 语义分割
-
-
+Comming soon ...
 

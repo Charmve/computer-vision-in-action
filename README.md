@@ -101,10 +101,10 @@
     - 参考文献
 - <b><h4>理论篇</h4></b>
   - 第 1 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
-    - 1.1 Softmax 回归
-    - 1.2 [反向传播算法](./docs/1_理论篇/chapter1_Neural-Networks/chapter1_2-Back-Propagation.md)
-    - 1.3 [多层感知器](./docs/1_理论篇/chapter1_Neural-Networks/chapter1_3-多层感知器MLP.md)
-    - 1.4 神经学观点
+    - 1.1 [Softmax 回归](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.1 Softmax回归.md)
+    - 1.2 [反向传播算法](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.2_Back-Propagation.md)
+    - 1.3 [多层感知器](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
+    - 1.4 [神经学观点](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.4_神经学观点.md)
     - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
     - 小结
     - 参考文献
@@ -198,13 +198,17 @@
     - 7.13 [实战Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
     - 参考文献
-  - 第 8 章 [著名数据集及基准](docs/2_实战篇/chapter8_著名数据集及基准/chapter8_1-著名数据集.md)
-    - 8.1 [数据集](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8_1-著名数据集.md)
-        - [ImageNet](https://image-net.org/)
-        - [MNIST](http://yann.lecun.com/exdb/mnist/)
-        - [COCO](https://cocodataset.org/)
-        - [CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar.html)
-    - 8.2 基准
+  - 第 8 章 [著名数据集及基准](docs/2_实战篇/chapter8_著名数据集及基准)
+    - 8.1 [数据集](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md)
+        - 8.1.1 常见数据集
+          - 8.1.1 [ImageNet](https://image-net.org/)
+          - 8.1.2 [MNIST](http://yann.lecun.com/exdb/mnist/)
+          - 8.1.3 [COCO](https://cocodataset.org/)
+          - 8.1.4 [CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar.html)
+        - 8.1.2 Pytorch数据集及读取方法简介
+        - 8.1.3 数据增强简介
+        - 总结
+    - 8.2 [基准](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
     - 小结
     - 参考文献
   - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter9/chapter9)

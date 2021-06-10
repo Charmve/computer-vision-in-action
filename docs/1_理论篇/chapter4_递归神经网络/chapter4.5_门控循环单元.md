@@ -45,12 +45,12 @@
 
 #### 4.5.1.1 重置门和更新门
 
-如图6.4所示，门控循环单元中的重置门和更新门的输入均为当前时间步输入$\boldsymbol{X}_t$与上一时间步隐藏状态$\boldsymbol{H}_{t-1}$，输出由激活函数为sigmoid函数的全连接层计算得到。
+如图4.4所示，门控循环单元中的重置门和更新门的输入均为当前时间步输入$\boldsymbol{X}_t$与上一时间步隐藏状态$\boldsymbol{H}_{t-1}$，输出由激活函数为sigmoid函数的全连接层计算得到。
 
 <div align=center>
-<img width="500" src="../img/chapter06/6.7_gru_1.svg"/>
+<img width="500" src="../../imgs/chapter04/4.7_gru_1.svg"/>
 </div>
-<div align=center>图6.4 门控循环单元中重置门和更新门的计算</div>
+<div align=center>图4.4 门控循环单元中重置门和更新门的计算</div>
 
 
 具体来说，假设隐藏单元个数为$h$，给定时间步$t$的小批量输入$\boldsymbol{X}_t \in \mathbb{R}^{n \times d}$（样本数为$n$，输入个数为$d$）和上一时间步隐藏状态$\boldsymbol{H}_{t-1} \in \mathbb{R}^{n \times h}$。重置门$\boldsymbol{R}_t \in \mathbb{R}^{n \times h}$和更新门$\boldsymbol{Z}_t \in \mathbb{R}^{n \times h}$的计算如下：
@@ -62,16 +62,16 @@ $$
 \end{aligned}
 $$
 
-其中$\boldsymbol{W}_{xr}, \boldsymbol{W}_{xz} \in \mathbb{R}^{d \times h}$和$\boldsymbol{W}_{hr}, \boldsymbol{W}_{hz} \in \mathbb{R}^{h \times h}$是权重参数，$\boldsymbol{b}_r, \boldsymbol{b}_z \in \mathbb{R}^{1 \times h}$是偏差参数。3.8节（多层感知机）节中介绍过，sigmoid函数可以将元素的值变换到0和1之间。因此，重置门$\boldsymbol{R}_t$和更新门$\boldsymbol{Z}_t$中每个元素的值域都是$[0, 1]$。
+其中$\boldsymbol{W}_{xr}, \boldsymbol{W}_{xz} \in \mathbb{R}^{d \times h}$和$\boldsymbol{W}_{hr}, \boldsymbol{W}_{hz} \in \mathbb{R}^{h \times h}$是权重参数，$\boldsymbol{b}_r, \boldsymbol{b}_z \in \mathbb{R}^{1 \times h}$是偏差参数。1.3节（[多层感知机](../chapter1_Neural-Networks/chapter1_3-多层感知器MLP.md)）节中介绍过，sigmoid函数可以将元素的值变换到0和1之间。因此，重置门$\boldsymbol{R}_t$和更新门$\boldsymbol{Z}_t$中每个元素的值域都是$[0, 1]$。
 
 #### 4.5.1.2 候选隐藏状态
 
 接下来，门控循环单元将计算候选隐藏状态来辅助稍后的隐藏状态计算。如图6.5所示，我们将当前时间步重置门的输出与上一时间步隐藏状态做按元素乘法（符号为$\odot$）。如果重置门中元素值接近0，那么意味着重置对应隐藏状态元素为0，即丢弃上一时间步的隐藏状态。如果元素值接近1，那么表示保留上一时间步的隐藏状态。然后，将按元素乘法的结果与当前时间步的输入连结，再通过含激活函数tanh的全连接层计算出候选隐藏状态，其所有元素的值域为$[-1, 1]$。
 
 <div align=center>
-<img width="500" src="../img/chapter06/6.7_gru_2.svg"/>
+<img width="500" src="../../imgs/chapter04/4.7_gru_2.svg"/>
 </div>
-<div align=center>图6.5 门控循环单元中候选隐藏状态的计算</div>
+<div align=center>图4.5 门控循环单元中候选隐藏状态的计算</div>
 
 具体来说，时间步$t$的候选隐藏状态$\tilde{\boldsymbol{H}}_t \in \mathbb{R}^{n \times h}$的计算为
 
@@ -86,12 +86,12 @@ $$\tilde{\boldsymbol{H}}_t = \text{tanh}(\boldsymbol{X}_t \boldsymbol{W}_{xh} + 
 $$\boldsymbol{H}_t = \boldsymbol{Z}_t \odot \boldsymbol{H}_{t-1}  + (1 - \boldsymbol{Z}_t) \odot \tilde{\boldsymbol{H}}_t.$$
 
 <div align=center>
-<img width="500" src="../img/chapter06/6.7_gru_3.svg"/>
+<img width="500" src="../../imgs/chapter04/4.7_gru_3.svg"/>
 </div>
-<div align=center>图6.6 门控循环单元中隐藏状态的计算</div>
+<div align=center>图4.6 门控循环单元中隐藏状态的计算</div>
 
 
-值得注意的是，更新门可以控制隐藏状态应该如何被包含当前时间步信息的候选隐藏状态所更新，如图6.6所示。假设更新门在时间步$t'$到$t$（$t' < t$）之间一直近似1。那么，在时间步$t'$到$t$之间的输入信息几乎没有流入时间步$t$的隐藏状态$\boldsymbol{H}_t$。实际上，这可以看作是较早时刻的隐藏状态$\boldsymbol{H}_{t'-1}$一直通过时间保存并传递至当前时间步$t$。这个设计可以应对循环神经网络中的梯度衰减问题，并更好地捕捉时间序列中时间步距离较大的依赖关系。
+值得注意的是，更新门可以控制隐藏状态应该如何被包含当前时间步信息的候选隐藏状态所更新，如图4.6所示。假设更新门在时间步$t'$到$t$（$t' < t$）之间一直近似1。那么，在时间步$t'$到$t$之间的输入信息几乎没有流入时间步$t$的隐藏状态$\boldsymbol{H}_t$。实际上，这可以看作是较早时刻的隐藏状态$\boldsymbol{H}_{t'-1}$一直通过时间保存并传递至当前时间步$t$。这个设计可以应对循环神经网络中的梯度衰减问题，并更好地捕捉时间序列中时间步距离较大的依赖关系。
 
 我们对门控循环单元的设计稍作总结：
 
@@ -100,7 +100,7 @@ $$\boldsymbol{H}_t = \boldsymbol{Z}_t \odot \boldsymbol{H}_{t-1}  + (1 - \boldsy
 
 ### 4.5.2 读取数据集
 
-为了实现并展示门控循环单元，下面依然使用周杰伦歌词数据集来训练模型作词。这里除门控循环单元以外的实现已在6.2节（循环神经网络）中介绍过。以下为读取数据集部分。
+为了实现并展示门控循环单元，下面依然使用周杰伦歌词数据集来训练模型作词。这里除门控循环单元以外的实现已在4.1节（[循环神经网络](chapter4.1_递归神经网络.md)）中介绍过。以下为读取数据集部分。
 
 ``` python
 import numpy as np
@@ -149,7 +149,7 @@ def get_params():
 
 #### 4.5.3.2 定义模型
 
-下面的代码定义隐藏状态初始化函数`init_gru_state`。同6.4节（循环神经网络的从零开始实现）中定义的`init_rnn_state`函数一样，它返回由一个形状为(批量大小, 隐藏单元个数)的值为0的`Tensor`组成的元组。
+下面的代码定义隐藏状态初始化函数`init_gru_state`。同4.2节（[循环神经网络的从零开始实现](chapter4.2_循环神经网络的从零开始实现.md)）中定义的`init_rnn_state`函数一样，它返回由一个形状为(批量大小, 隐藏单元个数)的值为0的`Tensor`组成的元组。
 
 ``` python
 def init_gru_state(batch_size, num_hiddens, device):

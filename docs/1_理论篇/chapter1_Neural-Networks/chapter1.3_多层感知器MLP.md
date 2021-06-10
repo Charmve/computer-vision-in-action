@@ -6,28 +6,20 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-
-# 第 9 章 检测与分割实战项目
+# 第 1 章 神经网络
 
 作者: 张伟 (Charmve)
 
-日期: 2021/06/10
+日期: 2021/06/09
 
-  - 9.1 语义分割
-    - 9.1.1 [语义分割 PyTorch 版](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
-    - 9.1.2 实战项目 6 
-  - 9.2 目标检测
-    - 9.2.1 常用网络
-    - 9.2.2 实战项目 7 
-  - 9.3 实例分割 
-    - 9.3.1 常用网络 
-    - 9.3.2 实战项目 8
-    - 9.3.3 新方法：滑动窗口, PointRend, PolarMask
-  - 小结
-  - 参考文献
+- 第 1 章 [神经网络](../)
+    - 1.1 [Softmax 回归](chapter1.1 Softmax回归.md)
+    - 1.2 [反向传播算法](chapter1.2_Back-Propagation.md)
+    - 1.3 多层感知器
+    - 1.4 [神经学观点](chapter1.4_神经学观点.md)
+    - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
+    - 小结
+    - 参考文献
 
 
-## 9.1 语义分割
-
-
-
+## 1.3 多层感知器
