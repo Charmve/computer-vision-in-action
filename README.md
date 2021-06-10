@@ -149,11 +149,11 @@
     - [小结](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/chapter3_Image-Classification.md#小结)
     - [参考文献](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/chapter3_Image-Classification.md#参考文献)
   - 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
-    - 4.1 递归神经网络 RNN
-    - 4.2 循环神经网络的从零开始实现
-    - 4.3 循环神经网络的简洁实现
-    - 4.4 长短期记忆人工神经网络 LSTM
-    - 4.5 门控循环单元（GRU）
+    - 4.1 [递归神经网络 RNN](/docs/1_理论篇/chapter4_递归神经网络/chapter4.1_递归神经网络.md)
+    - 4.2 [循环神经网络的从零开始实现](/docs/1_理论篇/chapter4_递归神经网络/chapter4.2_循环神经网络的从零开始实现.md)
+    - 4.3 [循环神经网络的简洁实现](/docs/1_理论篇/chapter4_递归神经网络/chapter4.3_循环神经网络的简洁实现.md)
+    - 4.4 [长短期记忆人工神经网络 LSTM](/docs/1_理论篇/chapter4_递归神经网络/chapter4.4_长短期记忆人工神经网络LSTM.md)
+    - 4.5 [门控循环单元（GRU）](/docs/1_理论篇/chapter4_递归神经网络/chapter4.5_门控循环单元.md)
     - 小结
     - 参考文献
   - 第 5 章 [模型拟合与优化算法]()
@@ -168,12 +168,18 @@
     - 小结
     - 参考文献
 - <b><h4>实战篇</h4></b>
-  - 第 6 章 [深度学习环境搭建](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
-    - 6.1 [PyTorch](./notebooks/05_PyTorch.ipynb)
-    - 6.2 [OpenCV](./notebooks/02_Python.ipynb)
-    - 6.3 [Numpy](./notebooks/03_NumPy.ipynb)
-    - 6.4 [Pandas](./notebooks/04_Pandas.ipynb)
-    - 6.5 [深度学习环境搭建配置指南](https://blog.csdn.net/Charmve/article/details/107739506)
+  - 第 6 章 [深度学习环境搭建](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+    - 6.1 [深度学习环境搭建指南](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.1_深度学习环境搭建指南.md)
+    - 6.2 [Pytorch 基础使用介绍](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md)
+      - 6.2.1 [Tensors](#621-tensors)
+      - 6.2.2 [Operations](#622-operations)
+      - 6.2.3 [Numpy桥梁](#623-numpy桥梁)
+      - 6.2.4 [CUDA Tensors](#624-cuda-tensors)
+    - 6.3 [Python](./notebooks/02_Python.ipynb)
+    - 6.4 [Numpy 基础使用](./notebooks/03_NumPy.ipynb)
+    - 6.5 [Pandas 基础使用](./notebooks/04_Pandas.ipynb)
+    - 6.4 [OpenCV 安装及基础使用](./notebooks/02_Python.ipynb)
+    - 6.7 [Jupyter Notebook 配置及基础使用](./notebooks/01_Notebooks.ipynb)
     - 小结
     - 参考文献
   - 第 7 章 [经典卷积神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
@@ -419,6 +425,25 @@ python3 setup.py
 - 📄 <code>README.md</code> - 全书介绍及目录
 
 
+## 常见问题
+
+- **在线教程页面无法打开**: 
+
+    测试中存在部分人打不开在线教程的情况。
+
+    部分小伙伴反馈尝试切换浏览器后可以正常打开了，如果仍然不行，最有效的解决办法是科学上网。
+
+- **无法加载图片的解决办法**: 
+
+    根本解决办法还是科学上网，也可以尝试修改host文件看下是否能解决。
+
+    [windows解决方案：修改host文件](https://blog.csdn.net/u011583927/article/details/104384169)
+
+- **公式无法正常显示解决办法**：
+
+    GitHub中的Markdown原生是不支持LATEX公式显示的，如果你喜欢在本项目中直接浏览教程，可以安装Chrome的`MathJax Plugin for Github`插件让大部分公式正常显示。而docs文件夹已经利用docsify被部署到了GitHub Pages上，包含公式的章节强力建议使用 [《计算机视觉实战演练：算法与应用》 在线阅读](https://charmve.github.io/computer-vision-in-action) 进行学习。
+    当然如果你还想跑一下运行相关代码的话还是得把本项目clone下来，然后运行code文件夹下相关代码。
+
 ## 致谢
 <a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
 
@@ -472,6 +497,21 @@ python3 setup.py
 </td>
 </tr>
 <table>
+
+
+## Citation
+
+Use this bibtex to cite this repository:
+```
+@misc{computer-vision-in-action,
+  title={计算机视觉实战演练：算法与应用（Computer Vision in Action）},
+  author={Charmve},
+  year={2021.06},
+  publisher={Github},
+  journal={GitHub repository},
+  howpublished={\url{https://github.com/Charmve/computer-vision-in-action}},
+}
+```
 
 ## Stargazers Over Time
 
