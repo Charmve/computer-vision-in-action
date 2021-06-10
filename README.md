@@ -108,27 +108,20 @@
     - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
     - 小结
     - 参考文献
-  - 第 2 章 [卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md)
-    - 2.1 [从神经网络到卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#21-从神经网络到卷积神经网络)
-      - 2.1.1 [定义](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#211-定义)
-      - 2.1.2 [卷积神经网络的架构](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#212-卷积神经网络的架构)
-    - 2.2 [卷积网络的层级结构](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#22-卷积网络的层级结构)
-      - 2.2.1 [数据输入层](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#221-数据输入层)
-      - 2.2.2 [卷积计算层](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#222-卷积计算层)
-        - [(1) 卷积的计算](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#1-卷积的计算)
-        - [(2) 参数共享机制](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#2-参数共享机制)
-      - 2.2.3 [非线性层（或激活层）](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#223-非线性层或激活层)
-      - 2.2.4 [池化层](#224-池化层)
-      - 2.2.5 [全连接层](#225-全连接层)
-    - 2.3 [卷积神经网络的几点说明](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#23-卷积神经网络的几点说明)
-      - 2.3.1 [训练算法](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#231-训练算法)
-      - 2.3.2 [优缺点](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#232-优缺点)
-      - 2.3.3 [典型CNN](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#233-典型CNN)
-      - 2.3.4 [fine-tuning](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#234-fine-tuning)
-      - 2.3.5 [常用框架](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#235-常用框架)
-    - 2.4 [实战项目 2 - 动手搭建一个卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
-      - 2.4.1 [卷积神经网络的前向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#271-卷积神经网络的前向传播)
-      - 2.4.2 [卷积神经网络的反向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#272-卷积神经网络的反向传播)
+  - 第 2 章 [卷积神经网络](docs/1_理论篇/chapter2_CNN/chapter2_CNN.md)
+    - 2.1 [从神经网络到卷积神经网络](docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#21-从神经网络到卷积神经网络)
+      - 2.1.1 [定义](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#211-定义)
+      - 2.1.2 [卷积神经网络的架构](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#212-卷积神经网络的架构)
+    - 2.2 [卷积网络的层级结构](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#22-卷积网络的层级结构)
+      - 2.2.1 [数据输入层](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#221-数据输入层)
+      - 2.2.2 [卷积计算层](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#222-卷积计算层)
+      - 2.2.3 [非线性层（或激活层）](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#223-非线性层或激活层)
+      - 2.2.4 [池化层](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#224-池化层)
+      - 2.2.5 [全连接层](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#225-全连接层)
+    - 2.3 [卷积神经网络的几点说明](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#23-卷积神经网络的几点说明)
+    - 2.4 [实战项目 2 - 动手搭建一个卷积神经网络](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
+      - 2.4.1 [卷积神经网络的前向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#271-卷积神经网络的前向传播)
+      - 2.4.2 [卷积神经网络的反向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#272-卷积神经网络的反向传播)
       - 2.4.3 [手写一个卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#273-手写一个卷积神经网络)
         - [1. 定义一个卷积层](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#1-定义一个卷积层)
         - [2. 构造一个激活函数](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#2-构造一个激活函数)
@@ -178,7 +171,7 @@
     - 6.3 [Python](./notebooks/02_Python.ipynb)
     - 6.4 [Numpy 基础使用](./notebooks/03_NumPy.ipynb)
     - 6.5 [Pandas 基础使用](./notebooks/04_Pandas.ipynb)
-    - 6.4 [OpenCV 安装及基础使用](./notebooks/02_Python.ipynb)
+    - 6.6 [OpenCV 安装及基础使用](./notebooks/02_Python.ipynb)
     - 6.7 [Jupyter Notebook 配置及基础使用](./notebooks/01_Notebooks.ipynb)
     - 小结
     - 参考文献
@@ -194,42 +187,42 @@
     - 7.9 [Mask-RCNN](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
     - 7.10 [区域卷积神经网络（R-CNN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.9%20区域卷积神经网络（R-CNN）.md)
     - 7.11 [全卷积网络（FCN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
-    - 7.12 [实战Kaggle比赛：图像分类（CIFAR-10）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
-    - 7.13 [实战Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
     - 参考文献
   - 第 8 章 [著名数据集及基准](docs/2_实战篇/chapter8_著名数据集及基准)
     - 8.1 [数据集](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md)
-        - 8.1.1 常见数据集
-          - 8.1.1 [ImageNet](https://image-net.org/)
-          - 8.1.2 [MNIST](http://yann.lecun.com/exdb/mnist/)
-          - 8.1.3 [COCO](https://cocodataset.org/)
-          - 8.1.4 [CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar.html)
-        - 8.1.2 Pytorch数据集及读取方法简介
-        - 8.1.3 数据增强简介
-        - 总结
+        - 8.1.1 [常见数据集](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#811-常见数据集)
+          - 8.1.1.1 [ImageNet](https://image-net.org/)
+          - 8.1.1.2 [MNIST](http://yann.lecun.com/exdb/mnist/)
+          - 8.1.1.3 [COCO](https://cocodataset.org/)
+          - 8.1.1.4 [CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar.html)
+        - 8.1.2 [Pytorch数据集及读取方法简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#812-pytorch数据集及读取方法简介)
+        - 8.1.3 [数据增强简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#813-数据增强简介)
+        - [总结](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#总结)
     - 8.2 [基准](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
+    - 8.3 [实战项目5 Kaggle比赛：图像分类（CIFAR-10）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
+    - 8.4 [实战项目6 Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
     - 参考文献
   - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter9/chapter9)
     - 9.1 语义分割
       - 9.1.1 [语义分割 PyTorch 版](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
-      - 9.1.2 实战项目 6 
+      - 9.1.2 实战项目 7
     - 9.2 目标检测
       - 9.2.1 常用网络
-      - 9.2.2 实战项目 7 
+      - 9.2.2 实战项目 8
     - 9.3 [实例分割](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md)
       - 9.3.1 [常用网络](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md#931-常用网络)
-      - 9.3.2 [实战项目 8 实时高分辨率背景抠图](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md#932-实战项目-8-实时高分辨率背景抠图)
+      - 9.3.2 [实战项目 9 - 实时高分辨率背景抠图](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md#932-实战项目-8-实时高分辨率背景抠图)
       - 9.3.3 新方法：[滑动窗口](https://blog.csdn.net/Charmve/article/details/108915225), [PointRend](https://blog.csdn.net/Charmve/article/details/108892076), PolarMask
     - 小结
     - 参考文献
-  - 第 10 章 [图像分类项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
+  - 第 10 章 [项目实战综合](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
     - 10.1 [手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
     - 10.2 [文本检测](https://github.com/Charmve/Scene-Text-Detection)
     - 10.3 [车道线检测](https://github.com/Charmve/Awesome-Lane-Detection)
-      - 10.3.1 常用网络 
-      - 10.3.2 实战项目 9
+      - 10.3.1 [常用网络]()
+      - 10.3.2 [实战项目 10 - 车道线检测项目实战](https://blog.csdn.net/Charmve/article/details/116678477)
     - 10.4 [镜面检测](https://github.com/Charmve/Mirror-Glass-Detection)
     - 10.5 [图像抠图 Matting](https://github.com/Charmve/TimeWarp)
     - 小结
@@ -238,8 +231,8 @@
   - 第 11 章 [可视化和理解](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)
     - 11.1 表征可视化
     - 11.2 对抗实例
-    - 11.3 DeepDream 和风格迁移
-    - 11.4 [实战项目 10: PyTorch 如何使用TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
+    - 11.3 [DeepDream 和风格迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
+    - 11.4 [实战项目 11: PyTorch 如何使用TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
       - 11.4.1 [创建 TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1141-创建-tensorboard)
       - 11.4.2 [写入 TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1142-写入-tensorboard)
       - 11.4.3 [使用 TensorBoard 检查模型](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1143-使用-tensorboard-检查模型)
