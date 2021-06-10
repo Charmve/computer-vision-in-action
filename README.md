@@ -101,7 +101,7 @@
     - 参考文献
 - <b><h4>理论篇</h4></b>
   - 第 1 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
-    - 1.1 [Softmax 回归](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.1 Softmax回归.md)
+    - 1.1 [Softmax 回归](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.1_Softmax回归.md)
     - 1.2 [反向传播算法](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.2_Back-Propagation.md)
     - 1.3 [多层感知器](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
     - 1.4 [神经学观点](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.4_神经学观点.md)
@@ -257,6 +257,7 @@
       - 12.3.2 项目实战
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
+      - 12.3.3 [实战项目11 - 样式迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
     - 12.4 [变分自编码器 Variational Auto-encoder, VAE](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
       - 12.4.1 [概述](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)    
       - 12.4.2 [基本原理](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)        
@@ -289,7 +290,7 @@
     - 15.3 [基于特征的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#153-基于特征的迁移)
     - 15.4 [基于共享参数的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#154-基于共享参数的迁移)
     - 15.5 [深度学习和迁移学习结合](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#155-深度学习和迁移学习结合)
-    - 15.7 [实战项目 11 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
+    - 15.7 [实战项目12 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
       - 15.7.1 [迁移学习在计算机视觉领域的应用](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1571-迁移学习在计算机视觉领域的应用)
       - 15.7.2 [实战项目: 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1572-实战项目-蚂蚁和蜜蜂的分类问题)
     - [小结](#小结)
@@ -326,7 +327,7 @@
         - 17.3.2.4 [Deformable-DETR](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-2-4-Deformable-DETR)
     - 17.4 [优点及分析](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#四-优点及分析)
     - 17.5 [缺点及分析](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#五-缺点及分析)
-    - [实战项目 12 - 基于transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803)
+    - [实战项目 13 - 基于transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803)
     - 小结
     - [参考文献](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#六-参考文献)
   - 第 18 章 [知识蒸馏](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA)
@@ -337,7 +338,7 @@
       - 18.2.3 Relation-based Knowledge
     - 18.3 知识蒸馏的应用 NLP-BERT
     - 18.4 常见疑问解答
-    - [实战项目 13 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
+    - [实战项目 14 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
     - 小结
     - [参考文献](#参考文献)
   - 第 19 章 [Normalization 模型](https://blog.csdn.net/Charmve/article/details/107650487)
