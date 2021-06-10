@@ -45,7 +45,7 @@
 
 #### 4.5.1.1 重置门和更新门
 
-如图4.4所示，门控循环单元中的重置门和更新门的输入均为当前时间步输入$\boldsymbol{X}_t$与上一时间步隐藏状态$\boldsymbol{H}_{t-1}$，输出由激活函数为sigmoid函数的全连接层计算得到。
+如图4.4所示，门控循环单元中的重置门和更新门的输入均为当前时间步输入$X_t$与上一时间步隐藏状态$H_{t-1}$，输出由激活函数为sigmoid函数的全连接层计算得到。
 
 <div align=center>
   <img width="500" src="../../imgs/chapter04/4.7_gru_1.svg"/>
@@ -53,16 +53,16 @@
 </div>
 <br>
 
-具体来说，假设隐藏单元个数为$h$，给定时间步$t$的小批量输入$\boldsymbol{X}_t \in \mathbb{R}^{n \times d}$（样本数为$n$，输入个数为$d$）和上一时间步隐藏状态$\boldsymbol{H}_{t-1} \in \mathbb{R}^{n \times h}$。重置门$\boldsymbol{R}_t \in \mathbb{R}^{n \times h}$和更新门$\boldsymbol{Z}_t \in \mathbb{R}^{n \times h}$的计算如下：
+具体来说，假设隐藏单元个数为$h$，给定时间步$t$的小批量输入$\X_t \in \mathbb{R}^{n \times d}$（样本数为$n$，输入个数为$d$）和上一时间步隐藏状态$\H_{t-1} \in \mathbb{R}^{n \times h}$。重置门$R_t \in \mathbb{R}^{n \times h}$和更新门$\Z_t \in \mathbb{R}^{n \times h}$的计算如下：
 
 $$
 \begin{aligned}
-\boldsymbol{R}_t = \sigma(\boldsymbol{X}_t \boldsymbol{W}_{xr} + \boldsymbol{H}_{t-1} \boldsymbol{W}_{hr} + \boldsymbol{b}_r),\\
-\boldsymbol{Z}_t = \sigma(\boldsymbol{X}_t \boldsymbol{W}_{xz} + \boldsymbol{H}_{t-1} \boldsymbol{W}_{hz} + \boldsymbol{b}_z),
+\R_t = \sigma(\X_t W_{xr} + H_{t-1} W_{hr} + b_r),\\
+\Z_t = \sigma(X_t W_{xz} + H_{t-1} W_{hz} + b_z),
 \end{aligned}
 $$
 
-其中$\boldsymbol{W}_{xr}, \boldsymbol{W}_{xz} \in \mathbb{R}^{d \times h}$和$\boldsymbol{W}_{hr}, \boldsymbol{W}_{hz} \in \mathbb{R}^{h \times h}$是权重参数，$\boldsymbol{b}_r, \boldsymbol{b}_z \in \mathbb{R}^{1 \times h}$是偏差参数。1.3节（[多层感知机](../chapter1_Neural-Networks/chapter1_3-多层感知器MLP.md)）节中介绍过，sigmoid函数可以将元素的值变换到0和1之间。因此，重置门$\boldsymbol{R}_t$和更新门$\boldsymbol{Z}_t$中每个元素的值域都是$[0, 1]$。
+其中$W_{xr}, W_{xz} \in \mathbb{R}^{d \times h}$和$W_{hr}, W_{hz} \in \mathbb{R}^{h \times h}$是权重参数，$b_r, b_z \in \mathbb{R}^{1 \times h}$是偏差参数。1.3节（[多层感知机](../chapter1_Neural-Networks/chapter1_3-多层感知器MLP.md)）节中介绍过，sigmoid函数可以将元素的值变换到0和1之间。因此，重置门$R_t$和更新门$Z_t$中每个元素的值域都是$[0, 1]$。
 
 #### 4.5.1.2 候选隐藏状态
 
@@ -74,17 +74,17 @@ $$
 </div>
 <br>
 
-具体来说，时间步$t$的候选隐藏状态$\tilde{\boldsymbol{H}}_t \in \mathbb{R}^{n \times h}$的计算为
+具体来说，时间步$t$的候选隐藏状态$\tilde{H}_t \in \mathbb{R}^{n \times h}$的计算为
 
-$$\tilde{\boldsymbol{H}}_t = \text{tanh}(\boldsymbol{X}_t \boldsymbol{W}_{xh} + \left(\boldsymbol{R}_t \odot \boldsymbol{H}_{t-1}\right) \boldsymbol{W}_{hh} + \boldsymbol{b}_h),$$
+$$\tilde{H}_t = \text{tanh}(X_t W_{xh} + \left(R_t \odot H_{t-1}\right) W_{hh} + b_h),$$
 
-其中$\boldsymbol{W}_{xh} \in \mathbb{R}^{d \times h}$和$\boldsymbol{W}_{hh} \in \mathbb{R}^{h \times h}$是权重参数，$\boldsymbol{b}_h \in \mathbb{R}^{1 \times h}$是偏差参数。从上面这个公式可以看出，重置门控制了上一时间步的隐藏状态如何流入当前时间步的候选隐藏状态。而上一时间步的隐藏状态可能包含了时间序列截至上一时间步的全部历史信息。因此，重置门可以用来丢弃与预测无关的历史信息。
+其中$W_{xh} \in \mathbb{R}^{d \times h}$和$W_{hh} \in \mathbb{R}^{h \times h}$是权重参数，$b_h \in \mathbb{R}^{1 \times h}$是偏差参数。从上面这个公式可以看出，重置门控制了上一时间步的隐藏状态如何流入当前时间步的候选隐藏状态。而上一时间步的隐藏状态可能包含了时间序列截至上一时间步的全部历史信息。因此，重置门可以用来丢弃与预测无关的历史信息。
 
 #### 4.5.1.3 隐藏状态
 
-最后，时间步$t$的隐藏状态$\boldsymbol{H}_t \in \mathbb{R}^{n \times h}$的计算使用当前时间步的更新门$\boldsymbol{Z}_t$来对上一时间步的隐藏状态$\boldsymbol{H}_{t-1}$和当前时间步的候选隐藏状态$\tilde{\boldsymbol{H}}_t$做组合：
+最后，时间步$t$的隐藏状态$H_t \in \mathbb{R}^{n \times h}$的计算使用当前时间步的更新门$Z_t$来对上一时间步的隐藏状态$H_{t-1}$和当前时间步的候选隐藏状态$\tilde{H}_t$做组合：
 
-$$\boldsymbol{H}_t = \boldsymbol{Z}_t \odot \boldsymbol{H}_{t-1}  + (1 - \boldsymbol{Z}_t) \odot \tilde{\boldsymbol{H}}_t.$$
+$$H_t = Z_t \odot H_{t-1}  + (1 - Z_t) \odot \tilde{H}_t.$$
 
 <div align=center>
   <img width="500" src="../../imgs/chapter04/4.7_gru_3.svg"/>
@@ -92,7 +92,7 @@ $$\boldsymbol{H}_t = \boldsymbol{Z}_t \odot \boldsymbol{H}_{t-1}  + (1 - \boldsy
 </div>
 <br>
 
-值得注意的是，更新门可以控制隐藏状态应该如何被包含当前时间步信息的候选隐藏状态所更新，如图4.6所示。假设更新门在时间步$t'$到$t$（$t' < t$）之间一直近似1。那么，在时间步$t'$到$t$之间的输入信息几乎没有流入时间步$t$的隐藏状态$\boldsymbol{H}_t$。实际上，这可以看作是较早时刻的隐藏状态$\boldsymbol{H}_{t'-1}$一直通过时间保存并传递至当前时间步$t$。这个设计可以应对循环神经网络中的梯度衰减问题，并更好地捕捉时间序列中时间步距离较大的依赖关系。
+值得注意的是，更新门可以控制隐藏状态应该如何被包含当前时间步信息的候选隐藏状态所更新，如图4.6所示。假设更新门在时间步$t'$到$t$（$t' < t$）之间一直近似1。那么，在时间步$t'$到$t$之间的输入信息几乎没有流入时间步$t$的隐藏状态$H_t$。实际上，这可以看作是较早时刻的隐藏状态$H_{t'-1}$一直通过时间保存并传递至当前时间步$t$。这个设计可以应对循环神经网络中的梯度衰减问题，并更好地捕捉时间序列中时间步距离较大的依赖关系。
 
 我们对门控循环单元的设计稍作总结：
 
