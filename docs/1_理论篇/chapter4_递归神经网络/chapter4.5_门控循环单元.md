@@ -62,6 +62,16 @@ $$
 \end{aligned}
 $$
 
+具体来说，假设隐藏单元个数为$h$，给定时间步$t$的小批量输入$\boldsymbol{X}_t \in \mathbb{R}^{n \times d}$（样本数为$n$，输入个数为$d$）和上一时间步隐藏状态$\boldsymbol{H}_{t-1} \in \mathbb{R}^{n \times h}$。重置门$\boldsymbol{R}_t \in \mathbb{R}^{n \times h}$和更新门$\boldsymbol{Z}_t \in \mathbb{R}^{n \times h}$的计算如下：
+
+$$
+\begin{aligned}
+\boldsymbol{R}_t = \sigma(\boldsymbol{X}_t \boldsymbol{W}_{xr} + \boldsymbol{H}_{t-1} \boldsymbol{W}_{hr} + \boldsymbol{b}_r),\\
+\boldsymbol{Z}_t = \sigma(\boldsymbol{X}_t \boldsymbol{W}_{xz} + \boldsymbol{H}_{t-1} \boldsymbol{W}_{hz} + \boldsymbol{b}_z),
+\end{aligned}
+$$
+
+
 其中$W_{xr}, W_{xz} \in \mathbb{R}^{d \times h}$和$W_{hr}, W_{hz} \in \mathbb{R}^{h \times h}$是权重参数，$b_r, b_z \in \mathbb{R}^{1 \times h}$是偏差参数。1.3节（[多层感知机](../chapter1_Neural-Networks/chapter1_3-多层感知器MLP.md)）节中介绍过，sigmoid函数可以将元素的值变换到0和1之间。因此，重置门$R_t$和更新门$Z_t$中每个元素的值域都是$[0, 1]$。
 
 #### 4.5.1.2 候选隐藏状态
