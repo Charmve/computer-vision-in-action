@@ -50,8 +50,10 @@ LSTM 中引入了3个门，即输入门（input gate）、遗忘门（forget gat
 <img width="500" src="../../imgs/chapter04/4.8_lstm_0.svg"/>
 </div>
 <div align=center>图4.7 长短期记忆中输入门、遗忘门和输出门的计算</div>
+<br>
 
 具体来说，假设隐藏单元个数为$h$，给定时间步$t$的小批量输入$\boldsymbol{X}_t \in \mathbb{R}^{n \times d}$（样本数为$n$，输入个数为$d$）和上一时间步隐藏状态$\boldsymbol{H}_{t-1} \in \mathbb{R}^{n \times h}$。
+
 时间步$t$的输入门$\boldsymbol{I}_t \in \mathbb{R}^{n \times h}$、遗忘门$\boldsymbol{F}_t \in \mathbb{R}^{n \times h}$和输出门$\boldsymbol{O}_t \in \mathbb{R}^{n \times h}$分别计算如下：
 
 $$
@@ -73,7 +75,7 @@ $$
 <img width="500" src="../../imgs/chapter04/4.8_lstm_1.svg"/>
 </div>
 <div align=center>图4.8 长短期记忆中候选记忆细胞的计算</div>
-
+<br>
 
 具体来说，时间步$t$的候选记忆细胞$\tilde{\boldsymbol{C}}_t \in \mathbb{R}^{n \times h}$的计算为
 
@@ -97,7 +99,7 @@ $$\boldsymbol{C}_t = \boldsymbol{F}_t \odot \boldsymbol{C}_{t-1} + \boldsymbol{I
 <img width="500" src="../../imgs/chapter04/4.8_lstm_2.svg"/>
 </div>
 <div align=center>图4.9 长短期记忆中记忆细胞的计算</div>
-
+<br>
 
 #### 4.4.1.4 隐藏状态
 
@@ -111,7 +113,7 @@ $$\boldsymbol{H}_t = \boldsymbol{O}_t \odot \text{tanh}(\boldsymbol{C}_t).$$
 <img width="500" src="../../imgs/chapter04/4.8_lstm_3.svg"/>
 </div>
 <div align=center>图4.10 长短期记忆中隐藏状态的计算</div>
-
+<br>
 
 ### 4.4.2 读取数据集
 

@@ -12,17 +12,17 @@
 
 日期: 2021/06/06
 
-- 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-    - 8.1 数据集
-        - 8.1.1 常见数据集
-          - 8.1.1 [ImageNet](https://image-net.org/)
-          - 8.1.2 [MNIST](http://yann.lecun.com/exdb/mnist/)
-          - 8.1.3 [COCO](https://cocodataset.org/)
-          - 8.1.4 [CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar.html)
-        - 8.1.2 Pytorch数据集及读取方法简介
-        - 8.1.3 数据增强简介
-        - 总结
-    - 8.2 基准
+- 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter8/chapter8)
+    - 8.1 [数据集](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md)
+        - 8.1.1 [常见数据集](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#811-常见数据集)
+          - 8.1.1.1 [ImageNet](https://image-net.org/)
+          - 8.1.1.2 [MNIST](http://yann.lecun.com/exdb/mnist/)
+          - 8.1.1.3 [COCO](https://cocodataset.org/)
+          - 8.1.1.4 [CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar.html)
+        - 8.1.2 [Pytorch数据集及读取方法简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#812-pytorch数据集及读取方法简介)
+        - 8.1.3 [数据增强简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#813-数据增强简介)
+        - [总结](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#总结)
+    - 8.2 [基准](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
     - 小结
     - 参考文献
 
