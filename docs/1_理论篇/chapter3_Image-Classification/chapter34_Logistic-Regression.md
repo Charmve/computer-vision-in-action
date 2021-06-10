@@ -41,6 +41,12 @@
 
 ## 3.4 逻辑回归 LR
 
+<p align="center">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/07_Logistic_Regression.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+    </a>
+</p>
+
 
 机器学习模型大致分为**预测模型**和**分类模型**，而分类又分为线性和非线性两类。
 ||**线性分类器**|**非线性分类器**|
