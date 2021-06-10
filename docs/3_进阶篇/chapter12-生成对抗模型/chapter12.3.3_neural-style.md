@@ -16,7 +16,7 @@
       - 12.3.2 项目实战
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
-      - 12.3.2 实战项目11 样式迁移
+      - 12.3.3 实战项目11 样式迁移
     - [12.4 变分自编码器 Variational Auto-encoder, VAE](/chapter12_4-变分自编码器VAE.md#124-变分自编码器-variational-auto-encoder-vae)
       - [12.4.1 概述](/chapter12_4-变分自编码器VAE.md#1241-概述) 
       - [12.4.2 基本原理](/chapter12_4-变分自编码器VAE.md#1242-基本原理) 
