@@ -23,3 +23,6 @@
 
 
 ## 1.1 Softmax 回归
+
+
+Comming soon ...
