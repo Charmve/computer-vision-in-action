@@ -200,8 +200,8 @@
         - 8.1.3 [数据增强简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#813-数据增强简介)
         - [总结](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#总结)
     - 8.2 [基准](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
-    - 8.3 [实战项目5 Kaggle比赛：图像分类（CIFAR-10）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
-    - 8.4 [实战项目6 Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
+    - 8.3 [实战项目 5 - Kaggle比赛：图像分类（CIFAR-10）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
+    - 8.4 [实战项目 6 - Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
     - 参考文献
   - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter9/chapter9)
@@ -375,7 +375,7 @@
   - <b><h4>附录</h4></b>
     - A 矩阵
     - B [常用激活函数总结](https://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw==&mid=2247484495&idx=1&sn=0bbb2094d93169baf20eedb284bc668f)
-    - C 梯度下降法
+    - C [梯度下降法](https://blog.csdn.net/Charmve/article/details/106089198)
   - <b><h4>[后记](/docs/book_postscript.md)</h4></b>
   - <b><h4>[参考文献](#参考文献-1)</h4></b>
 
