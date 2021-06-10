@@ -69,9 +69,9 @@ $$
 接下来，门控循环单元将计算候选隐藏状态来辅助稍后的隐藏状态计算。如图6.5所示，我们将当前时间步重置门的输出与上一时间步隐藏状态做按元素乘法（符号为$\odot$）。如果重置门中元素值接近0，那么意味着重置对应隐藏状态元素为0，即丢弃上一时间步的隐藏状态。如果元素值接近1，那么表示保留上一时间步的隐藏状态。然后，将按元素乘法的结果与当前时间步的输入连结，再通过含激活函数tanh的全连接层计算出候选隐藏状态，其所有元素的值域为$[-1, 1]$。
 
 <div align=center>
-<img width="500" src="../../imgs/chapter04/4.7_gru_2.svg"/>
+  <img width="500" src="../../imgs/chapter04/4.7_gru_2.svg"/>
+  图4.5 门控循环单元中候选隐藏状态的计算
 </div>
-<div align=center>图4.5 门控循环单元中候选隐藏状态的计算</div>
 
 具体来说，时间步$t$的候选隐藏状态$\tilde{\boldsymbol{H}}_t \in \mathbb{R}^{n \times h}$的计算为
 
@@ -86,10 +86,9 @@ $$\tilde{\boldsymbol{H}}_t = \text{tanh}(\boldsymbol{X}_t \boldsymbol{W}_{xh} + 
 $$\boldsymbol{H}_t = \boldsymbol{Z}_t \odot \boldsymbol{H}_{t-1}  + (1 - \boldsymbol{Z}_t) \odot \tilde{\boldsymbol{H}}_t.$$
 
 <div align=center>
-<img width="500" src="../../imgs/chapter04/4.7_gru_3.svg"/>
+  <img width="500" src="../../imgs/chapter04/4.7_gru_3.svg"/>
+  图4.6 门控循环单元中隐藏状态的计算
 </div>
-<div align=center>图4.6 门控循环单元中隐藏状态的计算</div>
-
 
 值得注意的是，更新门可以控制隐藏状态应该如何被包含当前时间步信息的候选隐藏状态所更新，如图4.6所示。假设更新门在时间步$t'$到$t$（$t' < t$）之间一直近似1。那么，在时间步$t'$到$t$之间的输入信息几乎没有流入时间步$t$的隐藏状态$\boldsymbol{H}_t$。实际上，这可以看作是较早时刻的隐藏状态$\boldsymbol{H}_{t'-1}$一直通过时间保存并传递至当前时间步$t$。这个设计可以应对循环神经网络中的梯度衰减问题，并更好地捕捉时间序列中时间步距离较大的依赖关系。
 
