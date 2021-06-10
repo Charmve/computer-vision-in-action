@@ -53,15 +53,6 @@
 </div>
 <br>
 
-具体来说，假设隐藏单元个数为$h$，给定时间步$t$的小批量输入$\X_t \in \mathbb{R}^{n \times d}$（样本数为$n$，输入个数为$d$）和上一时间步隐藏状态$\H_{t-1} \in \mathbb{R}^{n \times h}$。重置门$R_t \in \mathbb{R}^{n \times h}$和更新门$\Z_t \in \mathbb{R}^{n \times h}$的计算如下：
-
-$$
-\begin{aligned}
-\R_t = \sigma(\X_t W_{xr} + H_{t-1} W_{hr} + b_r),\\
-\Z_t = \sigma(X_t W_{xz} + H_{t-1} W_{hz} + b_z),
-\end{aligned}
-$$
-
 具体来说，假设隐藏单元个数为$h$，给定时间步$t$的小批量输入$\boldsymbol{X}_t \in \mathbb{R}^{n \times d}$（样本数为$n$，输入个数为$d$）和上一时间步隐藏状态$\boldsymbol{H}_{t-1} \in \mathbb{R}^{n \times h}$。重置门$\boldsymbol{R}_t \in \mathbb{R}^{n \times h}$和更新门$\boldsymbol{Z}_t \in \mathbb{R}^{n \times h}$的计算如下：
 
 $$
