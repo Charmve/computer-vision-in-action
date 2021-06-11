@@ -19,8 +19,8 @@
     - 14.4 [主流方法与模型架构](#144-主流方法与模型架构)
     - 14.5 [指标 METRICS](#145-指标-metrics)
     - 14.6 [可能的未来方向](#146-可能的未来方向)
-    - 小结
-    - 参考文献
+    - [小结](#小结)
+    - [参考文献](#参考文献)
 
 ----
 
@@ -100,15 +100,15 @@ ActivityNet 大规模活动识别挑战赛 (ActivityNet Large Scale Activity Rec
 
 ### 14.4.1 经典方法
 
-Wang等人[2][3] 提出DT和iDT方法。DT利用光流得到视频中的运动轨迹，再沿着轨迹提取特征。iDT对相机运动进行了补偿，同时由于人的运动比较显著，iDT用额外的检测器检测人，以去除人对相邻帧之间投影矩阵估计的影响。这是深度学习方法成熟之前效果最好的经典方法，该方法的弊端是特征维度高(特征比原始视频还要大)、速度慢。实践中，早期的深度学习方法在和iDT结合之后仍能取得一定的效果提升，现在深度学习方法的性能已较iDT有大幅提升，因此iDT渐渐淡出视线。
+Wang Heng 等人[2][3] 提出DT和iDT方法，如下图14.4所示。DT利用光流得到视频中的运动轨迹，再沿着轨迹提取特征。iDT对相机运动进行了补偿，同时由于人的运动比较显著，iDT用额外的检测器检测人，以去除人对相邻帧之间投影矩阵估计的影响。这是深度学习方法成熟之前效果最好的经典方法，该方法的弊端是特征维度高(特征比原始视频还要大)、速度慢。实践中，早期的深度学习方法在和iDT结合之后仍能取得一定的效果提升，现在深度学习方法的性能已较iDT有大幅提升，因此iDT渐渐淡出视线。
 
-![image](https://user-images.githubusercontent.com/29084184/121528062-b1c8d480-ca2d-11eb-899f-8f60c5e41144.png)
+![image](https://user-images.githubusercontent.com/29084184/121620923-bf1da780-ca9d-11eb-8418-8a584f525512.png)
 
-图14.4 
+图14.4 提取和表征密集轨迹的方法。 左特征点在每个空间尺度的网格上密集采样; 中间跟踪是通过密集光流场中的中值滤波在 L 帧的相应空间尺度上进行的; 右轨迹形状由相对点坐标表示，描述符（HOG，HOF，MBH）沿轨迹在 N×N 个像素邻域内计算，分为 $nσ×nσ×nτ$ 个单元.
 
 ### 14.4.2 前沿模型架构
 
-随着深度学习、计算性能等各方面的提升，该方向吸引了大量学者进行研究，在这里视频行为分类问题整理了目前（2021.06）前沿的模型架构。由于该领域的快速发展性质，大家可在PaperWithCode上及时查看最新研究成果的更新。
+随着深度学习、计算性能等各方面的提升，该方向吸引了大量学者进行研究，在这里视频行为分类问题整理了目前（2021.06）前沿的模型架构。由于该领域的快速发展性质，大家可在 PaperWithCode 上及时查看最新研究成果的更新。
 
 
 #### 14.4.2.1 行为识别模型
@@ -123,11 +123,11 @@ Action Recognition Models，
 
 图14.5  动作识别模型示例。 RGB 和 Motion Single-Stream 架构在一个采样特征上训练 2D、3D 或混合 CNN。 双流架构融合 RGB 和 Motion 流。时间分割架构将视频分成多个片段，在单流或多流架构上处理每个片段，并融合输出。 两阶段架构使用时间分割来提取特征向量并将其输入卷积或循环网络。
 
-- 第二类是**双流架构**，一个流用于 RGB 学习，一个流用于运动特征学习 [26, 231]。然而，计算光流或其他手工制作的特征在计算上是昂贵的。因此，最近的几个模型使用“隐藏”运动流，
-其中运动表示是学习而不是手动确定的。这些包括 MotionNet [326]，其操作类似于标准的双流方法，以及 MARS [41] 和 D3D [243]，它们在流之间执行中间融合。 Feichetenhofer 等人[59] 
-探索了流之间的门控技术, 虽然这些模型通常在计算上受限于两个流，但可能有更多流用于其他模态 [269, 274]。
+- 第二类是**双流架构**，一个流用于 RGB 学习，一个流用于运动特征学习 [4, 5]。然而，计算光流或其他手工制作的特征在计算上是昂贵的。因此，最近的几个模型使用“隐藏”运动流，
+其中运动表示是学习而不是手动确定的。这些包括 MotionNet [326]，其操作类似于标准的双流方法，以及 MARS [6] 和 D3D [7]，它们在流之间执行中间融合。 Feichetenhofer 等人[8] 
+探索了流之间的门控技术, 虽然这些模型通常在计算上受限于两个流，但可能有更多流用于其他模态 [9, 10]。
 
-- 第三类是**时间分割架构**，由单流、双流或多流构建而成，可解决动作的长期依赖性。时间段网络 (TSN) 方法 [272, 273] 将输入视频划分为 𝑁 段，从这些段中采样，并通过平均段级输出来创建视频级预测。每个段流之间共享模型权重。 T-C3D [163]、TRN [321]、ECO [327] 和 SlowFast [58] 通过执行多分辨率分割和/或融合建立在时间分割的基础上。
+- 第三类是**时间分割架构**，由单流、双流或多流构建而成，可解决动作的长期依赖性。时间段网络 (TSN) 方法 [11, 12] 将输入视频划分为 𝑁 段，从这些段中采样，并通过平均段级输出来创建视频级预测。每个段流之间共享模型权重。 T-C3D [13]、TRN [14]、ECO [15] 和 SlowFast [58] 通过执行多分辨率分割和/或融合建立在时间分割的基础上。
 
 - 第四类是**两阶段学习**，在我们的 AR 方法分类中的最高复杂度。第一阶段使用时间分割方法来提取段嵌入的特征向量，第二阶段对这些特征进行训练。这些包括 3D 融合和 CNN+LSTM 方法。
 
@@ -258,4 +258,40 @@ Temporal Action Localization/Detection Models
 
 [3] H. Wang and C. Schmid. Action recognition with improved trajectories. ICCV'13.
 
-[4] MATTHEW HUTCHINSON and VIJAY GADEPALLY. Video Action Understanding: A Tutorial. https://arxiv.org/pdf/2010.06647.pdf
+[4] Joao Carreira and Andrew Zisserman. 2017. Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset. arXiv:1705.07750 [cs.CV]
+
+[5] Karen Simonyan and Andrew Zisserman. 2014. Two-Stream Convolutional Networks for Action Recognition in Videos. In Advances in Neural Information Processing Systems 27, Z. Ghahramani, M. Welling, C. Cortes, N. D. Lawrence, and K. Q. Weinberger (Eds.). Curran Associates, Inc., 568–576. http://papers.nips.cc/paper/5353-twostream-convolutional-networks-for-action-recognition-in-videos.pdf
+
+[6] Nieves Crasto, Philippe Weinzaepfel, Karteek Alahari, and Cordelia Schmid. 2019. MARS: Motion-Augmented RGB
+Stream for Action Recognition. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition
+(CVPR).
+
+[7] Jonathan Stroud, David Ross, Chen Sun, Jia Deng, and Rahul Sukthankar. 2020. D3D: Distilled 3D Networks for Video Action Recognition. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV).
+
+[8] Christoph Feichtenhofer, Axel Pinz, and Richard P. Wildes. 2017. Spatiotemporal Multiplier Networks for Video
+Action Recognition. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+
+[9] Liangliang Wang, Lianzheng Ge, Ruifeng Li, and Yajun Fang. 2017. Three-stream CNNs for action recognition. Pattern
+Recognition Letters 92 (2017), 33 – 40. https://doi.org/10.1016/j.patrec.2017.04.004
+
+[10] Le Wang, Jinliang Zang, Qilin Zhang, Zhenxing Niu, Gang Hua, and Nanning Zheng. 2018. Action Recognition by an Attention-Aware Temporal Weighted Convolutional Neural Network. Sensors 18, 7 (Jun 2018), 1979. https://doi.org/10.3390/s18071979
+
+[11] Limin Wang, Yuanjun Xiong, Zhe Wang, Yu Qiao, Dahua Lin, Xiaoou Tang, and Luc Van Gool. 2016. Temporal
+Segment Networks: Towards Good Practices for Deep Action Recognition. In Computer Vision – ECCV 2016, Bastian
+Leibe, Jiri Matas, Nicu Sebe, and Max Welling (Eds.). Springer International Publishing, Cham, 20–36.
+
+[12] L. Wang, Y. Xiong, Z. Wang, Y. Qiao, D. Lin, X. Tang, and L. Van Gool. 2019. Temporal Segment Networks for Action
+Recognition in Videos. IEEE Transactions on Pattern Analysis and Machine Intelligence 41, 11 (2019), 2740–2755.
+
+[13] Kun Liu, Wu Liu, Chuang Gan, Mingkui Tan, and Huadong Ma. 2018. T-c3d: Temporal convolutional 3d network for
+real-time action recognition. In Thirty-second AAAI conference on artificial intelligence.
+
+[14] Bolei Zhou, Alex Andonian, Aude Oliva, and Antonio Torralba. 2018. Temporal Relational Reasoning in Videos. In
+Proceedings of the European Conference on Computer Vision (ECCV).
+
+[15] Mohammadreza Zolfaghari, Kamaljeet Singh, and Thomas Brox. 2018. ECO: Efficient Convolutional Network for
+Online Video Understanding. In Proceedings of the European Conference on Computer Vision (ECCV)
+
+[16] MATTHEW HUTCHINSON and VIJAY GADEPALLY. Video Action Understanding: A Tutorial. https://arxiv.org/pdf/2010.06647.pdf
+
+
