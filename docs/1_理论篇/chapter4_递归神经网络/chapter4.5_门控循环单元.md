@@ -29,7 +29,7 @@
 ## 4.5 门控循环单元（GRU）
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/13_Recurrent_Neural_Networks.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/Gated_Recurrent_Units.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>
