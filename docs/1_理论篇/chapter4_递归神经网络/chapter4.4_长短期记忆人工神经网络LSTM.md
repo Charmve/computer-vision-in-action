@@ -30,7 +30,7 @@
 ## 4.4 长短期记忆人工神经网络 LSTM
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/13_Recurrent_Neural_Networks.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/Long_Short_Term_Memory.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>
