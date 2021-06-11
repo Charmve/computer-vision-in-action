@@ -149,7 +149,43 @@
     - 4.5 [门控循环单元（GRU）](/docs/1_理论篇/chapter4_递归神经网络/chapter4.5_门控循环单元.md)
     - 小结
     - 参考文献
-  - 第 5 章 [模型拟合与优化算法]()
+  - 第 5 章 [图神经网络](/docs/1_理论篇/chapter5_图神经网络/chapter5_图神经网络.md)
+    - 5.1 [历史脉络](/docs/1_理论篇/chapter5_图神经网络/chapter5_图神经网络.md#51-历史脉络)
+    - 5.2 [图神经网络(Graph Neural Network)](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_1.html)
+      - 5.2.1 [状态更新与输出](/docs/1_理论篇/chapter5_图神经网络/chapter5_图神经网络.md#51-常见数据集)
+      - 5.2.2 [不动点理论](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#812-pytorch数据集及读取方法简介)
+      - 5.2.3 [具体实现](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#813-数据增强简介)
+      - 5.2.4 [模型学习]()
+      - 5.2.5 [GNN与RNN](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
+      - 5.2.6 [GNN的局限]()
+    - 5.3 [门控图神经网络(Gated Graph Neural Network)]()
+      - 5.3.1 状态更新
+      - 5.3.2 实例1:到达判断
+      - 5.3.3 实例2:语义解析
+      - 5.3.4 GNN与GGNN
+    - 5.4 [图卷积神经网络(GCNN)](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_2.html)
+      - 5.4.1 图卷积缘起
+      - 5.4.2 图卷积框架(Framework)
+      - 5.4.3 再谈卷积
+      - 5.4.4 空域卷积(Spatial Convolution)
+      - 5.4.5 消息传递网络(Message Passing Neural Network)
+      - 5.4.6 图采样与聚合(Graph Sample and Aggregate)
+      - 5.4.7 图结构序列化(PATCHY-SAN)
+      - 5.4.8 频域卷积(Spectral Convolution)
+    - 5.5 [生成图表示](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_3.html)
+      - 5.5.1 图读出操作(ReadOut)
+      - 5.5.2 基于统计的方法(Statistics Category)
+      - 5.5.3 基于学习的方法(Learning Category)
+      - 5.5.4 其他方法
+    - 5.6 [图神经网络在计算机视觉上的应用](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_3.html)
+      - 5.6.1 [点云分割](https://arxiv.org/abs/1904.03751)
+      - 5.6.2 [点云生成](https://openreview.net/forum?id=SJeXSo09FQ)
+      - 5.6.3 [RGBD图像分割](https://www.cs.toronto.edu/~urtasun/publications/qi_etal_iccv17.pdf)
+      - 5.6.4 [视觉问答VQA](https://visualqa.org/)
+      - 5.6.5 [零次学习ZSL](https://arxiv.org/pdf/1803.08035.pdf)
+    - 小结
+    - 参考文献
+  - 第 6 章 [模型拟合与优化算法]()
     - 5.1 优化与深度学习
     - 5.2 梯度下降和随机梯度下降
     - 5.3 小批量随机梯度下降
@@ -173,6 +209,7 @@
     - 6.5 [Pandas 基础使用](./notebooks/04_Pandas.ipynb)
     - 6.6 [OpenCV 安装及基础使用](./notebooks/02_Python.ipynb)
     - 6.7 [Jupyter Notebook 配置及基础使用](./notebooks/01_Notebooks.ipynb)
+    - 6.8 [实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
     - 小结
     - 参考文献
   - 第 7 章 [经典卷积神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
@@ -207,17 +244,17 @@
   - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter9/chapter9)
     - 9.1 语义分割
       - 9.1.1 [语义分割 PyTorch 版](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
-      - 9.1.2 实战项目 7
+      - 9.1.2 [实战项目 7 - ]
     - 9.2 目标检测
       - 9.2.1 常用网络
-      - 9.2.2 实战项目 8
+      - 9.2.2 [实战项目 8 - ]()
     - 9.3 [实例分割](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md)
       - 9.3.1 [常用网络](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md#931-常用网络)
       - 9.3.2 [实战项目 9 - 实时高分辨率背景抠图](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md#932-实战项目-8-实时高分辨率背景抠图)
       - 9.3.3 新方法：[滑动窗口](https://blog.csdn.net/Charmve/article/details/108915225), [PointRend](https://blog.csdn.net/Charmve/article/details/108892076), PolarMask
     - 小结
     - 参考文献
-  - 第 10 章 [项目实战综合](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
+  - 第 10 章 [GitHub开源项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
     - 10.1 [手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
     - 10.2 [文本检测](https://github.com/Charmve/Scene-Text-Detection)
     - 10.3 [车道线检测](https://github.com/Charmve/Awesome-Lane-Detection)
@@ -251,29 +288,33 @@
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
       - 12.3.3 [实战项目11 - 样式迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
-    - 12.4 [变分自编码器 Variational Auto-encoder, VAE](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
-      - 12.4.1 [概述](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)    
-      - 12.4.2 [基本原理](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)        
-        - 12.4.2.1 [定义](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1-定义)        
-        - 12.4.2.2 [理论基础：三要素](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#2-理论基础三要素) 
-        - 12.4.2.3 [推导过程](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#3-推导过程)            
-      - 12.4.3 [VAE v.s. AE 区别与联系](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1243-vae-vs-ae-区别与联系)    
-      - 12.4.4 [变分自编码器的代码实现](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)    
-      - 12.4.5 [卷积变分自编码器的实现与简单应用](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)        
+    - 12.4 [变分自编码器 Variational Auto-encoder, VAE](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
+      - 12.4.1 [概述](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)    
+      - 12.4.2 [基本原理](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)        
+        - 12.4.2.1 [定义](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1-定义)        
+        - 12.4.2.2 [理论基础：三要素](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#2-理论基础三要素) 
+        - 12.4.2.3 [推导过程](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#3-推导过程)            
+      - 12.4.3 [VAE v.s. AE 区别与联系](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1243-vae-vs-ae-区别与联系)    
+      - 12.4.4 [变分自编码器的代码实现](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)    
+      - 12.4.5 [卷积变分自编码器的实现与简单应用](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)  
+      - 12.4.6 [实战项目 12 - 旧照片修复](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life) 
       - 小结     
-      - [参考文献](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#参考文献) 
+      - [参考文献](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#参考文献) 
     - 参考文献
   - 第 13 章 [深度增强学习](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 13.1 方法梯度，硬性关注
     - 13.2 Q - 学习，评价器
     - 小结
     - 参考文献
-  - 第 14 章 [视频理解](https://charmve.github.io/computer-vision-in-action/#/chapter1/chapter1)
-    - 14.1 概述
-    - 14.2 行为理解
-    - 14.3 主流方法
-    - 小结
-    - 参考文献
+  - 第 14 章 [视频理解](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md)
+    - 14.1 [概述](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#141-概述)
+    - 14.2 [视频理解场景中的主要问题](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#142-视频理解场景中的主要问题)
+    - 14.3 [常用数据集](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#143-常用数据集)
+    - 14.4 [主流方法与模型架构](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#144-主流方法与模型架构)
+    - 14.5 [指标 METRICS](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#145-指标-metrics)
+    - 14.6 [可能的未来方向](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#146-可能的未来方向)
+    - [小结](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#小结)
+    - [参考文献](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#参考文献)
   - 第 15 章 [迁移学习](./docs/3_进阶篇/chapter15_迁移学习)
     - 15.1 [概述](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#151-迁移学习概述)
       - 15.1.1 [背景](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#1511-背景)
@@ -283,7 +324,7 @@
     - 15.3 [基于特征的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#153-基于特征的迁移)
     - 15.4 [基于共享参数的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#154-基于共享参数的迁移)
     - 15.5 [深度学习和迁移学习结合](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#155-深度学习和迁移学习结合)
-    - 15.7 [实战项目12 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
+    - 15.7 [实战项目 12 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
       - 15.7.1 [迁移学习在计算机视觉领域的应用](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1571-迁移学习在计算机视觉领域的应用)
       - 15.7.2 [实战项目: 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1572-实战项目-蚂蚁和蜜蜂的分类问题)
     - [小结](#小结)
