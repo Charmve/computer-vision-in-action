@@ -12,7 +12,7 @@
 
 日期: 2021/06/11
 
-- 第 5 章 [图神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter8/chapter8)
+- 第 5 章 [图神经网络](/docs/1_理论篇/chapter5_图神经网络/chapter5_图神经网络.md)
     - 5.1 [历史脉络](/docs/1_理论篇/chapter5_图神经网络/chapter5_图神经网络.md#51-历史脉络)
     - 5.2 [图神经网络(Graph Neural Network)](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_1.html)
       - 5.2.1 [状态更新与输出](/docs/1_理论篇/chapter5_图神经网络/chapter5_图神经网络.md#51-常见数据集)
@@ -21,7 +21,7 @@
       - 5.2.4 [模型学习]()
       - 5.2.5 [GNN与RNN](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
       - 5.2.6 [GNN的局限]()
-    - 5.3 [门控图神经网络(Gated Graph Neural Network)]
+    - 5.3 [门控图神经网络(Gated Graph Neural Network)]()
       - 5.3.1 状态更新
       - 5.3.2 实例1:到达判断
       - 5.3.3 实例2:语义解析
@@ -30,23 +30,22 @@
       - 5.4.1 图卷积缘起
       - 5.4.2 图卷积框架(Framework)
       - 5.4.3 再谈卷积
-        - 5.4.3.1 基础概念
-        - 5.4.3.2 实例:掷骰子问题
       - 5.4.4 空域卷积(Spatial Convolution)
       - 5.4.5 消息传递网络(Message Passing Neural Network)
       - 5.4.6 图采样与聚合(Graph Sample and Aggregate)
       - 5.4.7 图结构序列化(PATCHY-SAN)
       - 5.4.8 频域卷积(Spectral Convolution)
-        - 5.4.8.1 前置内容
-        - 5.4.8.2 傅里叶变换(Fourier Transform)
-        - 5.4.8.3 图上的傅里叶变换
-        - 5.4.8.4 频域卷积网络(Spectral CNN)
-        - 5.4.8.5 切比雪夫网络(ChebNet)
     - 5.5 [生成图表示](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_3.html)
       - 5.5.1 图读出操作(ReadOut)
       - 5.5.2 基于统计的方法(Statistics Category)
       - 5.5.3 基于学习的方法(Learning Category)
       - 5.5.4 其他方法
+    - 5.6 [图神经网络在计算机视觉上的应用](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_3.html)
+      - 5.6.1 [点云分割](https://arxiv.org/abs/1904.03751)
+      - 5.6.2 [点云生成](https://openreview.net/forum?id=SJeXSo09FQ)
+      - 5.6.3 [RGBD图像分割](https://www.cs.toronto.edu/~urtasun/publications/qi_etal_iccv17.pdf)
+      - 5.6.4 [视觉问答VQA](https://visualqa.org/)
+      - 5.6.5 [零次学习ZSL](https://arxiv.org/pdf/1803.08035.pdf)
     - 小结
     - 参考文献
 
