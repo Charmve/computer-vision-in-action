@@ -12,20 +12,29 @@
 
 日期: 2021/06/10
 
-- 第 6 章 [深度学习环境搭建](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+- 第 6 章 [软件环境搭建与工具使用](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 6.1 深度学习环境搭建指南
-    - 6.2 Pytorch 基础使用介绍
+    - 6.2 [Pytorch 基础使用介绍](chapter6.2_Pytorch-基础使用介绍.md)
       - 6.2.1 [Tensors](#621-tensors)
       - 6.2.2 [Operations](#622-operations)
       - 6.2.3 [Numpy桥梁](#623-numpy桥梁)
       - 6.2.4 [CUDA Tensors](#624-cuda-tensors)
-    - 6.3 [Python](../../../notebooks/02_Python.ipynb)
-    - 6.4 [Numpy 基础使用](../../../notebooks/03_NumPy.ipynb)
-    - 6.5 [Pandas 基础使用](../../../notebooks/04_Pandas.ipynb)
-    - 6.4 [OpenCV 安装及基础使用](../../../notebooks/02_Python.ipynb)
-    - 6.7 [Jupyter Notebook 配置及基础使用](../../../notebooks/01_Notebooks.ipynb)
+    - 6.3 [Python 基本语法](../../../notebooks/chapter07_environment-setup-and-tool-use/02_Python.ipynb)
+    - 6.4 [Numpy 基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/03_NumPy.ipynb)
+    - 6.5 [Pandas 基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/04_Pandas.ipynb)
+    - 6.6 [OpenCV 安装及基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
+    - 6.7 [Jupyter Notebook 配置及基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/01_Notebooks.ipynb)
+    - 6.8 [基本的图像操作和处理](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md)
+      - 6.8.1 [PIL：Python图像处理类库](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#781-pil-python图像处理类库)
+      - 6.8.2 [Matplotlib](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#782-matplotlib)
+      - 6.8.3 [NumPy](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#783-numpy)
+      - 6.8.4 [SciPy](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#784-scipy)
+      - 6.8.5 [高级示例：图像去噪](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#785-高级示例-图像去噪)
+    - 6.9 [实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
     - 小结
     - 参考文献
+
+---
 
 ## 6.1 深度学习环境搭建指南
 
