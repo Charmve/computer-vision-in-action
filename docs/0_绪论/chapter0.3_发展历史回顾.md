@@ -1,22 +1,48 @@
-## 第 0 章 绪论
-  1. 概述
-  2. 计算机视觉基本概念
-  3. 典型的计算机视觉任务
+<p align="left">
+  <a href="https://github.com/Charmve"><img src="https://img.shields.io/badge/GitHub-@Charmve-000000.svg?logo=GitHub" alt="GitHub" target="_blank"></a>
+  <a href="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkIzZk5ldWVGZEQ4YnZ4cXlzbXRtRktUTGdFSXZOMUdnTHhDNXV0Y1VBZVJ0T0lJa0hTZTVnVGowamVtZUVOQTJJMHhiU0xjQ3VrVVEvNjQw?x-oss-process=image/format,png" target="_blank" ><img src="https://img.shields.io/badge/公众号-@迈微AI研习社-000000.svg?style=flat-square&amp;logo=WeChat" alt="微信公众号"/></a>
+  <a href="https://www.zhihu.com/people/MaiweiE-com" target="_blank" ><img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-@Charmve-000000.svg?style=flat-square&amp;logo=Zhihu" alt="知乎"/></a>
+  <a href="https://space.bilibili.com/62079686" target="_blank"><img src="https://img.shields.io/badge/B站-@Charmve-000000.svg?style=flat-square&amp;logo=Bilibili" alt="B站"/></a>
+  <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
+</p>
+
+# 第 0 章 计算机视觉概述
+
+- 第 0 章 计算机视觉概述
+  - 0.1 [概述](chapter0.1_概述.md)
+  - 0.2 [计算机视觉基本概念](chapter0.2_计算机视觉基本概念.md)
+  - 0.3 发展历史回顾
+  - 0.4 [典型的计算机视觉任务](chapter0.4_典型的计算机视觉任务.md)
       - 图像分类 
       - 目标识别与目标检测
       - 实例分割与语义分割
       - 3D 建模
-  4. 发展历史回顾
-  5. 小练习
-  6. 本书编写逻辑
+  - 0.5 [国内外优秀的计算机视觉团队汇总](chapter0.5_国内外优秀的计算机视觉团队汇总.md)
+  - 小练习
+  - 小结
+  - 参考文献
+  
+---
 
-# 4. 发展历史回顾
+## 0.3 发展历史回顾
 
 作者: 张伟 (Charmve)
 日期: 2021/04/29
 
 
 <br>
+
+![image](https://user-images.githubusercontent.com/29084184/121769873-9b8b5780-cb98-11eb-91e9-e367753ef9cc.png)
+
+图1 Hubel and Wiesel Experiment
+
+![image](https://user-images.githubusercontent.com/29084184/121769995-4439b700-cb99-11eb-9226-991f2a620ef7.png)
+
+图2 LeCun等人用神经网络进行手写字识别
+
+![image](https://user-images.githubusercontent.com/29084184/121770500-36396580-cb9c-11eb-972b-ceb1422cb740.png)
+
+图3 （左）八张 ILSVRC-2010 测试图像和我们模型认为最有可能的五个标签。 正确的标签写在每张图像下，分配给正确标签的概率也用红色条显示（如果它恰好在前 5 个）。 （右）第一列中的五个 ILSVRC 2010 测试图像。 剩余的列显示了六个训练图像，它们在最后一个隐藏层中产生特征向量，与测试图像的特征向量的欧几里德距离最小。
 
 | 年份  | 事件 | 相关论文/Reference | 
 |--|--|--|
