@@ -66,7 +66,19 @@
   <a href="res/计算机视觉实战演练：算法与应用_思维导图.pdf">全书详细思维导图</a>
 </p>
 
-本书详细介绍，请移步 [<b>序言</b>](/docs/book_preface.md)
+本书详细介绍，请移步 [<b>序言</b>](/docs/book_preface.md)。
+
+* 第一部分包括基础知识和预备知识。chap_introduction 提供深度学习的入门课程。然后在 chap_preliminaries 中，将快速向你介绍实践计算机视觉所需的前提条件，例如如何存储和处理数据，以及如何应用基于线性代数、微积分和概率基本概念的各种数值运算，涵盖了深度学习的最基本概念和技术，例如线性回归、多层感知机和正则化。
+
+* 第二部分是本书涉及的计算机视觉基础理论，核心部分为神经网络模型。包括神经网络、卷积神经网络、循环神经网络理论讲解，以图像分类、模型拟合与优化作为其代码的实战项目。在模型拟合和优化章节中，着重分享梯度下降、随机梯度下降、动量法、AdaBoost等方法。
+
+* 接下来的七章集中讨论现代计算机视觉技术实战。描述了计算机视觉的经典卷积神经网络PyTorch实现，并为我们随后实现更复杂的模型奠定了基础。接下来，在`chap_cnn` 和 `chap_modern_cnn` 中，我们介绍了卷积神经网络（convolutional neural network，CNN），这是构成大多数现代计算机视觉系统骨干的强大工具。随后，在 `chap_rnn` 和 `chap_modern_rnn` 中，我们引入了循环神经网络(recurrent neural network，RNN)，这是一种利用数据中的时间或序列结构的模型，通常用于自然语言处理和时间序列预测，但在计算机视觉领域也表现出惊奇的效果。在`chap_attention` 中，我们介绍了一类新的模型，它采用了一种称为注意力机制的技术，最近它们已经开始在自然语言处理中取代循环神经网络。这一部分将帮助你快速了解大多数现代计算机视觉应用背后的基本工具。
+
+* 该部分以项目为实战指导，给出详细的项目指导书和代码实现，更为特别的是，给出了**notebook**可以直接在线运行，跑通结果，免去了本地运行环境的搭建复杂性。于此同时，为了方便读者在本地调试，作者建立了一个名为 L0CV 的第三方包，可以直接在代码中 ``import L0CV`` 后使用。
+
+* 第三部分讨论最近几年出现的“网红”模型，诸如：Transformer、Attention、知识蒸馏、迁移学习、生成对抗模型等。这部分也是此份资料的力挺之作。首先，在 `chap_optimization` 中，我们讨论了用于训练深度学习模型的几种常用优化算法。
+
+## 愿景
 
 本开源项目代表了我们的一种尝试：我们将教给读者概念、背景知识和代码；我们将在同一个地方阐述剖析问题所需的批判性思维、解决问题所需的数学知识，以及实现解决方案所需的工程技能。
 
@@ -191,15 +203,15 @@
       - 5.6.5 [零次学习ZSL](https://arxiv.org/pdf/1803.08035.pdf)
     - 小结
     - 参考文献
-  - 第 6 章 [模型拟合与优化算法](notebooks/chapter06_optimization/)
-    - 6.1 [优化与深度学习](notebooks/chapter06_optimization/6.1_optimization-intro.ipynb)
-    - 6.2 [梯度下降和随机梯度下降](notebooks/chapter06_optimization/6.2_gd-sgd.ipynb)
-    - 6.3 [小批量随机梯度下降](notebooks/chapter06_optimization/6.3_minibatch-sgd.ipynb)
-    - 6.4 [动量法](notebooks/chapter06_optimization/6.4_momentum.ipynb)
-    - 6.5 [AdaGrad算法](notebooks/chapter06_optimization/6.5_adagrad.ipynb)
-    - 6.6 [RMSProp算法](notebooks/chapter06_optimization/6.6_rmsprop.ipynb)
-    - 6.7 [AdaDelta算法](notebooks/chapter06_optimization/6.7_adadelta.ipynb)
-    - 6.8 [Adam算法](notebooks/chapter06_optimization/6.8_adam.ipynb)
+  - 第 6 章 [模型拟合与优化算法]()
+    - 6.1 优化与深度学习
+    - 6.2 梯度下降和随机梯度下降
+    - 6.3 小批量随机梯度下降
+    - 6.4 动量法
+    - 6.5 AdaGrad算法
+    - 6.6 RMSProp算法
+    - 6.7 AdaDelta算法
+    - 6.8 Adam算法
     - 小结
     - 参考文献
 - <b><h4>实战篇</h4></b>
@@ -210,21 +222,21 @@
       - 6.2.2 [Operations](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#622-operations)
       - 6.2.3 [Numpy桥梁](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#623-numpy桥梁)
       - 6.2.4 [CUDA Tensors](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#624-cuda-tensors)
-    - 6.3 [Python 基本语法](./notebooks/chapter07_environment-setup-and-tool-use/02_Python.ipynb)
+    - 6.3 [Python](./notebooks/chapter07_environment-setup-and-tool-use/02_Python.ipynb)
     - 6.4 [Numpy 基础使用](./notebooks/chapter07_environment-setup-and-tool-use/03_NumPy.ipynb)
     - 6.5 [Pandas 基础使用](./notebooks/chapter07_environment-setup-and-tool-use/04_Pandas.ipynb)
     - 6.6 [OpenCV 安装及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
     - 6.7 [Jupyter Notebook 配置及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/01_Notebooks.ipynb)
-    - 6.8 [基本的图像操作和处理](docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md)
-      - 6.8.1 [PIL：Python图像处理类库](docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#781-pil-python图像处理类库)
-      - 6.8.2 [Matplotlib](docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#782-matplotlib)
-      - 6.8.3 [NumPy](docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#783-numpy)
-      - 6.8.4 [SciPy](docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#784-scipy)
-      - 6.8.5 [高级示例：图像去噪](docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#785-高级示例-图像去噪)
+    - 6.8 [基本的图像操作和处理](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md)
+      - 6.8.1 [PIL：Python图像处理类库](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#781-pil-python图像处理类库)
+      - 6.8.2 [Matplotlib](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#782-matplotlib)
+      - 6.8.3 [NumPy](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#783-numpy)
+      - 6.8.4 [SciPy](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#784-scipy)
+      - 6.8.5 [高级示例：图像去噪](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#785-高级示例-图像去噪)
     - 6.9 [实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
     - 小结
     - 参考文献
-  - 第 7 章 [经典神经网络架构：原理与PyTorch实现](notebooks/chapter07_convolutional-neural-networks)
+  - 第 7 章 [经典神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
     - 7.1 [卷积神经网络（LeNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.1%20卷积神经网络（LeNet）.md)
     - 7.2 [深度卷积神经网络（AlexNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.2%20深度卷积神经网络（AlexNet）.md)
     - 7.3 [使用重复元素的网络（VGG）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.3%20使用重复元素的网络（VGG）.md)
@@ -313,16 +325,16 @@
       - [小结](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3_生成对抗网络GAN.md#小结)
       - [参考文献](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3_生成对抗网络GAN.md#参考文献)
     - 12.4 [变分自编码器 Variational Auto-encoder, VAE](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
-      - 12.4.1 [概述](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)
-      - 12.4.2 [基本原理](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)
+      - 12.4.1 [概述](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)    
+      - 12.4.2 [基本原理](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)        
         - 12.4.2.1 [定义](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1-定义)        
         - 12.4.2.2 [理论基础：三要素](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#2-理论基础三要素) 
         - 12.4.2.3 [推导过程](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#3-推导过程)            
-      - 12.4.3 [VAE v.s. AE 区别与联系](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1243-vae-vs-ae-区别与联系)
-      - 12.4.4 [变分自编码器的代码实现](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)
-      - 12.4.5 [卷积变分自编码器的实现与简单应用](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)
+      - 12.4.3 [VAE v.s. AE 区别与联系](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1243-vae-vs-ae-区别与联系)    
+      - 12.4.4 [变分自编码器的代码实现](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)    
+      - 12.4.5 [卷积变分自编码器的实现与简单应用](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)  
       - 12.4.6 [实战项目 13 - 旧照片修复](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life) 
-      - 小结
+      - 小结     
       - [参考文献](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#参考文献) 
     - 参考文献
   - 第 13 章 [深度增强学习](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md)
