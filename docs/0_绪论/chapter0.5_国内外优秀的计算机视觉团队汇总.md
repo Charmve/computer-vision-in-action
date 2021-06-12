@@ -28,13 +28,13 @@
   
 ---
 
-## 0.5 国内外优秀的计算机视觉团队汇总<br>计算机视觉名人名人堂
+## 0.5 国内外优秀的计算机视觉团队汇总<br>计算机视觉名人堂
 
-本汇总还在更新中，国内外优秀的计算机视觉团队有很多，我这里只是列举了自己从知乎、CSDN等网站上收集到的，排名不分先后，如有遗漏，还请谅解。同时欢迎小伙伴提<a href="https://github.com/Charmve/computer-vision-in-action/pulls">``PR-国内外优秀的计算机视觉团队汇总增加补充``</a>，我会及时更新，谢谢~
+本汇总还在更新中，国内外优秀的计算机视觉团队有很多，我这里只是列举了自己从知乎、CSDN等网站上收集到的，排名不分先后，如有遗漏，还请谅解。同时欢迎小伙伴提<a href="https://github.com/Charmve/computer-vision-in-action/pulls">``国内外优秀的计算机视觉团队汇总增加补充``PR</a>，我会及时更新，谢谢~
 
 感谢极市平台微信公众号的粉丝 Alan、Andy、陈、蓝色格调、亚辉、邵帅、城邑、SuperMAN和知乎好友：Shihua Huang的补充贡献。
 
-> 最后更新于2020/7/22，已累计更新 10次，材料整合自[极市开发者社区@chengzi](https://bbs.cvmart.net/articles/481/outstanding-Computer-Vision-Team)和[知乎Charles@](https://www.zhihu.com/question/61688385/answer/759134370)
+> 最后更新于2020/7/22，已累计更新 10次，材料整合自[极市开发者社区@chengzi](https://bbs.cvmart.net/articles/481/outstanding-Computer-Vision-Team)和[知乎@Charles](https://www.zhihu.com/question/61688385/answer/759134370)
 
 以下团队近3年内基本上有3篇以上的CV顶会（CVPR ICCV ECCV NIPS），主要分布于：
 
