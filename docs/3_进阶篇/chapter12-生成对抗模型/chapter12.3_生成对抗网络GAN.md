@@ -12,20 +12,20 @@
     - 12.1 Pixel RNN/CNN
     - 12.2 自编码器 Auto-encoder
     - 12.3 生成对抗网络 GAN
-      - 12.3.1 概述
-      - 12.3.2 GAN的基本思想
-      - 12.3.3 GAN浅析
-        - 12.3.3.1 GAN的基本结构
-        - 12.3.3.2 GAN的训练方式
-          - 关于生成器
-          - 关于判别器
-          - 如何训练
-      - 12.3.4 训练相关理论基础
+      - 12.3.1 [概述](#1231-概述)
+      - 12.3.2 [GAN的基本思想](#1232-gan的基本思想)
+      - 12.3.3 [GAN浅析](#1233-gan浅析)
+        - 12.3.3.1 [GAN的基本结构](#12331-gan的基本结构)
+        - 12.3.3.2 [GAN的训练方式](#12332-gan的训练方式)
+          - [关于生成器](#关于生成器)
+          - [关于判别器](#关于判别器)
+          - [如何训练](#如何训练)
+      - 12.3.4 [训练相关理论基础](#1234训练相关理论基础)
       - 12.3.5 项目实战案例StyleGAN
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
-      - 小结
-      - 参考文献
+      - [小结](#小结)
+      - [参考文献](#参考文献)
     - [12.4 变分自编码器 Variational Auto-encoder, VAE](/chapter12_4-变分自编码器VAE.md#124-变分自编码器-variational-auto-encoder-vae)
       - [12.4.1 概述](/chapter12_4-变分自编码器VAE.md#1241-概述)    
       - [12.4.2 基本原理](/chapter12_4-变分自编码器VAE.md#1242-基本原理)                 
@@ -156,7 +156,7 @@ GAN的主要结构包括一个**生成器**G（Generator）和一个**判别器*
 
 基本流程如下：
 
-1. 初始化判别器D的参数 $/theta_d$ 和生成器G的参数 $/theta_g$ 。
+1. 初始化判别器D的参数 $\theta _d$ 和生成器G的参数 $\theta_g$ 。
 2. 从真实样本中采样 $m$ 个样本 ${x^1, x^2,...,x^m}$ ，从先验分布噪声中采样 $m$ 个噪声样本 ${z^1, z^2,...,z^m}$ 并通过生成器获取 $m$ 个生成样本 ${\widetilde{x}^1,\widetilde{x}^2,...,\widetilde{x}^m}$ 。固定生成器G，训练判别器D尽可能好地准确判别真实样本和生成样本，尽可能大地区分正确样本和生成的样本。
 3. **循环k次更新判别器之后，使用较小的学习率来更新一次生成器的参数**，训练生成器使其尽可能能够减小生成样本与真实样本之间的差距，也相当于尽量使得判别器判别错误。
 4. 多次更新迭代之后，最终理想情况是使得判别器判别不出样本来自于生成器的输出还是真实的输出。亦即最终样本判别概率均为0.5。
@@ -181,9 +181,7 @@ GAN的主要结构包括一个**生成器**G（Generator）和一个**判别器*
 
 前面用了大白话来说明了训练的大致流程，下面会从交叉熵开始说起，一步步说明损失函数的相关理论，尤其是论文中包含min，max的公式如下图5形式：
 
-$$
-\min \limits_{G} \max \limits_{D} V(D,G) = \mathbb{E}_{x \sim p_{\rm data(x))}}\Big[ \log D(x)\Big] + \mathbb{E}_{z \sim p_{\rm z(z))}} \Big[\log(1-D(G(z)))\Big]
-$$
+$$\min \limits_{G} \max \limits_{D} V(D,G) = \mathbb{E}_{x \sim p_{\rm data(x))}}\Big[ \log D(x)\Big] + \mathbb{E}_{z \sim p_{\rm z(z))}} \Big[\log(1-D(G(z)))\Big]$$
 
 图12.7 minmax公式
 
@@ -198,9 +196,7 @@ $$ H(p,q) := -\sum_i p_i \log q_i$$
 
 在当前模型的情况下，判别器为一个二分类问题，因此可以对基本交叉熵进行更具体地展开如下：
 
-$$
-H((x_1,y_1),D) = - y_1 \log D(x_1) - (1-y_1) \log (1-D(x_1))
-$$
+$$H((x_1,y_1),D) = - y_1 \log D(x_1) - (1-y_1) \log (1-D(x_1))$$
 
 图12.9 二分类交叉熵
 
@@ -208,9 +204,7 @@ $$
 
 将上式推广到N个样本后，将N个样本相加得到对应的公式如下：
 
-$$
-H((x_i,y_i)_{i=1}^N,D) = - \sum_{i=1}^N y_i \log D(x_i) - \sum_{i=1}^N (1-y_i) \log (1-D(x_i))
-$$
+$$H((x_i,y_i)_{i=1}^N,D) = - \sum_{i=1}^N y_i \log D(x_i) - \sum_{i=1}^N (1-y_i) \log (1-D(x_i))$$
 
 图12.10 N个样本的情况时
 
@@ -222,17 +216,14 @@ OK，到目前为止还是基本的二分类，下面加入GAN中特殊的地方
 其中，对于来自于真实的样本，我们要判别为正确的分布 $y_i$ 。来自于生成的样本我们要判别其为错误分布 $(1-y_i)$。将上面式子进一步使用概率分布的期望形式写出（为了表达无限的样本情况，相当于无限样本求和情况），并且让 $y_i$ 为 1/2 且使用 $G(z)$ 表示生成样本可以得到如下图8的公式：
 
 ![image](https://user-images.githubusercontent.com/29084184/121766068-01b8b000-cb82-11eb-8b4a-384b30418787.png)
-$$
-H((x_i,y_i)_{i=1}^\infty,D) = - \frac{1}{2} \mathbb{E}_{x \sim p_{\rm data}}\Big[ \log D(x)\Big] - \frac{1}{2} \mathbb{E}_{z} \Big[\log (1-D(G(z)))\Big]
-$$
+
+$$H((x_i,y_i)_{i=1}^\infty,D) = - \frac{1}{2} \mathbb{E}_{x \sim p_{\rm data}}\Big[ \log D(x)\Big] - \frac{1}{2} \mathbb{E}_{z} \Big[\log (1-D(G(z)))\Big]$$
 
 图12.11 GAN损失函数期望形式表达
 
 OK，现在我们再回过头来对比原本的的 $\min \limits_{G} \max \limits_{D}$ 公式，发现他们是不是其实就是同一个东西呢！:-D
 
-$$
-\min \limits_{G} \max \limits_{D} V(D,G) = \mathbb{E}_{x \sim p_{\rm data(x))}}\Big[ \log D(x)\Big] + \mathbb{E}_{z \sim p_{\rm z(z))}} \Big[\log(1-D(G(z)))\Big]
-$$
+$$\min \limits_{G} \max \limits_{D} V(D,G) = \mathbb{E}_{x \sim p_{\rm data(x))}}\Big[ \log D(x)\Big] + \mathbb{E}_{z \sim p_{\rm z(z))}} \Big[\log(1-D(G(z)))\Big]$$
 
 图12.12 损失函数的min max表达!
 
@@ -244,7 +235,7 @@ $$
 - 再将后面部分看成一个整体令 $L = \max \limits_{D} V(D,G)$ ，看 $\min \limits_{G}L$，这里是在固定判别器D的条件下得到生成器G，这个G要求能够最小化真实样本与生成样本的差异。
 - 通过上述min max的博弈过程，理想情况下会收敛于生成分布拟合于真实分布。
 
-### 12.3.5. 总结
+### 12.3.5. 小结
 
 本文大致介绍了GAN的整体情况。但是对于GAN实际上还有更多更完善的理论相关描述，进一步了解可以看相关的论文。并且在GAN一开始提出来的时候，实际上针对于不同的情况也有存在着一些不足，后面也陆续提出了不同的GAN的变体来完善GAN。
 
