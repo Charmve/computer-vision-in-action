@@ -39,7 +39,7 @@
 ## 6.2 Pytorch 基础使用介绍
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/05_PyTorch.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_environment-setup-and-tool-use/05_PyTorch.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>
