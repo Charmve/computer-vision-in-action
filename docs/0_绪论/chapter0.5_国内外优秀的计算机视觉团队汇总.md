@@ -444,7 +444,11 @@
 
 ## 参考资料
 [1] 国内外优秀的计算机视觉团队汇总 @chengzi https://bbs.cvmart.net/articles/481/outstanding-Computer-Vision-Team
+
 [2] 国内做计算机视觉或者机器学习比较好的实验室有哪些？ @Charles. https://www.zhihu.com/question/61688385/answer/759134370
+
 [3] https://www.zhihu.com/question/332075078/answer/734910130
+
 [4] https://blog.csdn.net/zhang_zeng/article/details/56009580
+
 [5] https://www.zhihu.com/question/332075078/answer/738194144
