@@ -191,15 +191,15 @@
       - 5.6.5 [零次学习ZSL](https://arxiv.org/pdf/1803.08035.pdf)
     - 小结
     - 参考文献
-  - 第 6 章 [模型拟合与优化算法]()
-    - 6.1 优化与深度学习
-    - 6.2 梯度下降和随机梯度下降
-    - 6.3 小批量随机梯度下降
-    - 6.4 动量法
-    - 6.5 AdaGrad算法
-    - 6.6 RMSProp算法
-    - 6.7 AdaDelta算法
-    - 6.8 Adam算法
+  - 第 6 章 [模型拟合与优化算法](notebooks/chapter06_optimization/)
+    - 6.1 [优化与深度学习](notebooks/chapter06_optimization/6.1_optimization-intro.ipynb)
+    - 6.2 [梯度下降和随机梯度下降](notebooks/chapter06_optimization/6.2_gd-sgd.ipynb)
+    - 6.3 [小批量随机梯度下降](notebooks/chapter06_optimization/6.3_minibatch-sgd.ipynb)
+    - 6.4 [动量法](notebooks/chapter06_optimization/6.4_momentum.ipynb)
+    - 6.5 [AdaGrad算法](notebooks/chapter06_optimization/6.5_adagrad.ipynb)
+    - 6.6 [RMSProp算法](notebooks/chapter06_optimization/6.6_rmsprop.ipynb)
+    - 6.7 [AdaDelta算法](notebooks/chapter06_optimization/6.7_adadelta.ipynb)
+    - 6.8 [Adam算法](notebooks/chapter06_optimization/6.8_adam.ipynb)
     - 小结
     - 参考文献
 - <b><h4>实战篇</h4></b>
@@ -224,7 +224,7 @@
     - 6.9 [实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
     - 小结
     - 参考文献
-  - 第 7 章 [经典神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
+  - 第 7 章 [经典神经网络架构：原理与PyTorch实现](notebooks/chapter07_convolutional-neural-networks)
     - 7.1 [卷积神经网络（LeNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.1%20卷积神经网络（LeNet）.md)
     - 7.2 [深度卷积神经网络（AlexNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.2%20深度卷积神经网络（AlexNet）.md)
     - 7.3 [使用重复元素的网络（VGG）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.3%20使用重复元素的网络（VGG）.md)
@@ -313,16 +313,16 @@
       - [小结](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3_生成对抗网络GAN.md#小结)
       - [参考文献](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3_生成对抗网络GAN.md#参考文献)
     - 12.4 [变分自编码器 Variational Auto-encoder, VAE](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
-      - 12.4.1 [概述](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)    
-      - 12.4.2 [基本原理](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)        
+      - 12.4.1 [概述](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)
+      - 12.4.2 [基本原理](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)
         - 12.4.2.1 [定义](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1-定义)        
         - 12.4.2.2 [理论基础：三要素](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#2-理论基础三要素) 
         - 12.4.2.3 [推导过程](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#3-推导过程)            
-      - 12.4.3 [VAE v.s. AE 区别与联系](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1243-vae-vs-ae-区别与联系)    
-      - 12.4.4 [变分自编码器的代码实现](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)    
-      - 12.4.5 [卷积变分自编码器的实现与简单应用](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)  
+      - 12.4.3 [VAE v.s. AE 区别与联系](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1243-vae-vs-ae-区别与联系)
+      - 12.4.4 [变分自编码器的代码实现](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)
+      - 12.4.5 [卷积变分自编码器的实现与简单应用](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)
       - 12.4.6 [实战项目 13 - 旧照片修复](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life) 
-      - 小结     
+      - 小结
       - [参考文献](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#参考文献) 
     - 参考文献
   - 第 13 章 [深度增强学习](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md)
