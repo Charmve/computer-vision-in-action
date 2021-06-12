@@ -13,16 +13,18 @@
 日期: 2021/06/06
 
 - 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter8/chapter8)
-    - 8.1 [数据集](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md)
-        - 8.1.1 [常见数据集](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#811-常见数据集)
+    - 8.1 数据集
+        - 8.1.1 [常见数据集](#811-常见数据集)
           - 8.1.1.1 [ImageNet](https://image-net.org/)
           - 8.1.1.2 [MNIST](http://yann.lecun.com/exdb/mnist/)
           - 8.1.1.3 [COCO](https://cocodataset.org/)
           - 8.1.1.4 [CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar.html)
-        - 8.1.2 [Pytorch数据集及读取方法简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#812-pytorch数据集及读取方法简介)
-        - 8.1.3 [数据增强简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#813-数据增强简介)
-        - [总结](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#总结)
-    - 8.2 [基准](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
+        - 8.1.2 [Pytorch数据集及读取方法简介](#812-pytorch数据集及读取方法简介)
+        - 8.1.3 [数据增强简介](#813-数据增强简介)
+        - 8.1.4 [小练习](#小练习)
+        - [小结](#小结)
+    - 8.2 [基准](chapter8.2_基准BenchMark.md)
+    - 8.3 [评价指标](/chapter8.3_评价指标.md)
     - 小结
     - 参考文献
 
@@ -51,6 +53,7 @@ ImageNet项目是一个大型计算机视觉数据库，它按照WordNet层次�
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/imageNet展示.png">
 
+图8.1 ImageNet数据集
 
 **总览**
 
@@ -62,13 +65,17 @@ ImageNet项目是一个大型计算机视觉数据库，它按照WordNet层次�
 
 **层次结构及下载方式**
 
- 下图展示了ImageNet的层次结构：
+如图8.2所示，展示了ImageNet的层次结构：
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/imageNet层次结构.png">
 
- ImageNet有5种下载方式，如下图所示：
+图8.2 层次结构及下载方式
+
+ImageNet有5种下载方式，如下图8.3所示：
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/imageNet下载方式.png">
+
+图8.3 ImageNet下载方式
 
    *  所有原始图像可通过url下载：http://image-net.org/download-imageurls
    *  直接下载原始图像：需要自己申请注册一个账号，然后登录访问，普通邮箱（非组织和学校）无法获取权限。对于希望将图像用于非商业研究或教育目的的研究人员，可以在特定条件下通过ImageNet网站提供访问权限。
@@ -81,13 +88,17 @@ ImageNet项目是一个大型计算机视觉数据库，它按照WordNet层次�
 
 **简介**
 
-MNIST数据集(Mixed National Institute of Standards and Technology database)是美国国家标准与技术研究院收集整理的大型手写数字数据库。包含60,000个示例的训练集以及10,000个示例的测试集，其中训练集 (training set) 由来自 250 个不同人手写的数字构成, 其中 50% 是高中学生, 50% 来自人口普查局 (the Census Bureau) 的工作人员，测试集(test set) 也是同样比例的手写数字数据。可以说，完成MNIST手写数字分类和识别是计算机视觉领域的"Hello World"。
+MNIST数据集(Mixed National Institute of Standards and Technology database)是美国国家标准与技术研究院收集整理的大型手写数字数据库，如图8.4所示。包含60,000个示例的训练集以及10,000个示例的测试集，其中训练集 (training set) 由来自 250 个不同人手写的数字构成, 其中 50% 是高中学生, 50% 来自人口普查局 (the Census Bureau) 的工作人员，测试集(test set) 也是同样比例的手写数字数据。可以说，**完成MNIST手写数字分类和识别是计算机视觉领域的"Hello World"**（第1章 实战项目 1 - 手写字分类）。
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/MNIST展示1.png">
 
-如下图所示，MNIST数据集的图像尺寸为28 * 28，且这些图像只包含灰度信息，灰度值在0~1之间。  
+图8.4 MNIST数据集
+
+如下图8.5所示，MNIST数据集的图像尺寸为28 * 28，且这些图像只包含灰度信息，灰度值在0~1之间。  
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/MNIST展示2.png">
+
+图8.5 MNIST数据集举例
 
 **下载**
 
@@ -98,8 +109,80 @@ MNIST数据集(Mixed National Institute of Standards and Technology database)是
   * [t10k-images-idx3-ubyte.gz:](http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz) test set images (1648877 bytes)
   * [t10k-labels-idx1-ubyte.gz:](http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz)  test set labels (4542 bytes)
 
-
 #### 8.1.1.3 [COCO](https://cocodataset.org/)
+
+##### 8.1.1.3.1 COCO简介
+
+COCO数据集是微软团队获取的一个可以用来图像recognition+segmentation+captioning 数据集，其官方说明网址：https://cocodataset.org/。
+
+该数据集主要有的特点如下：
+- 目标分割
+- 上下文中的识别
+- 每类图像多个对象
+- 超过 300,000 张图像
+- 超过 200 万个实例
+- 80个对象类别
+- 每张图片 5 个标题
+- 100,000 人的关键点
+
+为了更好的介绍这个数据集，微软在ECCV Workshops里发表这篇文章：[Microsoft COCO: Common Objects in Context](https://arxiv.org/pdf/1405.0312.pdf)。从这篇文章中，我们了解了这个数据集以scene understanding为目标，主要从复杂的日常场景中截取，图像中的目标通过精确的segmentation进行位置的标定。图像包括91类目标，328,000影像和2,500,000个label。
+
+
+该数据集主要解决3个问题：目标检测，目标之间的上下文关系，目标的2维上的精确定位。数据集的对比示意图，如图8.12所示。
+
+![image](https://user-images.githubusercontent.com/29084184/121768049-a0e3a480-cb8e-11eb-9b49-5b73f17927e1.png)
+
+图8.6 COCO 数据集。虽然以前的对象识别数据集专注于 (a) 图像分类、(b) 对象边界框定位或 (c) 语义像素级分割，但该数据集专注于 (d) 分割单个对象实例，引入了一个大型的、注释丰富的数据集，其中包含描绘自然环境中常见物体的复杂日常场景的图像。
+
+
+##### 8.1.1.3.2 数据集分类
+
+
+
+- 图像分类
+
+分类需要二进制的标签来确定目标是否在图像中。早期数据集主要是位于空白背景下的单一目标，如MNIST手写数据库，COIL household objects。在机器学习领域的著名数据集有CIFAR-10 and CIFAR-100，在32*32影像上分别提供10和100类。最近最著名的分类数据集即ImageNet，22,000类，每类500-1000影像。
+
+- 目标检测
+
+经典的情况下通过bounding box确定目标位置，期初主要用于人脸检测与行人检测，数据集如Caltech Pedestrian Dataset包含350,000个bounding box标签。PASCAL VOC数据包括20个目标超过11,000图像，超过27,000目标bounding box。最近还有ImageNet数据下获取的detection数据集，200类，400,000张图像，350,000个bounding box。由于一些目标之间有着强烈的关系而非独立存在，在特定场景下检测某种目标是是否有意义的，因此精确的位置信息比bounding box更加重要。
+
+- 语义场景标注
+
+这类问题需要pixel级别的标签，其中个别目标很难定义，如街道和草地。数据集主要包括室内场景和室外场景的，一些数据集包括深度信息。其中，SUN dataset包括908个场景类，3,819个常规目标类(person, chair, car)和语义场景类(wall, sky, floor)，每类的数目具有较大的差别（这点COCO数据进行改进，保证每一类数据足够）。
+
+![image](https://user-images.githubusercontent.com/29084184/121768252-e5237480-cb8f-11eb-9c5f-d05bc7d4e308.png)
+
+图8.7 (a) 标志性对象图像、(b) 标志性场景图像和 (c) 非标志性图像的示例。
+
+- 其他视觉数据集
+
+一些数据集如Middlebury datasets，包含立体相对，多视角立体像对和光流；同时还有Berkeley Segmentation Data Set (BSDS500)，可以评价segmentation和edge detection算法。
+
+
+##### 8.1.1.3.3 COCO展示
+
+该数据集标记流程，如图8.8所示。
+
+![image](https://user-images.githubusercontent.com/29084184/121768294-2582f280-cb90-11eb-970c-73c5d3da3446.png)
+
+图8.8 标记流程分为 3 个主要任务：（a）标记图像中存在的类别，（b）定位和标记标记类别的所有实例，以及（c）分割每个对象实例。
+
+COCO数据集有91类，虽然比ImageNet和SUN类别少，但是每一类的图像多，这有利于获得更多的每类中位于某种特定场景的能力，对比PASCAL VOC，其有更多类和图像。
+
+COCO数据集分两部分发布，前部分于2014年发布，后部分于2015年，2014年版本：82,783 training, 40,504 validation, and 40,775 testing images，有270k的segmented people和886k的segmented object；2015年版本：165,482 train, 81,208 val, and 81,434 test images。
+
+其性能对比和一些例子，如图8.9所示。
+
+![image](https://user-images.githubusercontent.com/29084184/121768348-611dbc80-cb90-11eb-8337-cddacb384beb.png)
+
+图8.9 MS COCO 和 PASCAL VOC 的每个类别的注释实例数。 (b,c) 分别为 MS COCO、ImageNet 检测、PASCAL VOC 和 SUN 的每张图像的注释类别和注释实例的数量（类别和实例的平均数量显示在括号中）。 (d) 对于许多流行的对象识别数据集，类别数量与每个类别的实例数量。 (e) MS COCO、ImageNet Detection、PASCAL VOC 和 SUN 数据集的实例大小分布。
+
+如图8.10所示，数据集中带注释的图像样本。
+
+![image](https://user-images.githubusercontent.com/29084184/121768391-91655b00-cb90-11eb-9a5e-1acc1d476810.png)
+
+图8.10 MS COCO 数据集中带注释的图像样本
 
 
 #### 8.1.1.4 CIFAR-10
@@ -110,7 +193,7 @@ MNIST数据集(Mixed National Institute of Standards and Technology database)是
 
 ![image](https://user-images.githubusercontent.com/29084184/120912825-164e0180-c6c5-11eb-9d4c-bb099d9498ec.png)
 
-图8.1 CIFAR-10数据集
+图8.11 CIFAR-10数据集
 
 CIFAR-10是一个更接近普适物体的彩色图像数据集。CIFAR-10 是由Hinton 的学生Alex Krizhevsky 和Ilya Sutskever 整理的一个用于识别普适物体的小型数据集。一共包含10 个类别的RGB 彩色图片：飞机（ airplane ）、汽车（ automobile ）、鸟类（ bird ）、猫（ cat ）、鹿（ deer ）、狗（ dog ）、蛙类（ frog ）、马（ horse ）、船（ ship ）和卡车（ truck ）。
 每个图片的尺寸为32 × 32 ，每个类别有6000个图像，数据集中一共有50000 张训练图片和10000 张测试图片。
@@ -218,7 +301,7 @@ torchvision.datasets.CIFAR10(dataset_dir, train=True, transform=None, target_tra
 
 为了直观地体现数据读取方法，给出以下两个示例：
 
-**读取示例1(从网上自动下载)**
+**读取示例1：从网上自动下载**
 
 ```python
 from PIL import Image
@@ -241,7 +324,7 @@ test_data = torchvision.datasets.CIFAR10('../../../dataset',
                                                       download=True)      
 ```
 
-**读取示例2(示例1基础上附带数据增强)**
+**读取示例2：示例1基础上附带数据增强**
 
 在使用API读取数据时，API中的transform参数指定了导入数据集时需要对图像进行何种变换操作。对于图像进行各种变换来增加数据的丰富性称为数据增强，是一种常用操作，在下一小节将有更详细的说明。
 
@@ -379,9 +462,11 @@ convert_to_img(save_path, True)
 convert_to_img(save_path, False)
 ```
 
-上面的代码虽然笨重，但是能够清晰的展示图像和我们索引文件内容的对应关系，也实现图像本地存储和索引文件构建。我们在索引文件中记录了每张图像的文件名和标签，并且每一行对应一张图像的信息，这也是为了方便数据的索引。其实我们在索引文件中可以直接记录每一张图像的路径和标签信息，但考虑数据的可移植性，便只记录了图像的名称。
+上面的代码虽然笨重，但是能够清晰的展示图像和我们索引文件内容的对应关系，也实现图像本地存储和索引文件构建。我们在索引文件中记录了每张图像的文件名和标签，并且每一行对应一张图像的信息，这也是为了方便数据的索引。其实我们在索引文件中可以直接记录每一张图像的路径和标签信息，但考虑数据的可移植性，便只记录了图像的名称。如下图8.12所示。
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/dataset_show.png">
+
+图8.12 在索引文件中记录了每张图像的文件名和标签
 
 通过上面的示例，其实是为了展示自制分类数据集的数据形式与索引文件之间的关系，以方便后续构建自己的Dataset。
 
@@ -688,9 +773,11 @@ batch20000:images shape info-->torch.Size([3, 1, 28, 28]) labels-->tensor([9., 7
                 └── ...
 ```
 
-我们可以清楚看出在训练集和测试集中分别包含有cat、dog、duck、horse四类图像的子文件夹，在子文件夹中就是所属类别的具体图像。在笔者电脑中，数据集的图片路径如下图所示。
+我们可以清楚看出在训练集和测试集中分别包含有cat、dog、duck、horse四类图像的子文件夹，在子文件夹中就是所属类别的具体图像。在笔者电脑中，数据集的图片路径如下图8.13所示。
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/train_test_file.png">
+
+图8.13 数据集的图片路径
 
 使用torchvision包中的ImageFolder类针对上述的文件目录组织形式快速创建dataset。
 
@@ -744,7 +831,7 @@ transform = transforms.Compose([transforms.CenterCrop(10),
 
 部分图像变换的代码示例和效果展示如下：
 
-**首先import相关的包并读入原始图像**
+**首先import相关的包并读入原始图像**，如图8.14所示。
 
 ```python
 from PIL import Image
@@ -759,9 +846,11 @@ plt.imshow(im)
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/ori.png">
 
+图8.14 读入原始图像
+
 **裁剪效果示例**
 
-对上述原图进行中心裁剪、随机裁剪和随机长宽比裁剪，得到裁剪效果展示如图。
+对上述原图进行中心裁剪、随机裁剪和随机长宽比裁剪，得到裁剪效果展示如图8.15所示。
 
 ```python
 ## 中心裁剪
@@ -777,9 +866,11 @@ random_resized_crop = transforms.RandomResizedCrop(200,
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/crop.png">
 
+图8.15 裁剪效果示例
+
 **翻转和旋转效果示例**
 
-对上述原图进行水平翻转、垂直翻转和随机旋转，得到裁剪效果展示如图。
+对上述原图进行水平翻转、垂直翻转和随机旋转，得到裁剪效果展示如图8.16所示。
 
 ```python
 ## 依概率p水平翻转
@@ -792,22 +883,31 @@ random_rotation = transforms.RandomRotation(30)(im)
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/flip_and_rotation.png">
 
+图8.16 翻转和旋转效果示例
+
 **其他图像变换效果示例**   
 
-   ```python
+对上述原图进行图像填充、调整亮度、对比度和饱和度、灰度图处理、仿射变换、尺寸缩放、转Tensor、标准化和转换为PILImage操作，如图8.17所示。
+
+```python
 ## 图像填充
 pad = transforms.Pad(10, fill=0, padding_mode='constant')(im)
+
 ## 调整亮度、对比度和饱和度
 color_jitter = transforms.ColorJitter(brightness=1,
                               contrast=0.5,
                               saturation=0.5,
                               hue=0.4)(im)
+
 ## 转成灰度图
 gray = transforms.Grayscale(1)(im)
+
 ## 仿射变换
 random_affine = transforms.RandomAffine(45,(0.5,0.7),(0.8,0.5),3)(im)
+
 ## 尺寸缩放
 resize = transforms.Resize([100,200])(im)
+
 ## 转Tensor、标准化和转换为PILImage
 mean = [0.45, 0.5, 0.5]
 std = [0.3, 0.6, 0.5]
@@ -816,13 +916,15 @@ transform = transforms.Compose([transforms.ToTensor(), #转Tensor
                                 transforms.ToPILImage() # 这里是为了可视化，故将其再转为 PIL
                                 ])
 img_tansform = transform(im)
-   ```
+```
 
 <img src="https://raw.githubusercontent.com/datawhalechina/dive-into-cv-pytorch/master/markdown_imgs/chapter02/2.1_dataloader_and_augmentation/transform.png">
 
+图8.17 其他图像变换效果示例
+
 ---
 
-### 总结    
+### 小结    
 
 前文对数据读取和数据增广方法分别进行了详细介绍，篇幅很长，最后这部分做个小小的总结。
 
@@ -872,6 +974,307 @@ test_loader = torch.utils.data.DataLoader(train_data,
 
 
 本文第一部分对常用数据集进行了简单介绍，第二部分讲解了pytorch中的各种数据集读取方法，包括torchvision自带数据集的读取方法，ImageFolder格式数据集读取方法和任意数据集的一般化自定义读取方案。第三部分介绍了常见的数据增强方法且展示了可视化效果，最后给出了一个数据加载的完整示例。
+
+### 8.1.4 小练习: ``pycocoDemo.ipynb`` 解读
+
+下面我们来解读一下 [pycocoDemo.ipynb](https://www.cnblogs.com/q735613050/p/8969452.html)。由于 COCO API 对 Windows 不是那么友好，为了避免去调试各种 Bug，下面我们先在 Linux 系统下来使用 COCO API。下面我是在 Jupyter Notebook 下运行代码的。
+
+```python
+%matplotlib inline
+import zipfile
+import os
+import numpy as np
+import skimage.io as io
+import matplotlib.pyplot as plt
+import pylab
+pylab.rcParams['figure.figsize'] = (8.0, 10.0)
+
+# -------------------
+try:       # pycocotools 已经加入了全局环境变量中
+    from pycocotools.coco import COCO
+except ModuleNotFoundError:
+    import sys
+    # 加载 COCO API 环境
+    sys.path.append('D:\API\cocoapi\PythonAPI')
+    from pycocotools.coco import COCO
+
+root = 'E:/Data/coco'  # 你下载的 COCO 数据集所在目录
+
+# 查看 images 下的图片
+os.listdir(f'{root}/images')
+```
+
+```
+['test2014.zip',
+ 'test2015.zip',
+ 'test2017.zip',
+ 'train2014.zip',
+ 'train2017.zip',
+ 'unlabeled2017.zip',
+ 'val2014.zip',
+ 'val2017.zip']
+```
+
+下面我以 ``val2017.zip`` 图片数据集为例，来说明下面的一些问题。
+```
+Z = zipfile.ZipFile(f'{root}/images/val2017.zip')
+Z.namelist()[7]   # 查看一张图片的文件名
+```
+
+```
+val2017/000000463918.jpg'
+```
+
+由于 ``Z.read`` 函数返回的是 ``bytes``，所以，我们需要借助一些其他模块来将图片数据转换为 np.uint8 形式。
+```
+img_b = Z.read(Z.namelist()[7])
+print(type(img_b))
+```
+```
+<class 'bytes'>
+```
+
+方式1：``np.frombuffer(img_b, 'B')``
+```
+import numpy as np
+import cv2
+
+img_flatten = np.frombuffer(img_b, 'B')
+img_cv = cv2.imdecode(img_flatten, cv2.IMREAD_ANYCOLOR)
+print(img_cv.shape)
+```
+```
+(359, 500, 3)
+```
+
+方式2：``imageio.imread``
+```
+import imageio
+img_io = imageio.imread(img_b)
+print(img_io.shape)
+```
+```
+(359, 500, 3)
+```
+
+方式3：``mxnet.image.imdecode``
+
+```
+import mxnet as mx
+img_mx = mx.image.imdecode(img_b)
+```
+
+下面我们来看看这张图片张什么样？如图8.18所示。
+```python
+from matplotlib import pyplot as  plt
+
+plt.subplot(231)
+plt.imshow(cv2.cvtColor(img_cv, cv2.COLOR_BGR2RGB))
+plt.title('OpenCV')
+plt.axis('off')
+plt.subplot(232)
+plt.imshow(img_io)
+plt.title('imageio')
+plt.axis('off')
+plt.subplot(233)
+plt.imshow(img_io)
+plt.title('MXNet')
+plt.axis('off')
+plt.show()
+```
+
+![image](https://user-images.githubusercontent.com/29084184/121768736-5106dc80-cb92-11eb-83a5-2eeb08cece8e.png)
+
+图8.18 读取一张图片显示
+
+考虑到 OpenCV 的高效性，我们采用方式1 来处理 ``images`` 下的图片数据。
+```
+def buffer2array(Z, image_name):
+    '''
+    无需解压，直接获取图片数据
+    
+    参数
+    ===========
+    Z:: 图片数据是 ZipFile 对象
+    '''
+    buffer = Z.read(image_name)
+    image = np.frombuffer(buffer, dtype="B")  # 将 buffer 转换为 np.uint8 数组
+    img = cv2.imdecode(image, cv2.IMREAD_COLOR)
+    return img
+
+
+img = buffer2array(Z, Z.namelist()[8])
+print('图片的尺寸：', img.shape)
+```
+```
+图片的尺寸： (480, 640, 3)
+```
+
+#### 8.1.4.1 获取标签信息（利用官方给定教程）
+
+这里有一个坑 (由 PIL 引发) ``import skimage.io as io`` 在 Windows 下可能会报错，我的解决办法是：
+
+- 先卸载 Pillow，然后重新安装即可。
+
+- 插曲：PIL(Python Imaging Library)是Python一个强大方便的图像处理库，名气也比较大。Pillow 是 PIL 的一个派生分支，但如今已经发展成为比 PIL 本身更具活力的图像处理库。
+```
+dataDir = cocox.root
+dataType = 'val2017'
+annFile = '{}/annotations/instances_{}.json'.format(dataDir, dataType)
+```
+```
+# initialize COCO api for instance annotations
+coco=COCO(annFile)
+```
+```
+loading annotations into memory...
+Done (t=0.93s)
+creating index...
+index created!
+```
+```
+COCO??
+```
+``COCO ``是一个类：
+```
+Constructor of Microsoft COCO helper class for reading and visualizing annotations.
+:param annotation_file (str): location of annotation file
+:param image_folder (str): location to the folder that hosts images.
+```
+
+#### 8.1.4.2 COCO 类别和超类别
+```
+cats = coco.loadCats(coco.getCatIds())
+nms = [cat['name'] for cat in cats]
+print('COCO categories: \n{}\n'.format(' '.join(nms)))
+
+nms = set([cat['supercategory'] for cat in cats])
+print('COCO supercategories: \n{}'.format(' '.join(nms)))
+```
+```
+COCO categories: 
+person bicycle car motorcycle airplane bus train truck boat traffic light fire hydrant stop sign parking meter bench bird cat dog horse sheep cow elephant bear zebra giraffe backpack umbrella handbag tie suitcase frisbee skis snowboard sports ball kite baseball bat baseball glove skateboard surfboard tennis racket bottle wine glass cup fork knife spoon bowl banana apple sandwich orange broccoli carrot hot dog pizza donut cake chair couch potted plant bed dining table toilet tv laptop mouse remote keyboard cell phone microwave oven toaster sink refrigerator book clock vase scissors teddy bear hair drier toothbrush
+
+COCO supercategories: 
+appliance sports person indoor vehicle food electronic furniture animal outdoor accessory kitchen
+```
+```
+# get all images containing given categories, select one at random
+catIds = coco.getCatIds(catNms=['person', 'dog', 'skateboard'])
+imgIds = coco.getImgIds(catIds=catIds)
+imgIds = coco.getImgIds(imgIds=[335328])
+img = coco.loadImgs(imgIds[np.random.randint(0, len(imgIds))])[0]
+```
+```
+img
+```
+```
+{'license': 4,
+ 'file_name': '000000335328.jpg',
+ 'coco_url': 'http://images.cocodataset.org/val2017/000000335328.jpg',
+ 'height': 640,
+ 'width': 512,
+ 'date_captured': '2013-11-20 19:29:37',
+ 'flickr_url': 'http://farm3.staticflickr.com/2079/2128089396_ddd988a59a_z.jpg',
+ 'id': 335328}
+```
+官方给的这个代码需要将图片数据集解压：
+```
+# load and display image
+# use url to load image
+# I = io.imread(img['coco_url'])
+I = io.imread('%s/images/%s/%s' % (dataDir, dataType, img['file_name']))
+plt.axis('off')
+plt.imshow(I)
+plt.show()
+```
+
+我们可以使用 ``zipfile`` 模块直接读取图片，而无须解压，如图8.19所示。
+```
+image_names[-1]
+'E:/Data/coco/images/val2017.zip'
+val_z = zipfile.ZipFile(image_names[-1])
+I = image.imdecode(val_z.read('%s/%s' % (dataType, img['file_name']))).asnumpy()
+# 或者直接使用 I = buffer2array(val_z, val_z.namelist()[8])
+plt.axis('off')
+plt.imshow(I)
+plt.show()
+```
+
+![image](https://user-images.githubusercontent.com/29084184/121768758-71cf3200-cb92-11eb-83f9-034922a888fa.png)
+
+图8.19 读取一张图片
+
+#### 8.1.4.3 载入和展示：实例注解
+```
+plt.imshow(I)
+plt.axis('off')
+annIds = coco.getAnnIds(imgIds=img['id'], catIds=catIds, iscrowd=None)
+anns = coco.loadAnns(annIds)
+coco.showAnns(anns)
+```
+
+![image](https://user-images.githubusercontent.com/29084184/121768791-a8a54800-cb92-11eb-8625-9cb4718f29e4.png)
+
+图8.20 载入和展示：实例注解
+
+
+#### 8.1.4.4 载入人体关键点标注
+初始化人体关键点标注（person keypoints annotations）的 COCO api。
+```
+annFile = '{}/annotations/person_keypoints_{}.json'.format(dataDir, dataType)
+coco_kps = COCO(annFile)
+loading annotations into memory...
+Done (t=0.43s)
+creating index...
+index created!
+```
+
+展示，如图8.21所示。
+```
+plt.imshow(I)
+plt.axis('off')
+ax = plt.gca()
+annIds = coco_kps.getAnnIds(imgIds=img['id'], catIds=catIds, iscrowd=None)
+anns = coco_kps.loadAnns(annIds)
+coco_kps.showAnns(anns)
+```
+
+![image](https://user-images.githubusercontent.com/29084184/121768849-089bee80-cb93-11eb-9a6e-aabe00d7333d.png)
+
+图8.21 人体关键点
+
+#### 8.1.4.5 载入和展示：标题注释
+```
+annFile = '{}/annotations/captions_{}.json'.format(dataDir, dataType)
+coco_caps = COCO(annFile)
+loading annotations into memory...
+Done (t=0.06s)
+creating index...
+index created!
+```
+
+展示，结果如图8.22所示。
+
+```
+annIds = coco_caps.getAnnIds(imgIds=img['id'])
+anns = coco_caps.loadAnns(annIds)
+coco_caps.showAnns(anns)
+plt.imshow(I)
+plt.axis('off')
+plt.show()
+A couple of people riding waves on top of boards.
+a couple of people that are surfing in water
+A man and a young child in wet suits surfing in the ocean.
+a man and small child standing on a surf board  and riding some waves
+A young boy on a surfboard being taught to surf.
+caption
+```
+
+![image](https://user-images.githubusercontent.com/29084184/121768835-fb7eff80-cb92-11eb-8324-a5e9883dfd10.png)
+
+图8.22 载入和展示：标题注释
+
 
 ### 参考资料
 
