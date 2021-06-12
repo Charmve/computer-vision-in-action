@@ -88,15 +88,16 @@
 - <b><h4>主要符号表</h4></b>
 - <b><h4>绪论篇</h4></b>
   - 第 0 章  [计算机视觉概述](https://charmve.github.io/computer-vision-in-action/#/chapter0/chapter0)
-    - 1. 概述
-    - 2. 计算机视觉基本概念
-    - 3. 典型的计算机视觉任务
-        - 图像分类 
-        - 目标识别与目标检测
-        - 实例分割与语义分割
-        - 3D 建模
-    - 4. [发展历史回顾](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/0_绪论/4_发展历史回顾.md)
-    - 5. 小练习
+    - 0.1 [概述](docs/0_绪论/chapter0.1_概述.md)
+    - 0.2 [计算机视觉基本概念](docs/0_绪论/chapter0.2_计算机视觉基本概念.md)
+    - 0.3 [发展历史回顾](docs/0_绪论/chapter0.3_发展历史回顾.md)
+    - 0.4 [典型的计算机视觉任务](docs/0_绪论/chapter0.4_典型的计算机视觉任务.md)
+      - 图像分类 
+      - 目标识别与目标检测
+      - 实例分割与语义分割
+      - 3D 建模
+    - 0.5 [国内外优秀的计算机视觉团队汇总](docs/0_绪论/chapter0.5_国内外优秀的计算机视觉团队汇总.md)
+    - 小练习
     - 小结
     - 参考文献
 - <b><h4>理论篇</h4></b>
@@ -191,30 +192,36 @@
     - 小结
     - 参考文献
   - 第 6 章 [模型拟合与优化算法]()
-    - 5.1 优化与深度学习
-    - 5.2 梯度下降和随机梯度下降
-    - 5.3 小批量随机梯度下降
-    - 5.4 动量法
-    - 5.5 AdaGrad算法
-    - 5.6 RMSProp算法
-    - 5.7 AdaDelta算法
-    - 5.8 Adam算法
+    - 6.1 优化与深度学习
+    - 6.2 梯度下降和随机梯度下降
+    - 6.3 小批量随机梯度下降
+    - 6.4 动量法
+    - 6.5 AdaGrad算法
+    - 6.6 RMSProp算法
+    - 6.7 AdaDelta算法
+    - 6.8 Adam算法
     - 小结
     - 参考文献
 - <b><h4>实战篇</h4></b>
-  - 第 6 章 [深度学习环境搭建](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
+  - 第 6 章 [软件环境搭建与工具使用](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 6.1 [深度学习环境搭建指南](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.1_深度学习环境搭建指南.md)
     - 6.2 [Pytorch 基础使用介绍](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md)
-      - 6.2.1 [Tensors](#621-tensors)
-      - 6.2.2 [Operations](#622-operations)
-      - 6.2.3 [Numpy桥梁](#623-numpy桥梁)
-      - 6.2.4 [CUDA Tensors](#624-cuda-tensors)
-    - 6.3 [Python](./notebooks/02_Python.ipynb)
-    - 6.4 [Numpy 基础使用](./notebooks/03_NumPy.ipynb)
-    - 6.5 [Pandas 基础使用](./notebooks/04_Pandas.ipynb)
-    - 6.6 [OpenCV 安装及基础使用](./notebooks/02_Python.ipynb)
-    - 6.7 [Jupyter Notebook 配置及基础使用](./notebooks/01_Notebooks.ipynb)
-    - 6.8 [实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
+      - 6.2.1 [Tensors](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#621-tensors)
+      - 6.2.2 [Operations](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#622-operations)
+      - 6.2.3 [Numpy桥梁](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#623-numpy桥梁)
+      - 6.2.4 [CUDA Tensors](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#624-cuda-tensors)
+    - 6.3 [Python](./notebooks/chapter07_environment-setup-and-tool-use/02_Python.ipynb)
+    - 6.4 [Numpy 基础使用](./notebooks/chapter07_environment-setup-and-tool-use/03_NumPy.ipynb)
+    - 6.5 [Pandas 基础使用](./notebooks/chapter07_environment-setup-and-tool-use/04_Pandas.ipynb)
+    - 6.6 [OpenCV 安装及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
+    - 6.7 [Jupyter Notebook 配置及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/01_Notebooks.ipynb)
+    - 6.8 [基本的图像操作和处理](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md)
+      - 6.8.1 [PIL：Python图像处理类库](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#781-pil-python图像处理类库)
+      - 6.8.2 [Matplotlib](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#782-matplotlib)
+      - 6.8.3 [NumPy](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#783-numpy)
+      - 6.8.4 [SciPy](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#784-scipy)
+      - 6.8.5 [高级示例：图像去噪](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#785-高级示例-图像去噪)
+    - 6.9 [实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
     - 小结
     - 参考文献
   - 第 7 章 [经典神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
@@ -222,14 +229,14 @@
     - 7.2 [深度卷积神经网络（AlexNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.2%20深度卷积神经网络（AlexNet）.md)
     - 7.3 [使用重复元素的网络（VGG）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.3%20使用重复元素的网络（VGG）.md)
     - 7.4 [含并行连结的网络（GoogLeNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.4%20含并行连结的网络（GoogLeNet）.md)
-    - 7.5 [残差网络（ResNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
-    - 7.6 [二阶网络编码解码（U-Net）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
-    - 7.7 [稠密连接网络（DenseNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
-    - 7.8 [实例分割网络（SegNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
-    - 7.9 [Mask-RCNN](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
-    - 7.10 [区域卷积神经网络（R-CNN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.9%20区域卷积神经网络（R-CNN）.md)
-    - 7.11 [全卷积网络（FCN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
-    - 1.12 [YOLO: 实时目标检测](https://pjreddie.com/darknet/yolo/)
+    - 7.5 [残差网络（ResNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/chapter7.6_残差网络-ResNet.md)
+    - 7.6 [二阶网络编码解码（U-Net）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/chapter7.7_二阶网络编码解码-UNet.md)
+    - 7.7 [稠密连接网络（DenseNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/chapter7.8_稠密连接网络-DenseNet.md)
+    - 7.8 [语义分割网络（SegNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/chapter7.9_语义分割网络-SegNet.md)
+    - 7.9 [实例分割网络（Mask-RCNN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/chapter7.9_实例分割网络-Mask-RCNN.md)
+    - 7.10 [区域卷积神经网络（R-CNN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/chapter7.10_区域卷积神经网络-RCNN.md)
+    - 7.11 [全卷积网络（FCN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/chapter7.11_全卷积网络-FCN.md)
+    - 7.12 [YOLO: 实时目标检测](https://pjreddie.com/darknet/yolo/)
     - 小结
     - 参考文献
   - 第 8 章 [著名数据集及基准](docs/2_实战篇/chapter8_著名数据集及基准)
@@ -242,9 +249,10 @@
         - 8.1.2 [Pytorch数据集及读取方法简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#812-pytorch数据集及读取方法简介)
         - 8.1.3 [数据增强简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#813-数据增强简介)
         - [总结](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#总结)
-    - 8.2 [基准](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
-    - 8.3 [实战项目 6 - Kaggle比赛：图像分类（CIFAR-10）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
-    - 8.4 [实战项目 7 - Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
+    - 8.2 [基准测试](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
+    - 8.3 [评价指标](/chapter8.3_评价指标.md)
+    - 8.4 [实战项目 6 - Kaggle比赛：图像分类（CIFAR-10）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
+    - 8.5 [实战项目 7 - Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
     - 参考文献
   - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter9/chapter9)
@@ -282,7 +290,7 @@
       - 11.4.4 [向 TensorBoard 添加 "Projector"](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1144-向-tensorboard-添加-projector)
       - 11.4.5 [使用 TensorBoard 跟踪模型训练](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1145-使用-tensorboard-跟踪模型训练)
       - 11.4.6 [使用 TensorBoard 评估训练好的模型](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1146-使用-tensorboard-评估训练好的模型)
-      - [小结](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#小结)
+      - 11.4.7 [案例总结](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#小结)
     - 小结
     - 参考文献
   - 第 12 章 [生成对抗模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
@@ -301,9 +309,9 @@
       - 12.3.5 项目实战案例StyleGAN
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
+      - 12.3.6 [实战项目11 - 图像风格迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
       - [小结](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3_生成对抗网络GAN.md#小结)
       - [参考文献](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3_生成对抗网络GAN.md#参考文献)
-      - 12.3.3 [实战项目11 - 图像风格迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
     - 12.4 [变分自编码器 Variational Auto-encoder, VAE](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
       - 12.4.1 [概述](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)    
       - 12.4.2 [基本原理](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)        
@@ -317,11 +325,19 @@
       - 小结     
       - [参考文献](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#参考文献) 
     - 参考文献
-  - 第 13 章 [深度增强学习](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
-    - 13.1 方法梯度，硬性关注
-    - 13.2 Q - 学习，评价器
-    - 小结
-    - 参考文献
+  - 第 13 章 [深度增强学习](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md)
+    - 13.1 [引言-如何解决通用人工智能的难点](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#141-引言-如何解决通用人工智能的难点)
+    - 13.2 [什么是深度增强学习](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#142-什么是深度增强学习)
+      - 13.2.1 [深度学习](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#1421-深度学习)
+      - 13.2.2 [增强学习](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#1422-增强学习)
+      - 13.2.3 [二者的融合](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#1423-二者的融合)
+    - 13.3 [怎么利用深度增强学习解决问题](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#143-怎么利用深度增强学习解决问题)
+      - 13.3.1 [Policy-based DRL](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#1431-policy-based-drl)
+      - 13.3.2 [Value-based DRL](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#1432-value-based-drl)
+      - 13.3.3 [Model-based DRL](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#1433-model-based-drl)
+    - 13.4 [深度增强学习在计算机视觉中的应用](#144-深度增强学习在计算机视觉中的应用)
+    - [小结](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#小结)
+    - [参考文献](/docs/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#参考文献)
   - 第 14 章 [视频理解](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md)
     - 14.1 [概述](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#141-概述)
     - 14.2 [视频理解场景中的主要问题](/docs/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#142-视频理解场景中的主要问题)
