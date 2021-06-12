@@ -41,11 +41,12 @@
 
 ## 12.3 生成对抗网络 GAN
 
-自2014年Ian Goodfellow提出了GAN（Generative Adversarial Network）以来，对GAN的研究可谓如火如荼。各种GAN的变体不断涌现，下图是GAN相关论文的发表情况：
+自2014年Ian Goodfellow提出了GAN（Generative Adversarial Network）以来，对GAN的研究可谓如火如荼。各种GAN的变体不断涌现，下图12.0是GAN相关论文的发表情况：
 
 ![image](https://user-images.githubusercontent.com/29084184/121766118-6411b080-cb82-11eb-8639-cee7dbe27162.png)
 
 图12.0 GAN相关论文发表情况
+
 大牛Yann LeCun甚至评价GAN为 “adversarial training is the coolest thing since sliced bread”。
 
 那么到底什么是GAN呢？它又好在哪里？下面我们开始进行介绍。
@@ -83,9 +84,11 @@ GAN受博弈论中的零和博弈启发，将生成问题视作判别器和生�
 GAN从概率分布的角度来看，就是通过D来将生成分布推向真实分布，紧接着再优化D，直至到达图(d)所示，到达Nash均衡点，从而生成分布与真实分布重叠，生成极为接近真实分布的数据。
 
 **#通俗解释：#**
+
 GAN全称对抗生成网络，顾名思义是生成模型的一种，而他的训练则是处于一种对抗博弈状态中的。下面举例来解释一下GAN的基本思想。
 
 ![image](https://user-images.githubusercontent.com/29084184/121765883-b651d200-cb80-11eb-87af-792d5c225ad3.png)
+
 图12.4 球员与教练员
 
 > 假如你是一名篮球运动员，你想在下次比赛中得到上场机会。
@@ -130,8 +133,8 @@ GAN的主要结构包括一个**生成器**G（Generator）和一个**判别器*
 
 
 #### 12.3.3.2 GAN的训练方式
-前面已经定义了一个生成器（Generator）来生成手写数字，一个判别器（Discrimnator）来判别手写数字是否是真实的，和一些真实的手写数字数据集。那么我们怎样来进行训练呢？
 
+前面已经定义了一个生成器（Generator）来生成手写数字，一个判别器（Discrimnator）来判别手写数字是否是真实的，和一些真实的手写数字数据集。那么我们怎样来进行训练呢？
 
 
 ##### 关于生成器
@@ -153,8 +156,8 @@ GAN的主要结构包括一个**生成器**G（Generator）和一个**判别器*
 
 基本流程如下：
 
-1. 初始化判别器D的参数 [公式] 和生成器G的参数 [公式] 。
-2. 从真实样本中采样 [公式] 个样本 { [公式] } ，从先验分布噪声中采样 [公式] 个噪声样本 { [公式] } 并通过生成器获取 [公式] 个生成样本 { [公式] } 。固定生成器G，训练判别器D尽可能好地准确判别真实样本和生成样本，尽可能大地区分正确样本和生成的样本。
+1. 初始化判别器D的参数 $/theta_d$ 和生成器G的参数 $/theta_g$ 。
+2. 从真实样本中采样 $m$ 个样本 ${x^1, x^2,...,x^m}$ ，从先验分布噪声中采样 $m$ 个噪声样本 ${z^1, z^2,...,z^m}$ 并通过生成器获取 $m$ 个生成样本 ${\widetilde{x}^1,\widetilde{x}^2,...,\widetilde{x}^m}$ 。固定生成器G，训练判别器D尽可能好地准确判别真实样本和生成样本，尽可能大地区分正确样本和生成的样本。
 3. **循环k次更新判别器之后，使用较小的学习率来更新一次生成器的参数**，训练生成器使其尽可能能够减小生成样本与真实样本之间的差距，也相当于尽量使得判别器判别错误。
 4. 多次更新迭代之后，最终理想情况是使得判别器判别不出样本来自于生成器的输出还是真实的输出。亦即最终样本判别概率均为0.5。
 
@@ -164,7 +167,7 @@ GAN的主要结构包括一个**生成器**G（Generator）和一个**判别器*
 
 图12.6 生成器判别器与样本示意图
 
-注：图中的黑色虚线表示真实的样本的分布情况，蓝色虚线表示判别器判别概率的分布情况，绿色实线表示生成样本的分布。 [公式] 表示噪声， [公式] 到 [公式] 表示通过生成器之后的分布的映射情况。
+注：图中的黑色虚线表示真实的样本的分布情况，蓝色虚线表示判别器判别概率的分布情况，绿色实线表示生成样本的分布。 $Z$ 表示噪声， $Z$ 到 $x$ 表示通过生成器之后的分布的映射情况。
 
 我们的目标是使用生成样本分布（绿色实线）去拟合真实的样本分布（黑色虚线），来达到生成以假乱真样本的目的。
 
@@ -174,58 +177,74 @@ GAN的主要结构包括一个**生成器**G（Generator）和一个**判别器*
 - 训练生成器之后达到（c）样本状态，此时生成器分布相比之前，逼近了真实样本分布。
 - 经过多次反复训练迭代之后，最终希望能够达到（d）状态，生成样本分布拟合于真实样本分布，并且判别器分辨不出样本是生成的还是真实的（判别概率均为0.5）。也就是说我们这个时候就可以生成出非常真实的样本啦，目的达到。
 
-### 12.3.3 训练相关理论基础
+### 12.3.4 训练相关理论基础
 
 前面用了大白话来说明了训练的大致流程，下面会从交叉熵开始说起，一步步说明损失函数的相关理论，尤其是论文中包含min，max的公式如下图5形式：
 
-![image](https://user-images.githubusercontent.com/29084184/121766041-e3eb4b00-cb81-11eb-921e-220335a19145.png)
+$$
+\min \limits_{G} \max \limits_{D} V(D,G) = \mathbb{E}_{x \sim p_{\rm data(x))}}\Big[ \log D(x)\Big] + \mathbb{E}_{z \sim p_{\rm z(z))}} \Big[\log(1-D(G(z)))\Big]
+$$
 
 图12.7 minmax公式
-判别器在这里是一种分类器，用于区分样本的真伪，因此我们常常使用交叉熵（cross entropy）来进行判别分布的相似性，交叉熵公式如下图6所示：
 
-![image](https://user-images.githubusercontent.com/29084184/121766044-e6e63b80-cb81-11eb-88ae-d4241bbb6db3.png)
+判别器在这里是一种分类器，用于区分样本的真伪，因此我们常常使用交叉熵（cross entropy）来进行判别分布的相似性，交叉熵公式如下：
+
+$$ H(p,q) := -\sum_i p_i \log q_i$$
 
 图12.8 交叉熵公式
-> Tips: 公式中 [公式] 和 [公式] 为真实的样本分布和生成器的生成分布。由于交叉熵是非常常见的损失函数，这里默认大家都较为熟悉，就不进行赘述了。
+
+> Tips: 公式中 $p_i$ 和 $q_i$ 为真实的样本分布和生成器的生成分布。由于交叉熵是非常常见的损失函数，这里默认大家都较为熟悉，就不进行赘述了。
 
 
-在当前模型的情况下，判别器为一个二分类问题，因此可以对基本交叉熵进行更具体地展开如下图7所示：
+在当前模型的情况下，判别器为一个二分类问题，因此可以对基本交叉熵进行更具体地展开如下：
 
-![image](https://user-images.githubusercontent.com/29084184/121766054-eea5e000-cb81-11eb-866a-82459eb19add.png)
+$$
+H((x_1,y_1),D) = - y_1 \log D(x_1) - (1-y_1) \log (1-D(x_1))
+$$
 
 图12.9 二分类交叉熵
-> Tips: 其中，假定 [公式] 为正确样本分布，那么对应的（ [公式] ）就是生成样本的分布。 [公式] 表示判别器，则 [公式] 表示判别样本为正确的概率， [公式] 则对应着判别为错误样本的概率。这里仅仅是对当前情况下的交叉熵损失的具体化。相信大家也还是比较熟悉。
+
+> Tips: 其中，假定 $y_i$ 为正确样本分布，那么对应的 $(1-y_i)$ 就是生成样本的分布。 $D$ 表示判别器，则 $D(x_1)$ 表示判别样本为正确的概率， $(1-D(x_1))$ 则对应着判别为错误样本的概率。这里仅仅是对当前情况下的交叉熵损失的具体化。相信大家也还是比较熟悉。
+
 将上式推广到N个样本后，将N个样本相加得到对应的公式如下：
 
-![image](https://user-images.githubusercontent.com/29084184/121766056-f2396700-cb81-11eb-8aa1-e43710f81ae3.png)
+$$
+H((x_i,y_i)_{i=1}^N,D) = - \sum_{i=1}^N y_i \log D(x_i) - \sum_{i=1}^N (1-y_i) \log (1-D(x_i))
+$$
 
 图12.10 N个样本的情况时
 
 
 OK，到目前为止还是基本的二分类，下面加入GAN中特殊的地方。
 
-对于GAN中的样本点 [公式] ，对应于两个出处，要么来自于真实样本，要么来自于生成器生成的样本 [公式] ~ [公式] ( 这里的 [公式] 是服从于投到生成器中噪声的分布)。
+对于GAN中的样本点 $x_i$ ，对应于两个出处，要么来自于真实样本，要么来自于生成器生成的样本 $\widetilde{x}^1 ~ G(z)$ ( 这里的 $z$ 是服从于投到生成器中噪声的分布)。
 
-其中，对于来自于真实的样本，我们要判别为正确的分布 [公式] 。来自于生成的样本我们要判别其为错误分布（ [公式] ）。将上面式子进一步使用概率分布的期望形式写出（为了表达无限的样本情况，相当于无限样本求和情况），并且让 [公式] 为 1/2 且使用 [公式] 表示生成样本可以得到如下图8的公式：
+其中，对于来自于真实的样本，我们要判别为正确的分布 $y_i$ 。来自于生成的样本我们要判别其为错误分布 $(1-y_i)$。将上面式子进一步使用概率分布的期望形式写出（为了表达无限的样本情况，相当于无限样本求和情况），并且让 $y_i$ 为 1/2 且使用 $G(z)$ 表示生成样本可以得到如下图8的公式：
 
 ![image](https://user-images.githubusercontent.com/29084184/121766068-01b8b000-cb82-11eb-8b4a-384b30418787.png)
+$$
+H((x_i,y_i)_{i=1}^\infty,D) = - \frac{1}{2} \mathbb{E}_{x \sim p_{\rm data}}\Big[ \log D(x)\Big] - \frac{1}{2} \mathbb{E}_{z} \Big[\log (1-D(G(z)))\Big]
+$$
 
 图12.11 GAN损失函数期望形式表达
 
-OK，现在我们再回过头来对比原本的的 [公式] 公式，发现他们是不是其实就是同一个东西呢！:-D
+OK，现在我们再回过头来对比原本的的 $\min \limits_{G} \max \limits_{D}$ 公式，发现他们是不是其实就是同一个东西呢！:-D
 
-![image](https://user-images.githubusercontent.com/29084184/121766072-0e3d0880-cb82-11eb-8907-ccc2af21fc06.png)
+$$
+\min \limits_{G} \max \limits_{D} V(D,G) = \mathbb{E}_{x \sim p_{\rm data(x))}}\Big[ \log D(x)\Big] + \mathbb{E}_{z \sim p_{\rm z(z))}} \Big[\log(1-D(G(z)))\Big]
+$$
 
-图12.12 损失函数的min max表达
+图12.12 损失函数的min max表达!
 
-我们回忆一下上面12.2.2.3中介绍的流程理解一下这里的 [公式] 。
 
-- 这里的 [公式]相当于表示真实样本和生成样本的差异程度。
-- 先看 [公式] 。这里的意思是固定生成器G，尽可能地让判别器能够最大化地判别出样本来自于真实数据还是生成的数据。
-- 再将后面部分看成一个整体令 [公式] = [公式] ，看 [公式]，这里是在固定判别器D的条件下得到生成器G，这个G要求能够最小化真实样本与生成样本的差异。
+我们回忆一下上面12.2.2.3中介绍的流程理解一下这里的 $\min \limits_{G} \max \limits_{D}$ 。
+
+- 这里的 $V(G,D)$ 相当于表示真实样本和生成样本的差异程度。
+- 先看 $\max \limits_{D} V(D,G)$ 。这里的意思是固定生成器G，尽可能地让判别器能够最大化地判别出样本来自于真实数据还是生成的数据。
+- 再将后面部分看成一个整体令 $L = \max \limits_{D} V(D,G)$ ，看 $\min \limits_{G}L$，这里是在固定判别器D的条件下得到生成器G，这个G要求能够最小化真实样本与生成样本的差异。
 - 通过上述min max的博弈过程，理想情况下会收敛于生成分布拟合于真实分布。
 
-### 12.3.4. 总结
+### 12.3.5. 总结
 
 本文大致介绍了GAN的整体情况。但是对于GAN实际上还有更多更完善的理论相关描述，进一步了解可以看相关的论文。并且在GAN一开始提出来的时候，实际上针对于不同的情况也有存在着一些不足，后面也陆续提出了不同的GAN的变体来完善GAN。
 
@@ -254,8 +273,8 @@ OK，现在我们再回过头来对比原本的的 [公式] 公式，发现他�
 
 [3] Goodfellow, Ian J., Pouget-Abadie, Jean, Mirza, Mehdi, Xu, Bing, Warde-Farley, David, Ozair, Sherjil, Courville, Aaron C., and Bengio, Yoshua. Generative adversarial nets. NIPS, 2014.
 
-[4] Understanding Generative Adversarial Networks
+[4] [Understanding Generative Adversarial Networks](https://danieltakeshi.github.io/2017/03/05/understanding-generative-adversarial-networks/)
 
-[5]【 李宏毅深度学习 】Introduction of Generative Adversarial Network (GAN)（中文）
+[5]【李宏毅深度学习】Introduction of Generative Adversarial Network (GAN)（中文） https://www.bilibili.com/video/av17412504/?from=search&seid=12003526139493552118
 
-[6] Introductory guide to Generative Adversarial Networks (GANs) and their promise!
+[6] [Introductory guide to Generative Adversarial Networks (GANs) and their promise!](https://www.analyticsvidhya.com/blog/2017/06/introductory-generative-adversarial-networks-gans/)
