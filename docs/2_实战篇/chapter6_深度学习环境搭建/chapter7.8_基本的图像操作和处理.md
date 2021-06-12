@@ -21,7 +21,7 @@
     - 7.6 [OpenCV 安装及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
     - 7.7 [Jupyter Notebook 配置及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/01_Notebooks.ipynb)
     - 7.8 基本的图像操作和处理
-      - 7.8.1 [PIL：Python图像处理类库](#781-pil-python图像处理类库)
+      - 7.8.1 [PIL：Python图像处理类库](#781-pilpython图像处理类库)
       - 7.8.2 [Matplotlib](#782-matplotlib)
       - 7.8.3 [NumPy](#783-numpy)
       - 7.8.4 [SciPy](#784-scipy)
@@ -94,6 +94,7 @@ for infile in filelist:
 
 ```
 其中，test jpg文件夹是作者自己建立的文件夹，存放测试的**.jpg图像，源代码证添加了部分代码以便将获取的图像文件名保存下来，同时将所有的图像转化为.png格式，运行程序后的结果如下：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021041418390393.png)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210414183906834.png)
@@ -209,6 +210,7 @@ show()
 ```
 
 运行结果如下：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210414184059984.png#pic_center)
 
 
@@ -475,7 +477,7 @@ show()
 
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210414184706106.png#pic_center)
-- array变换的相反操作可以利用PIL的fromarray()函数来完成
+- array变换的相反操作可以利用PIL的``fromarray()``函数来完成
 
 ```python
 pil_im=Image.fromarray(im)
@@ -602,6 +604,7 @@ def compute_average(imlist):
   return array(averageim, 'uint8')
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210414184922444.png#pic_center)
+
 注意：有可能因为某些图像打不开而导致平均的结果只是某一幅自身或某两幅图像的平均
 
 #### 7.8.3.5 对图像进行主成分分析
