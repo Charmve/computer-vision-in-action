@@ -55,7 +55,7 @@
 </td>
 </table>
 
-### 全书组织
+## 全书组织
 :label: `fig_book_org`
 
 <p align="center">
@@ -90,7 +90,7 @@
 5. 由包含有关技术细节问答的论坛作为补充，使大家可以相互答疑并交换经验。
 
 
-### 目录
+## 目录
 
 <table align="center">
 <tr>
@@ -484,7 +484,7 @@ python3 setup.py
 ```
 3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
 
-### 🔍 Browse Folders
+## 🔍 文件浏览
 - 📁 <code>L0CV/</code> - 专为本项目建立的 L0CV 包 
 - 📁 <code>code/</code> - 书中完整代码
 - 📁 <code>datasets/</code> - 本书所用数据集
@@ -495,18 +495,23 @@ python3 setup.py
   - 📁 <code>2_实战篇/</code> - 项目实战教程
   - 📁 <code>3_进阶篇/</code> - 最新CV模型和算法
   - 📁 <code>附件/</code> - 所需数学和统计学知识
-- 📁 <code>models/</code> - 封装可用的网络模型
+  - 📁 <code>img/</code> - 各章节所使用的插图
+- 📁 <code>models/</code> - 封装可用的预训练模型
 - 📁 <code>notebooks/</code> - 全书 Colab notebook，可在线测试
+  - 📁 <code>chapter04_recurrent-neural-networks/</code> - 第 4 章 - 递归神经网络 Jupyter Notebook 实现
+  - 📁 <code>chapter05_graph-neural-network/</code> - 第 5 章 - 图神经网络 Jupyter Notebook 实现
+  - 📁 <code>chapter06_optimization/</code> - 第 6 章 - 模型拟合与优化算法 Jupyter Notebook 实现
+  - 📁 <code>chapter07_environment-setup-and-tool-use/</code> - 第 7 章 - 软件环境搭建与工具使用 Jupyter Notebook 实现
+  - 📁 <code>chapter08_convolutional-neural-networks/</code> - 第 8 章 - 经典神经网络架构：原理与PyTorch实现 Jupyter Notebook 实现
+  - ...
   - 📄 <code>01_Notebooks.ipynb</code> - Notebooks 基本介绍和使用
   - 📄 <code>02_Python.ipynb</code> - Python 编程简明教程
   - 📄 <code>03_NumPy.ipynb</code> - NumPy 的使用
   - 📄 <code>04_Pandas.ipynb</code> - Pandas 的使用
-  - 📄 <code>05_PyTorch.ipynb</code> - PyTorch 的使用
-  - 📄 <code>06_Linear_Regression.ipynb</code>  - 线性回归
   - ...
   - 📄 <code>16_CVAE.ipynb</code> - 卷积变分自编码器
   - 📄 <code>17_TL-ants-bees-classification.ipynb</code>  - 迁移学习的应用：蚂蚁和蜜蜂的分类问题
-- 📁 <code>res/</code> - ui 图片
+- 📁 <code>res/</code> - ui 图片及全书思维导图PDF
 - 📄 <code>README.md</code> - 全书介绍及目录
 
 
