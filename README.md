@@ -101,11 +101,14 @@
     - 参考文献
 - <b><h4>理论篇</h4></b>
   - 第 1 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
-    - 1.1 [Softmax 回归](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.1_Softmax回归.md)
-    - 1.2 [反向传播算法](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.2_Back-Propagation.md)
-    - 1.3 [多层感知器](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
-    - 1.4 [神经学观点](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.4_神经学观点.md)
-    - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
+    - 1.1 [反向传播算法](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.2_Back-Propagation.md)
+    - 1.2 [多层感知器](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
+    - 1.3 [神经学观点](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.4_神经学观点.md)
+    - 1.4 [神经网络1-建立神经网络架构](https://cs231n.github.io/neural-networks-1/)
+    - 1.5 [神经网络2-设置数据和损失](https://cs231n.github.io/neural-networks-2/)
+    - 1.6 [神经网络3-学习和评估](https://cs231n.github.io/neural-networks-3/)
+    - 1.7 [案例分析-最小神经网络案例研究](https://cs231n.github.io/neural-networks-case-study/)
+    - 1.8 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
     - 小结
     - 参考文献
   - 第 2 章 [卷积神经网络](docs/1_理论篇/chapter2_CNN/chapter2_CNN.md)
@@ -122,20 +125,22 @@
     - 2.4 [实战项目 2 - 动手搭建一个卷积神经网络](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
       - 2.4.1 [卷积神经网络的前向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#271-卷积神经网络的前向传播)
       - 2.4.2 [卷积神经网络的反向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#272-卷积神经网络的反向传播)
-      - 2.4.3 [手写一个卷积神经网络](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#273-手写一个卷积神经网络)
-        - [1. 定义一个卷积层](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#1-定义一个卷积层)
-        - [2. 构造一个激活函数](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#2-构造一个激活函数)
-        - [3. 定义一个类，保存卷积层的参数和梯度](#3-定义一个类保存卷积层的参数和梯度)
-        - [4. 卷积层的前向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#4-卷积层的前向传播)
-        - [5. 卷积层的反向传播](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#5-卷积层的反向传播)
-        - [6. MaxPooling层的训练](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#6-MaxPooling层的训练)
+      - 2.4.3 [手写一个卷积神经网络](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#273-手写一个卷积神经网络)
+        - [1. 定义一个卷积层](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#1-定义一个卷积层)
+        - [2. 构造一个激活函数](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#2-构造一个激活函数)
+        - [3. 定义一个类，保存卷积层的参数和梯度](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#3-定义一个类保存卷积层的参数和梯度)
+        - [4. 卷积层的前向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#4-卷积层的前向传播)
+        - [5. 卷积层的反向传播](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#5-卷积层的反向传播)
+        - [6. MaxPooling层的训练](docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#6-MaxPooling层的训练)
       - 2.4.4 [PaddlePaddle卷积神经网络源码解析](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#274-PaddlePaddle卷积神经网络源码解析)
-    - [小结](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#小结)
-    - [参考文献](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#参考文献)
+    - [小结](docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#小结)
+    - [参考文献](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#参考文献)
   - 第 3 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
-    - 3.1 [数据驱动方法]()
+    - 3.1 [数据驱动方法](https://cs231n.github.io/classification/)
     - 3.2 [k 最近邻算法](/docs/1_理论篇/chapter3_Image-Classification/chapter32_knn.md)
     - 3.3 [线性分类](/docs/1_理论篇/chapter3_Image-Classification/chapter33_line-classification.md)
+      - 3.3.1 [支持向量机](./docs/1_理论篇/chapter3_Image-Classification/chapter3.3.1_支持向量机.md)
+      - 3.3.2 [Softmax 回归](./docs/1_理论篇/chapter3_Image-Classification/chapter3.3.2_Softmax回归.md)
     - 3.4 [逻辑回归 LR](/docs/1_理论篇/chapter3_Image-Classification/chapter34_Logistic-Regression.md) 
     - 3.5 [实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
     - 3.6 [实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
@@ -212,7 +217,7 @@
     - 6.8 [实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
     - 小结
     - 参考文献
-  - 第 7 章 [经典卷积神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
+  - 第 7 章 [经典神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
     - 7.1 [卷积神经网络（LeNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.1%20卷积神经网络（LeNet）.md)
     - 7.2 [深度卷积神经网络（AlexNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.2%20深度卷积神经网络（AlexNet）.md)
     - 7.3 [使用重复元素的网络（VGG）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.3%20使用重复元素的网络（VGG）.md)
@@ -224,6 +229,7 @@
     - 7.9 [Mask-RCNN](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
     - 7.10 [区域卷积神经网络（R-CNN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.9%20区域卷积神经网络（R-CNN）.md)
     - 7.11 [全卷积网络（FCN）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/)
+    - 1.12 [YOLO: 实时目标检测](https://pjreddie.com/darknet/yolo/)
     - 小结
     - 参考文献
   - 第 8 章 [著名数据集及基准](docs/2_实战篇/chapter8_著名数据集及基准)
@@ -237,29 +243,29 @@
         - 8.1.3 [数据增强简介](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#813-数据增强简介)
         - [总结](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#总结)
     - 8.2 [基准](/docs/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
-    - 8.3 [实战项目 5 - Kaggle比赛：图像分类（CIFAR-10）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
-    - 8.4 [实战项目 6 - Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
+    - 8.3 [实战项目 6 - Kaggle比赛：图像分类（CIFAR-10）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
+    - 8.4 [实战项目 7 - Kaggle比赛：狗的品种识别（ImageNet Dogs）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
     - 参考文献
   - 第 9 章 [检测与分割实战项目](https://charmve.github.io/computer-vision-in-action/#/chapter9/chapter9)
     - 9.1 语义分割
       - 9.1.1 [语义分割 PyTorch 版](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
-      - 9.1.2 [实战项目 7 - ]
+      - 9.1.2 [实战项目 8 - 基于PolarNet的点云端到端语义分割项目实战]()
     - 9.2 目标检测
       - 9.2.1 常用网络
-      - 9.2.2 [实战项目 8 - ]()
+      - 9.2.2 [实战项目 9 - 基于PyTorch的YOLO5目标检测项目实战]()
     - 9.3 [实例分割](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md)
       - 9.3.1 [常用网络](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md#931-常用网络)
-      - 9.3.2 [实战项目 9 - 实时高分辨率背景抠图](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md#932-实战项目-8-实时高分辨率背景抠图)
-      - 9.3.3 新方法：[滑动窗口](https://blog.csdn.net/Charmve/article/details/108915225), [PointRend](https://blog.csdn.net/Charmve/article/details/108892076), PolarMask
+      - 9.3.2 [实战项目 10 - 实时高分辨率背景抠图](/docs/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md#932-实战项目-8-实时高分辨率背景抠图)
+      - 9.3.3 新方法：[滑动窗口](https://blog.csdn.net/Charmve/article/details/108915225), [PointRend](https://blog.csdn.net/Charmve/article/details/108892076), [PolarMask](https://github.com/xieenze/PolarMask)
     - 小结
     - 参考文献
-  - 第 10 章 [GitHub开源项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
+  - 第 10 章 [计算机视觉课题研究初探](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
     - 10.1 [手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
     - 10.2 [文本检测](https://github.com/Charmve/Scene-Text-Detection)
     - 10.3 [车道线检测](https://github.com/Charmve/Awesome-Lane-Detection)
-      - 10.3.1 [常用网络]()
-      - 10.3.2 [实战项目 10 - 车道线检测项目实战](https://blog.csdn.net/Charmve/article/details/116678477)
+      - 10.3.1 [常用网络](https://github.com/Charmve/Awesome-Lane-Detection)
+      - 10.3.2 [实战项目 11 - 车道线检测项目实战](https://blog.csdn.net/Charmve/article/details/116678477)
     - 10.4 [镜面检测](https://github.com/Charmve/Mirror-Glass-Detection)
     - 10.5 [图像抠图 Matting](https://github.com/Charmve/TimeWarp)
     - 小结
@@ -269,7 +275,7 @@
     - 11.1 表征可视化
     - 11.2 对抗实例
     - 11.3 [DeepDream 和风格迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
-    - 11.4 [实战项目 11: PyTorch 如何使用TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
+    - 11.4 [实战项目 12: PyTorch 如何使用TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
       - 11.4.1 [创建 TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1141-创建-tensorboard)
       - 11.4.2 [写入 TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1142-写入-tensorboard)
       - 11.4.3 [使用 TensorBoard 检查模型](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1143-使用-tensorboard-检查模型)
@@ -287,7 +293,7 @@
       - 12.3.2 项目实战
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
-      - 12.3.3 [实战项目11 - 样式迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
+      - 12.3.3 [实战项目11 - 图像风格迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
     - 12.4 [变分自编码器 Variational Auto-encoder, VAE](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
       - 12.4.1 [概述](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)    
       - 12.4.2 [基本原理](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)        
@@ -297,7 +303,7 @@
       - 12.4.3 [VAE v.s. AE 区别与联系](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1243-vae-vs-ae-区别与联系)    
       - 12.4.4 [变分自编码器的代码实现](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)    
       - 12.4.5 [卷积变分自编码器的实现与简单应用](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)  
-      - 12.4.6 [实战项目 12 - 旧照片修复](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life) 
+      - 12.4.6 [实战项目 13 - 旧照片修复](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life) 
       - 小结     
       - [参考文献](docs/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#参考文献) 
     - 参考文献
@@ -324,7 +330,7 @@
     - 15.3 [基于特征的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#153-基于特征的迁移)
     - 15.4 [基于共享参数的迁移](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#154-基于共享参数的迁移)
     - 15.5 [深度学习和迁移学习结合](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#155-深度学习和迁移学习结合)
-    - 15.7 [实战项目 12 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
+    - 15.7 [实战项目 14 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
       - 15.7.1 [迁移学习在计算机视觉领域的应用](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1571-迁移学习在计算机视觉领域的应用)
       - 15.7.2 [实战项目: 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1572-实战项目-蚂蚁和蜜蜂的分类问题)
     - [小结](#小结)
@@ -344,26 +350,26 @@
     - 16.6 [Attention九层塔 - 注意力机制的九重理解](/docs/3_进阶篇/chapter16-注意力机制%20Attention%20is%20All%20You%20Need/chapter16_Attention-is-All-You-Need.md)
     - 小结
     - 参考文献
-  - 第 17 章 [跨界模型 Transformer](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md)
-    - 17.1 [思想和框图](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#%E4%B8%80%E6%80%9D%E6%83%B3%E5%92%8C%E6%A1%86%E5%9B%BE)
-    - 17.2 [实现细节](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#二实现细节)
-      - [17.2.1 Encoder](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-1-Encoder)
-      - [17.2.2 Decoder](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-2-Decoder)
-      - [17.2.3 Self-Attention](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-3-Self-Attention)
-      - [17.2.4 Multi-Headed Attention](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-4-Multi-Headed-Attention)
-      - [17.2.5 Positional Encoding](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-5-Positional-Encoding)
-    - 17.3 [应用任务和结果](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#三-应用任务和结果)
-      - 17.3.1 [NLP领域](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-1-NLP领域)
-      - 17.3.2 [CV领域](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-2-CV领域)
-        - 17.3.2.1 [检测DETR](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-2-1-检测DETR)
-        - 17.3.2.2 [分类ViT](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-2-2-分类ViT)
+  - 第 17 章 [跨界模型 Transformer](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md)
+    - 17.1 [思想和框图](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#%E4%B8%80%E6%80%9D%E6%83%B3%E5%92%8C%E6%A1%86%E5%9B%BE)
+    - 17.2 [实现细节](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#二实现细节)
+      - [17.2.1 Encoder](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-1-Encoder)
+      - [17.2.2 Decoder](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-2-Decoder)
+      - [17.2.3 Self-Attention](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-3-Self-Attention)
+      - [17.2.4 Multi-Headed Attention](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-4-Multi-Headed-Attention)
+      - [17.2.5 Positional Encoding](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#2-5-Positional-Encoding)
+    - 17.3 [应用任务和结果](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#三-应用任务和结果)
+      - 17.3.1 [NLP领域](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-1-NLP领域)
+      - 17.3.2 [CV领域](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-2-CV领域)
+        - 17.3.2.1 [检测DETR](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-2-1-检测DETR)
+        - 17.3.2.2 [分类ViT](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-2-2-分类ViT)
         - 17.3.2.3 [分割SETR](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-2-3-分割SETR)
         - 17.3.2.4 [Deformable-DETR](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#3-2-4-Deformable-DETR)
-    - 17.4 [优点及分析](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#四-优点及分析)
-    - 17.5 [缺点及分析](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#五-缺点及分析)
-    - [实战项目 13 - 基于transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803)
+    - 17.4 [优点及分析](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#四-优点及分析)
+    - 17.5 [缺点及分析](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#五-缺点及分析)
+    - [实战项目 15 - 基于Transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803)
     - 小结
-    - [参考文献](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#六-参考文献)
+    - [参考文献](/docs/3_%E8%BF%9B%E9%98%B6%E7%AF%87/chapter17-%E8%B7%A8%E7%95%8C%E6%A8%A1%E5%9E%8B%20Transformer/chapter17_Transformer.md#六-参考文献)
   - 第 18 章 [知识蒸馏](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA)
     - 18.1 概要
     - 18.2 KD主要方法
@@ -372,7 +378,7 @@
       - 18.2.3 Relation-based Knowledge
     - 18.3 知识蒸馏的应用 NLP-BERT
     - 18.4 常见疑问解答
-    - [实战项目 14 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
+    - [实战项目 16 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
     - 小结
     - [参考文献](#参考文献)
   - 第 19 章 [Normalization 模型](https://blog.csdn.net/Charmve/article/details/107650487)
@@ -417,6 +423,7 @@
     - A 矩阵
     - B [常用激活函数总结](https://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw==&mid=2247484495&idx=1&sn=0bbb2094d93169baf20eedb284bc668f)
     - C [梯度下降法](https://blog.csdn.net/Charmve/article/details/106089198)
+    - D [深度学习调参技巧总结](https://blog.csdn.net/Charmve/article/details/107650479)
   - <b><h4>[后记](/docs/book_postscript.md)</h4></b>
   - <b><h4>[参考文献](#参考文献-1)</h4></b>
 
