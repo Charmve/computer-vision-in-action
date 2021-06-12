@@ -24,12 +24,12 @@
     - 6.5 [Pandas 基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/04_Pandas.ipynb)
     - 6.6 [OpenCV 安装及基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
     - 6.7 [Jupyter Notebook 配置及基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/01_Notebooks.ipynb)
-    - 6.8 [基本的图像操作和处理](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md)
-      - 6.8.1 [PIL：Python图像处理类库](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#781-pil-python图像处理类库)
-      - 6.8.2 [Matplotlib](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#782-matplotlib)
-      - 6.8.3 [NumPy](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#783-numpy)
-      - 6.8.4 [SciPy](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#784-scipy)
-      - 6.8.5 [高级示例：图像去噪](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#785-高级示例-图像去噪)
+    - 6.8 [基本的图像操作和处理](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md)
+      - 6.8.1 [PIL：Python图像处理类库](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#781-pil-python图像处理类库)
+      - 6.8.2 [Matplotlib](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#782-matplotlib)
+      - 6.8.3 [NumPy](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#783-numpy)
+      - 6.8.4 [SciPy](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#784-scipy)
+      - 6.8.5 [高级示例：图像去噪](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#785-高级示例-图像去噪)
     - 6.9 [实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
     - 小结
     - 参考文献
