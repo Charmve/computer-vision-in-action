@@ -32,6 +32,9 @@
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/Gated_Recurrent_Units.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/Gated_Recurrent_Units.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+    </a>
 </p>
 
 上一节介绍了循环神经网络中的梯度计算方法。我们发现，当时间步数较大或者时间步较小时，循环神经网络的梯度较容易出现衰减或爆炸。虽然裁剪梯度可以应对梯度爆炸，但无法解决梯度衰减的问题。通常由于这个原因，循环神经网络在实际中较难捕捉时间序列中时间步距离较大的依赖关系。
@@ -112,10 +115,10 @@ import torch.nn.functional as F
 
 import sys
 sys.path.append("..") 
-import d2lzh_pytorch as d2l
+import L0CV
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-(corpus_indices, char_to_idx, idx_to_char, vocab_size) = d2l.load_data_jay_lyrics()
+(corpus_indices, char_to_idx, idx_to_char, vocab_size) = L0CV.load_data_jay_lyrics()
 ```
 
 ### 4.5.3 从零开始实现
@@ -187,7 +190,7 @@ pred_period, pred_len, prefixes = 40, 50, ['分开', '不分开']
 我们每过40个迭代周期便根据当前训练的模型创作一段歌词。
 
 ```python
-d2l.train_and_predict_rnn(gru, get_params, init_gru_state, num_hiddens,
+L0CV.train_and_predict_rnn(gru, get_params, init_gru_state, num_hiddens,
                           vocab_size, device, corpus_indices, idx_to_char,
                           char_to_idx, False, num_epochs, num_steps, lr,
                           clipping_theta, batch_size, pred_period, pred_len,
@@ -216,8 +219,8 @@ epoch 160, perplexity 1.442282, time 1.51 sec
 ``` python
 lr = 1e-2 # 注意调整学习率
 gru_layer = nn.GRU(input_size=vocab_size, hidden_size=num_hiddens)
-model = d2l.RNNModel(gru_layer, vocab_size).to(device)
-d2l.train_and_predict_rnn_pytorch(model, num_hiddens, vocab_size, device,
+model = L0CV.RNNModel(gru_layer, vocab_size).to(device)
+L0CV.train_and_predict_rnn_pytorch(model, num_hiddens, vocab_size, device,
                                 corpus_indices, idx_to_char, char_to_idx,
                                 num_epochs, num_steps, lr, clipping_theta,
                                 batch_size, pred_period, pred_len, prefixes)
