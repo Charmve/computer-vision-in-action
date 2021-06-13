@@ -65,7 +65,7 @@ from PIL import Image
 
 import sys
 sys.path.append("..") 
-import d2lzh_pytorch as d2l
+import L0CV
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 ```
 
@@ -74,16 +74,16 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 首先，我们分别读取内容图像和样式图像。从打印出的图像坐标轴可以看出，它们的尺寸并不一样。
 
 ``` python
-d2l.set_figsize()
+L0CV.set_figsize()
 content_img = Image.open('../../data/rainier.jpg')
-d2l.plt.imshow(content_img);
+L0CV.plt.imshow(content_img);
 ```
 <div align=center>
 <img width="400" src="../../imgs/chapter12/9.11_output1.png"/>
 </div>
 
 ``` python
-d2l.set_figsize()
+L0CV.set_figsize()
 style_img = Image.open('../../data/autumn_oak.jpg')
 d2l.plt.imshow(style_img);
 ```
@@ -378,7 +378,7 @@ epoch 450, content loss 0.23, style loss 0.67, TV loss 1.03, 0.07 sec
 下面我们查看一下训练好的合成图像。可以看到图12.14中的合成图像保留了内容图像的风景和物体，并同时迁移了样式图像的色彩。因为图像尺寸较小，所以细节上依然比较模糊。
 
 ``` python
-d2l.plt.imshow(postprocess(output));
+L0CV.plt.imshow(postprocess(output));
 ```
 <div align=center>
 <img width="400" src="../../imgS/chapter12/12.11_output3.png"/>
@@ -411,8 +411,8 @@ epoch 450, content loss 0.27, style loss 0.42, TV loss 0.69, 0.18 sec
 可以看到，由于图像尺寸更大，每一次迭代需要花费更多的时间。下面我们查看一下训练好的合成图像。
 
 ``` python
-d2l.set_figsize((7, 5))
-d2l.plt.imshow(postprocess(big_output));
+L0CV.set_figsize((7, 5))
+L0CV.plt.imshow(postprocess(big_output));
 ```
 
 <div align=center>
