@@ -40,6 +40,7 @@
 <div align=center>
 <img width="600" src="../../imgs/chapter12/9.11_style-transfer.svg"/>
 </div>
+
 <div align=center>图12.12 输入内容图像和样式图像，输出样式迁移后的合成图像</div>
 
 ### 12.3.3.1 方法
@@ -49,6 +50,7 @@
 <div align=center>
 <img width="500" src="../../imgs/chapter12/9.11_neural-style.svg"/>
 </div>
+
 <div align=center>图12.13 基于卷积神经网络的样式迁移。实线箭头和虚线箭头分别表示正向传播和反向传播</div>
 
 下面，我们通过实验来进一步了解样式迁移的技术细节。实验需要用到一些导入的包或模块。
@@ -381,8 +383,9 @@ epoch 450, content loss 0.23, style loss 0.67, TV loss 1.03, 0.07 sec
 L0CV.plt.imshow(postprocess(output));
 ```
 <div align=center>
-<img width="400" src="../../imgS/chapter12/12.11_output3.png"/>
+<img width="400" src="../../imgs/chapter12/9.11_output3.png"/>
 </div>
+
 <div align=center>图12.14 150X225 尺寸的合成图像</div>
 
 为了得到更加清晰的合成图像，下面我们在更大的$300 \times 450$尺寸上训练。我们将图9.14的高和宽放大2倍，以初始化更大尺寸的合成图像。
@@ -416,8 +419,9 @@ L0CV.plt.imshow(postprocess(big_output));
 ```
 
 <div align=center>
-<img width="600" src="../../imgS/chapter12/12.11_output4.png"/>
+<img width="600" src="../../imgs/chapter12/9.11_output4.png"/>
 </div>
+
 <div align=center>图12.15 300X450 尺寸的合成图像</div>
 
 从训练得到的图12.15中可以看到，此时的合成图像因为尺寸更大，所以保留了更多的细节。合成图像里面不仅有大块的类似样式图像的油画色彩块，色彩块中甚至出现了细微的纹理。
