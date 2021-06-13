@@ -29,6 +29,8 @@
 
 ------
 
+<a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb\"><img src="https://colab.research.google.com/assets/colab-badge.svg\" ></a> <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb\"><img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter\"></a>
+
 ## 12.3.3 样式迁移
 
 如果你是一位摄影爱好者，也许接触过滤镜。它能改变照片的颜色样式，从而使风景照更加锐利或者令人像更加美白。但一个滤镜通常只能改变照片的某个方面。如果要照片达到理想中的样式，经常需要尝试大量不同的组合，其复杂程度不亚于模型调参。
@@ -36,7 +38,7 @@
 在本节中，我们将介绍如何使用卷积神经网络自动将某图像中的样式应用在另一图像之上，即样式迁移（style transfer）[1]。这里我们需要两张输入图像，一张是内容图像，另一张是样式图像，我们将使用神经网络修改内容图像使其在样式上接近样式图像。图9.12中的内容图像为本书作者在西雅图郊区的雷尼尔山国家公园（Mount Rainier National Park）拍摄的风景照，而样式图像则是一副主题为秋天橡树的油画。最终输出的合成图像在保留了内容图像中物体主体形状的情况下应用了样式图像的油画笔触，同时也让整体颜色更加鲜艳。
 
 <div align=center>
-<img width="600" src="../../imgS/chapter12/12.11_style-transfer.svg"/>
+<img width="600" src="../../imgs/chapter12/9.11_style-transfer.svg"/>
 </div>
 <div align=center>图12.12 输入内容图像和样式图像，输出样式迁移后的合成图像</div>
 
@@ -45,7 +47,7 @@
 图12.13用一个例子来阐述基于卷积神经网络的样式迁移方法。首先，我们初始化合成图像，例如将其初始化成内容图像。该合成图像是样式迁移过程中唯一需要更新的变量，即样式迁移所需迭代的模型参数。然后，我们选择一个预训练的卷积神经网络来抽取图像的特征，其中的模型参数在训练中无须更新。深度卷积神经网络凭借多个层逐级抽取图像的特征。我们可以选择其中某些层的输出作为内容特征或样式特征。以图9.13为例，这里选取的预训练的神经网络含有3个卷积层，其中第二层输出图像的内容特征，而第一层和第三层的输出被作为图像的样式特征。接下来，我们通过正向传播（实线箭头方向）计算样式迁移的损失函数，并通过反向传播（虚线箭头方向）迭代模型参数，即不断更新合成图像。样式迁移常用的损失函数由3部分组成：内容损失（content loss）使合成图像与内容图像在内容特征上接近，样式损失（style loss）令合成图像与样式图像在样式特征上接近，而总变差损失（total variation loss）则有助于减少合成图像中的噪点。最后，当模型训练结束时，我们输出样式迁移的模型参数，即得到最终的合成图像。
 
 <div align=center>
-<img width="500" src="../../imgS/chapter12/12.11_neural-style.svg"/>
+<img width="500" src="../../imgs/chapter12/9.11_neural-style.svg"/>
 </div>
 <div align=center>图12.13 基于卷积神经网络的样式迁移。实线箭头和虚线箭头分别表示正向传播和反向传播</div>
 
@@ -77,7 +79,7 @@ content_img = Image.open('../../data/rainier.jpg')
 d2l.plt.imshow(content_img);
 ```
 <div align=center>
-<img width="400" src="../../imgS/chapter12/12.11_output1.png"/>
+<img width="400" src="../../imgs/chapter12/9.11_output1.png"/>
 </div>
 
 ``` python
@@ -86,7 +88,7 @@ style_img = Image.open('../../data/autumn_oak.jpg')
 d2l.plt.imshow(style_img);
 ```
 <div align=center>
-<img width="400" src="../../imgS/chapter12/12.11_output2.png"/>
+<img width="400" src="../../imgs/chapter12/9.11_output2.png"/>
 </div>
 
 ### 12.3.3.3 预处理和后处理图像
