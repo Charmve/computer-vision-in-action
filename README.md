@@ -508,6 +508,12 @@
 
 ## 如何食用
 
+:label:`sec_code`
+
+<p align="center">
+  <img src="res/ui/L0CV.png" alt="L0CV architecture">
+</p> 
+
 1. Install
 ```
 pip3 install -r requirements.txt
