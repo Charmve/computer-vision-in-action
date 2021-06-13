@@ -9,10 +9,13 @@ import zipfile
 
 from IPython import display
 from matplotlib import pyplot as plt
-import mxnet as mx
-from mxnet import autograd, gluon, image, init, nd
-from mxnet.contrib import text
-from mxnet.gluon import data as gdata, loss as gloss, nn, utils as gutils
+import torch
+from torch import nn
+import torch.nn.functional as F
+import torchvision
+import torchvision.transforms as transforms
+import torchtext
+import torchtext.vocab as Vocab
 import numpy as np
 
 
@@ -49,10 +52,10 @@ class Benchmark():
         print('%stime: %.4f sec' % (self.prefix, time.time() - self.start))
 
 
-def corr2d(X, K):
+def corr2d(X, K):  
     """Compute 2D cross-correlation."""
     h, w = K.shape
-    Y = nd.zeros((X.shape[0] - h + 1, X.shape[1] - w + 1))
+    Y = torch.zeros((X.shape[0] - h + 1, X.shape[1] - w + 1))
     for i in range(Y.shape[0]):
         for j in range(Y.shape[1]):
             Y[i, j] = (X[i: i + h, j: j + w] * K).sum()

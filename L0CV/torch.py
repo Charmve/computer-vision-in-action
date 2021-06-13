@@ -1,5 +1,5 @@
 # This file is generated automatically through:
-#    d2lbook build lib
+#    L0CV build lib
 # Don't edit it directly
 
 # Defined in file: ./chapter_preface/index.md
@@ -20,7 +20,7 @@ import time
 import requests
 import zipfile
 import hashlib
-d2l = sys.modules[__name__]
+L0CV = sys.modules[__name__]
 
 
 # Defined in file: ./chapter_preface/index.md
@@ -38,7 +38,7 @@ def use_svg_display():
 def set_figsize(figsize=(3.5, 2.5)):
     """Set the figure size for matplotlib."""
     use_svg_display()
-    d2l.plt.rcParams['figure.figsize'] = figsize
+    L0CV.plt.rcParams['figure.figsize'] = figsize
 
 
 # Defined in file: ./chapter_preliminaries/calculus.md
@@ -64,7 +64,7 @@ def plot(X, Y=None, xlabel=None, ylabel=None, legend=None, xlim=None,
         legend = []
 
     set_figsize(figsize)
-    axes = axes if axes else d2l.plt.gca()
+    axes = axes if axes else L0CV.plt.gca()
 
     # Return True if `X` (tensor or list) has 1 axis
     def has_one_axis(X):
@@ -120,24 +120,24 @@ class Timer:
 # Defined in file: ./chapter_linear-networks/linear-regression-scratch.md
 def synthetic_data(w, b, num_examples):
     """Generate y = Xw + b + noise."""
-    X = d2l.zeros((num_examples, w.shape[0]))
+    X = L0CV.zeros((num_examples, w.shape[0]))
     X += tf.random.normal(shape=X.shape)
-    y = d2l.matmul(X, tf.reshape(w, (-1, 1))) + b
+    y = L0CV.matmul(X, tf.reshape(w, (-1, 1))) + b
     y += tf.random.normal(shape=y.shape, stddev=0.01)
-    y = d2l.reshape(y, (-1, 1))
+    y = L0CV.reshape(y, (-1, 1))
     return X, y
 
 
 # Defined in file: ./chapter_linear-networks/linear-regression-scratch.md
 def linreg(X, w, b):
     """The linear regression model."""
-    return d2l.matmul(X, w) + b
+    return L0CV.matmul(X, w) + b
 
 
 # Defined in file: ./chapter_linear-networks/linear-regression-scratch.md
 def squared_loss(y_hat, y):
     """Squared loss."""
-    return (y_hat - d2l.reshape(y, y_hat.shape)) ** 2 / 2
+    return (y_hat - L0CV.reshape(y, y_hat.shape)) ** 2 / 2
 
 
 # Defined in file: ./chapter_linear-networks/linear-regression-scratch.md
@@ -169,10 +169,10 @@ def get_fashion_mnist_labels(labels):
 def show_images(imgs, num_rows, num_cols, titles=None, scale=1.5):
     """Plot a list of images."""
     figsize = (num_cols * scale, num_rows * scale)
-    _, axes = d2l.plt.subplots(num_rows, num_cols, figsize=figsize)
+    _, axes = L0CV.plt.subplots(num_rows, num_cols, figsize=figsize)
     axes = axes.flatten()
     for i, (ax, img) in enumerate(zip(axes, imgs)):
-        ax.imshow(d2l.numpy(img))
+        ax.imshow(L0CV.numpy(img))
         ax.axes.get_xaxis().set_visible(False)
         ax.axes.get_yaxis().set_visible(False)
         if titles:
@@ -201,9 +201,9 @@ def load_data_fashion_mnist(batch_size, resize=None):
 def accuracy(y_hat, y):
     """Compute the number of correct predictions."""
     if len(y_hat.shape) > 1 and y_hat.shape[1] > 1:
-        y_hat = d2l.argmax(y_hat, axis=1)        
-    cmp = d2l.astype(y_hat, y.dtype) == y
-    return float(d2l.reduce_sum(d2l.astype(cmp, y.dtype)))
+        y_hat = L0CV.argmax(y_hat, axis=1)        
+    cmp = L0CV.astype(y_hat, y.dtype) == y
+    return float(L0CV.reduce_sum(L0CV.astype(cmp, y.dtype)))
 
 
 # Defined in file: ./chapter_linear-networks/softmax-regression-scratch.md
@@ -211,7 +211,7 @@ def evaluate_accuracy(net, data_iter):
     """Compute the accuracy for a model on a dataset."""
     metric = Accumulator(2)  # No. of correct predictions, no. of predictions
     for X, y in data_iter:
-        metric.add(accuracy(net(X), y), d2l.size(y))
+        metric.add(accuracy(net(X), y), L0CV.size(y))
     return metric[0] / metric[1]
 
 
@@ -271,12 +271,12 @@ class Animator:
         # Incrementally plot multiple lines
         if legend is None:
             legend = []
-        d2l.use_svg_display()
-        self.fig, self.axes = d2l.plt.subplots(nrows, ncols, figsize=figsize)
+        L0CV.use_svg_display()
+        self.fig, self.axes = L0CV.plt.subplots(nrows, ncols, figsize=figsize)
         if nrows * ncols == 1:
             self.axes = [self.axes, ]
         # Use a lambda function to capture arguments
-        self.config_axes = lambda: d2l.set_axes(
+        self.config_axes = lambda: L0CV.set_axes(
             self.axes[0], xlabel, ylabel, xlim, ylim, xscale, yscale, legend)
         self.X, self.Y, self.fmts = None, None, fmts
 
@@ -326,7 +326,7 @@ class Updater():
         self.lr = lr
 
     def __call__(self, batch_size, grads):
-        d2l.sgd(self.params, grads, self.lr, batch_size)
+        L0CV.sgd(self.params, grads, self.lr, batch_size)
 
 
 # Defined in file: ./chapter_linear-networks/softmax-regression-scratch.md
@@ -334,20 +334,20 @@ def predict_ch3(net, test_iter, n=6):
     """Predict labels (defined in Chapter 3)."""
     for X, y in test_iter:
         break
-    trues = d2l.get_fashion_mnist_labels(y)
-    preds = d2l.get_fashion_mnist_labels(d2l.argmax(net(X), axis=1))
+    trues = L0CV.get_fashion_mnist_labels(y)
+    preds = L0CV.get_fashion_mnist_labels(L0CV.argmax(net(X), axis=1))
     titles = [true +'\n' + pred for true, pred in zip(trues, preds)]
-    d2l.show_images(
-        d2l.reshape(X[0:n], (n, 28, 28)), 1, n, titles=titles[0:n])
+    L0CV.show_images(
+        L0CV.reshape(X[0:n], (n, 28, 28)), 1, n, titles=titles[0:n])
 
 
 # Defined in file: ./chapter_multilayer-perceptrons/underfit-overfit.md
 def evaluate_loss(net, data_iter, loss):
     """Evaluate the loss of a model on the given dataset."""
-    metric = d2l.Accumulator(2)  # Sum of losses, no. of examples
+    metric = L0CV.Accumulator(2)  # Sum of losses, no. of examples
     for X, y in data_iter:
         l = loss(net(X), y)
-        metric.add(d2l.reduce_sum(l), d2l.size(l))
+        metric.add(L0CV.reduce_sum(l), L0CV.size(l))
     return metric[0] / metric[1]
 
 
@@ -441,8 +441,8 @@ def corr2d(X, K):
 class TrainCallback(tf.keras.callbacks.Callback):
     """A callback to visiualize the training progress."""
     def __init__(self, net, train_iter, test_iter, num_epochs, device_name):
-        self.timer = d2l.Timer()
-        self.animator = d2l.Animator(
+        self.timer = L0CV.Timer()
+        self.animator = L0CV.Animator(
             xlabel='epoch', xlim=[1, num_epochs], legend=[
                 'train loss', 'train acc', 'test acc'])
         self.net = net
@@ -468,7 +468,7 @@ class TrainCallback(tf.keras.callbacks.Callback):
                   f'{str(self.device_name)}')
 
 def train_ch6(net_fn, train_iter, test_iter, num_epochs, lr,
-              device=d2l.try_gpu()):
+              device=L0CV.try_gpu()):
     """Train a model with a GPU (defined in Chapter 6)."""
     device_name = device._device_name
     strategy = tf.distribute.OneDeviceStrategy(device_name)
@@ -509,12 +509,12 @@ class Residual(tf.keras.Model):
 
 
 # Defined in file: ./chapter_recurrent-neural-networks/text-preprocessing.md
-d2l.DATA_HUB['time_machine'] = (d2l.DATA_URL + 'timemachine.txt',
+L0CV.DATA_HUB['time_machine'] = (L0CV.DATA_URL + 'timemachine.txt',
                                 '090b5e7e70c295757f55df93cb0a180b9691891a')
 
 def read_time_machine():
     """Load the time machine dataset into a list of text lines."""
-    with open(d2l.download('time_machine'), 'r') as f:
+    with open(L0CV.download('time_machine'), 'r') as f:
         lines = f.readlines()
     return [re.sub('[^A-Za-z]+', ' ', line).strip().lower() for line in lines]
 
@@ -613,7 +613,7 @@ def seq_data_iter_random(corpus, batch_size, num_steps):
         initial_indices_per_batch = initial_indices[i: i + batch_size]
         X = [data(j) for j in initial_indices_per_batch]
         Y = [data(j + 1) for j in initial_indices_per_batch]
-        yield d2l.tensor(X), d2l.tensor(Y)
+        yield L0CV.tensor(X), L0CV.tensor(Y)
 
 
 # Defined in file: ./chapter_recurrent-neural-networks/language-models-and-dataset.md
@@ -622,10 +622,10 @@ def seq_data_iter_sequential(corpus, batch_size, num_steps):
     # Start with a random offset to partition a sequence
     offset = random.randint(0, num_steps)
     num_tokens = ((len(corpus) - offset - 1) // batch_size) * batch_size
-    Xs = d2l.tensor(corpus[offset: offset + num_tokens])
-    Ys = d2l.tensor(corpus[offset + 1: offset + 1 + num_tokens])
-    Xs = d2l.reshape(Xs, (batch_size, -1))
-    Ys = d2l.reshape(Ys, (batch_size, -1))
+    Xs = L0CV.tensor(corpus[offset: offset + num_tokens])
+    Ys = L0CV.tensor(corpus[offset + 1: offset + 1 + num_tokens])
+    Xs = L0CV.reshape(Xs, (batch_size, -1))
+    Ys = L0CV.reshape(Ys, (batch_size, -1))
     num_batches = Xs.shape[1] // num_steps
     for i in range(0, num_batches * num_steps, num_steps):
         X = Xs[:, i: i + num_steps]
@@ -638,10 +638,10 @@ class SeqDataLoader:
     """An iterator to load sequence data."""
     def __init__(self, batch_size, num_steps, use_random_iter, max_tokens):
         if use_random_iter:
-            self.data_iter_fn = d2l.seq_data_iter_random
+            self.data_iter_fn = L0CV.seq_data_iter_random
         else:
-            self.data_iter_fn = d2l.seq_data_iter_sequential
-        self.corpus, self.vocab = d2l.load_corpus_time_machine(max_tokens)
+            self.data_iter_fn = L0CV.seq_data_iter_sequential
+        self.corpus, self.vocab = L0CV.load_corpus_time_machine(max_tokens)
         self.batch_size, self.num_steps = batch_size, num_steps
 
     def __iter__(self):
@@ -679,7 +679,7 @@ def predict_ch8(prefix, num_preds, net, vocab, params):
     """Generate new characters following the `prefix`."""
     state = net.begin_state(batch_size=1)
     outputs = [vocab[prefix[0]]]
-    get_input = lambda: d2l.reshape(d2l.tensor([outputs[-1]]), (1, 1)).numpy()
+    get_input = lambda: L0CV.reshape(L0CV.tensor([outputs[-1]]), (1, 1)).numpy()
     for y in prefix[1:]:  # Warm-up period
         _, state = net(get_input(), state, params)
         outputs.append(vocab[y])
@@ -709,8 +709,8 @@ def grad_clipping(grads, theta):
 # Defined in file: ./chapter_recurrent-neural-networks/rnn-scratch.md
 def train_epoch_ch8(net, train_iter, loss, updater, params, use_random_iter):
     """Train a model within one epoch (defined in Chapter 8)."""
-    state, timer = None, d2l.Timer()
-    metric = d2l.Accumulator(2)  # Sum of training loss, no. of tokens
+    state, timer = None, L0CV.Timer()
+    metric = L0CV.Accumulator(2)  # Sum of training loss, no. of tokens
     for X, Y in train_iter:
         if state is None or use_random_iter:
             # Initialize `state` when either it is the first iteration or
@@ -719,16 +719,16 @@ def train_epoch_ch8(net, train_iter, loss, updater, params, use_random_iter):
         with tf.GradientTape(persistent=True) as g:
             g.watch(params)
             y_hat, state= net(X, state, params)
-            y = d2l.reshape(tf.transpose(Y), (-1))
+            y = L0CV.reshape(tf.transpose(Y), (-1))
             l = loss(y, y_hat)
         grads = g.gradient(l, params)
         grads = grad_clipping(grads, 1)
         updater.apply_gradients(zip(grads, params))
         
         # Keras loss by default returns the average loss in a batch
-        # l_sum = l * float(d2l.size(y)) if isinstance(
+        # l_sum = l * float(L0CV.size(y)) if isinstance(
         #     loss, tf.keras.losses.Loss) else tf.reduce_sum(l)
-        metric.add(l * d2l.size(y), d2l.size(y))
+        metric.add(l * L0CV.size(y), L0CV.size(y))
     return math.exp(metric[0] / metric[1]), metric[1] / timer.stop()
 
 
@@ -740,7 +740,7 @@ def train_ch8(net, train_iter, vocab, num_hiddens, lr, num_epochs, strategy,
         params = get_params(len(vocab), num_hiddens)
         loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
         updater = tf.keras.optimizers.SGD(lr)
-    animator = d2l.Animator(xlabel='epoch', ylabel='perplexity',
+    animator = L0CV.Animator(xlabel='epoch', ylabel='perplexity',
                             legend=['train'], xlim=[10, num_epochs])
     predict = lambda prefix: predict_ch8(prefix, 50, net, vocab, params)
     # Train and predict
@@ -750,19 +750,19 @@ def train_ch8(net, train_iter, vocab, num_hiddens, lr, num_epochs, strategy,
         if (epoch + 1) % 10 == 0:
             print(predict('time traveller'))
             animator.add(epoch + 1, [ppl])
-    device = d2l.try_gpu()._device_name
+    device = L0CV.try_gpu()._device_name
     print(f'perplexity {ppl:.1f}, {speed:.1f} tokens/sec on {str(device)}')
     print(predict('time traveller'))
     print(predict('traveller'))
 
 
 # Defined in file: ./chapter_recurrent-modern/machine-translation-and-dataset.md
-d2l.DATA_HUB['fra-eng'] = (d2l.DATA_URL + 'fra-eng.zip',
+L0CV.DATA_HUB['fra-eng'] = (L0CV.DATA_URL + 'fra-eng.zip',
                            '94646ad1522d915e7b0f9296181140edcf86a4f5')
 
 def read_data_nmt():
     """Load the English-French dataset."""
-    data_dir = d2l.download_extract('fra-eng')
+    data_dir = L0CV.download_extract('fra-eng')
     with open(os.path.join(data_dir, 'fra.txt'), 'r') as f:
         return f.read()
 
@@ -809,10 +809,10 @@ def build_array_nmt(lines, vocab, num_steps):
     """Transform text sequences of machine translation into minibatches."""
     lines = [vocab[l] for l in lines]
     lines = [l + [vocab['<eos>']] for l in lines]
-    array = d2l.tensor([truncate_pad(
+    array = L0CV.tensor([truncate_pad(
         l, num_steps, vocab['<pad>']) for l in lines])
-    valid_len = d2l.reduce_sum(
-        d2l.astype(array != vocab['<pad>'], d2l.int32), 1)
+    valid_len = L0CV.reduce_sum(
+        L0CV.astype(array != vocab['<pad>'], L0CV.int32), 1)
     return array, valid_len
 
 
@@ -821,27 +821,27 @@ def load_data_nmt(batch_size, num_steps, num_examples=600):
     """Return the iterator and the vocabularies of the translation dataset."""
     text = preprocess_nmt(read_data_nmt())
     source, target = tokenize_nmt(text, num_examples)
-    src_vocab = d2l.Vocab(source, min_freq=2,
+    src_vocab = L0CV.Vocab(source, min_freq=2,
                           reserved_tokens=['<pad>', '<bos>', '<eos>'])
-    tgt_vocab = d2l.Vocab(target, min_freq=2,
+    tgt_vocab = L0CV.Vocab(target, min_freq=2,
                           reserved_tokens=['<pad>', '<bos>', '<eos>'])
     src_array, src_valid_len = build_array_nmt(source, src_vocab, num_steps)
     tgt_array, tgt_valid_len = build_array_nmt(target, tgt_vocab, num_steps)
     data_arrays = (src_array, src_valid_len, tgt_array, tgt_valid_len)
-    data_iter = d2l.load_array(data_arrays, batch_size)
+    data_iter = L0CV.load_array(data_arrays, batch_size)
     return data_iter, src_vocab, tgt_vocab
 
 
 # Defined in file: ./chapter_attention-mechanisms/attention-cues.md
 def show_heatmaps(matrices, xlabel, ylabel, titles=None, figsize=(2.5, 2.5),
                   cmap='Reds'):
-    d2l.use_svg_display()
+    L0CV.use_svg_display()
     num_rows, num_cols = matrices.shape[0], matrices.shape[1]
-    fig, axes = d2l.plt.subplots(num_rows, num_cols, figsize=figsize,
+    fig, axes = L0CV.plt.subplots(num_rows, num_cols, figsize=figsize,
                                  sharex=True, sharey=True, squeeze=False)
     for i, (row_axes, row_matrices) in enumerate(zip(axes, matrices)):
         for j, (ax, matrix) in enumerate(zip(row_axes, row_matrices)):
-            pcm = ax.imshow(d2l.numpy(matrix), cmap=cmap)
+            pcm = ax.imshow(L0CV.numpy(matrix), cmap=cmap)
             if i == num_rows - 1:
                 ax.set_xlabel(xlabel)
             if j == 0:
@@ -853,7 +853,7 @@ def show_heatmaps(matrices, xlabel, ylabel, titles=None, figsize=(2.5, 2.5),
 
 # Defined in file: ./chapter_optimization/optimization-intro.md
 def annotate(text, xy, xytext):
-    d2l.plt.gca().annotate(text, xy=xy, xytext=xytext,
+    L0CV.plt.gca().annotate(text, xy=xy, xytext=xytext,
                            arrowprops=dict(arrowstyle='->'))
 
 
@@ -871,24 +871,24 @@ def train_2d(trainer, steps=20):
 
 def show_trace_2d(f, results):
     """Show the trace of 2D variables during optimization."""
-    d2l.set_figsize()
-    d2l.plt.plot(*zip(*results), '-o', color='#ff7f0e')
-    x1, x2 = d2l.meshgrid(d2l.arange(-5.5, 1.0, 0.1),
-                          d2l.arange(-3.0, 1.0, 0.1))
-    d2l.plt.contour(x1, x2, f(x1, x2), colors='#1f77b4')
-    d2l.plt.xlabel('x1')
-    d2l.plt.ylabel('x2')
+    L0CV.set_figsize()
+    L0CV.plt.plot(*zip(*results), '-o', color='#ff7f0e')
+    x1, x2 = L0CV.meshgrid(L0CV.arange(-5.5, 1.0, 0.1),
+                          L0CV.arange(-3.0, 1.0, 0.1))
+    L0CV.plt.contour(x1, x2, f(x1, x2), colors='#1f77b4')
+    L0CV.plt.xlabel('x1')
+    L0CV.plt.ylabel('x2')
 
 
 # Defined in file: ./chapter_optimization/minibatch-sgd.md
-d2l.DATA_HUB['airfoil'] = (d2l.DATA_URL + 'airfoil_self_noise.dat',
+L0CV.DATA_HUB['airfoil'] = (L0CV.DATA_URL + 'airfoil_self_noise.dat',
                            '76e5be1548fd8222e5074cf0faae75edff8cf93f')
 
 def get_data_ch11(batch_size=10, n=1500):
-    data = np.genfromtxt(d2l.download('airfoil'),
+    data = np.genfromtxt(L0CV.download('airfoil'),
                          dtype=np.float32, delimiter='\t')
     data = (data - data.mean(axis=0)) / data.std(axis=0)
-    data_iter = d2l.load_array((data[:n, :-1], data[:n, -1]),
+    data_iter = L0CV.load_array((data[:n, :-1], data[:n, -1]),
                                batch_size, is_train=True)
     return data_iter, data.shape[1]-1
 
@@ -902,10 +902,10 @@ def train_ch11(trainer_fn, states, hyperparams, data_iter,
     b = tf.Variable(tf.zeros(1), trainable=True)
 
     # Train
-    net, loss = lambda X: d2l.linreg(X, w, b), d2l.squared_loss
-    animator = d2l.Animator(xlabel='epoch', ylabel='loss',
+    net, loss = lambda X: L0CV.linreg(X, w, b), L0CV.squared_loss
+    animator = L0CV.Animator(xlabel='epoch', ylabel='loss',
                             xlim=[0, num_epochs], ylim=[0.22, 0.35])
-    n, timer = 0, d2l.Timer()
+    n, timer = 0, L0CV.Timer()
 
     for _ in range(num_epochs):
         for X, y in data_iter:
@@ -919,7 +919,7 @@ def train_ch11(trainer_fn, states, hyperparams, data_iter,
               timer.stop()
               p = n/X.shape[0]
               q = p/tf.data.experimental.cardinality(data_iter).numpy()
-              r = (d2l.evaluate_loss(net, data_iter, loss),)
+              r = (L0CV.evaluate_loss(net, data_iter, loss),)
               animator.add(q, r)
               timer.start()
     print(f'loss: {animator.Y[0][-1]:.3f}, {timer.avg():.3f} sec/epoch')
@@ -937,9 +937,9 @@ def train_concise_ch11(trainer_fn, hyperparams, data_iter, num_epochs=2):
     # Note: L2 Loss = 1/2 * MSE Loss. TensorFlow has MSE Loss which is
     # slightly different from MXNet's L2Loss by a factor of 2. Hence we halve
     # the loss value to get L2Loss in TensorFlow
-    animator = d2l.Animator(xlabel='epoch', ylabel='loss',
+    animator = L0CV.Animator(xlabel='epoch', ylabel='loss',
                             xlim=[0, num_epochs], ylim=[0.22, 0.35])
-    n, timer = 0, d2l.Timer()
+    n, timer = 0, L0CV.Timer()
     for _ in range(num_epochs):
         for X, y in data_iter:
             with tf.GradientTape() as g:
@@ -953,7 +953,7 @@ def train_concise_ch11(trainer_fn, hyperparams, data_iter, num_epochs=2):
                 timer.stop()
                 p = n/X.shape[0]
                 q = p/tf.data.experimental.cardinality(data_iter).numpy()
-                r = (d2l.evaluate_loss(net, data_iter, loss)/2,)
+                r = (L0CV.evaluate_loss(net, data_iter, loss)/2,)
                 animator.add(q, r)
                 timer.start()
     print(f'loss: {animator.Y[0][-1]:.3f}, {timer.avg():.3f} sec/epoch')
@@ -967,7 +967,7 @@ def box_corner_to_center(boxes):
     cy = (y1 + y2) / 2
     w = x2 - x1
     h = y2 - y1
-    boxes = d2l.stack((cx, cy, w, h), axis=-1)
+    boxes = L0CV.stack((cx, cy, w, h), axis=-1)
     return boxes
 
 def box_center_to_corner(boxes):
@@ -977,7 +977,7 @@ def box_center_to_corner(boxes):
     y1 = cy - 0.5 * h
     x2 = cx + 0.5 * w
     y2 = cy + 0.5 * h
-    boxes = d2l.stack((x1, y1, x2, y2), axis=-1)
+    boxes = L0CV.stack((x1, y1, x2, y2), axis=-1)
     return boxes
 
 
@@ -987,7 +987,7 @@ def bbox_to_rect(bbox, color):
     # Convert the bounding box (top-left x, top-left y, bottom-right x,
     # bottom-right y) format to matplotlib format: ((upper-left x,
     # upper-left y), width, height)
-    return d2l.plt.Rectangle(
+    return L0CV.plt.Rectangle(
         xy=(bbox[0], bbox[1]), width=bbox[2]-bbox[0], height=bbox[3]-bbox[1],
         fill=False, edgecolor=color, linewidth=2)
 
