@@ -119,6 +119,9 @@
   - 第 1 章 [神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter2/chapter2)
     - 1.1 [反向传播算法](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.2_Back-Propagation.md)
     - 1.2 [多层感知器](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
+      - 1.2.1 基本原理
+      - 1.2.2 从零开始实现多层感知器
+      - 1.2.3 多层感知器的简洁实现
     - 1.3 [神经学观点](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.4_神经学观点.md)
     - 1.4 [神经网络1-建立神经网络架构](https://cs231n.github.io/neural-networks-1/)
     - 1.5 [神经网络2-设置数据和损失](https://cs231n.github.io/neural-networks-2/)
@@ -151,17 +154,35 @@
       - 2.4.4 [PaddlePaddle卷积神经网络源码解析](/docs/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md#274-PaddlePaddle卷积神经网络源码解析)
     - [小结](docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#小结)
     - [参考文献](/docs/1_理论篇/chapter2_CNN/chapter2_CNN.md#参考文献)
-  - 第 3 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
+  - 第 3 章 [图像分类](./docs/1_理论篇/chapter3_Image-Classification/)
     - 3.1 [数据驱动方法](https://cs231n.github.io/classification/)
-    - 3.2 [k 最近邻算法](/docs/1_理论篇/chapter3_Image-Classification/chapter32_knn.md)
-    - 3.3 [线性分类](/docs/1_理论篇/chapter3_Image-Classification/chapter33_line-classification.md)
-      - 3.3.1 [支持向量机](./docs/1_理论篇/chapter3_Image-Classification/chapter3.3.1_支持向量机.md)
-      - 3.3.2 [Softmax 回归](./docs/1_理论篇/chapter3_Image-Classification/chapter3.3.2_Softmax回归.md)
-    - 3.4 [逻辑回归 LR](/docs/1_理论篇/chapter3_Image-Classification/chapter34_Logistic-Regression.md) 
-    - 3.5 [实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
-    - 3.6 [实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
-    - [小结](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/chapter3_Image-Classification.md#小结)
-    - [参考文献](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/chapter3_Image-Classification.md#参考文献)
+      - 3.1.1 语义上的差别
+      - 3.1.2 图像分类任务面临着许多挑战
+      - 3.1.3 数据驱动的方法
+    - 3.2 [k 最近邻算法](./docs/1_理论篇/chapter3_Image-Classification/chapter32_knn.md)
+      - 3.2.1 k 近邻模型
+      - 3.2.2 k 近邻模型三个基本要素
+      - 3.2.3 KNN算法的决策过程
+      - 3.2.4 k 近邻算法Python实现
+      - 小结
+      - 参考文献
+    - 3.3 [支持向量机](./docs/1_理论篇/chapter3_Image-Classification/chapter3.3.1_支持向量机.md)
+      - 3.3.1 概述
+      - 3.3.2 线性支持向量机
+      - 3.3.3 从零开始实现支持向量机
+      - 3.3.4 支持向量机的简洁实现
+    - 3.4 [Softmax 回归](./docs/1_理论篇/chapter3_Image-Classification/chapter3.3.2_Softmax回归.md)
+      - 3.4.1 softmax回归模型
+      - 3.4.2 从零开始实现softmax回归
+      - 3.4.3 softmax回归的简洁实现
+    - 3.5 [逻辑回归 LR](../../../notebooks/07_Logistic_Regression.ipynb)
+      - 3.5.1 逻辑回归模型
+      - 3.5.2 从零开始实现逻辑回归
+      - 3.5.3 逻辑回归的简洁实现
+    - 3.6 [实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
+    - 3.7 [实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
+    - [小结](./docs/1_理论篇/chapter3_Image-Classification/README.md#小结)
+    - [参考文献](./docs/1_理论篇/chapter3_Image-Classification/README.md#参考文献)
   - 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
     - 4.1 [递归神经网络 RNN](/docs/1_理论篇/chapter4_递归神经网络/chapter4.1_递归神经网络.md)
     - 4.2 [循环神经网络的从零开始实现](/docs/1_理论篇/chapter4_递归神经网络/chapter4.2_循环神经网络的从零开始实现.md)
@@ -206,6 +227,14 @@
       - 5.6.5 [零次学习ZSL](https://arxiv.org/pdf/1803.08035.pdf)
     - 小结
     - 参考文献
+  - 第 5 章 [模型选择、欠拟合和过拟合](/notebooks/)
+    - 5.1 [训练误差和泛化误差](/notebooks/)
+    - 5.2 [模型选择](/notebooks/)
+    - 5.3 [欠拟合和过拟合](/notebooks/)
+    - 5.4 [多项式函数拟合实验](/notebooks/)
+    - 5.5 [数值稳定性和模型初始化](/notebooks/)
+    - 小结
+    - 参考文献
   - 第 6 章 [模型拟合与优化算法](/notebooks/chapter06_optimization/)
     - 6.1 [优化与深度学习](/notebooks/chapter06_optimization/6.1_optimization-intro.ipynb)
     - 6.2 [梯度下降和随机梯度下降](/notebooks/chapter06_optimization/6.2_gd-sgd.ipynb)
@@ -239,7 +268,7 @@
     - 6.9 [实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
     - 小结
     - 参考文献
-  - 第 7 章 [经典神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
+  - 第 7 章 [经典卷积神经网络架构：原理与PyTorch实现](https://github.com/Charmve/Semantic-Segmentation-PyTorch)
     - 7.1 [卷积神经网络（LeNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.1%20卷积神经网络（LeNet）.md)
     - 7.2 [深度卷积神经网络（AlexNet）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.2%20深度卷积神经网络（AlexNet）.md)
     - 7.3 [使用重复元素的网络（VGG）](docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.3%20使用重复元素的网络（VGG）.md)
