@@ -101,6 +101,9 @@
 - <b><h4>绪论篇</h4></b>
   - 第 0 章  [计算机视觉概述](https://charmve.github.io/computer-vision-in-action/#/chapter0/chapter0)
     - 0.1 [概述](docs/0_绪论/chapter0.1_概述.md)
+	  - 0.1.1 什么是计算机视觉
+	  - 0.1.2 计算机视觉解决什么问题
+	  - 0.1.3 行业应用
     - 0.2 [计算机视觉基本概念](docs/0_绪论/chapter0.2_计算机视觉基本概念.md)
     - 0.3 [发展历史回顾](docs/0_绪论/chapter0.3_发展历史回顾.md)
     - 0.4 [典型的计算机视觉任务](docs/0_绪论/chapter0.4_典型的计算机视觉任务.md)
@@ -108,7 +111,7 @@
       - 目标识别与目标检测
       - 实例分割与语义分割
       - 3D 建模
-    - 0.5 [国内外优秀的计算机视觉团队汇总](docs/0_绪论/chapter0.5_国内外优秀的计算机视觉团队汇总.md)
+	- 0.5 [国内外优秀的计算机视觉团队汇总](docs/0_绪论/chapter0.5_国内外优秀的计算机视觉团队汇总.md)
     - 小练习
     - 小结
     - 参考文献
@@ -203,15 +206,15 @@
       - 5.6.5 [零次学习ZSL](https://arxiv.org/pdf/1803.08035.pdf)
     - 小结
     - 参考文献
-  - 第 6 章 [模型拟合与优化算法]()
-    - 6.1 优化与深度学习
-    - 6.2 梯度下降和随机梯度下降
-    - 6.3 小批量随机梯度下降
-    - 6.4 动量法
-    - 6.5 AdaGrad算法
-    - 6.6 RMSProp算法
-    - 6.7 AdaDelta算法
-    - 6.8 Adam算法
+  - 第 6 章 [模型拟合与优化算法](/notebooks/chapter06_optimization/)
+    - 6.1 [优化与深度学习](/notebooks/chapter06_optimization/6.1_optimization-intro.ipynb)
+    - 6.2 [梯度下降和随机梯度下降](/notebooks/chapter06_optimization/6.2_gd-sgd.ipynb)
+    - 6.3 [小批量随机梯度下降](/notebooks/chapter06_optimization/6.3_minibatch-sgd.ipynb)
+    - 6.4 [动量法](/notebooks/chapter06_optimization/6.4_momentum.ipynb)
+    - 6.5 [AdaGrad算法](/notebooks/chapter06_optimization/6.5_adagrad.ipynb)
+    - 6.6 [RMSProp算法](/notebooks/chapter06_optimization/6.6_rmsprop.ipynb)
+    - 6.7 [AdaDelta算法](/notebooks/chapter06_optimization/6.7_adadelta.ipynb)
+    - 6.8 [Adam算法](/notebooks/chapter06_optimization/6.8_adam.ipynb)
     - 小结
     - 参考文献
 - <b><h4>实战篇</h4></b>
@@ -484,7 +487,7 @@ python3 setup.py
 ```
 3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
 
-## 🔍 文件浏览
+## 🔍 仓库文件浏览
 - 📁 <code>L0CV/</code> - 专为本项目建立的 L0CV 包 
 - 📁 <code>code/</code> - 书中完整代码
 - 📁 <code>datasets/</code> - 本书所用数据集
@@ -511,19 +514,20 @@ python3 setup.py
   - ...
   - 📄 <code>16_CVAE.ipynb</code> - 卷积变分自编码器
   - 📄 <code>17_TL-ants-bees-classification.ipynb</code>  - 迁移学习的应用：蚂蚁和蜜蜂的分类问题
+- 📁 <code>docker/</code> - 为降低读者的学习成本，目前未进行搭建
 - 📁 <code>res/</code> - ui 图片及全书思维导图PDF
 - 📄 <code>README.md</code> - 全书介绍及目录
 
 
 ## 常见问题
 
-- **在线教程页面无法打开**: 
+- **在线教程页面无法打开**：
 
     测试中存在部分人打不开在线教程的情况。
 
     部分小伙伴反馈尝试切换浏览器后可以正常打开了，如果仍然不行，最有效的解决办法是科学上网。
 
-- **无法加载图片的解决办法**: 
+- **无法加载图片的解决办法**：
 
     根本解决办法还是科学上网，也可以尝试修改host文件看下是否能解决。
 
