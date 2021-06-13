@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../res/ui/book_framework.png" alt="book_framework">
+  <img src="../res/ui/book_framwork.png" alt="book_framework">
 </p> 
 
 <p align="right">
@@ -54,7 +54,7 @@
 
 ### 内容和结构
 
-全书大致可分为三个部分，在 :numref:`fig_book_org` 中用不同的颜色呈现：
+全书大致可分为三个部分，在 :numref:`fig_book_org` 中框图呈现：
 
 :label: `fig_book_org`
 
@@ -79,6 +79,10 @@
 ### 代码
 
 :label:`sec_code`
+
+<p align="center">
+  <img src="../res/ui/L0CV.png" alt="book_framework">
+</p> 
 
 **本书的大部分章节都以可执行代码为特色**，因为我们相信交互式学习体验在深度学习中的重要性。目前，某些直觉只能通过试错、小幅调整代码并观察结果来发展。理想情况下，一个优雅的数学理论可能会精确地告诉我们如何调整代码以达到期望的结果。不幸的是，这种优雅的理论目前还没有出现。尽管我们尽了最大努力，但仍然缺乏对各种技术的正式解释，这既是因为描述这些模型的数学可能非常困难，也是因为对这些主题的认真研究最近才进入高潮。我们希望随着深度学习理论的发展，这本书的未来版本将能够在当前版本无法提供的地方提供见解。
 
