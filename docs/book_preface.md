@@ -1,3 +1,11 @@
+<p align="center">
+  <img src="../res/ui/book_framework.png" alt="book_framework">
+</p> 
+
+<p align="right">
+:label: `fig_book_framework`
+</p> 
+
 # 序言
 
 就在过去的七八年时间里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。而计算机视觉又是受益颇深的一个领域，在诸多场景下收到了很好的效果。
