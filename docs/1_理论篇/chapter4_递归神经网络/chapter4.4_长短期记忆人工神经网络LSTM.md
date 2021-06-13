@@ -127,10 +127,10 @@ import torch.nn.functional as F
 
 import sys
 sys.path.append("..") 
-import d2lzh_pytorch as d2l
+import L0CV
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-(corpus_indices, char_to_idx, idx_to_char, vocab_size) = d2l.load_data_jay_lyrics()
+(corpus_indices, char_to_idx, idx_to_char, vocab_size) = L0CV.load_data_jay_lyrics()
 ```
 
 ### 4.4.3 从零开始实现
@@ -206,7 +206,7 @@ pred_period, pred_len, prefixes = 40, 50, ['分开', '不分开']
 我们每过40个迭代周期便根据当前训练的模型创作一段歌词。
 
 ``` python
-d2l.train_and_predict_rnn(lstm, get_params, init_lstm_state, num_hiddens,
+L0CV.train_and_predict_rnn(lstm, get_params, init_lstm_state, num_hiddens,
                           vocab_size, device, corpus_indices, idx_to_char,
                           char_to_idx, False, num_epochs, num_steps, lr,
                           clipping_theta, batch_size, pred_period, pred_len,
@@ -235,8 +235,8 @@ epoch 160, perplexity 4.274031, time 1.35 sec
 ``` python
 lr = 1e-2 # 注意调整学习率
 lstm_layer = nn.LSTM(input_size=vocab_size, hidden_size=num_hiddens)
-model = d2l.RNNModel(lstm_layer, vocab_size)
-d2l.train_and_predict_rnn_pytorch(model, num_hiddens, vocab_size, device,
+model = L0CV.RNNModel(lstm_layer, vocab_size)
+L0CV.train_and_predict_rnn_pytorch(model, num_hiddens, vocab_size, device,
                                 corpus_indices, idx_to_char, char_to_idx,
                                 num_epochs, num_steps, lr, clipping_theta,
                                 batch_size, pred_period, pred_len, prefixes)
