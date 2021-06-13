@@ -29,7 +29,7 @@
 
 ------
 
-<a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb\"><img src="https://colab.research.google.com/assets/colab-badge.svg\" ></a> <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb\"><img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter\"></a>
+<a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb\"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb\"><img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter"></a>
 
 ## 12.3.3 样式迁移
 
