@@ -33,7 +33,7 @@
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/Gated_Recurrent_Units.ipynb">
-        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+        <img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter" align="center" alt="Open in Colab">
     </a>
 </p>
 
