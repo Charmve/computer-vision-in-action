@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from setuptools import setup, find_packages
 import L0CV
 
@@ -20,9 +22,9 @@ setup(
     python_requires='>=3.5',
     author='ZHANG WEI (Charmve)',
     author_email='yidazhang1@gmail.com',
-    url='',
+    url='https://github.com/Charmve/computer-vision-in-action',
     description='Computer Vision in Action',
-    license='MIT-0',
+    license='GPL2.0',
     packages=find_packages(),
     zip_safe=True,
     install_requires=requirements,
