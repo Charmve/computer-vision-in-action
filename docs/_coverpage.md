@@ -10,4 +10,4 @@
 <br>
 
 [GitHub](https://github.com/Charmve/computer-vision-in-action)
-[Get Started](http://0.0.0.0:3000/#/?id=l0cv-computer-vision-in-action)
+[Get Started](https://charmve.github.io/computer-vision-in-action/#/?id=一种结合了代码、数据集和HTML的数字学习媒介)

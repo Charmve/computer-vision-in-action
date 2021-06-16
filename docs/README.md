@@ -1,4 +1,3 @@
-
 <h3> 一种结合了代码、数据集和HTML的数字学习媒介</h3>
 <br>
 
@@ -29,7 +28,7 @@
 </table>
 
 ### 全书组织
-:label: `fig_book_org`
+🏷️ `fig_book_org`
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/book_org.png" width=80% alt="book_org.png">

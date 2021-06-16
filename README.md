@@ -48,10 +48,10 @@
 <br>
 
 > <h4>在线阅读（内容实时更新）</h4>
-> - 地址：~~https://charmve.github.io/computer-vision-in-action~~ (正在开发中。。。)
+> - 地址：https://charmve.github.io/computer-vision-in-action/
 
 > <h4>最新版PDF下载</h4>
-> - 地址：~~https://github.com/charmve/computer-vision-in-action/releases~~
+> - 地址：~~https://github.com/charmve/computer-vision-in-action/releases~~ (马上来 ...)
 
 </tr>
 </td>
