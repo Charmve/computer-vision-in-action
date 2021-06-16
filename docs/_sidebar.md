@@ -2,7 +2,7 @@
 - <b><h4>主要符号表</h4></b>
 - <b><h4>绪论篇</h4></b>
   - [第 0 章  计算机视觉概述](/0_绪论/README.md)
-    - [0.1 概述](docs/0_绪论/chapter0.1_概述.md)
+    - [0.1 概述](/0_绪论/chapter0.1_概述.md)
       - 0.1.1 什么是计算机视觉
       - 0.1.2 计算机视觉解决什么问题
       - 0.1.3 行业应用
@@ -18,7 +18,7 @@
     - 小结
     - 参考文献
 - <b><h4>理论篇</h4></b>
-  - [第 1 章 神经网络](/1_理论篇/chapter1_Neural-Networks/chapter1_Neural-Networks/README.md)
+  - [第 1 章 神经网络](/1_理论篇/chapter1_Neural-Networks/README.md)
     - [1.1 反向传播算法](/1_理论篇/chapter1_Neural-Networks/chapter1.2_Back-Propagation.md)
     - [1.2 多层感知器](/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
       - 1.2.1 基本原理
@@ -36,7 +36,7 @@
     - [2.1 从神经网络到卷积神经网络](/1_理论篇/chapter2_CNN//chapter2_CNN.md#21-从神经网络到卷积神经网络)
     - [2.2 卷积网络的层级结构](/1_理论篇/chapter2_CNN/chapter2_CNN.md#22-卷积网络的层级结构)
     - [2.3 卷积神经网络的几点说明](/1_理论篇/chapter2_CNN/chapter2_CNN.md#23-卷积神经网络的几点说明)
-    - [2.4 实战项目 2 - 动手搭建一个卷积神经网络](/1_理论篇/chapter2_CNN-in-Action.md)
+    - [2.4 实战项目 2 - 动手搭建一个卷积神经网络](/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
     - 小结
     - 参考文献
   - [第 3 章 图像分类](/1_理论篇/chapter3_Image-Classification/README.md)
@@ -51,12 +51,12 @@
       - 3.2.4 k 近邻算法Python实现
       - 小结
       - 参考文献
-    - [3.3 支持向量机](./1_理论篇/chapter3_Image-Classification/chapter3.3.1_支持向量机.md)
+    - [3.3 支持向量机](./1_理论篇/chapter3_Image-Classification/chapter3.3_支持向量机.md)
       - 3.3.1 概述
       - 3.3.2 线性支持向量机
       - 3.3.3 从零开始实现支持向量机
       - 3.3.4 支持向量机的简洁实现
-    - [3.4 Softmax 回归](./1_理论篇/chapter3_Image-Classification/chapter3.3.2_Softmax回归.md)
+    - [3.4 Softmax 回归](./1_理论篇/chapter3_Image-Classification/chapter3.4_Softmax回归.md)
       - 3.4.1 softmax回归模型
       - 3.4.2 从零开始实现softmax回归
       - 3.4.3 softmax回归的简洁实现
@@ -160,12 +160,12 @@
     - 小结
     - 参考文献
   - [第 8 章 著名数据集及基准](/3_进阶篇/chapter11-可视化和理解/README.md)
-    - [8.1 数据集](/3_进阶篇/chapter11-可视化和理解chapter8.1_著名数据集.md)
+    - [8.1 数据集](/3_进阶篇/chapter11-可视化和理解/chapter8.1_著名数据集.md)
         - 8.1.1 常见数据集
         - 8.1.2 Pytorch数据集及读取方法简介
         - 8.1.3 数据增强简介
     - [8.2 基准测试](/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
-    - [8.3 评价指标](/chapter8.3_评价指标.md)
+    - [8.3 评价指标]/2_实战篇/chapter8_著名数据集及基准/(/chapter8.3_评价指标.md)
     - [8.4 实战项目 6 - Kaggle比赛：图像分类（CIFAR-10）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
     - [8.5 实战项目 7 - Kaggle比赛：狗的品种识别（ImageNet Dogs）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
