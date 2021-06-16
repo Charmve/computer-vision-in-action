@@ -1,9 +1,11 @@
-### 一种结合了代码、数据集和HTML的数字学习媒介
+
+<h3> 一种结合了代码、数据集和HTML的数字学习媒介</h3>
 <br>
 
 <table align="center">
 <tr>
 <td>
+<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" align="left" alt="L0CV" width="120" title="有疑问，跑起来就会变成一朵花 ❀"/>
 <code>全面</code>&nbsp;<code>前沿</code>&nbsp;<code>免费</code>
 <h1> 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
 <br><em>Computer Vision in Action</em></h1>
@@ -19,16 +21,16 @@
 </p>
 
 <div align="center">
-	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" width="220px" alt="logo:maiwei" title="有疑问，跑起来就会变成一朵花 ❀">
+	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/L0CV.png" alt="L0CV architecture">
 </div>
 
 <br>
 
 > <h4>在线阅读（内容实时更新）</h4>
-> - 地址：~~https://charmve.github.io/computer-vision-in-action~~ (正在开发中。。。)
+> - 地址：https://charmve.github.io/computer-vision-in-action/docs/#/
 
 > <h4>最新版PDF下载</h4>
-> - 地址：~~https://github.com/charmve/computer-vision-in-action/releases~~
+> - 地址：~~https://github.com/charmve/computer-vision-in-action/releases~~ （马上就来。。。）
 
 </tr>
 </td>
@@ -88,6 +90,8 @@
     GitHub中的Markdown原生是不支持LATEX公式显示的，如果你喜欢在本项目中直接浏览教程，可以安装Chrome的`MathJax Plugin for Github`插件让大部分公式正常显示。而docs文件夹已经利用docsify被部署到了GitHub Pages上，包含公式的章节强力建议使用 [《计算机视觉实战演练：算法与应用》 在线阅读](https://charmve.github.io/computer-vision-in-action) 进行学习。
     
     当然如果你还想跑一下运行相关代码的话还是得把本项目clone下来，然后运行code文件夹下相关代码。
+
+- **Jupyter Notebook 无法在 GitHub 上呈现？** [使用 nbviewer](https://leaherb.com/notebook_wont_render_use_nbviewer/)。
 
 ## 致谢
 

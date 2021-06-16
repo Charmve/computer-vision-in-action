@@ -6,7 +6,7 @@
 
 ## 目录
 
-  - [第 15 章 迁移学习](https://charmve.github.io/computer-vision-in-action/#/chapter15/chapter15)
+  - 第 15 章 迁移学习
     - [15.1 概述](#151-迁移学习概述)
       - [15.1.1 背景](#1511-背景)
       - [15.1.2 定义及分类](#1512-定义及分类)

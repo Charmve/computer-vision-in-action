@@ -11,7 +11,7 @@
       - 19.3.1 前向神经网络中的BN
       - 19.3.2 CNN网络中的BN
       - 19.3.3 Batch Norm的四大罪状
-    - 19.4 Layer Normalization、Instance Normalization及Group Normalization
+    - 19.4 三种 Normalization
       - 19.4.1 Layer Normalization
       - 19.4.2 Instance Normalization
       - 19.4.3 Group Normalization

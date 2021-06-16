@@ -8,7 +8,7 @@
 
 # 第 3 章 图像分类
 
-- 第 3 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
+- 第 3 章 图像分类
     - 3.1 [数据驱动方法](https://cs231n.github.io/classification/)
       - 3.1.1 语义上的差别
       - 3.1.2 图像分类任务面临着许多挑战
@@ -20,12 +20,12 @@
       - 3.2.4 k 近邻算法Python实现
       - 小结
       - 参考文献
-    - 3.3 [支持向量机](./docs/1_理论篇/chapter3_Image-Classification/chapter3.3.1_支持向量机.md)
+    - 3.3 [支持向量机](chapter3.3.1_支持向量机.md)
       - 3.3.1 概述
       - 3.3.2 线性支持向量机
       - 3.3.3 从零开始实现支持向量机
       - 3.3.4 支持向量机的简洁实现
-    - 3.4 [Softmax 回归](./docs/1_理论篇/chapter3_Image-Classification/chapter3.3.2_Softmax回归.md)
+    - 3.4 [Softmax 回归](chapter3.3.2_Softmax回归.md)
       - 3.4.1 softmax回归模型
       - 3.4.2 从零开始实现softmax回归
       - 3.4.3 softmax回归的简洁实现
