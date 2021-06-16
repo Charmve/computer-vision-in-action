@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="../res/ui/book_framwork.png" alt="book_framework">
+  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/book_framwork.png" alt="book_framework">
 </p> 
 
 <p align="right">
-:label: `fig_book_framework`
+🏷️ `fig_book_framework`
 </p> 
 
 # 序言
@@ -56,14 +56,14 @@
 
 全书大致可分为三个部分，在 :numref:`fig_book_org` 中框图呈现：
 
-:label: `fig_book_org`
+🏷️ `fig_book_org`
 
 <p align="center">
-  <img src="../res/ui/book_org.png" alt="book_org.png">
+  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/book_org.png" alt="book_org.png">
 </p> 
 
 <p align="right">
-  <a href="../res/计算机视觉实战演练：算法与应用_思维导图.pdf">全书详细思维导图</a>
+  <a href="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/计算机视觉实战演练：算法与应用_思维导图.pdf">全书详细思维导图</a>
 </p>
 
 * 第一部分包括基础知识和预备知识。chap_introduction 提供深度学习的入门课程。然后在 chap_preliminaries 中，将快速向你介绍实践计算机视觉所需的前提条件，例如如何存储和处理数据，以及如何应用基于线性代数、微积分和概率基本概念的各种数值运算，涵盖了深度学习的最基本概念和技术，例如线性回归、多层感知机和正则化。
@@ -78,10 +78,10 @@
 
 ### 代码
 
-:label:`sec_code`
+🏷️ `sec_code`
 
 <p align="center">
-  <img src="../res/ui/L0CV.png" alt="book_framework">
+  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/L0CV.png" alt="book_framework">
 </p> 
 
 **本书的大部分章节都以可执行代码为特色**，因为我们相信交互式学习体验在深度学习中的重要性。目前，某些直觉只能通过试错、小幅调整代码并观察结果来发展。理想情况下，一个优雅的数学理论可能会精确地告诉我们如何调整代码以达到期望的结果。不幸的是，这种优雅的理论目前还没有出现。尽管我们尽了最大努力，但仍然缺乏对各种技术的正式解释，这既是因为描述这些模型的数学可能非常困难，也是因为对这些主题的认真研究最近才进入高潮。我们希望随着深度学习理论的发展，这本书的未来版本将能够在当前版本无法提供的地方提供见解。
