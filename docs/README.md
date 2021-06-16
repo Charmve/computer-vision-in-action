@@ -7,8 +7,8 @@
 
 <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/maiwei.png" align="left" alt="L0CV" width="120" title="有疑问，跑起来就会变成一朵花 ❀"/>
 <code>全面</code>&nbsp;<code>前沿</code>&nbsp;<code>免费</code>
-# 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
-<br><em>Computer Vision in Action</em>
+<h1> 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
+<br><em>Computer Vision in Action</em></h1>
 
 <br>
 <p align="left">
