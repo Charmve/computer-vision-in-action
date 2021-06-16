@@ -22,31 +22,16 @@
 <body>
   <div id="app"></div>
   <script>
-    var num = 0;
-    mermaid.initialize({ startOnLoad: false });
-
     window.$docsify = {
       name: '计算机视觉实战演练 L0CV',
       loadSidebar: true,
       subMaxLevel: 2,
       auto2top: true,
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
+        '/.*/_sidebar.md': '/docs/_sidebar.md'
       },
       coverpage: true,
       repo: 'https://github.com/Charmve/computer-vision-in-action',
-      markdown: {
-        renderer: {
-          code: function(code, lang) {
-            if (lang === "mermaid") {
-              return (
-                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
-              );
-            }
-            return this.origin.code.apply(this, arguments);
-          }
-        }
-      }
     }
   </script>
 
@@ -59,9 +44,8 @@
   />
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-
   <!-- full text search-->
+  
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 
   <!-- Copy to Clipboard-->
