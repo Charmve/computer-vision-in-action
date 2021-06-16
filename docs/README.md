@@ -1,4 +1,4 @@
-<h3> 一种结合了代码、数据集和HTML的数字学习媒介</h3>
+### 一种结合了代码、数据集和HTML的数字学习媒介
 <br>
 
 <table align="center">
@@ -7,8 +7,8 @@
 
 <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/maiwei.png" align="left" alt="L0CV" width="120" title="有疑问，跑起来就会变成一朵花 ❀"/>
 <code>全面</code>&nbsp;<code>前沿</code>&nbsp;<code>免费</code>
-<h1> 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
-<br><em>Computer Vision in Action</em></h1>
+# 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
+<br><em>Computer Vision in Action</em>
 
 <br>
 <p align="left">
@@ -50,7 +50,7 @@
 
 * 第三部分讨论最近几年出现的“网红”模型，诸如：Transformer、Attention、知识蒸馏、迁移学习、生成对抗模型等。这部分也是此份资料的力挺之作。首先，在 `chap_optimization` 中，我们讨论了用于训练深度学习模型的几种常用优化算法。
 
-<h3> 部分章节还在完善中，谢谢支持！</h3>
+### 部分章节还在完善中，谢谢支持！
 
 ## 愿景
 
