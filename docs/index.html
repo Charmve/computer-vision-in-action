@@ -22,9 +22,6 @@
 <body>
   <div id="app"></div>
   <script>
-    var num = 0;
-    mermaid.initialize({ startOnLoad: false });
-
     window.$docsify = {
       name: '计算机视觉实战演练 L0CV',
       loadSidebar: true,
@@ -35,18 +32,6 @@
       },
       coverpage: true,
       repo: 'https://github.com/Charmve/computer-vision-in-action',
-      markdown: {
-        renderer: {
-          code: function(code, lang) {
-            if (lang === "mermaid") {
-              return (
-                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
-              );
-            }
-            return this.origin.code.apply(this, arguments);
-          }
-        }
-      }
     }
   </script>
 
