@@ -6,7 +6,7 @@
       - 0.1.1 什么是计算机视觉
       - 0.1.2 计算机视觉解决什么问题
       - 0.1.3 行业应用
-    - [0.2 计算机视觉基本概念](/0_绪论/chapter0.2_计算机视觉基本概念.md)
+    - [0.2 计算机视觉基本概念](/0_绪论/chapter0.2_基本概念辨析.md)
     - [0.3 发展历史回顾](/0_绪论/chapter0.3_发展历史回顾.md)
     - [0.4 典型的计算机视觉任务](/0_绪论/chapter0.4_典型的计算机视觉任务.md)
       - 0.4.1 图像分类 
@@ -18,13 +18,13 @@
     - 小结
     - 参考文献
 - <b><h4>理论篇</h4></b>
-  - [第 1 章 神经网络](/1_理论篇/chapter1_Neural-Networks/README.md)
-    - [1.1 反向传播算法](/1_理论篇/chapter1.2_Back-Propagation.md)
-    - [1.2 多层感知器](/1_理论篇/chapter1.3_多层感知器MLP.md)
+  - [第 1 章 神经网络](/1_理论篇/chapter1_Neural-Networks/chapter1_Neural-Networks/README.md)
+    - [1.1 反向传播算法](/1_理论篇/chapter1_Neural-Networks/chapter1.2_Back-Propagation.md)
+    - [1.2 多层感知器](/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
       - 1.2.1 基本原理
       - 1.2.2 从零开始实现多层感知器
       - 1.2.3 多层感知器的简洁实现
-    - [1.3 神经学观点](/1_理论篇/chapter1.4_神经学观点.md)
+    - [1.3 神经学观点](/1_理论篇/chapter1_Neural-Networks/chapter1.4_神经学观点.md)
     - [1.4 神经网络1-建立神经网络架构](https://cs231n.github.io/neural-networks-1/)
     - [1.5 神经网络2-设置数据和损失](https://cs231n.github.io/neural-networks-2/)
     - [1.6 神经网络3-学习和评估](https://cs231n.github.io/neural-networks-3/)
@@ -34,9 +34,9 @@
     - 参考文献
   - [第 2 章 卷积神经网络](/1_理论篇/chapter2_CNN/README.md)
     - [2.1 从神经网络到卷积神经网络](/1_理论篇/chapter2_CNN//chapter2_CNN.md#21-从神经网络到卷积神经网络)
-    - [2.2 卷积网络的层级结构](/1_理论篇/chapter2_CNN//chapter2_CNN.md#22-卷积网络的层级结构)
-    - [2.3 卷积神经网络的几点说明](/1_理论篇/chapter2_CNN//chapter2_CNN.md#23-卷积神经网络的几点说明)
-    - [2.4 实战项目 2 - 动手搭建一个卷积神经网络](/1_理论篇//chapter2_CNN-in-Action.md)
+    - [2.2 卷积网络的层级结构](/1_理论篇/chapter2_CNN/chapter2_CNN.md#22-卷积网络的层级结构)
+    - [2.3 卷积神经网络的几点说明](/1_理论篇/chapter2_CNN/chapter2_CNN.md#23-卷积神经网络的几点说明)
+    - [2.4 实战项目 2 - 动手搭建一个卷积神经网络](/1_理论篇/chapter2_CNN-in-Action.md)
     - 小结
     - 参考文献
   - [第 3 章 图像分类](/1_理论篇/chapter3_Image-Classification/README.md)

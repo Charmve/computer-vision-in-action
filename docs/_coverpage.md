@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" width="60px" alt="L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
+	<img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/maiwei.png" width="60px" alt="L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
 </div>
 
 # 计算机视觉实战演练

@@ -5,14 +5,14 @@
 <table align="center">
 <tr>
 <td>
-<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" align="left" alt="L0CV" width="120" title="有疑问，跑起来就会变成一朵花 ❀"/>
+
+<img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/maiwei.png" align="left" alt="L0CV" width="120" title="有疑问，跑起来就会变成一朵花 ❀"/>
 <code>全面</code>&nbsp;<code>前沿</code>&nbsp;<code>免费</code>
 <h1> 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
 <br><em>Computer Vision in Action</em></h1>
 
-作者：张伟（Charmve）
-
-<p align="center">
+<br>
+<p align="left">
   <a href="https://github.com/Charmve"><img src="https://img.shields.io/badge/作者-@Charmve-000000.svg?logo=GitHub" alt="GitHub"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://img.shields.io/badge/CV-Action-yellow" alt="CV-Action"></a>
   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a>
@@ -21,16 +21,8 @@
 </p>
 
 <div align="center">
-	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/L0CV.png" alt="L0CV architecture">
+	<img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/L0CV.png" width=60% alt="L0CV architecture">
 </div>
-
-<br>
-
-> <h4>在线阅读（内容实时更新）</h4>
-> - 地址：https://charmve.github.io/computer-vision-in-action/docs/#/
-
-> <h4>最新版PDF下载</h4>
-> - 地址：~~https://github.com/charmve/computer-vision-in-action/releases~~ （马上就来。。。）
 
 </tr>
 </td>
@@ -40,7 +32,7 @@
 :label: `fig_book_org`
 
 <p align="center">
-  <img src="../res/ui/book_org.png" alt="book_org.png">
+  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/book_org.png" width=80% alt="book_org.png">
 </p> 
 
 <p align="right">
@@ -58,6 +50,8 @@
 * 该部分以项目为实战指导，给出详细的项目指导书和代码实现，更为特别的是，给出了**notebook**可以直接在线运行，跑通结果，免去了本地运行环境的搭建复杂性。于此同时，为了方便读者在本地调试，作者建立了一个名为 L0CV 的第三方包，可以直接在代码中 ``import L0CV`` 后使用。
 
 * 第三部分讨论最近几年出现的“网红”模型，诸如：Transformer、Attention、知识蒸馏、迁移学习、生成对抗模型等。这部分也是此份资料的力挺之作。首先，在 `chap_optimization` 中，我们讨论了用于训练深度学习模型的几种常用优化算法。
+
+<h3> 部分章节还在完善中，谢谢支持！</h3>
 
 ## 愿景
 
@@ -95,11 +89,11 @@
 
 ## 致谢
 
-<a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
+<a href="https://maiweiai.github.io/"><img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
 
 ## 参考文献
 
---> Go to see [<b>REFERENCE.md</b>](docs/REFERENCE.md), &nbsp; 感谢前人的杰出工作，我才得以写出此书。
+感谢前人的杰出工作，我才得以写出此书。点击[<b>这里</b>](REFERENCE.md)，查看全部参考文献列表
 
 ## 关注我们
 <div align=center>
