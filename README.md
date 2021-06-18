@@ -33,7 +33,7 @@
 
 <p align="center">
   <a href="https://github.com/Charmve"><img src="https://img.shields.io/badge/作者-@Charmve-000000.svg?logo=GitHub" alt="GitHub"></a>
-  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://img.shields.io/badge/CV-Action-yellow" alt="CV-Action"></a>
+  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://img.shields.io/badge/CV-in%20Action-yellow" alt="CV-Action"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/code/"><img src="https://img.shields.io/badge/-@PyTorch-000000.svg?logo=PyTorch" alt="PyTorch"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/notebooks/"><img src="https://img.shields.io/badge/-@NoteBook-000000.svg?logo=jupyter" alt="jupyter"></a>
   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a>
