@@ -6,6 +6,15 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
+<p align="center">
+  <img src="../../../res/ui/image_classification.png" alt="image_classification">
+</p> 
+
+<p align="right">
+:label: ``fig_image_classification``
+</p> 
+
+
 # 第 7 章 经典卷积神经网络架构：原理与PyTorch实现
 
 作者: 张伟 (Charmve)
