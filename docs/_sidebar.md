@@ -1,3 +1,4 @@
+- <b><h4>[简介]()</h4></b>
 - <b><h4>[序言](book_preface.md)</h4></b>
 - <b><h4>主要符号表</h4></b>
 - <b><h4>绪论篇</h4></b>
@@ -165,7 +166,7 @@
         - 8.1.2 Pytorch数据集及读取方法简介
         - 8.1.3 数据增强简介
     - [8.2 基准测试](/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
-    - [8.3 评价指标]/2_实战篇/chapter8_著名数据集及基准/(/chapter8.3_评价指标.md)
+    - [8.3 评价指标]/2_实战篇/chapter8_著名数据集及基准/chapter8.3_评价指标.md)
     - [8.4 实战项目 6 - Kaggle比赛：图像分类（CIFAR-10）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
     - [8.5 实战项目 7 - Kaggle比赛：狗的品种识别（ImageNet Dogs）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结

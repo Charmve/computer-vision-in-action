@@ -81,7 +81,7 @@
 🏷️ `sec_code`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/L0CV.png" alt="book_framework">
+  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/L0CV.png" alt="book_framework" width=60%>
 </p> 
 
 **本书的大部分章节都以可执行代码为特色**，因为我们相信交互式学习体验在深度学习中的重要性。目前，某些直觉只能通过试错、小幅调整代码并观察结果来发展。理想情况下，一个优雅的数学理论可能会精确地告诉我们如何调整代码以达到期望的结果。不幸的是，这种优雅的理论目前还没有出现。尽管我们尽了最大努力，但仍然缺乏对各种技术的正式解释，这既是因为描述这些模型的数学可能非常困难，也是因为对这些主题的认真研究最近才进入高潮。我们希望随着深度学习理论的发展，这本书的未来版本将能够在当前版本无法提供的地方提供见解。
@@ -111,21 +111,6 @@ L0CV = sys.modules[__name__]
 ```
 
 下面是我们如何从PyTorch导入模块。
-:end_tab:
-
-:begin_tab:`tensorflow`
-本书中的大部分代码都是基于TensorFlow的。TensorFlow是一个开源的深度学习框架，在研究界和产业界都非常受欢迎。本书中的所有代码都在最新版本的TensorFlow下通过了测试。但是，由于深度学习的快速发展，一些在印刷版中代码可能在TensorFlow的未来版本无法正常工作。
-
-但是，我们计划使在线版本保持最新。如果你遇到任何此类问题，请查看 :ref:`chap_installation` 以更新你的代码和运行时环境。
-
-下面是我们如何从TensorFlow导入模块。
-:end_tab:
-
-```{.python .input}
-#@save
-from mxnet import autograd, context, gluon, image, init, np, npx
-from mxnet.gluon import nn, rnn
-```
 
 ```{.python .input}
 #@tab pytorch
@@ -140,6 +125,13 @@ from torchvision import transforms
 from PIL import Image
 ```
 
+`tensorflow`
+本书中的大部分代码都是基于TensorFlow的。TensorFlow是一个开源的深度学习框架，在研究界和产业界都非常受欢迎。本书中的所有代码都在最新版本的TensorFlow下通过了测试。但是，由于深度学习的快速发展，一些在印刷版中代码可能在TensorFlow的未来版本无法正常工作。
+
+但是，我们计划使在线版本保持最新。如果你遇到任何此类问题，请查看 `chap_installation` 以更新你的代码和运行时环境。
+
+下面是我们如何从TensorFlow导入模块。
+
 ```{.python .input}
 #@tab tensorflow
 #@save
@@ -149,7 +141,7 @@ import tensorflow as tf
 
 ### 目标受众
 
-本书面向学生（本科生或研究生）、工程师和研究人员，他们希望扎实掌握深度学习的实用技术。因为我们从头开始解释每个概念，所以不需要过往的深度学习或机器学习背景。全面解释深度学习的方法需要一些数学和编程，但我们只假设你了解一些基础知识，包括线性代数、微积分、概率和非常基础的Python编程。此外，在附录中，我们提供了本书所涵盖的大多数数学知识的复习。大多数时候，我们会优先考虑直觉和想法，而不是数学的严谨性。有许多很棒的书可以引导感兴趣的读者走得更远。Bela Bollobas的《线性分析》 :cite:`Bollobas.1999` 对线性代数和函数分析进行了深入的研究。 :cite:`Wasserman.2013` 是一本很好的统计学指南。如果你以前没有使用过Python语言，那么你可能想要仔细阅读这个[Python教程](http://learnpython.org/)。
+本书面向学生（本科生或研究生）、工程师和研究人员，他们希望扎实掌握深度学习的实用技术。因为我们从头开始解释每个概念，所以不需要过往的深度学习或机器学习背景。全面解释深度学习的方法需要一些数学和编程，但我们只假设你了解一些基础知识，包括线性代数、微积分、概率和非常基础的Python编程。此外，在附录中，我们提供了本书所涵盖的大多数数学知识的复习。大多数时候，我们会优先考虑直觉和想法，而不是数学的严谨性。有许多很棒的书可以引导感兴趣的读者走得更远。Bela Bollobas的《线性分析》 `Bollobas.1999` 对线性代数和函数分析进行了深入的研究。 `Wasserman.2013` 是一本很好的统计学指南。如果你以前没有使用过Python语言，那么你可能想要仔细阅读这个[Python教程](http://learnpython.org/)。
 
 ### 论坛
 

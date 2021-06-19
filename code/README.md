@@ -11,7 +11,7 @@
 :label:`sec_code`
 
 <p align="center">
-  <img src="../res/ui/L0CV.png" alt="L0CV architecture">
+  <img src="../res/ui/L0CV.png" width=60% alt="L0CV architecture">
 </p> 
 
 1. Install
@@ -25,6 +25,7 @@ python3 setup.py
 3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
 
 ## 示例
+
 
 ```python
 

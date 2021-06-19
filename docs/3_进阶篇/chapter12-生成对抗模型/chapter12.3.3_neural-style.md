@@ -78,7 +78,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 ``` python
 L0CV.set_figsize()
 content_img = Image.open('../../../datasets/images/rainier.jpg')
-L0CV.plt.imshow(content_img);
+L0CV.plt.imshow(content_img)
 ```
 <div align=center>
 <img width="400" src="../../imgs/chapter12/9.11_output1.png"/>
@@ -87,7 +87,7 @@ L0CV.plt.imshow(content_img);
 ``` python
 L0CV.set_figsize()
 style_img = Image.open('../../../datasets/images/autumn_oak.jpg')
-L0CV.plt.imshow(style_img);
+L0CV.plt.imshow(style_img)
 ```
 <div align=center>
 <img width="400" src="../../imgs/chapter12/9.11_output2.png"/>
