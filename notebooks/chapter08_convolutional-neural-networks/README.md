@@ -3,7 +3,7 @@
 </p> 
 
 <p align="right">
-:label: `fig_image_classification`
+:label: ``fig_image_classification``
 </p> 
 
 # 第 2 章 卷积神经网络
