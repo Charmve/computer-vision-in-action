@@ -75,12 +75,15 @@
   
   <script>
     const gitalk = new Gitalk({
+      id: decodeURI('{{ page.url }}'),
       clientID: 'c41595e0999dd2834af4',
       clientSecret: '4ad47f16f60a04c2870a1939406a6ad87bf219ec',
       repo: 'computer-vision-in-action',
       owner: 'Charmve',
       admin: ['Charmve'],
       // facebook-like distraction free mode
+      labels: ['Gitalk'],
+      perPage: 50,
       distractionFreeMode: false
     })
   </script>
