@@ -7,11 +7,11 @@
 </p>
 
 <p align="center">
-  <img src="../../../res/ui/image_classification.png" alt="image_classification">
-</p> 
+  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/image_classification.png" alt="image_classification">
+</p>
 
 <p align="right">
-:label: ``fig_image_classification``
+🏷️  ``fig_image_classification``
 </p> 
 
 
