@@ -18,10 +18,21 @@
       overflow-y: hidden;
     }
   </style>
+  <style>
+      nav.app-nav li ul {
+        min-width: 100px;
+      }
+
+      #carbonads {
+        box-shadow: none !important;
+        width: auto !important;
+      }
+    </style>
 </head>
 
 <body>
   <div id="app"></div>
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1/index.js"></script>
   <script>
     window.$docsify = {
       name: '计算机视觉实战演练 L0CV',
@@ -35,6 +46,7 @@
       coverpage: true,
       repo: 'https://github.com/Charmve/computer-vision-in-action',
       plugins: [
+        DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),
         function(hook, vm) {
           hook.beforeEach(function (html) {
             var url = 'https://github.com//Charmve/computer-vision-in-action/blob/main/docs/' + vm.route.file
