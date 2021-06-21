@@ -160,13 +160,13 @@
     - [7.12 YOLO: 实时目标检测](https://pjreddie.com/darknet/yolo/)
     - 小结
     - 参考文献
-  - [第 8 章 著名数据集及基准](/3_进阶篇/chapter11-可视化和理解/README.md)
-    - [8.1 数据集](/3_进阶篇/chapter11-可视化和理解/chapter8.1_著名数据集.md)
-        - 8.1.1 常见数据集
-        - 8.1.2 Pytorch数据集及读取方法简介
-        - 8.1.3 数据增强简介
+  - [第 8 章 著名数据集及基准](/2_实战篇/chapter8_著名数据集及基准/README.md)
+    - [8.1 数据集](/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md)
+        - [8.1.1 常见数据集](/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#811-常见数据集)
+        - [8.1.2 Pytorch数据集及读取方法简介](/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#812-pytorch数据集及读取方法简介)
+        - [8.1.3 数据增强简介](/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#813-数据增强简介)
     - [8.2 基准测试](/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
-    - [8.3 评价指标]/2_实战篇/chapter8_著名数据集及基准/chapter8.3_评价指标.md)
+    - [8.3 评价指标](/2_实战篇/chapter8_著名数据集及基准/chapter8.3_评价指标.md)
     - [8.4 实战项目 6 - Kaggle比赛：图像分类（CIFAR-10）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
     - [8.5 实战项目 7 - Kaggle比赛：狗的品种识别（ImageNet Dogs）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
     - 小结
