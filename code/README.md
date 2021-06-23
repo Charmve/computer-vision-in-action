@@ -26,8 +26,29 @@ python3 setup.py
 
 ## 示例
 
+```shell
+python3 L0CV_test.py
+```
+
+源代码:
 
 ```python
+import time
+import torch
+import torch.nn.functional as F
+import torchvision
+import numpy as np
+from PIL import Image
+
+import sys
+sys.path.append("..") 
+import L0CV
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') # 均已测试
+
+temp = "%-15s %-15s %15s"  
+print(temp % ("device", "torch version", "L0CV version"))
+print(temp % (device, torch.__version__, L0CV.__version__))
 
 ```
 
+可输出三项信息无报错即表示环境安装正确.

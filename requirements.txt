@@ -24,7 +24,6 @@ sklearn==0.0
 
 torch==1.4.0
 ipython==7.23.1
-tensorflow==2.5.0
 
 opencv-python==4.4.0.44
 tqdm==4.43.0

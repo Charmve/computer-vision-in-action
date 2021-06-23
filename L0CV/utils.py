@@ -5,9 +5,11 @@ import random
 import sys
 import tarfile
 import time
+import json
 import zipfile
 
 from IPython import display
+from PIL import Image
 from matplotlib import pyplot as plt
 import torch
 from torch import nn
@@ -149,21 +151,26 @@ def download_voc_pascal(data_dir='../data'):
         f.extractall(data_dir)
     return voc_dir
 
-
-def evaluate_accuracy(data_iter, net, ctx=[mx.cpu()]):
-    """Evaluate accuracy of a model on the given data set."""
-    if isinstance(ctx, mx.Context):
-        ctx = [ctx]
-    acc_sum, n = nd.array([0]), 0
-    for batch in data_iter:
-        features, labels, _ = _get_batch(batch, ctx)
-        for X, y in zip(features, labels):
-            y = y.astype('float32')
-            acc_sum += (net(X).argmax(axis=1) == y).sum().copyto(mx.cpu())
-            n += y.size
-        acc_sum.wait_to_read()
-    return acc_sum.asscalar() / n
-
+# ############################ 5.5 #########################
+def evaluate_accuracy(data_iter, net, device=None):
+    if device is None and isinstance(net, torch.nn.Module):
+        # 如果没指定device就使用net的device
+        device = list(net.parameters())[0].device 
+    acc_sum, n = 0.0, 0
+    with torch.no_grad():
+        for X, y in data_iter:
+            if isinstance(net, torch.nn.Module):
+                net.eval() # 评估模式, 这会关闭dropout
+                acc_sum += (net(X.to(device)).argmax(dim=1) == y.to(device)).float().sum().cpu().item()
+                net.train() # 改回训练模式
+            else: # 自定义的模型, 3.13节之后不会用到, 不考虑GPU
+                if('is_training' in net.__code__.co_varnames): # 如果有is_training这个参数
+                    # 将is_training设置成False
+                    acc_sum += (net(X, is_training=False).argmax(dim=1) == y).float().sum().item() 
+                else:
+                    acc_sum += (net(X).argmax(dim=1) == y).float().sum().item() 
+            n += y.shape[0]
+    return acc_sum / n
 
 def _get_batch(batch, ctx):
     """Return features and labels on ctx."""
@@ -220,46 +227,29 @@ def linreg(X, w, b):
     return nd.dot(X, w) + b
 
 
-def load_data_fashion_mnist(batch_size, resize=None, root=os.path.join(
-        '~', '.mxnet', 'datasets', 'fashion-mnist')):
+# ########################## 5.6 #########################3
+def load_data_fashion_mnist(batch_size, resize=None, root='~/datasets/FashionMNIST'):
     """Download the fashion mnist dataset and then load into memory."""
-    root = os.path.expanduser(root)
-    transformer = []
+    trans = []
     if resize:
-        transformer += [gdata.vision.transforms.Resize(resize)]
-    transformer += [gdata.vision.transforms.ToTensor()]
-    transformer = gdata.vision.transforms.Compose(transformer)
+        trans.append(torchvision.transforms.Resize(size=resize))
+    trans.append(torchvision.transforms.ToTensor())
+    
+    transform = torchvision.transforms.Compose(trans)
+    mnist_train = torchvision.datasets.FashionMNIST(root=root, train=True, download=True, transform=transform)
+    mnist_test = torchvision.datasets.FashionMNIST(root=root, train=False, download=True, transform=transform)
+    if sys.platform.startswith('win'):
+        num_workers = 0  # 0表示不用额外的进程来加速读取数据
+    else:
+        num_workers = 4
+    train_iter = torch.utils.data.DataLoader(mnist_train, batch_size=batch_size, shuffle=True, num_workers=num_workers)
+    test_iter = torch.utils.data.DataLoader(mnist_test, batch_size=batch_size, shuffle=False, num_workers=num_workers)
 
-    mnist_train = gdata.vision.FashionMNIST(root=root, train=True)
-    mnist_test = gdata.vision.FashionMNIST(root=root, train=False)
-    num_workers = 0 if sys.platform.startswith('win32') else 4
-
-    train_iter = gdata.DataLoader(mnist_train.transform_first(transformer),
-                                  batch_size, shuffle=True,
-                                  num_workers=num_workers)
-    test_iter = gdata.DataLoader(mnist_test.transform_first(transformer),
-                                 batch_size, shuffle=False,
-                                 num_workers=num_workers)
     return train_iter, test_iter
-
-
-def load_data_jay_lyrics():
-    """Load the Jay Chou lyric data set (available in the Chinese book)."""
-    with zipfile.ZipFile('../data/jaychou_lyrics.txt.zip') as zin:
-        with zin.open('jaychou_lyrics.txt') as f:
-            corpus_chars = f.read().decode('utf-8')
-    corpus_chars = corpus_chars.replace('\n', ' ').replace('\r', ' ')
-    corpus_chars = corpus_chars[0:10000]
-    idx_to_char = list(set(corpus_chars))
-    char_to_idx = dict([(char, i) for i, char in enumerate(idx_to_char)])
-    vocab_size = len(char_to_idx)
-    corpus_indices = [char_to_idx[char] for char in corpus_chars]
-    return corpus_indices, char_to_idx, idx_to_char, vocab_size
-
 
 def load_data_pikachu(batch_size, edge_size=256):
     """Download the pikachu dataest and then load into memory."""
-    data_dir = '../data/pikachu'
+    data_dir = '../datasets/pikachu'
     _download_pikachu(data_dir)
     train_iter = image.ImageDetIter(
         path_imgrec=os.path.join(data_dir, 'train.rec'),
@@ -369,82 +359,100 @@ def read_imdb(folder='train'):
     return data
 
 
-def read_voc_images(root='../data/VOCdevkit/VOC2012', is_train=True):
-    """Read VOC images."""
+def read_voc_images(root="../../data/VOCdevkit/VOC2012", 
+                    is_train=True, max_num=None):
     txt_fname = '%s/ImageSets/Segmentation/%s' % (
         root, 'train.txt' if is_train else 'val.txt')
     with open(txt_fname, 'r') as f:
         images = f.read().split()
+    if max_num is not None:
+        images = images[:min(max_num, len(images))]
     features, labels = [None] * len(images), [None] * len(images)
-    for i, fname in enumerate(images):
-        features[i] = image.imread('%s/JPEGImages/%s.jpg' % (root, fname))
-        labels[i] = image.imread(
-            '%s/SegmentationClass/%s.png' % (root, fname))
-    return features, labels
+    for i, fname in tqdm(enumerate(images)):
+        features[i] = Image.open('%s/JPEGImages/%s.jpg' % (root, fname)).convert("RGB")
+        labels[i] = Image.open('%s/SegmentationClass/%s.png' % (root, fname)).convert("RGB")
+    return features, labels # PIL image
+
+# ########################### 3.7 #####################################3
+class FlattenLayer(torch.nn.Module):
+    def __init__(self):
+        super(FlattenLayer, self).__init__()
+    def forward(self, x): # x shape: (batch, *, *, ...)
+        return x.view(x.shape[0], -1)
 
 
-class Residual(nn.Block):
-    """The residual block."""
-    def __init__(self, num_channels, use_1x1conv=False, strides=1, **kwargs):
-        super(Residual, self).__init__(**kwargs)
-        self.conv1 = nn.Conv2D(num_channels, kernel_size=3, padding=1,
-                               strides=strides)
-        self.conv2 = nn.Conv2D(num_channels, kernel_size=3, padding=1)
+############################# 5.8 ##############################
+class GlobalAvgPool2d(nn.Module):
+    # 全局平均池化层可通过将池化窗口形状设置成输入的高和宽实现
+    def __init__(self):
+        super(GlobalAvgPool2d, self).__init__()
+    def forward(self, x):
+        return F.avg_pool2d(x, kernel_size=x.size()[2:])
+
+
+# ########################### 5.11 ################################
+class Residual(nn.Module): 
+    def __init__(self, in_channels, out_channels, use_1x1conv=False, stride=1):
+        super(Residual, self).__init__()
+        self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1, stride=stride)
+        self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size=3, padding=1)
         if use_1x1conv:
-            self.conv3 = nn.Conv2D(num_channels, kernel_size=1,
-                                   strides=strides)
+            self.conv3 = nn.Conv2d(in_channels, out_channels, kernel_size=1, stride=stride)
         else:
             self.conv3 = None
-        self.bn1 = nn.BatchNorm()
-        self.bn2 = nn.BatchNorm()
+        self.bn1 = nn.BatchNorm2d(out_channels)
+        self.bn2 = nn.BatchNorm2d(out_channels)
 
     def forward(self, X):
-        Y = nd.relu(self.bn1(self.conv1(X)))
+        Y = F.relu(self.bn1(self.conv1(X)))
         Y = self.bn2(self.conv2(Y))
         if self.conv3:
             X = self.conv3(X)
-        return nd.relu(Y + X)
+        return F.relu(Y + X)
 
-
-def resnet18(num_classes):
-    """The ResNet-18 model."""
-    net = nn.Sequential()
-    net.add(nn.Conv2D(64, kernel_size=3, strides=1, padding=1),
-            nn.BatchNorm(), nn.Activation('relu'))
-
-    def resnet_block(num_channels, num_residuals, first_block=False):
-        blk = nn.Sequential()
-        for i in range(num_residuals):
-            if i == 0 and not first_block:
-                blk.add(Residual(num_channels, use_1x1conv=True, strides=2))
-            else:
-                blk.add(Residual(num_channels))
-        return blk
-
-    net.add(resnet_block(64, 2, first_block=True),
-            resnet_block(128, 2),
-            resnet_block(256, 2),
-            resnet_block(512, 2))
-    net.add(nn.GlobalAvgPool2D(), nn.Dense(num_classes))
+def resnet_block(in_channels, out_channels, num_residuals, first_block=False):
+    if first_block:
+        assert in_channels == out_channels # 第一个模块的通道数同输入通道数一致
+    blk = []
+    for i in range(num_residuals):
+        if i == 0 and not first_block:
+            blk.append(Residual(in_channels, out_channels, use_1x1conv=True, stride=2))
+        else:
+            blk.append(Residual(out_channels, out_channels))
+    return nn.Sequential(*blk)
+    
+def resnet18(output=10, in_channels=3):
+    net = nn.Sequential(
+        nn.Conv2d(in_channels, 64, kernel_size=7, stride=2, padding=3),
+        nn.BatchNorm2d(64), 
+        nn.ReLU(),
+        nn.MaxPool2d(kernel_size=3, stride=2, padding=1))
+    net.add_module("resnet_block1", resnet_block(64, 64, 2, first_block=True))
+    net.add_module("resnet_block2", resnet_block(64, 128, 2))
+    net.add_module("resnet_block3", resnet_block(128, 256, 2))
+    net.add_module("resnet_block4", resnet_block(256, 512, 2))
+    net.add_module("global_avg_pool", GlobalAvgPool2d()) # GlobalAvgPool2d的输出: (Batch, 512, 1, 1)
+    net.add_module("fc", nn.Sequential(FlattenLayer(), nn.Linear(512, output))) 
     return net
 
-
-class RNNModel(nn.Block):
-    """RNN model."""
-    def __init__(self, rnn_layer, vocab_size, **kwargs):
-        super(RNNModel, self).__init__(**kwargs)
+# ################################### 6.5 ################################################
+class RNNModel(nn.Module):
+    def __init__(self, rnn_layer, vocab_size):
+        super(RNNModel, self).__init__()
         self.rnn = rnn_layer
+        self.hidden_size = rnn_layer.hidden_size * (2 if rnn_layer.bidirectional else 1) 
         self.vocab_size = vocab_size
-        self.dense = nn.Dense(vocab_size)
+        self.dense = nn.Linear(self.hidden_size, vocab_size)
+        self.state = None
 
-    def forward(self, inputs, state):
-        X = nd.one_hot(inputs.T, self.vocab_size)
-        Y, state = self.rnn(X, state)
-        output = self.dense(Y.reshape((-1, Y.shape[-1])))
-        return output, state
-
-    def begin_state(self, *args, **kwargs):
-        return self.rnn.begin_state(*args, **kwargs)
+    def forward(self, inputs, state): # inputs: (batch, seq_len)
+        # 获取one-hot向量表示
+        X = to_onehot(inputs, self.vocab_size) # X是个list
+        Y, self.state = self.rnn(torch.stack(X), state)
+        # 全连接层会首先将Y的形状变成(num_steps * batch_size, num_hiddens)，它的输出
+        # 形状为(num_steps * batch_size, vocab_size)
+        output = self.dense(Y.view(-1, Y.shape[-1]))
+        return output, self.state
 
 
 def semilogy(x_vals, y_vals, x_label, y_label, x2_vals=None, y2_vals=None,
@@ -533,32 +541,28 @@ def to_onehot(X, size):
     return [nd.one_hot(x, size) for x in X.T]
 
 
-def train(train_iter, test_iter, net, loss, trainer, ctx, num_epochs):
+def train(train_iter, test_iter, net, loss, optimizer, device, num_epochs):
     """Train and evaluate a model."""
-    print('training on', ctx)
-    if isinstance(ctx, mx.Context):
-        ctx = [ctx]
+    net = net.to(device)
+    print("training on ", device)
+    batch_count = 0
     for epoch in range(num_epochs):
-        train_l_sum, train_acc_sum, n, m, start = 0.0, 0.0, 0, 0, time.time()
-        for i, batch in enumerate(train_iter):
-            Xs, ys, batch_size = _get_batch(batch, ctx)   
-            with autograd.record():
-                y_hats = [net(X) for X in Xs]
-                ls = [loss(y_hat, y) for y_hat, y in zip(y_hats, ys)]
-            for l in ls:
-                l.backward()
-            trainer.step(batch_size)
-            train_l_sum += sum([l.sum().asscalar() for l in ls])
-            n += sum([l.size for l in ls])
-            train_acc_sum += sum([(y_hat.argmax(axis=1) == y).sum().asscalar()
-                                 for y_hat, y in zip(y_hats, ys)])
-            m += sum([y.size for y in ys])
-        test_acc = evaluate_accuracy(test_iter, net, ctx)
-        print('epoch %d, loss %.4f, train acc %.3f, test acc %.3f, '
-              'time %.1f sec'
-              % (epoch + 1, train_l_sum / n, train_acc_sum / m, test_acc,
-                 time.time() - start))
-
+        train_l_sum, train_acc_sum, n, start = 0.0, 0.0, 0, time.time()
+        for X, y in train_iter:
+            X = X.to(device)
+            y = y.to(device)
+            y_hat = net(X)
+            l = loss(y_hat, y) 
+            optimizer.zero_grad()
+            l.backward()
+            optimizer.step()
+            train_l_sum += l.cpu().item()
+            train_acc_sum += (y_hat.argmax(dim=1) == y).sum().cpu().item()
+            n += y.shape[0]
+            batch_count += 1
+        test_acc = evaluate_accuracy(test_iter, net)
+        print('epoch %d, loss %.4f, train acc %.3f, test acc %.3f, time %.1f sec'
+              % (epoch + 1, train_l_sum / batch_count, train_acc_sum / n, test_acc, time.time() - start))
 
 def train_2d(trainer):
     """Optimize the objective function of 2d variables with a customized trainer."""
@@ -653,29 +657,29 @@ def train_and_predict_rnn_gluon(model, num_hiddens, vocab_size, ctx,
                 print(' -', predict_rnn_gluon(
                     prefix, pred_len, model, vocab_size, ctx, idx_to_char,
                     char_to_idx))
-
-
-def train_ch3(net, train_iter, test_iter, loss, num_epochs, batch_size,
-              params=None, lr=None, trainer=None):
+    
+def train_ch3(train_iter, test_iter, net, loss, optimizer, device, num_epochs):
     """Train and evaluate a model with CPU."""
+    net = net.to(device)
+    print("training on ", device)
+    batch_count = 0
     for epoch in range(num_epochs):
-        train_l_sum, train_acc_sum, n = 0.0, 0.0, 0
+        train_l_sum, train_acc_sum, n, start = 0.0, 0.0, 0, time.time()
         for X, y in train_iter:
-            with autograd.record():
-                y_hat = net(X)
-                l = loss(y_hat, y).sum()
+            X = X.to(device)
+            y = y.to(device)
+            y_hat = net(X)
+            l = loss(y_hat, y) 
+            optimizer.zero_grad()
             l.backward()
-            if trainer is None:
-                sgd(params, lr, batch_size)
-            else:
-                trainer.step(batch_size)
-            y = y.astype('float32')
-            train_l_sum += l.asscalar()
-            train_acc_sum += (y_hat.argmax(axis=1) == y).sum().asscalar()
-            n += y.size
+            optimizer.step()
+            train_l_sum += l.cpu().item()
+            train_acc_sum += (y_hat.argmax(dim=1) == y).sum().cpu().item()
+            n += y.shape[0]
+            batch_count += 1
         test_acc = evaluate_accuracy(test_iter, net)
-        print('epoch %d, loss %.4f, train acc %.3f, test acc %.3f'
-              % (epoch + 1, train_l_sum / n, train_acc_sum / n, test_acc))
+        print('epoch %d, loss %.4f, train acc %.3f, test acc %.3f, time %.1f sec'
+              % (epoch + 1, train_l_sum / batch_count, train_acc_sum / n, test_acc, time.time() - start))
 
 
 def train_ch5(net, train_iter, test_iter, batch_size, trainer, ctx,
@@ -702,92 +706,85 @@ def train_ch5(net, train_iter, test_iter, batch_size, trainer, ctx,
               % (epoch + 1, train_l_sum / n, train_acc_sum / n, test_acc,
                  time.time() - start))
 
+# ######################################## 7.3 ###############################################
+def get_data_ch7():  
+    data = np.genfromtxt('../../data/airfoil_self_noise.dat', delimiter='\t')
+    data = (data - data.mean(axis=0)) / data.std(axis=0)
+    return torch.tensor(data[:1500, :-1], dtype=torch.float32), \
+        torch.tensor(data[:1500, -1], dtype=torch.float32) # 前1500个样本(每个样本5个特征)
 
-def train_ch7(trainer_fn, states, hyperparams, features, labels, batch_size=10,
-              num_epochs=2):
-    """Train a linear regression model."""
+def train_ch7(optimizer_fn, states, hyperparams, features, labels,
+              batch_size=10, num_epochs=2):
+    # 初始化模型
     net, loss = linreg, squared_loss
-    w, b = nd.random.normal(scale=0.01, shape=(features.shape[1], 1)), nd.zeros(1)
-    w.attach_grad()
-    b.attach_grad()
+    
+    w = torch.nn.Parameter(torch.tensor(np.random.normal(0, 0.01, size=(features.shape[1], 1)), dtype=torch.float32),
+                           requires_grad=True)
+    b = torch.nn.Parameter(torch.zeros(1, dtype=torch.float32), requires_grad=True)
 
     def eval_loss():
-        return loss(net(features, w, b), labels).mean().asscalar()
+        return loss(net(features, w, b), labels).mean().item()
 
     ls = [eval_loss()]
-    data_iter = gdata.DataLoader(
-        gdata.ArrayDataset(features, labels), batch_size, shuffle=True)
+    data_iter = torch.utils.data.DataLoader(
+        torch.utils.data.TensorDataset(features, labels), batch_size, shuffle=True)
+    
     for _ in range(num_epochs):
         start = time.time()
         for batch_i, (X, y) in enumerate(data_iter):
-            with autograd.record():
-                l = loss(net(X, w, b), y).mean()
+            l = loss(net(X, w, b), y).mean()  # 使用平均损失
+            
+            # 梯度清零
+            if w.grad is not None:
+                w.grad.data.zero_()
+                b.grad.data.zero_()
+                
             l.backward()
-            trainer_fn([w, b], states, hyperparams)
+            optimizer_fn([w, b], states, hyperparams)  # 迭代模型参数
             if (batch_i + 1) * batch_size % 100 == 0:
-                ls.append(eval_loss())
+                ls.append(eval_loss())  # 每100个样本记录下当前训练误差
+    # 打印结果和作图
     print('loss: %f, %f sec per epoch' % (ls[-1], time.time() - start))
     set_figsize()
     plt.plot(np.linspace(0, num_epochs, len(ls)), ls)
     plt.xlabel('epoch')
     plt.ylabel('loss')
 
-
-def train_gluon_ch7(trainer_name, trainer_hyperparams, features, labels,
+# 本函数与原书不同的是这里第一个参数优化器函数而不是优化器的名字
+# 例如: optimizer_fn=torch.optim.SGD, optimizer_hyperparams={"lr": 0.05}
+def train_gluon_ch7(optimizer_fn, optimizer_hyperparams, features, labels,
                     batch_size=10, num_epochs=2):
-    """Train a linear regression model with a given Gluon trainer."""
-    net = nn.Sequential()
-    net.add(nn.Dense(1))
-    net.initialize(init.Normal(sigma=0.01))
-    loss = gloss.L2Loss()
+    # 初始化模型
+    net = nn.Sequential(
+        nn.Linear(features.shape[-1], 1)
+    )
+    loss = nn.MSELoss()
+    optimizer = optimizer_fn(net.parameters(), **optimizer_hyperparams)
 
     def eval_loss():
-        return loss(net(features), labels).mean().asscalar()
+        return loss(net(features).view(-1), labels).item() / 2
 
     ls = [eval_loss()]
-    data_iter = gdata.DataLoader(
-        gdata.ArrayDataset(features, labels), batch_size, shuffle=True)
-    trainer = gluon.Trainer(net.collect_params(),
-                            trainer_name, trainer_hyperparams)
+    data_iter = torch.utils.data.DataLoader(
+        torch.utils.data.TensorDataset(features, labels), batch_size, shuffle=True)
+
     for _ in range(num_epochs):
         start = time.time()
         for batch_i, (X, y) in enumerate(data_iter):
-            with autograd.record():
-                l = loss(net(X), y)
+            # 除以2是为了和train_ch7保持一致, 因为squared_loss中除了2
+            l = loss(net(X).view(-1), y) / 2 
+            
+            optimizer.zero_grad()
             l.backward()
-            trainer.step(batch_size)
+            optimizer.step()
             if (batch_i + 1) * batch_size % 100 == 0:
                 ls.append(eval_loss())
+    # 打印结果和作图
     print('loss: %f, %f sec per epoch' % (ls[-1], time.time() - start))
     set_figsize()
     plt.plot(np.linspace(0, num_epochs, len(ls)), ls)
     plt.xlabel('epoch')
     plt.ylabel('loss')
-
-
-def try_all_gpus():
-    """Return all available GPUs, or [mx.cpu()] if there is no GPU."""
-    ctxes = []
-    try:
-        for i in range(16):
-            ctx = mx.gpu(i)
-            _ = nd.array([0], ctx=ctx)
-            ctxes.append(ctx)
-    except mx.base.MXNetError:
-        pass
-    if not ctxes:
-        ctxes = [mx.cpu()]
-    return ctxes
-
-
-def try_gpu():
-    """If GPU is available, return mx.gpu(0); else return mx.cpu()."""
-    try:
-        ctx = mx.gpu()
-        _ = nd.array([0], ctx=ctx)
-    except mx.base.MXNetError:
-        ctx = mx.cpu()
-    return ctx
 
 
 def use_svg_display():
@@ -795,46 +792,63 @@ def use_svg_display():
     display.set_matplotlib_formats('svg')
 
 
+# colormap2label = torch.zeros(256 ** 3, dtype=torch.uint8)
+# for i, colormap in enumerate(VOC_COLORMAP):
+#     colormap2label[(colormap[0] * 256 + colormap[1]) * 256 + colormap[2]] = i
 def voc_label_indices(colormap, colormap2label):
-    """Assign label indices for Pascal VOC2012 Dataset."""
-    colormap = colormap.astype('int32')
+    """
+    convert colormap (PIL image) to colormap2label (uint8 tensor).
+    """
+    colormap = np.array(colormap.convert("RGB")).astype('int32')
     idx = ((colormap[:, :, 0] * 256 + colormap[:, :, 1]) * 256
            + colormap[:, :, 2])
     return colormap2label[idx]
 
-
 def voc_rand_crop(feature, label, height, width):
-    """Random cropping for images of the Pascal VOC2012 Dataset."""
-    feature, rect = image.random_crop(feature, (width, height))
-    label = image.fixed_crop(label, *rect)
+    """
+    Random crop feature (PIL image) and label (PIL image).
+    """
+    i, j, h, w = torchvision.transforms.RandomCrop.get_params(
+            feature, output_size=(height, width))
+    
+    feature = torchvision.transforms.functional.crop(feature, i, j, h, w)
+    label = torchvision.transforms.functional.crop(label, i, j, h, w)    
+
     return feature, label
 
-
-class VOCSegDataset(gdata.Dataset):
-    """The Pascal VOC2012 Dataset."""
-    def __init__(self, is_train, crop_size, voc_dir, colormap2label):
-        self.rgb_mean = nd.array([0.485, 0.456, 0.406])
-        self.rgb_std = nd.array([0.229, 0.224, 0.225])
-        self.crop_size = crop_size
-        data, labels = read_voc_images(root=voc_dir, is_train=is_train)
-        self.data = [self.normalize_image(im) for im in self.filter(data)]
-        self.labels = self.filter(labels)
+class VOCSegDataset(torch.utils.data.Dataset):
+    def __init__(self, is_train, crop_size, voc_dir, colormap2label, max_num=None):
+        """
+        crop_size: (h, w)
+        """
+        self.rgb_mean = np.array([0.485, 0.456, 0.406])
+        self.rgb_std = np.array([0.229, 0.224, 0.225])
+        self.tsf = torchvision.transforms.Compose([
+            torchvision.transforms.ToTensor(),
+            torchvision.transforms.Normalize(mean=self.rgb_mean, 
+                                             std=self.rgb_std)
+        ])
+        
+        self.crop_size = crop_size # (h, w)
+        features, labels = read_voc_images(root=voc_dir, 
+                                           is_train=is_train, 
+                                           max_num=max_num)
+        self.features = self.filter(features) # PIL image
+        self.labels = self.filter(labels)     # PIL image
         self.colormap2label = colormap2label
-        print('read ' + str(len(self.data)) + ' examples')
+        print('read ' + str(len(self.features)) + ' valid examples')
 
-    def normalize_image(self, data):
-        return (data.astype('float32') / 255 - self.rgb_mean) / self.rgb_std
-
-    def filter(self, images):
-        return [im for im in images if (
-            im.shape[0] >= self.crop_size[0] and
-            im.shape[1] >= self.crop_size[1])]
+    def filter(self, imgs):
+        return [img for img in imgs if (
+            img.size[1] >= self.crop_size[0] and
+            img.size[0] >= self.crop_size[1])]
 
     def __getitem__(self, idx):
-        data, labels = voc_rand_crop(self.data[idx], self.labels[idx],
-                                     *self.crop_size)
-        return (data.transpose((2, 0, 1)),
-                voc_label_indices(labels, self.colormap2label))
+        feature, label = voc_rand_crop(self.features[idx], self.labels[idx],
+                                       *self.crop_size)
+        
+        return (self.tsf(feature),
+                voc_label_indices(label, self.colormap2label))
 
     def __len__(self):
-        return len(self.data)
+        return len(self.features)
