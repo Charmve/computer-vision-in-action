@@ -514,7 +514,7 @@
   <img src="res/ui/L0CV.png" alt="L0CV architecture">
 </p> 
 
-1. 本地运行
+### 1. 本地运行
 - 依赖包安装
 ```shell
 sudo apt-get update
@@ -531,7 +531,7 @@ cd code
 python3 L0CV_test.py
 ```
 
-2. Colab 运行
+### 2. Colab 运行
 
 - 依赖包安装
 ```
@@ -551,7 +551,9 @@ cd notebooks
 jupyter notesbook
 ```
 
-3. 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
+### 3. 结合文章/notebook阅读
+
+按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
 
 ## 🔍 仓库文件浏览
 - 📁 <code>L0CV/</code> - 专为本项目建立的 L0CV 包 
