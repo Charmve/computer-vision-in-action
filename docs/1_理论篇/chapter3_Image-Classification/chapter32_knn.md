@@ -105,25 +105,21 @@ $$
 
 1. 明考斯基(Minkowsky)距离
 
-$$d(X,Y)=[\sum\nolimits_{i=1}^{n}∣xi−yi∣^λ]^{\frac{1}λ}$$, 
-
-λ一般取整数值，不同的λ取值对应于不同的距离 
+$$d(X,Y)=[\sum\nolimits_{i=1}^{n}∣xi−yi∣^λ]^{\frac{1}λ}$$
+, λ一般取整数值，不同的λ取值对应于不同的距离 
 
 2. 曼哈顿(Manhattan)距离
-$$d(X,Y)=\sum\nolimits_{i=1}^{n}∣xi−yi∣$$，
-
-该距离是Minkowsky距离在λ=1时的一个特例
+$$d(X,Y)=\sum\nolimits_{i=1}^{n}∣xi−yi∣$$
+，该距离是Minkowsky距离在λ=1时的一个特例
 
 3. Cityblock距离
 
-$$d(X,Y)=\sum\nolimits_{i=1}^{n}wi∣xi−yi∣$$，
-
-该距离是Manhattan距离的加权修正，其中wi,i=1,2,...,n是权重因子
+$$d(X,Y)=\sum\nolimits_{i=1}^{n}wi∣xi−yi∣$$
+，该距离是Manhattan距离的加权修正，其中wi,i=1,2,...,n是权重因子
 
 4. 欧几里德(Euclidean)距离（欧氏距离）
-$$d(X,Y)=[\sum\nolimits_{i=1}^{n}∣x_i−y_i∣^2]\frac{1}{2}=(X−Y)(X−Y)T$$，
-
-是Minkowsky距离在λ=2时的特例
+$$d(X,Y)=[\sum\nolimits_{i=1}^{n}∣x_i−y_i∣^2]\frac{1}{2}=(X−Y)(X−Y)T$$
+，是Minkowsky距离在λ=2时的特例
 
 5. Canberra距离
 $$d(X,Y)=\sum\nolimits_{i=1}^{n}(x_i−y_i)(x_i+y_i)$$
@@ -458,7 +454,7 @@ print(testVector[0,0:22])
 
 图3.10 测试识别手写数字结果
       
-错误率为<font color = red > 1.2%。</font>
+错误率为<font color = red > 1.2% </font>。
 
 ## 小结
 
