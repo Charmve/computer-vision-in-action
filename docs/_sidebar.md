@@ -44,7 +44,7 @@
     - 练习
     - 参考文献
   - [第 2 章 卷积神经网络](/1_理论篇/chapter2_CNN/README.md)
-    - [2.1 从神经网络到卷积神经网络](/1_理论篇/chapter2_CNN//chapter2_CNN.md#21-从神经网络到卷积神经网络)
+    - [2.1 从神经网络到卷积神经网络](/1_理论篇/chapter2_CNN/chapter2_CNN.md#21-从神经网络到卷积神经网络)
     - [2.2 卷积网络的层级结构](/1_理论篇/chapter2_CNN/chapter2_CNN.md#22-卷积网络的层级结构)
     - [2.3 卷积神经网络的几点说明](/1_理论篇/chapter2_CNN/chapter2_CNN.md#23-卷积神经网络的几点说明)
     - [2.4 实战项目 2 - 动手搭建一个卷积神经网络](/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
