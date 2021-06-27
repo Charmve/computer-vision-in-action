@@ -98,7 +98,7 @@
 
   <!-- full text search -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@master/plugin/search.min.js"></script>
   
   <!-- Copy to Clipboard -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
@@ -125,24 +125,24 @@
   </script>
 
   <!-- 复制提醒 -->
-  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@master/plugin/sweetalert.min.js"></script>
   <script>
     document.body.oncopy = function () {
      swal("复制成功 🎉",
-             "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by 吴跟强",
+             "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by Charmve",
              "success"); };
   </script>
 
   <!-- 回到顶部功能 -->
-  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/jquery.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/jquery.goup.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@master/plugin/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@master/plugin/jquery.goup.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $.goup({
         trigger: 100,
         bottomOffset: 52,
         locationOffset: 25,
-        //title: 'TOP',
+        title: 'TOP',
         titleAsText: true
       });
     });
@@ -154,7 +154,7 @@
       room: 'enjoytoshare/community'
     };
   </script>
-  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/sidecar.v1.js" async defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@master/plugin/sidecar.v1.js" async defer></script>
 
 
   <!-- 右下角添加 live2d -->
@@ -185,6 +185,7 @@
     });
   </script>
 
+  <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
 
   <!-- json 颜色显示 -->
   <script src="//unpkg.com/prismjs/components/prism-python.js"></script>
