@@ -57,6 +57,12 @@
 </td>
 </table>
 
+<div align="right">
+
+  Share on [QQ](http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action) | [WeChat](http://mp.weixin.qq.com/intent/wechat?text=https://github.com/Charmve/computer-vision-in-action) | [Weibo](http://weibo.com/intent/weibo?text=https://github.com/Charmve/computer-vision-in-action) | [Twitter](http://twitter.com/intent/tweet?text=https://github.com/Charmve/computer-vision-in-action)
+</div> 
+
+
 ## 全书组织
 :label: `fig_book_org`
 

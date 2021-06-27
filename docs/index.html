@@ -45,6 +45,20 @@
       },
       coverpage: true,
       repo: 'https://github.com/Charmve/computer-vision-in-action',
+      search: {
+        paths: 'auto',
+        placeholder: {
+          '/zh-cn/': '🔍 搜索',
+          '/': '🔍 Type to search'
+        },
+        noData: {
+          '/zh-cn/': '😒 换一个关键词试试',
+          '/': '😒 Try with an other word'
+        },
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },//添加搜索框
       plugins: [
         <!-- DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),
         -->
@@ -78,12 +92,18 @@
   
   <!-- docsify的分页导航插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  
+  <!-- 支持 LaTex 语言 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
 
   <!-- full text search -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/search.min.js"></script>
+  
   <!-- Copy to Clipboard -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   
   <!-- gitalk -->
   <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
@@ -103,6 +123,68 @@
       distractionFreeMode: false
     })
   </script>
+
+  <!-- 复制提醒 -->
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/sweetalert.min.js"></script>
+  <script>
+    document.body.oncopy = function () {
+     swal("复制成功 🎉",
+             "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by 吴跟强",
+             "success"); };
+  </script>
+
+  <!-- 回到顶部功能 -->
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/jquery.goup.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.goup({
+        trigger: 100,
+        bottomOffset: 52,
+        locationOffset: 25,
+        //title: 'TOP',
+        titleAsText: true
+      });
+    });
+  </script>
+
+  <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能-->
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'enjoytoshare/community'
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/charmve/computer-vision-in-action@main/plugin/sidecar.v1.js" async defer></script>
+
+
+  <!-- 右下角添加 live2d -->
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+  <script>
+    L2Dwidget.init({
+      "model": {
+        //jsonpath控制显示那个小萝莉模型，
+        //(切换模型需要改动)
+        jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+        "scale": 1
+      },
+      "display": {
+        "position": "right", //看板娘的表现位置
+        "width": 70,  //小萝莉的宽度
+        "height": 140, //小萝莉的高度
+        "hOffset": 35,
+        "vOffset": -20
+      },
+      "mobile": {
+        "show": true,
+        "scale": 0.5
+      },
+      "react": {
+        "opacityDefault": 0.7,
+        "opacityOnHover": 0.2
+      }
+    });
+  </script>
+
 
   <!-- json 颜色显示 -->
   <script src="//unpkg.com/prismjs/components/prism-python.js"></script>
