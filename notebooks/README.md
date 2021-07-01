@@ -11,7 +11,7 @@
 :label:``sec_code``
 
 <p align="center">
-  <img src="../res/ui/L0CV.png" alt="L0CV architecture">
+  <img src="../res/ui/L0CV.png" height="auto" width="60%" alt="L0CV architecture">
 </p> 
 
 1. Install ``requirements.txt``
