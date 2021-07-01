@@ -376,8 +376,8 @@
     - [B 常用激活函数总结](https://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw==&mid=2247484495&idx=1&sn=0bbb2094d93169baf20eedb284bc668f)
     - [C 梯度下降法](https://blog.csdn.net/Charmve/article/details/106089198)
     - [D 深度学习调参技巧总结](https://blog.csdn.net/Charmve/article/details/107650479)
-    - [深入理解计算机视觉中的损失函数](https://blog.csdn.net/Charmve/article/details/105094371)
+    - [E 深入理解计算机视觉中的损失函数](https://blog.csdn.net/Charmve/article/details/105094371)
   - <b><h4>[后记](/book_postscript.md)</h4></b>
-  - <b><h4>[参考文献](#参考文献-1)</h4></b>
+  - <b><h4>[参考文献](REFERENCE.md)</h4></b>
 
   - <b>更新中 ...</b>
