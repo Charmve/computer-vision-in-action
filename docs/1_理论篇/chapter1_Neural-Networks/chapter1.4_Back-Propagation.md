@@ -10,25 +10,45 @@
 
 作者: 张伟 (Charmve)
 
-日期: 2021/06/09
+日期: 2021/04/29
 
-- 第 1 章 [神经网络](../)
-    - 1.1 [Softmax 回归](chapter1.1 Softmax回归.md)
-    - 1.2 反向传播算法
-      - 1.2.1 [概述](#121-概述)
-      - 1.2.2 [前向传播](#122-前向传播)
-      - 1.2.3 [反向传播](#123-反向传播)
-      - 1.2.4 [Python源代码](#124-Python源代码)
-    - 1.3 [多层感知器](chapter1_3_多层感知器MLP.md)
-    - 1.4 [神经学观点](chapter1.4_神经学观点.md)
-    - 1.5 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
+- 第 1 章 [神经网络]()
+    - 1.1 [线性回归](/1_理论篇/chapter1_Neural-Networks/chapter1.1_line-regression.md)
+      - 1.1.1 基本原理
+      - 1.1.2 从零实现线性回归
+      - 1.1.3 线性回归的简洁实现
+    - 1.2 [Softmax 回归](./docs/1_理论篇/chapter3_Image-Classification/chapter1.2_Softmax回归.md)
+      - 1.2.1 softmax回归模型
+      - 1.2.2 从零开始实现softmax回归
+      - 1.2.3 softmax回归的简洁实现
+    - 1.3 [多层感知器](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
+      - 1.3.1 基本原理
+      - 1.3.2 从零开始实现多层感知器
+      - 1.3.3 多层感知器的简洁实现
+    - 1.4 [反向传播算法](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.4_Back-Propagation.md)
+    - 1.5 [神经网络](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.5_neural-networks.md)
+      - 1.5.1 [神经学观点](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.5.1_神经学观点.md)
+      - 1.5.2 [神经网络1-建立神经网络架构](https://cs231n.github.io/neural-networks-1/)
+      - 1.5.3 [神经网络2-设置数据和损失](https://cs231n.github.io/neural-networks-2/)
+      - 1.5.4 [神经网络3-学习和评估](https://cs231n.github.io/neural-networks-3/)
+      - 1.5.5 [案例分析-最小神经网络案例研究](https://cs231n.github.io/neural-networks-case-study/)
+    - 1.6 [实战项目 1 - 手写字分类](https://blog.csdn.net/Charmve/article/details/108531735)
     - 小结
     - 参考文献
 
+---
 
-## 1.2 反向传播算法
+# 1.4 反向传播算法
 
-### 1.2.1 概述
+
+<p align="center">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter1/3_MLP.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+    </a>
+</p>
+
+
+## 1.4.1 概述
 
 反向传播法其实是神经网络的基础了，但是很多人在学的时候总是会遇到一些问题，或者看到大篇的公式觉得好像很难就退缩了，其实不难，就是一个链式求导法则反复用。如果不想看公式，可以直接把数值带进去，实际的计算一下，体会一下这个过程之后再来推导公式，这样就会觉得很容易了。
 
@@ -73,8 +93,8 @@
 
 **目标：给出输入数据 i1,i2 (0.05和0.10)，使输出尽可能与原始输出 o1,o2 (0.01和0.99)接近。**
 
-### 1.2.2 前向传播
-#### 1.2.2.1 输入层---->隐含层：
+## 1.4.2 前向传播
+### 1.4.2.1 输入层---->隐含层：
 
 计算神经元h1的输入加权和：
 
@@ -89,7 +109,7 @@
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232614652.png#pic_center)
                                   
 
-#### 1.2.2.2 隐含层---->输出层：
+### 1.4.2.2 隐含层---->输出层：
 
 计算输出层神经元o1和o2的值：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232622747.png)
@@ -97,8 +117,8 @@
 
 这样前向传播的过程就结束了，我们得到输出值为[0.75136079 , 0.772928465]，与实际值[0.01 , 0.99]相差还很远，现在我们对误差进行反向传播，更新权值，重新计算输出。
 
-### 1.2.3 反向传播
-#### 1.2.3.1 计算总误差
+## 1.4.3 反向传播
+### 1.4.3.1 计算总误差
 
 总误差：(square error)
 
@@ -108,7 +128,7 @@
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232640654.png)
 
-#### 1.2.3.2 隐含层---->输出层的权值更新：
+### 1.4.3.2 隐含层---->输出层的权值更新：
 
 以权重参数w5为例，如果我们想知道w5对整体误差产生了多少影响，可以用整体误差对w5求偏导求出：（链式法则）
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529232645863.png#pic_center)
@@ -169,7 +189,7 @@
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200529233004225.png)
 
-#### 1.2.3.3 隐含层---->隐含层的权值更新：
+### 1.4.3.3 隐含层---->隐含层的权值更新：
 
 方法其实与上面说的差不多，但是有个地方需要变一下，在上文计算总误差对w5的偏导时，是从out(o1)---->net(o1)---->w5,但是在隐含层之间的权值更新时，是out(h1)---->net(h1)---->w1,而out(h1)会接受E(o1)和E(o2)两个地方传来的误差，所以这个地方两个都要计算，如图1.5所示。
 
@@ -219,7 +239,7 @@
 
 这样误差反向传播法就完成了，最后我们再把更新的权值重新计算，不停地迭代，在这个例子中第一次迭代之后，总误差E(total)由0.298371109下降至0.291027924。迭代10000次后，总误差为0.000035085，输出为[0.015912196, 0.984065734]（原输入为[0.01, 0.99]）,证明效果还是不错的。
 
-### 1.2.4 Python源代码
+## 1.4.4 Python源代码
 
 ```python
 #coding:utf-8
@@ -456,10 +476,11 @@ for i in range(10000):
 稳重使用的是sigmoid激活函数，实际还有几种不同的激活函数可以选择，具体的可以参考文献[3]，最后推荐一个在线演示神经网络变化的网址：http://www.emergentmind.com/neural-network ，可以自己填输入输出，然后观看每一次迭代权值的变化，很好玩。
 
 
-### 小结
+## 小结
 
+## 练习
 
-### 参考文献
+## 参考文献
 
 1. Poll的笔记：[Mechine Learning & Algorithm]神经网络基础. http://www.cnblogs.com/maybe2030/p/5597716.html#3457159
 

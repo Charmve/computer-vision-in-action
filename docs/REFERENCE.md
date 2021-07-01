@@ -1,3 +1,10 @@
+<div align="center">
+	<img src="imgs/ref/dive-into-deep-learning.png" width="220px" alt="dive-into-deep-learning" title="李沐-动手学深度学习">
+    <img src="imgs/ref/lihang-book.jpeg" width="220px" alt="lihang-book" title="李航-统计学习方法">
+    &nbsp;&nbsp;<img src="imgs/ref/python-computer-vision-program.jpg" width="200px" alt="python-computer-vision-program" title="Python计算机视觉编程">
+</div>
+<br>
+
 ## 参考文献
 
 [1] 李沐. [动手学深度学习（Dive into Deep Learning，D2L.ai）](https://zh.d2l.ai/). 人民邮电出版社：北京. [<u>源代码</u>](https://github.com/d2l-ai/d2l-zh)

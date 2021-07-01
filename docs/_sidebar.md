@@ -20,11 +20,11 @@
     - 参考文献
 - <b><h4>理论篇</h4></b>
   - [第 1 章 神经网络](/1_理论篇/chapter1_Neural-Networks/README.md)
-    - [1.1 线性回归](/1_理论篇/chapter1_Neural-Networks/chapter1.2_line-regression.md)
+    - [1.1 线性回归](/1_理论篇/chapter1_Neural-Networks/chapter1.1_line-regression.md)
       - 1.1.1 基本原理
       - 1.1.2 从零实现线性回归
       - 1.1.3 线性回归的简洁实现
-    - [1.2 Softmax 回归](./1_理论篇/chapter3_Image-Classification/chapter3.4_Softmax回归.md)
+    - [1.2 Softmax 回归](./1_理论篇/chapter3_Image-Classification/chapter1.2_Softmax回归.md)
       - 1.2.1 softmax回归模型
       - 1.2.2 从零开始实现softmax回归
       - 1.2.3 softmax回归的简洁实现
@@ -32,8 +32,8 @@
       - 1.3.1 基本原理
       - 1.3.2 从零开始实现多层感知器
       - 1.3.3 多层感知器的简洁实现
-    - [1.4 反向传播算法](/1_理论篇/chapter1_Neural-Networks/chapter1.2_Back-Propagation.md)
-    - [1.5 神经网络](/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
+    - [1.4 反向传播算法](/1_理论篇/chapter1_Neural-Networks/chapter1.4_Back-Propagation.md)
+    - [1.5 神经网络](/1_理论篇/chapter1_Neural-Networks/chapter1.5_neural-networks.md)
       - [1.5.1 神经学观点](/1_理论篇/chapter1_Neural-Networks/chapter1.4_神经学观点.md)
       - [1.5.2 神经网络1-建立神经网络架构](https://cs231n.github.io/neural-networks-1/)
       - [1.5.3 神经网络2-设置数据和损失](https://cs231n.github.io/neural-networks-2/)
@@ -56,28 +56,28 @@
       - 3.1.1 语义上的差别
       - 3.1.2 图像分类任务面临着许多挑战
       - 3.1.3 数据驱动的方法
-    - [3.2 k 最近邻算法](/1_理论篇/chapter3_Image-Classification/chapter32_knn.md)
-      - [3.2.1 k 近邻模型](/1_理论篇/chapter3_Image-Classification/chapter32_knn.md#321-k-近邻模型)
-      - [3.2.2 k 近邻模型三个基本要素](/1_理论篇/chapter3_Image-Classification/chapter32_knn.md#322-k-近邻模型三个基本要素)
-      - [3.2.3 KNN算法的决策过程](/1_理论篇/chapter3_Image-Classification/chapter32_knn.md#323-knn算法的决策过程)
-      - [3.2.4 k 近邻算法Python实现](/1_理论篇/chapter3_Image-Classification/chapter32_knn.md#324-k-近邻算法python实现)
+    - [3.2 k 最近邻算法](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md)
+      - [3.2.1 k 近邻模型](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md#321-k-近邻模型)
+      - [3.2.2 k 近邻模型三个基本要素](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md#322-k-近邻模型三个基本要素)
+      - [3.2.3 KNN算法的决策过程](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md#323-knn算法的决策过程)
+      - [3.2.4 k 近邻算法Python实现](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md#324-k-近邻算法python实现)
       - 小结
       - 参考文献
-    - [3.3 支持向量机](./1_理论篇/chapter3_Image-Classification/chapter3.3_支持向量机.md)
+    - [3.3 支持向量机](/1_理论篇/chapter3_Image-Classification/chapter3.3_支持向量机.md)
       - 3.3.1 概述
       - 3.3.2 线性支持向量机
       - 3.3.3 SVM vs Softmax
       - 3.3.4 从零开始实现支持向量机
       - 3.3.5 支持向量机的简洁实现
-    - [3.4 逻辑回归 LR](../notebooks/07_Logistic_Regression.ipynb)
+    - [3.4 逻辑回归 LR](/1_理论篇/chapter3_Image-Classification/chapter3.4_Logistic-Regression.md)
       - 3.5.1 逻辑回归模型
       - 3.5.2 从零开始实现逻辑回归
       - 3.5.3 逻辑回归的简洁实现
     - [3.5 实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
     - [3.6 实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
-    - [小结](./1_理论篇/chapter3_Image-Classification/README.md#小结)
+    - [小结](/1_理论篇/chapter3_Image-Classification/README.md#小结)
     - 练习
-    - [参考文献](./1_理论篇/chapter3_Image-Classification/README.md#参考文献)
+    - [参考文献](/1_理论篇/chapter3_Image-Classification/README.md#参考文献)
   - 第 4 章 递归神经网络
     - [4.1 递归神经网络 RNN](/1_理论篇/chapter4_递归神经网络/chapter4.1_递归神经网络.md)
     - [4.2 循环神经网络的从零开始实现](/1_理论篇/chapter4_递归神经网络/chapter4.2_循环神经网络的从零开始实现.md)
@@ -204,14 +204,16 @@
     - 小结
     - 练习
     - 参考文献
-  - [第 12 章 计算机视觉课题研究初探]()
+  - [第 12 章 计算机视觉课题研究初探](/2_实战篇/chapter10_计算机视觉课题研究初探/)
     - [12.1 手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
     - [12.2 文本检测](https://github.com/Charmve/Scene-Text-Detection)
     - [12.3 车道线检测](https://github.com/Charmve/Awesome-Lane-Detection)
       - 12.3.1 常用网络
       - 12.3.2 实战项目 11 - 车道线检测项目实战
     - [12.4 镜面检测](https://github.com/Charmve/Mirror-Glass-Detection)
-    - [12.5 图像抠图 Matting](https://github.com/Charmve/TimeWarp)
+    - [12.5 图像抠图 Matting](/2_实战篇/chapter10_计算机视觉课题研究初探/charpter10_5-图像抠图.md)
+    - [12.6 图像超分辨率](/2_实战篇/chapter10_计算机视觉课题研究初探/charpter10_6-图像超分辨率.md)
+    - [12.7 3D 重建](/2_实战篇/chapter10_计算机视觉课题研究初探/charpter10_7-3D重建.md)
     - 小结
     - 练习
     - 参考文献

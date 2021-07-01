@@ -38,13 +38,6 @@
 
 ---
 
-# 1.3 多层感知器
-
-
-<p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter1/3_MLP.ipynb">
-        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
-    </a>
-</p>
+# 1.5.1 神经学观点
 
 Comming soon ...

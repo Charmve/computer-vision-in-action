@@ -12,10 +12,23 @@
 
 日期: 2021/04/29
 
-- 第 3 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
-    - 3.1 [数据驱动方法]()
-    - 3.2 [k 最近邻算法](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/chapter32_knn.md)
-    - 3.3 [线性分类](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/1_理论篇/chapter3_Image-Classification/chapter33_line-classification.md)
+- 第 3 章 [图像分类](./)
+    - 3.1 [数据驱动方法](https://cs231n.github.io/classification/)
+      - 3.1.1 语义上的差别
+      - 3.1.2 图像分类任务面临着许多挑战
+      - 3.1.3 数据驱动的方法
+    - 3.2 [k 最近邻算法](chapter3.2_knn.md)
+      - 3.2.1 [k 近邻模型](chapter3.2_knn.md#321-k-近邻模型)
+      - 3.2.2 [k 近邻模型三个基本要素](chapter3.2_knn.md#322-k-近邻模型三个基本要素)
+      - 3.2.3 [KNN算法的决策过程](chapter3.2_knn.md#323-k-KNN算法的决策过程)
+      - 3.2.4 [k 近邻算法Python实现](chapter3.2_knn.md#324-k-近邻算法Python实现)
+      - 小结
+      - 参考文献
+    - 3.3 [支持向量机](chapter3.3_支持向量机.md)
+      - 3.3.1 概述
+      - 3.3.2 线性支持向量机
+      - 3.3.3 从零开始实现支持向量机
+      - 3.3.4 支持向量机的简洁实现
     - 3.4 [逻辑回归 LR]() 
       - 3.4.1 [逻辑回归LR](#341-逻辑回归lr)
         - 3.4.1.1 回归模型引言
@@ -35,11 +48,13 @@
       - [参考文献](#参考文献)
     - 3.5 [实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
     - 3.6 [实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
-    - [小结](#小结)
-    - [参考文献](#参考文献)
+    - [小结](./docs/1_理论篇/chapter3_Image-Classification/README.md#小结)
+    - [参考文献](./docs/1_理论篇/chapter3_Image-Classification/README.md#参考文献)
+
+--- 
 
 
-## 3.4 逻辑回归 LR
+# 3.4 逻辑回归 LR
 
 <p align="center">
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/07_Logistic_Regression.ipynb">
@@ -57,12 +72,12 @@
 
 当你的目标变量是分类变量时，才会考虑逻辑回归，并且主要用于两分类问题。
 
-### 3.4.1 逻辑回归 LR
+## 3.4.1 逻辑回归 LR
 **LR 模型可以被认为就是一个被Sigmoid函数（logistic方程）所归一化后的线性回归模型！**
 
 逻辑回归(Logistic Regression, LR)模型其实仅在**线性回归**的基础上，套用了一个逻辑函数，但也就由于这个逻辑函数，使得逻辑回归模型成为了机器学习领域一颗耀眼的明星，更是计算广告学的核心。
 
-#### 3.4.1.1 回归模型引言
+### 3.4.1.1 回归模型引言
 
 看了很多博主和相关参考书，他们直接上来就给函数，对于像我这样刚开始学习Machine Learning的VegetableBird来讲，我还是不太愿意从一开始就从公式推导开始。
 
@@ -98,7 +113,7 @@ log似然是：
 ![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMwLmNuYmxvZ3MuY29tL2Jsb2cvNTQwOTgwLzIwMTMxMS8yNDIyNTI1Ny1lODg2MzQ0N2M1ODQ0MTkzODI1MjQ0ZDdmMWIwNTA4MC5naWY#pic_center)
 <br>
 
-#### 3.4.1.2 直观表述
+### 3.4.1.2 直观表述
 
 $$
 P(y=1|x,θ) = \frac{1}{1+e^{-θ^Tx}}  
@@ -121,7 +136,7 @@ $$
 
 由此看见，**LR模型学习最关键的问题就是研究如何求解这组权值！**
 
-#### 3.4.1.3 决策边界（Decision Boundary）
+### 3.4.1.3 决策边界（Decision Boundary）
 在LR模型中我们知道：当假设函数，即，此时我们预测成**正类**；反之预测为**负类**。由图来看，我们可以得到更加清晰的认识。下图为**Sigmoid函数**，也是**LR的外层函数**。我们看到当时，此时（即内层函数），然而此时也正是将y预测为1的时候；同理，我们可以得出内层函数时，我们将其预测成0(即负类)。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200105174916305.png)
@@ -157,8 +172,8 @@ $$
 
 值得注意的一点，决策边界并不是训练集的属性，而是假设本身和参数的属性。因为训练集不可以定义决策边界，它只负责拟合参数；而只有参数确定了，决策边界才得以确定。
 
-### 3.4.2 权值求解
-#### 3.4.2.1 Cost Function代价函数（似然函数）
+## 3.4.2 权值求解
+### 3.4.2.1 Cost Function代价函数（似然函数）
 前面我们介绍线性回归模型时，给出了线性回归的代价函数的形式（误差平方和函数），具体形式如下：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200105175145430.png)
@@ -195,7 +210,7 @@ $$
 
 该函数是一个凸函数，这也达到了我们的要求。这也是LR代价函数最终形式。
 
-#### 3.4.2.2 似然函数的求解-梯度下降
+### 3.4.2.2 似然函数的求解-梯度下降
 **代价函数的求导过程**
 
 Sigmoid函数的求导过程：
@@ -219,7 +234,7 @@ $$
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200105175555564.png)
 
 
-#### 3.4.2.3 模型评估
+### 3.4.2.3 模型评估
 对于LR分类模型的评估，常用AUC来评估，关于AUC的更多定义与介绍，可见参考文献2，在此只介绍一种极简单的计算与理解方法。
 
 对于下图的分类：
@@ -231,8 +246,8 @@ $$
 AUC正是衡量分类正确度的方法，将训练集中的label看两类{0，1}的分类问题，分类目标是将预测结果尽量将两者分开。将每个0和1看成一个pair关系，团中的训练集共有 5*5=25 个 pair 关系，只有将所有pair关系一至时，分类结果才是最好的，而auc为1。在训练方法1中，与10相关的pair关系完全正确，同样9、8、7的pair关系也完全正确，但对于6，其pair关系(6，5)关系错误，而与4、3、2、1的关系正确，故其auc为(25-1)/25=0.96；对于分类方法2，其6、7、8、9的pair关系，均有一个错误，即(6,1)、(7,1)、(8,1)、(9,1)，对于数据点10，其正任何数据点的pair关系，都错误，即(10,1)、(10,2)、(10,3)、(10,4)、(10,5)，故方法2的auc为(25-4-5)/25=0.64，因而正如直观所见，分类方法1要优于分类方法2。
 <br>
 　　　　　　
-### 3.4.3 加入正则项
-#### 3.4.3.1 正则解释
+## 3.4.3 加入正则项
+### 3.4.3.1 正则解释
 正则：[机器学习中正则化项L1和L2的直观理解](https://blog.csdn.net/jinping_shi/article/details/52433975)  https://blog.csdn.net/jinping_shi/article/details/52433975
 
 此时的w为θ。
@@ -265,10 +280,10 @@ AUC正是衡量分类正确度的方法，将训练集中的label看两类{0，1
 - L2正则化可以防止模型过拟合（overfitting）；一定程度上，L1也可以防止过拟合
 
 
-#### 3.4.3.2 L1和L2正则化的直观理解
+### 3.4.3.2 L1和L2正则化的直观理解
 这部分内容将解释**为什么L1正则化可以产生稀疏模型（L1是怎么让系数等于零的）**，以及**为什么L2正则化可以防止过拟合**。
 
-### （1）L1正则化和特征选择
+#### （1）L1正则化和特征选择
 稀疏模型与特征选择：
 
 上面提到L1正则化有助于生成一个稀疏权值矩阵，进而可以用于特征选择。为什么要生成一个稀疏矩阵？
@@ -288,7 +303,7 @@ AUC正是衡量分类正确度的方法，将训练集中的label看两类{0，1
 
 而正则化前面的系数α，可以控制L图形的大小。α越小，L的图形越大（上图中的黑色方框）；α越大，L的图形就越小，可以小到黑色方框只超出原点范围一点点，这是最优点的值(w1,w2)=(0,w)中的w可以取到很小的值。
 
-### （2）L2正则化和过拟合
+#### （2）L2正则化和过拟合
 类似，假设有如下带**L2正则化**的损失函数： 
 
 ![在这里插入图片描述](https://img-blog.csdn.net/20180816193710691#pic_center)
@@ -325,7 +340,7 @@ AUC正是衡量分类正确度的方法，将训练集中的label看两类{0，1
 从公式5可以看到，λλ越大，θjθj衰减得越快。另一个理解可以参考图2，λλ越大，L2圆的半径越小，最后求得代价函数最值时各参数也会变得很小。
 <br>
  
-### 3.4.4 代码实现（Python）
+## 3.4.4 代码实现（Python）
 
 ```python
 # -*- coding: utf-8 -*-
@@ -387,7 +402,11 @@ print theta_n
 print C.plot() 
 ```
 
-### 参考文献
+## 小结
+
+## 练习
+
+## 参考文献
 
 [1] [逻辑回归（Logistic Regression）](https://blog.csdn.net/liulina603/article/details/78676723) ==偏应用的一篇==  原文链接：https://blog.csdn.net/liulina603/article/details/78676723
 

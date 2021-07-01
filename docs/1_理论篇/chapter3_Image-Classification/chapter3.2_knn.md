@@ -12,21 +12,31 @@
 
 日期: 2021/04/29
 
-- 第 3 章 [图像分类](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
-    - 3.1 [数据驱动方法]()
-    - 3.2 [k 最近邻算法](chapter32_knn.md)
-      - 3.2.1 [k 近邻模型](#321-k-近邻模型)
-      - 3.2.2 [k 近邻模型三个基本要素](#322-k-近邻模型三个基本要素)
-      - 3.2.3 [KNN算法的决策过程](#323-k-KNN算法的决策过程)
-      - 3.2.4 [k 近邻算法Python实现](#324-k-近邻算法Python实现)
-      - [小结](#小结)
-      - [参考文献](#参考文献)
-    - 3.3 [线性分类](chapter33_line-classification.md)
-    - 3.4 [逻辑回归 LR](chapter34_Logistic-Regression.md) 
+- 第 3 章 [图像分类](./)
+    - 3.1 [数据驱动方法](https://cs231n.github.io/classification/)
+      - 3.1.1 语义上的差别
+      - 3.1.2 图像分类任务面临着许多挑战
+      - 3.1.3 数据驱动的方法
+    - 3.2 [k 最近邻算法](chapter3.2_knn.md)
+      - 3.2.1 [k 近邻模型](chapter3.2_knn.md#321-k-近邻模型)
+      - 3.2.2 [k 近邻模型三个基本要素](chapter3.2_knn.md#322-k-近邻模型三个基本要素)
+      - 3.2.3 [KNN算法的决策过程](chapter3.2_knn.md#323-k-KNN算法的决策过程)
+      - 3.2.4 [k 近邻算法Python实现](chapter3.2_knn.md#324-k-近邻算法Python实现)
+      - 小结
+      - 参考文献
+    - 3.3 [支持向量机](chapter3.3_支持向量机.md)
+      - 3.3.1 概述
+      - 3.3.2 线性支持向量机
+      - 3.3.3 从零开始实现支持向量机
+      - 3.3.4 支持向量机的简洁实现
+    - 3.4 [逻辑回归 LR](chapter3.4_Logistic-Regression.md)
+      - 3.4.1 逻辑回归模型
+      - 3.4.2 从零开始实现逻辑回归
+      - 3.4.3 逻辑回归的简洁实现
     - 3.5 [实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
     - 3.6 [实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
-    - [小结](#小结)
-    - [参考文献](#参考文献)
+    - [小结](./docs/1_理论篇/chapter3_Image-Classification/README.md#小结)
+    - [参考文献](./docs/1_理论篇/chapter3_Image-Classification/README.md#参考文献)
 
 ---
 

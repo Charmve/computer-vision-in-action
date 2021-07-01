@@ -38,11 +38,11 @@
 
 ---
 
-# 1.3 多层感知器
+# 1.2 Softmax 回归
 
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter1/3_MLP.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/06_Linear_Regression.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>
