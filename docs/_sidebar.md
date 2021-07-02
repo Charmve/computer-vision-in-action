@@ -137,14 +137,14 @@
     - 练习
     - 参考文献
   - 第 7 章 模型拟合与优化算法
-    - [7.1 优化与深度学习](../notebooks/chapter06_optimization/6.1_optimization-intro.ipynb)
-    - [7.2 梯度下降和随机梯度下降](../notebooks/chapter06_optimization/6.2_gd-sgd.ipynb)
-    - [7.3 小批量随机梯度下降](../notebooks/chapter06_optimization/6.3_minibatch-sgd.ipynb)
-    - [7.4 动量法](../notebooks/chapter06_optimization/6.4_momentum.ipynb)
-    - [7.5 AdaGrad算法](../notebooks/chapter06_optimization/6.5_adagrad.ipynb)
-    - [7.6 RMSProp算法](../notebooks/chapter06_optimization/6.6_rmsprop.ipynb)
-    - [7.7 AdaDelta算法](../notebooks/chapter06_optimization/6.7_adadelta.ipynb)
-    - [7.8 Adam算法](../notebooks/chapter06_optimization/6.8_adam.ipynb)
+    - [7.1 优化与深度学习](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.1_optimization-intro.ipynb)
+    - [7.2 梯度下降和随机梯度下降](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.2_gd-sgd.ipynb)
+    - [7.3 小批量随机梯度下降](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.3_minibatch-sgd.ipynb)
+    - [7.4 动量法](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.4_momentum.ipynb)
+    - [7.5 AdaGrad算法](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.5_adagrad.ipynb)
+    - [7.6 RMSProp算法](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.6_rmsprop.ipynb)
+    - [7.7 AdaDelta算法](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.7_adadelta.ipynb)
+    - [7.8 Adam算法](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.8_adam.ipynb)
     - 小结
     - 练习
     - 参考文献
@@ -152,11 +152,11 @@
   - [第 8 章 软件环境搭建与工具使用](/2_实战篇/chapter6_深度学习环境搭建/README.md)
     - [8.1 深度学习环境搭建指南](/2_实战篇/chapter6_深度学习环境搭建/chapter6.1_深度学习环境搭建指南.md)
     - [8.2 Pytorch 基础使用介绍](/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md)
-    - [8.3 Python](../notebooks/chapter07_environment-setup-and-tool-use/02_Python.ipynb)
-    - [8.4 Numpy 基础使用](../notebooks/chapter07_environment-setup-and-tool-use/03_NumPy.ipynb)
-    - [8.5 Pandas 基础使用](../notebooks/chapter07_environment-setup-and-tool-use/04_Pandas.ipynb)
-    - [8.6 OpenCV 安装及基础使用](../notebooks/chapter07_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
-    - [8.7 Jupyter Notebook 配置及基础使用](../notebooks/chapter07_environment-setup-and-tool-use/01_Notebooks.ipynb)
+    - [8.3 Python](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter08_environment-setup-and-tool-use/02_Python.ipynb)
+    - [8.4 Numpy 基础使用](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter08_environment-setup-and-tool-use/03_NumPy.ipynb)
+    - [8.5 Pandas 基础使用](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter08_environment-setup-and-tool-use/04_Pandas.ipynb)
+    - [8.6 OpenCV 安装及基础使用](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter08_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
+    - [8.7 Jupyter Notebook 配置及基础使用](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter08_environment-setup-and-tool-use/01_Notebooks.ipynb)
     - [8.8 基本的图像操作和处理](/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md)
     - [8.9 实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
     - 小结
@@ -218,11 +218,14 @@
     - 练习
     - 参考文献
 - <b><h4>进阶篇</h4></b>
-  - [第 13 章 可视化和理解](/3_进阶篇/chapter11-可视化和理解/README.md)
-    - 13.1 表征可视化
-    - 13.2 对抗实例
-    - [13.3 DeepDream 和风格迁移](/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
-    - [13.4 实战项目 12: PyTorch 如何使用TensorBoard](/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
+  - [第 13 章 可视化和理解卷积神经网络](/3_进阶篇/chapter11-可视化和理解/README.md)
+    - 13.1 特征可视化
+    - 13.2 倒置
+    - 13.3 可视化数据梯度
+    - [13.4 Embeddings](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter13_Understanding-and-Visualizing/Embeddings.ipynb)
+    - 13.5 对抗样本
+    - [13.6 DeepDream 和风格迁移](/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
+    - [13.7 实战项目 12: PyTorch 如何使用TensorBoard](/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
     - 小结
     - 练习
     - 参考文献
@@ -243,6 +246,7 @@
       - [14.4.4 变分自编码器的代码实现](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)
       - [14.4.5 卷积变分自编码器的实现与简单应用](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)
       - [14.4.6 实战项目 13 - 旧照片修复](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life)
+      - [14.4.6 实战项目 14 - 动漫头像生成](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter12_practice-projects/Anime-StyleGAN2.ipynb)
     - 小结
     - 练习
     - 参考文献
@@ -276,13 +280,13 @@
     - [17.3 基于特征的迁移](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#153-基于特征的迁移)
     - [17.4 基于共享参数的迁移](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#154-基于共享参数的迁移)
     - [17.5 深度学习和迁移学习结合](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#155-深度学习和迁移学习结合)
-    - [17.7 实战项目 14 - 蚂蚁和蜜蜂的分类问题](3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
+    - [17.7 实战项目 15 - 蚂蚁和蜜蜂的分类问题](3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
       - 17.7.1 迁移学习在计算机视觉领域的应用
       - 17.7.2 实战项目: 蚂蚁和蜜蜂的分类问题
     - [小结](#小结)
     - 练习
     - [参考文献](#参考文献)
-  - [第 18 章 计算机视觉中的注意力机制 Attention is All You Need](../notebooks/14_Attention.ipynb)
+  - [第 18 章 计算机视觉中的注意力机制 Attention is All You Need](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter16_Attention/1_Attention.ipynb)
     - 18.1 概述
     - 18.2 Attention with RNNs
     - [18.3 Self-attention 自注意力](https://mp.weixin.qq.com/s/nUd7YtCci1_AwQ4nOwK9bA)
@@ -315,7 +319,7 @@
         - 19.3.2.4 Deformable-DETR
     - [19.4 优点及分析](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#四-优点及分析)
     - [19.5 缺点及分析](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#五-缺点及分析)
-    - [实战项目 15 - 基于Transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803)
+    - [实战项目 16 - 基于Transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803)
     - 小结
     - 练习
     - [参考文献](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#六-参考文献)
@@ -327,7 +331,7 @@
       - 20.2.3 Relation-based Knowledge
     - 20.3 知识蒸馏的应用 NLP-BERT
     - 20.4 常见疑问解答
-    - [实战项目 16 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
+    - [实战项目 17 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
     - 小结
     - 练习
     - [参考文献](#参考文献)

@@ -338,7 +338,7 @@ $$loss_{KL}= -log({\sigma_{1}}) + \frac{\sigma_{1}^{2} + \mu_{1}^{2}}{2} - \frac
 
 本次实验采用的是 notebook，可以是自己电脑上安装的 jupyter notebook，也可以使用自己云服务器安装的，也可以考虑使用谷歌提供的 [Colaboratory](https://colab.research.google.com/notebooks/welcome.ipynb)。
 
-文件地址：[``/notebooks/16_CVAE.ipynb``](../../../notebooks/16_CVAE.ipynb)
+文件地址：[``/notebooks/chapter14_GAN/CVAE.ipynb``](../../../notebooks/chapter14_GAN/CVAE.ipynb)
 
 #### 1. 安装依赖
 1. 确定使用的是 tensorflow 2.x

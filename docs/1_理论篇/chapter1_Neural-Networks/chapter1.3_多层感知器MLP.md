@@ -21,7 +21,7 @@
       - 1.2.1 softmax回归模型
       - 1.2.2 从零开始实现softmax回归
       - 1.2.3 softmax回归的简洁实现
-    - 1.3 [多层感知器](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
+    - 1.3 多层感知器
       - 1.3.1 基本原理
       - 1.3.2 从零开始实现多层感知器
       - 1.3.3 多层感知器的简洁实现
@@ -42,7 +42,7 @@
 
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter1/3_MLP.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter1_Neural-Networks/3_MLP.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>

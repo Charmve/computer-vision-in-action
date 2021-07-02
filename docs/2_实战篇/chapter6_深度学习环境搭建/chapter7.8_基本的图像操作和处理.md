@@ -15,11 +15,11 @@
       - 7.2.2 [Operations](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#622-operations)
       - 7.2.3 [Numpy桥梁](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#623-numpy桥梁)
       - 7.2.4 [CUDA Tensors](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#624-cuda-tensors)
-    - 7.3 [Python](./notebooks/chapter07_environment-setup-and-tool-use/02_Python.ipynb)
-    - 7.4 [Numpy 基础使用](./notebooks/chapter07_environment-setup-and-tool-use/03_NumPy.ipynb)
-    - 7.5 [Pandas 基础使用](./notebooks/chapter07_environment-setup-and-tool-use/04_Pandas.ipynb)
-    - 7.6 [OpenCV 安装及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
-    - 7.7 [Jupyter Notebook 配置及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/01_Notebooks.ipynb)
+    - 7.3 [Python](./notebooks/chapter08_environment-setup-and-tool-use/02_Python.ipynb)
+    - 7.4 [Numpy 基础使用](./notebooks/chapter08_environment-setup-and-tool-use/03_NumPy.ipynb)
+    - 7.5 [Pandas 基础使用](./notebooks/chapter08_environment-setup-and-tool-use/04_Pandas.ipynb)
+    - 7.6 [OpenCV 安装及基础使用](./notebooks/chapter08_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
+    - 7.7 [Jupyter Notebook 配置及基础使用](./notebooks/chapter08_environment-setup-and-tool-use/01_Notebooks.ipynb)
     - 7.8 基本的图像操作和处理
       - 7.8.1 [PIL：Python图像处理类库](#781-pilpython图像处理类库)
       - 7.8.2 [Matplotlib](#782-matplotlib)
@@ -32,7 +32,7 @@
 
 ---
 
-<p align="center"><a target="_blank" href="colab.research.google.com/github/Charmve/computer-vision-in-action/blob/master/notebooks/chapter07_environment-setup-and-tool-use/image-process-with-tools.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" align="center"></a>
+<p align="center"><a target="_blank" href="colab.research.google.com/github/Charmve/computer-vision-in-action/blob/master/notebooks/chapter08_environment-setup-and-tool-use/06_image-process-with-tools.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" align="center"></a>
 </p>
 
 ## 7.8 基本的图像操作和处理

@@ -248,15 +248,15 @@
     - 5.5 [数值稳定性和模型初始化](/notebooks/)
     - 小结
     - 参考文献
-  - 第 6 章 [模型拟合与优化算法](/notebooks/chapter06_optimization/)
-    - 6.1 [优化与深度学习](/notebooks/chapter06_optimization/6.1_optimization-intro.ipynb)
-    - 6.2 [梯度下降和随机梯度下降](/notebooks/chapter06_optimization/6.2_gd-sgd.ipynb)
-    - 6.3 [小批量随机梯度下降](/notebooks/chapter06_optimization/6.3_minibatch-sgd.ipynb)
-    - 6.4 [动量法](/notebooks/chapter06_optimization/6.4_momentum.ipynb)
-    - 6.5 [AdaGrad算法](/notebooks/chapter06_optimization/6.5_adagrad.ipynb)
-    - 6.6 [RMSProp算法](/notebooks/chapter06_optimization/6.6_rmsprop.ipynb)
-    - 6.7 [AdaDelta算法](/notebooks/chapter06_optimization/6.7_adadelta.ipynb)
-    - 6.8 [Adam算法](/notebooks/chapter06_optimization/6.8_adam.ipynb)
+  - 第 6 章 [模型拟合与优化算法](/notebooks/chapter07_optimization/)
+    - 6.1 [优化与深度学习](/notebooks/chapter07_optimization/7.1_optimization-intro.ipynb)
+    - 6.2 [梯度下降和随机梯度下降](/notebooks/chapter07_optimization/7.2_gd-sgd.ipynb)
+    - 6.3 [小批量随机梯度下降](/notebooks/chapter07_optimization/7.3_minibatch-sgd.ipynb)
+    - 6.4 [动量法](/notebooks/chapter07_optimization/7.4_momentum.ipynb)
+    - 6.5 [AdaGrad算法](/notebooks/chapter07_optimization/7.5_adagrad.ipynb)
+    - 6.6 [RMSProp算法](/notebooks/chapter07_optimization/7.6_rmsprop.ipynb)
+    - 6.7 [AdaDelta算法](/notebooks/chapter07_optimization/7.7_adadelta.ipynb)
+    - 6.8 [Adam算法](/notebooks/chapter07_optimization/7.8_adam.ipynb)
     - 小结
     - 参考文献
 - <b><h4>实战篇</h4></b>
@@ -267,11 +267,11 @@
       - 6.2.2 [Operations](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#622-operations)
       - 6.2.3 [Numpy桥梁](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#623-numpy桥梁)
       - 6.2.4 [CUDA Tensors](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.2_Pytorch-基础使用介绍.md#624-cuda-tensors)
-    - 6.3 [Python](./notebooks/chapter07_environment-setup-and-tool-use/02_Python.ipynb)
-    - 6.4 [Numpy 基础使用](./notebooks/chapter07_environment-setup-and-tool-use/03_NumPy.ipynb)
-    - 6.5 [Pandas 基础使用](./notebooks/chapter07_environment-setup-and-tool-use/04_Pandas.ipynb)
-    - 6.6 [OpenCV 安装及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
-    - 6.7 [Jupyter Notebook 配置及基础使用](./notebooks/chapter07_environment-setup-and-tool-use/01_Notebooks.ipynb)
+    - 6.3 [Python](./notebooks/chapter08_environment-setup-and-tool-use/02_Python.ipynb)
+    - 6.4 [Numpy 基础使用](./notebooks/chapter08_environment-setup-and-tool-use/03_NumPy.ipynb)
+    - 6.5 [Pandas 基础使用](./notebooks/chapter08_environment-setup-and-tool-use/04_Pandas.ipynb)
+    - 6.6 [OpenCV 安装及基础使用](./notebooks/chapter08_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
+    - 6.7 [Jupyter Notebook 配置及基础使用](./notebooks/chapter08_environment-setup-and-tool-use/01_Notebooks.ipynb)
     - 6.8 [基本的图像操作和处理](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md)
       - 6.8.1 [PIL：Python图像处理类库](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#781-pil-python图像处理类库)
       - 6.8.2 [Matplotlib](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md#782-matplotlib)
@@ -338,11 +338,14 @@
     - 小结
     - 参考文献
 - <b><h4>进阶篇</h4></b>
-  - 第 11 章 [可视化和理解](https://charmve.github.io/computer-vision-in-action/#/chapter5/chapter5)
-    - 11.1 表征可视化
-    - 11.2 对抗实例
-    - 11.3 [DeepDream 和风格迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
-    - 11.4 [实战项目 12: PyTorch 如何使用TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
+  - 第 11 章 [可视化和理解卷积神经网络](/docs/3_进阶篇/chapter11-可视化和理解/)
+    - 11.1 特征可视化
+    - 11.2 倒置
+    - 11.3 可视化数据梯度
+    - 11.4 [Embeddings](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter13_Understanding-and-Visualizing/Embeddings.ipynb)
+    - 11.5 对抗样本
+    - 11.6 [DeepDream 和风格迁移](/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
+    - 11.7 [实战项目 12: PyTorch 如何使用TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
       - 11.4.1 [创建 TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1141-创建-tensorboard)
       - 11.4.2 [写入 TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1142-写入-tensorboard)
       - 11.4.3 [使用 TensorBoard 检查模型](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md#1143-使用-tensorboard-检查模型)
@@ -420,7 +423,7 @@
       - 15.7.2 [实战项目: 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md#1572-实战项目-蚂蚁和蜜蜂的分类问题)
     - [小结](#小结)
     - [参考文献](#参考文献)
-  - 第 16 章 [计算机视觉中的注意力机制 Attention is All You Need](./notebooks/14_Attention.ipynb)
+  - 第 16 章 [计算机视觉中的注意力机制 Attention is All You Need](./notebooks/chapter16_Attention/1_Attention.ipynb)
     - 16.1 概述
     - 16.2 Attention with RNNs
     - 16.3 [Self-attention 自注意力](https://mp.weixin.qq.com/s/nUd7YtCci1_AwQ4nOwK9bA)
@@ -582,19 +585,22 @@ jupyter notesbook
   - 📁 <code>img/</code> - 各章节所使用的插图
 - 📁 <code>models/</code> - 封装可用的预训练模型
 - 📁 <code>notebooks/</code> - 全书 Colab notebook，可在线测试
+  - 📁 <code>chapter01_neural-networks/</code> - 第 1 章 - 神经网络 Jupyter Notebook 实现
+  - 📁 <code>chapter02_CNN/</code> - 第 2 章 - 卷积神经网络 Jupyter Notebook 实现
+  - 📁 <code>chapter03_Image-Classification</code> - 第 3 章 - 图像分类 Jupyter Notebook 实现
   - 📁 <code>chapter04_recurrent-neural-networks/</code> - 第 4 章 - 递归神经网络 Jupyter Notebook 实现
   - 📁 <code>chapter05_graph-neural-network/</code> - 第 5 章 - 图神经网络 Jupyter Notebook 实现
-  - 📁 <code>chapter06_optimization/</code> - 第 6 章 - 模型拟合与优化算法 Jupyter Notebook 实现
-  - 📁 <code>chapter07_environment-setup-and-tool-use/</code> - 第 7 章 - 软件环境搭建与工具使用 Jupyter Notebook 实现
-  - 📁 <code>chapter08_convolutional-neural-networks/</code> - 第 8 章 - 经典神经网络架构：原理与PyTorch实现 Jupyter Notebook 实现
+  - 📁 <code>chapter07_optimization/</code> - 第 6 章 - 模型拟合与优化算法 Jupyter Notebook 实现
+  - 📁 <code>chapter08_environment-setup-and-tool-use/</code> - 第 7 章 - 软件环境搭建与工具使用 Jupyter Notebook 实现
+  - 📁 <code>chapter09_convolutional-neural-networks/</code> - 第 8 章 - 经典神经网络架构：原理与PyTorch实现 Jupyter Notebook 实现
+  - 📁 <code>chapter12_practice-projects</code> - 第 12 章 - 计算机视觉课题研究初探 Jupyter Notebook 实现
+  - 📁 <code>chapter13_Understanding-and-Visualizing/</code> - 第 13 章 - 可视化与理解卷积神经网络 Jupyter Notebook 实现
+  - 📁 <code>chapter14_GAN/</code> - 第 14 章 - 生成对抗模型 Jupyter Notebook 实现
+  - 📁 <code>chapter15_Transfer-Learning/</code> - 第 15 章 - 迁移学习 Jupyter Notebook 实现
+  - 📁 <code>chapter16_Attention/</code> - 第 16 章 - 注意力机制 Jupyter Notebook 实现
+  - 📁 <code>chapter17_Transformers/</code> - 第 17 章 - Transformers Jupyter Notebook 实现
   - ...
-  - 📄 <code>01_Notebooks.ipynb</code> - Notebooks 基本介绍和使用
-  - 📄 <code>02_Python.ipynb</code> - Python 编程简明教程
-  - 📄 <code>03_NumPy.ipynb</code> - NumPy 的使用
-  - 📄 <code>04_Pandas.ipynb</code> - Pandas 的使用
-  - ...
-  - 📄 <code>16_CVAE.ipynb</code> - 卷积变分自编码器
-  - 📄 <code>17_TL-ants-bees-classification.ipynb</code>  - 迁移学习的应用：蚂蚁和蜜蜂的分类问题
+  - 📁 <code>imgs/</code> - Jupyter Notebook 中用到的图片
 - 📁 <code>docker/</code> - 为降低读者的学习成本，目前未进行搭建
 - 📁 <code>res/</code> - ui 图片及全书思维导图PDF
 - 📄 <code>README.md</code> - 全书介绍及目录

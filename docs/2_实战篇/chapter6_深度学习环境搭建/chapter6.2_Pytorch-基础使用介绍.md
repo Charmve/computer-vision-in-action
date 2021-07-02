@@ -19,11 +19,11 @@
       - 6.2.2 [Operations](#622-operations)
       - 6.2.3 [Numpy桥梁](#623-numpy桥梁)
       - 6.2.4 [CUDA Tensors](#624-cuda-tensors)
-    - 6.3 [Python](../../../notebooks/chapter07_environment-setup-and-tool-use/02_Python.ipynb)
-    - 6.4 [Numpy 基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/03_NumPy.ipynb)
-    - 6.5 [Pandas 基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/04_Pandas.ipynb)
-    - 6.6 [OpenCV 安装及基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
-    - 6.7 [Jupyter Notebook 配置及基础使用](../../../notebooks/chapter07_environment-setup-and-tool-use/01_Notebooks.ipynb)
+    - 6.3 [Python](../../../notebooks/chapter08_environment-setup-and-tool-use/02_Python.ipynb)
+    - 6.4 [Numpy 基础使用](../../../notebooks/chapter08_environment-setup-and-tool-use/03_NumPy.ipynb)
+    - 6.5 [Pandas 基础使用](../../../notebooks/chapter08_environment-setup-and-tool-use/04_Pandas.ipynb)
+    - 6.6 [OpenCV 安装及基础使用](../../../notebooks/chapter08_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
+    - 6.7 [Jupyter Notebook 配置及基础使用](../../../notebooks/chapter08_environment-setup-and-tool-use/01_Notebooks.ipynb)
     - 6.8 [基本的图像操作和处理](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md)
       - 6.8.1 [PIL：Python图像处理类库](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#781-pil-python图像处理类库)
       - 6.8.2 [Matplotlib](../../../docs/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md#782-matplotlib)
@@ -39,7 +39,7 @@
 ## 6.2 Pytorch 基础使用介绍
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_environment-setup-and-tool-use/05_PyTorch.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter08_environment-setup-and-tool-use/05_PyTorch.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>

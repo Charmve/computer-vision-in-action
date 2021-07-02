@@ -22,9 +22,17 @@
     - 小结
     - 参考文献
 
-## 4.1 递归神经网络 RNN
+---
+
+# 4.1 递归神经网络 RNN
+
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/13_Recurrent_Neural_Networks.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter04_recurrent-neural-networks/Recurrent_Neural_Networks.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
+    <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter04_recurrent-neural-networks/Recurrent_Neural_Networks.ipynb">
+    <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png\">
+    View on nbViewer</a>
 </p>
+
+Comming soon ...

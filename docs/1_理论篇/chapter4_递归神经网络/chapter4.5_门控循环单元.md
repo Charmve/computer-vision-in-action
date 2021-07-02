@@ -29,11 +29,11 @@
 ## 4.5 门控循环单元（GRU）
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/Gated_Recurrent_Units.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter04_recurrent-neural-networks/Gated_Recurrent_Units.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/Gated_Recurrent_Units.ipynb">
-        <img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter" align="center" alt="Open in Colab">
+    <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter04_recurrent-neural-networks/Gated_Recurrent_Units.ipynb">
+        <img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter" align="center" alt="View on nbViewer">
     </a>
 </p>
 

@@ -6,7 +6,7 @@
 
 ## 目录
 
-  - 第 10 章 [图像分类项目实战](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
+  - 第 10 章 [计算机视觉课题研究初探](https://charmve.github.io/computer-vision-in-action/#/chapter10/chapter10)
     - 10.1 [手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
     - 10.2 [文本检测](https://github.com/Charmve/Scene-Text-Detection)
     - 10.3 [车道线检测](https://github.com/Charmve/Awesome-Lane-Detection)
@@ -24,6 +24,11 @@
 
 # 10.7 3D 重建
 
+<p align="center">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter12_practice-projects/PIFuHD-Demo.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+    </a>
+</p>
 
 ![PIFuHD](../../imgs/chapter10/result_girl02_256.png)
 ![Teaser Image](https://shunsukesaito.github.io/PIFuHD/resources/images/pifuhd.gif)

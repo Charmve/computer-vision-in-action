@@ -17,7 +17,7 @@
       - 1.1.1 基本原理
       - 1.1.2 从零实现线性回归
       - 1.1.3 线性回归的简洁实现
-    - 1.2 [Softmax 回归](./docs/1_理论篇/chapter3_Image-Classification/chapter1.2_Softmax回归.md)
+    - 1.2 Softmax 回归
       - 1.2.1 softmax回归模型
       - 1.2.2 从零开始实现softmax回归
       - 1.2.3 softmax回归的简洁实现
@@ -42,7 +42,7 @@
 
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/06_Linear_Regression.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter01_Neural-Networks/02_softmax.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>

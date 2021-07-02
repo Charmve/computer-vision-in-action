@@ -25,7 +25,7 @@
       - 1.3.1 基本原理
       - 1.3.2 从零开始实现多层感知器
       - 1.3.3 多层感知器的简洁实现
-    - 1.4 [反向传播算法](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.4_Back-Propagation.md)
+    - 1.4 反向传播算法
     - 1.5 [神经网络](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.5_neural-networks.md)
       - 1.5.1 [神经学观点](./docs/1_理论篇/chapter1_Neural-Networks/chapter1.5.1_神经学观点.md)
       - 1.5.2 [神经网络1-建立神经网络架构](https://cs231n.github.io/neural-networks-1/)
@@ -42,7 +42,7 @@
 
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter1/3_MLP.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks//chapter1_Neural-Networks/4_back-propagation.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>

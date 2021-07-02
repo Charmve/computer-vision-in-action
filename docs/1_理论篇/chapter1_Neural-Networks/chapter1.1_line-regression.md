@@ -13,7 +13,7 @@
 日期: 2021/04/29
 
 - 第 1 章 [神经网络]()
-    - 1.1 [线性回归](/1_理论篇/chapter1_Neural-Networks/chapter1.1_line-regression.md)
+    - 1.1 线性回归
       - 1.1.1 基本原理
       - 1.1.2 从零实现线性回归
       - 1.1.3 线性回归的简洁实现
@@ -42,9 +42,15 @@
 
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter1/1_line-regression.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter01_Neural-Networks/01_line-regression.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>
 
 Comming soon ...
+
+## 1.1.1 基本原理
+
+## 1.1.2 从零实现线性回归
+
+## 1.1.3 线性回归的简洁实现
