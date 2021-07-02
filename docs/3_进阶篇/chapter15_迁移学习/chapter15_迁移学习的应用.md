@@ -38,7 +38,7 @@
 
 # 15.7 实战项目 2 - 蚂蚁和蜜蜂的分类问题
 
-<p align="center"><a target="_blank" href="colab.research.google.com/github/Charmve/computer-vision-in-action/blob/master/notebooks/17_TL-ants-bees-classification.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" align="center"></a>
+<p align="center"><a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/master/notebooks/17_TL-ants-bees-classification.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" align="center"></a>
 </p>
 
 ## 15.7.1 迁移学习在计算机视觉领域的应用
