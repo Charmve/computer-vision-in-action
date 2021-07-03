@@ -11,11 +11,20 @@
 - 第 12 章 [生成对抗模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 12.1 Pixel RNN/CNN
     - 12.2 自编码器 Auto-encoder
-    - 12.3 生成对抗网络 GAN
-      - 12.3.1 原理
-      - 12.3.2 项目实战
+    - 12.3 生成对抗网络 GAN](chapter12.3_生成对抗网络GAN.md)
+      - 12.3.1 [概述](chapter12.3_生成对抗网络GAN.md#1231-概述)
+      - 12.3.2 [GAN的基本思想](chapter12.3_生成对抗网络GAN.md#1232-gan的基本思想)
+      - 12.3.3 [GAN浅析](chapter12.3_生成对抗网络GAN.md#1233-gan浅析)
+        - 12.3.3.1 [GAN的基本结构](chapter12.3_生成对抗网络GAN.md#12331-gan的基本结构)
+        - 12.3.3.2 [GAN的训练方式](chapter12.3_生成对抗网络GAN.md#12332-gan的训练方式)
+      - 12.3.4 [训练相关理论基础](chapter12.3_生成对抗网络GAN.md#1234训练相关理论基础)
+      - 12.3.5 StyleGAN项目实战案例
         - [StyleGAN](https://github.com/Charmve/VOGUE-Try-On)
         - [StyleGAN 2.0](https://blog.csdn.net/Charmve/article/details/115315353)
+        - [PTI: Pivotal Tuning for Latent-based editing of Real Images](https://github.com/danielroich/PTI)
+        - SinGAN: Learning a Generative Model from a Single Natural Image
+      - [小结](#小结)
+      - [参考文献](#参考文献)
       - 12.3.3 实战项目11 样式迁移
     - [12.4 变分自编码器 Variational Auto-encoder, VAE](/chapter12_4-变分自编码器VAE.md#124-变分自编码器-variational-auto-encoder-vae)
       - [12.4.1 概述](/chapter12_4-变分自编码器VAE.md#1241-概述) 
@@ -38,7 +47,7 @@
 在本节中，我们将介绍如何使用卷积神经网络自动将某图像中的样式应用在另一图像之上，即样式迁移（style transfer）[1]。这里我们需要两张输入图像，一张是内容图像，另一张是样式图像，我们将使用神经网络修改内容图像使其在样式上接近样式图像。图9.12中的内容图像为本书作者在西雅图郊区的雷尼尔山国家公园（Mount Rainier National Park）拍摄的风景照，而样式图像则是一副主题为秋天橡树的油画。最终输出的合成图像在保留了内容图像中物体主体形状的情况下应用了样式图像的油画笔触，同时也让整体颜色更加鲜艳。
 
 <div align=center>
-<img width="600" src="../../imgs/chapter12/9.11_style-transfer.svg"/>
+<img width="600" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter12/9.11_style-transfer.svg?raw=true"/>
 </div>
 
 <div align=center>图12.12 输入内容图像和样式图像，输出样式迁移后的合成图像</div>
@@ -48,7 +57,7 @@
 图12.13用一个例子来阐述基于卷积神经网络的样式迁移方法。首先，我们初始化合成图像，例如将其初始化成内容图像。该合成图像是样式迁移过程中唯一需要更新的变量，即样式迁移所需迭代的模型参数。然后，我们选择一个预训练的卷积神经网络来抽取图像的特征，其中的模型参数在训练中无须更新。深度卷积神经网络凭借多个层逐级抽取图像的特征。我们可以选择其中某些层的输出作为内容特征或样式特征。以图9.13为例，这里选取的预训练的神经网络含有3个卷积层，其中第二层输出图像的内容特征，而第一层和第三层的输出被作为图像的样式特征。接下来，我们通过正向传播（实线箭头方向）计算样式迁移的损失函数，并通过反向传播（虚线箭头方向）迭代模型参数，即不断更新合成图像。样式迁移常用的损失函数由3部分组成：内容损失（content loss）使合成图像与内容图像在内容特征上接近，样式损失（style loss）令合成图像与样式图像在样式特征上接近，而总变差损失（total variation loss）则有助于减少合成图像中的噪点。最后，当模型训练结束时，我们输出样式迁移的模型参数，即得到最终的合成图像。
 
 <div align=center>
-<img width="500" src="../../imgs/chapter12/9.11_neural-style.svg"/>
+<img width="500" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter12/9.11_neural-style.svg?raw=true"/>
 </div>
 
 <div align=center>图12.13 基于卷积神经网络的样式迁移。实线箭头和虚线箭头分别表示正向传播和反向传播</div>
@@ -77,20 +86,20 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 ``` python
 L0CV.set_figsize()
-content_img = Image.open('../../../datasets/images/rainier.jpg')
+content_img = Image.open('https://github.com/Charmve/computer-vision-in-action/blob/main/docs/datasets/images/rainier.jpg?raw=true')
 L0CV.plt.imshow(content_img)
 ```
 <div align=center>
-<img width="400" src="../../imgs/chapter12/9.11_output1.png"/>
+<img width="400" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter12/9.11_output1.png?raw=true"/>
 </div>
 
 ``` python
 L0CV.set_figsize()
-style_img = Image.open('../../../datasets/images/autumn_oak.jpg')
+style_img = Image.open('https://github.com/Charmve/computer-vision-in-action/blob/main/docs/datasets/images/autumn_oak.jpg?raw=true')
 L0CV.plt.imshow(style_img)
 ```
 <div align=center>
-<img width="400" src="../../imgs/chapter12/9.11_output2.png"/>
+<img width="400" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter12/9.11_output2.png?raw=true"/>
 </div>
 
 ### 12.3.3.3 预处理和后处理图像
@@ -383,7 +392,7 @@ epoch 450, content loss 0.23, style loss 0.67, TV loss 1.03, 0.07 sec
 L0CV.plt.imshow(postprocess(output));
 ```
 <div align=center>
-<img width="400" src="../../imgs/chapter12/9.11_output3.png"/>
+<img width="400" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter12/9.11_output3.png?raw=true"/>
 </div>
 
 <div align=center>图12.14 150X225 尺寸的合成图像</div>
@@ -419,7 +428,7 @@ L0CV.plt.imshow(postprocess(big_output));
 ```
 
 <div align=center>
-<img width="600" src="../../imgs/chapter12/9.11_output4.png"/>
+<img width="600" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter12/9.11_output4.png?raw=true"/>
 </div>
 
 <div align=center>图12.15 300X450 尺寸的合成图像</div>
@@ -440,7 +449,16 @@ L0CV.plt.imshow(postprocess(big_output));
 * 调整损失函数中的权值超参数，输出是否保留更多内容或减少更多噪点？
 * 替换实验中的内容图像和样式图像，你能创作出更有趣的合成图像吗？
 
+# 进阶实战
 
+## 体验
+<div align=center>
+    <img width="600" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter12/fast-photo-style.png?raw=true"/>
+</div>
+
+https://github.com/NVIDIA/FastPhotoStyle
+
+## 动手
 
 ### 参考文献
 

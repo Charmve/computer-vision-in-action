@@ -51,7 +51,7 @@
 如图4.4所示，门控循环单元中的重置门和更新门的输入均为当前时间步输入$X_t$与上一时间步隐藏状态$H_{t-1}$，输出由激活函数为sigmoid函数的全连接层计算得到。
 
 <div align=center>
-  <img width="500" src="../../imgs/chapter04/4.7_gru_1.svg"/>
+  <img width="500" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter04/4.7_gru_1.svg?raw=true"/>
   <br>图4.4 门控循环单元中重置门和更新门的计算
 </div>
 <br>
@@ -73,7 +73,7 @@ $$
 接下来，门控循环单元将计算候选隐藏状态来辅助稍后的隐藏状态计算。如图6.5所示，我们将当前时间步重置门的输出与上一时间步隐藏状态做按元素乘法（符号为$\odot$）。如果重置门中元素值接近0，那么意味着重置对应隐藏状态元素为0，即丢弃上一时间步的隐藏状态。如果元素值接近1，那么表示保留上一时间步的隐藏状态。然后，将按元素乘法的结果与当前时间步的输入连结，再通过含激活函数tanh的全连接层计算出候选隐藏状态，其所有元素的值域为$[-1, 1]$。
 
 <div align=center>
-  <img width="500" src="../../imgs/chapter04/4.7_gru_2.svg"/>
+  <img width="500" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter04/4.7_gru_2.svg?raw=true"/>
   <br>图4.5 门控循环单元中候选隐藏状态的计算
 </div>
 <br>
@@ -91,7 +91,7 @@ $$\tilde{H}_t = \text{tanh}(X_t W_{xh} + \left(R_t \odot H_{t-1}\right) W_{hh} +
 $$H_t = Z_t \odot H_{t-1}  + (1 - Z_t) \odot \tilde{H}_t.$$
 
 <div align=center>
-  <img width="500" src="../../imgs/chapter04/4.7_gru_3.svg"/>
+  <img width="500" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter04/4.7_gru_3.svg?raw=true"/>
   <br>图4.6 门控循环单元中隐藏状态的计算
 </div>
 <br>

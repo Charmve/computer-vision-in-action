@@ -19,7 +19,9 @@
     - 14.4 [主流方法与模型架构](#144-主流方法与模型架构)
     - 14.5 [指标 METRICS](#145-指标-metrics)
     - 14.6 [可能的未来方向](#146-可能的未来方向)
+    - 14.7 [项目实战 15 - 视频理解项目实战 SlowFast + Multi-Moments in Time](#147-视频理解项目实战)
     - [小结](#小结)
+    - [练习](#练习)
     - [参考文献](#参考文献)
 
 ----
@@ -244,11 +246,42 @@ Temporal Action Localization/Detection Models
 - **更大、更通用数据集**。哪种方法更好和用什么数据集(解决什么任务)有很大关系。如果视频本身就比较静止，或者单帧图像已经包含了足够的信息，那么用逐帧单独处理的策略已经可以取得很好的结果。
 - **视频=图像+音频**。视频是一种多模态的数据形式，能否利用音频信息辅助视频分析呢。Aytar等人在NIPS'16的工作中利用图像辅助音频分析。
 
+## 14.7 视频理解项目实战
+
+<div class="col-md-7 col-sm-12 col-xs-12 wp3" style="padding-top: 25px; text-align: center;">
+    <video autoplay muted loop src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter14/CAM_video_no_probs.mp4?raw=true" style="border-radius: 10px; width: 100%; max-width: 520px;"></video>
+    <p><a style="color: rgba(28, 54, 83, 0.6);" href="http://cnnlocalization.csail.mit.edu/">Using CAM
+            Method by Zhou et al.</a></p>
+</div>
+
+https://github.com/facebookresearch/SlowFast
+
+http://moments.csail.mit.edu/
+
+### 完整代码
+代码还没上传。。。
+
+📁 <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/chapter15_迁移学习:蚂蚁和蜜蜂的分类问题">``code/chapter15_迁移学习:蚂蚁和蜜蜂的分类问题/``</a>
+
+<table class="tfo-notebook-buttons\" align="left\">
+<td>
+  <a target="_blank" href="colab.research.google.com/github/Charmve/computer-vision-in-action/blob/master/notebooks/chapter15_Transfer-Learning/TL-ants-bees-classification.ipynb">
+  <img src="https://www.tensorflow.org/images/colab_logo_32px.png\">
+  Run in Google Colab</a>
+</td>
+<td>
+  <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter15_Transfer-Learning/TL-ants-bees-classification.ipynb">
+  <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png\">
+  View on nbViewer</a>
+</td>
+</table>
 
 ## 小结
 
 在本章节中展示了封装在动作理解中的一系列问题，列出了用作基准和预训练源的数据集，描述了数据准备步骤和策略，组织了深度学习模型构建块和最先进的模型系列。 我们希望本章节澄清了术语，扩展了您对这些问题的理解，并激发了您在计算机视觉和深度学习的交叉领域在这个快速发展的领域中进行研究的灵感。 
 本文还通过通用数据集、模型构建块和指标展示了这些动作理解问题空间之间的异同。 为此，我们还希望这可以促进喷发出交叉学科和前沿研究与应用思维的火花，并在最后给出了作者对视频理解方向浅薄的未来展望。
+
+## 练习
 
 ## 参考文献
 

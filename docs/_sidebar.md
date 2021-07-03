@@ -225,7 +225,7 @@
     - [13.4 Embeddings](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter13_Understanding-and-Visualizing/Embeddings.ipynb)
     - 13.5 对抗样本
     - [13.6 DeepDream 和风格迁移](/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
-    - [13.7 实战项目 12: PyTorch 如何使用TensorBoard](/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
+    - [13.7 实战项目 12 - PyTorch 如何使用TensorBoard](/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md)
     - 小结
     - 练习
     - 参考文献
@@ -238,7 +238,7 @@
       - 14.3.3 GAN浅析
       - 14.3.4 训练相关理论基础
       - 14.3.5 项目实战案例StyleGAN
-      - 14.3.6 实战项目11 - 图像风格迁移
+      - [14.3.6 实战项目 11 - 图像风格迁移](/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
     - [14.4 变分自编码器 Variational Auto-encoder, VAE](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
       - [14.4.1 概述](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)
       - [14.4.2 基本原理](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)
@@ -271,6 +271,7 @@
     - [16.4 主流方法与模型架构](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#144-主流方法与模型架构)
     - [16.5 指标 METRICS](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#145-指标-metrics)
     - [16.6 可能的未来方向](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#146-可能的未来方向)
+    - [16.7 项目实战 15 - 视频理解项目实战 SlowFast + Multi-Moments in Time](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#147-视频理解项目实战)
     - [小结](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#小结)
     - 练习
     - [参考文献](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#参考文献)
@@ -280,7 +281,7 @@
     - [17.3 基于特征的迁移](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#153-基于特征的迁移)
     - [17.4 基于共享参数的迁移](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#154-基于共享参数的迁移)
     - [17.5 深度学习和迁移学习结合](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#155-深度学习和迁移学习结合)
-    - [17.7 实战项目 15 - 蚂蚁和蜜蜂的分类问题](3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
+    - [17.7 实战项目 16 - 蚂蚁和蜜蜂的分类问题](3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
       - 17.7.1 迁移学习在计算机视觉领域的应用
       - 17.7.2 实战项目: 蚂蚁和蜜蜂的分类问题
     - [小结](#小结)
@@ -319,7 +320,7 @@
         - 19.3.2.4 Deformable-DETR
     - [19.4 优点及分析](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#四-优点及分析)
     - [19.5 缺点及分析](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#五-缺点及分析)
-    - [实战项目 16 - 基于Transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803)
+    - [实战项目 17 - 基于Transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803)
     - 小结
     - 练习
     - [参考文献](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#六-参考文献)
@@ -331,7 +332,7 @@
       - 20.2.3 Relation-based Knowledge
     - 20.3 知识蒸馏的应用 NLP-BERT
     - 20.4 常见疑问解答
-    - [实战项目 17 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
+    - [实战项目 18 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)
     - 小结
     - 练习
     - [参考文献](#参考文献)

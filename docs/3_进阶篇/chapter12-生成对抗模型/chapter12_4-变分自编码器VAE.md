@@ -649,6 +649,10 @@ embed.embed_file(anim_file)
 
 <br> --> [Back to Menu](#124-变分自编码器-variational-auto-encoder-vae)
 
+## 小结
+
+## 练习
+
 ## 参考文献
 
 [1] Kingma D P, Welling M. Auto-Encoding Variational Bayes[J]. stat, 2014, 1050: 10.
