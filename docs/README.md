@@ -76,7 +76,9 @@
 
     根本解决办法还是科学上网，也可以尝试修改host文件看下是否能解决。
 
-    [windows解决方案：修改host文件](https://blog.csdn.net/u011583927/article/details/104384169)
+    [windows解决方案：修改host文件](https://zhuanlan.zhihu.com/p/107196957)
+    
+    [Mac解决方案 `/etc/hosts`](https://www.jianshu.com/p/25e5e07b2464)
 
 - **公式无法正常显示解决办法**：
 
