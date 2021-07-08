@@ -628,6 +628,17 @@ jupyter notesbook
 
 - **Jupyter Notebook 无法在 GitHub 上呈现？** [使用 nbviewer](https://leaherb.com/notebook_wont_render_use_nbviewer/)。
 
+## 👥 社区互助
+
+如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。
+
+通过 GitHub Discussions 提问时，建议使用 `Q&A` 标签。
+
+通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 `L0CV` 标签。
+
+1. [GitHub Discussions](https://github.com/Charmve/computer-vision-in-action/discussions)
+2. [Stack Overflow](http://stackoverflow.com/questions/tagged/L0CV)（英文）
+3. [Segment Fault](https://segmentfault.com/t/L0CV)（中文）
 
 ## 致谢
 <a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
