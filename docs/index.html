@@ -8,6 +8,15 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/favicon.ico" media="screen" />
+  
+  <!---
+  <!-- Adsense 资源投放 --
+  <script data-ad-client="ca-pub-1890271224952559" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 谷歌站点收录 --
+  <meta name="google-site-verification" content="qTFCf1hJ275saQ7H1kin5t2DVpznBKAj0Gi50XMOVMo" />
+  <!-- 百度站点收录--
+  <meta name="baidu-site-verification" content="SZyWUIzWiU" />
+  --->
 
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
@@ -73,8 +82,9 @@
         depth: 6,
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
       },//添加搜索框
+      ga: 'UA-164658031-2',// 谷歌分析 SEO
       plugins: [
-        <!-- DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),
+        <!-- DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'), // 标题下的广告
         -->
         function(hook, vm) {
           hook.beforeEach(function (html) {
@@ -204,7 +214,6 @@
   </script>
   
   <!-- 谷歌分析 -->
-  ga: 'UA-164658031-2',
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
 
   <!-- 实现离线化 -->
