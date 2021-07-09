@@ -65,6 +65,8 @@
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       coverpage: true,
+      onlyCover: true,
+      topMargin: 60,//调整top
       repo: 'https://github.com/Charmve/computer-vision-in-action',
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
       search: {
@@ -139,11 +141,21 @@
       repo: 'computer-vision-in-action',
       owner: 'Charmve',
       admin: ['Charmve'],
+      title: location.hash.match(/#(.*?)([?]|$)/)[1],
+      id: location.hash.match(/#(.*?)([?]|$)/)[1],
       // facebook-like distraction free mode
       labels: ['Gitalk'],
       perPage: 50,
       distractionFreeMode: false
     })
+    // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+    window.onhashchange = function(event){
+      if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
+        location.reload()
+      }
+    }
+    // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
+    // gitalk.render('gitalk-container')
   </script>
   
   <!-- alert 样式 -->
@@ -178,7 +190,7 @@
   <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能
   <script>
     ((window.gitter = {}).chat = {}).options = {
-      room: 'enjoytoshare/community'
+      room: 'L0CV/community'
     };
   </script>
   <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/sidecar.v1.js" async defer></script>
