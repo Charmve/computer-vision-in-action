@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>计算机视觉实战演练</title>
+  <title>计算机视觉实战演练：算法与应用🌱</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -27,15 +27,27 @@
         box-shadow: none !important;
         width: auto !important;
       }
-    </style>
+  </style>
+  <style>
+  /*滚动条样式 start*/
+    /* 滚动条宽度 */
+    ::-webkit-scrollbar{width:5px;}
+    /* 滚动条颜色 */
+    ::-webkit-scrollbar-thumb{
+      background: #33a9dc;
+      background-image: linear-gradient(#6ecd56, #33a9dc, #cb6196, #c16290);
+      border-radius: 2em;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
   <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1/index.js"></script>
   <script>
     window.$docsify = {
       name: '计算机视觉实战演练 L0CV',
+      nameLink: 'https://charmve.github.io/L0CV-web/',
       loadSidebar: true,
       maxLevel: 4,
       subMaxLevel: 2,
@@ -45,6 +57,7 @@
       },
       coverpage: true,
       repo: 'https://github.com/Charmve/computer-vision-in-action',
+      externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
       search: {
         paths: 'auto',
         placeholder: {
@@ -187,6 +200,16 @@
         "opacityOnHover": 0.2
       }
     });
+  </script>
+  
+  <!-- 谷歌分析 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+
+  <!-- 实现离线化 -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('pwa.js')
+    }
   </script>
 
   <!-- json 颜色显示 -->
