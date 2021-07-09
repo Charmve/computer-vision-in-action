@@ -135,7 +135,7 @@
   
   <script>
     const gitalk = new Gitalk({
-      id: decodeURI('{{ page.url }}'),
+      id: decodeURI('{{ page.title }}'),
       clientID: 'c41595e0999dd2834af4',
       clientSecret: '4ad47f16f60a04c2870a1939406a6ad87bf219ec',
       repo: 'computer-vision-in-action',
@@ -150,7 +150,7 @@
     })
     // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
     window.onhashchange = function(event){
-      if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
+      if(event.newURL.split('?')[0] !== event.oldURL.split('?')[0]) {
         location.reload()
       }
     }
