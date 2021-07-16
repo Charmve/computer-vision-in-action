@@ -103,6 +103,7 @@
 <table align="center">
 <tr>
 <td>
+<details><summary>Click to expand</summary>
 
 - <b><h4>[序言](/docs/book_preface.md)</h4></b>
 - <b><h4>主要符号表</h4></b>
@@ -517,6 +518,8 @@
 
 <br>
 - <b>更新中 ...</b>
+
+</details>
 
 </tr>
 </td>
