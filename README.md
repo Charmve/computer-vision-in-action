@@ -79,7 +79,7 @@
 
 <div align="right">
 
-分享到 [QQ](http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action) | [WeChat](http://mp.weixin.qq.com/intent/wechat?text=https://github.com/Charmve/computer-vision-in-action) | [Weibo](http://weibo.com/intent/weibo?text=https://github.com/Charmve/computer-vision-in-action) | [Twitter](http://twitter.com/intent/tweet?text=https://github.com/Charmve/computer-vision-in-action)
+分享到 [QQ](http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action) | [微信](http://mp.weixin.qq.com/intent/wechat?text=https://github.com/Charmve/computer-vision-in-action) | [微博](http://weibo.com/intent/weibo?text=https://github.com/Charmve/computer-vision-in-action) | [推特](http://twitter.com/intent/tweet?text=https://github.com/Charmve/computer-vision-in-action)
 </div> 
 
 ## 全书组织
@@ -105,7 +105,7 @@
 
 * 第三部分讨论最近几年出现的<b>“网红”模型</b>，诸如：Transformer、Attention、知识蒸馏、迁移学习、生成对抗模型等。这部分也是此份资料的力挺之作。最后，在 `chap_optimization` 中，我们讨论了用于训练深度学习模型的几种常用优化算法，如：模型压缩、模型剪枝、微调、蒸馏等。
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 愿景
 
@@ -118,7 +118,7 @@
 4. 允许我们和整个[社区](https://github.com/Charmve/computer-vision-in-action/discussions)不断快速迭代内容，从而紧跟仍在高速发展的计算机视觉领域；
 5. 由包含有关技术细节问答的论坛作为补充，使大家可以相互答疑并交换经验。
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 目录
 <details><summary>📘 详细目录</summary>
@@ -548,7 +548,7 @@
 
 </details>
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 🔍 仓库文件浏览
 
@@ -587,7 +587,7 @@
 > - 📁 <code>res/</code> - ui 图片及全书思维导图PDF
 > - 📄 <code>README.md</code> - 全书介绍及目录
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 如何食用
 
@@ -670,7 +670,7 @@ import L0CV
 																  
 </details>
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 常见问题
 
@@ -694,7 +694,7 @@ import L0CV
 
 - **Jupyter Notebook 无法在 GitHub 上呈现？** [使用 nbviewer](https://leaherb.com/notebook_wont_render_use_nbviewer/)。
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 👥 社区互助
 
@@ -708,18 +708,18 @@ import L0CV
 2. [Stack Overflow](http://stackoverflow.com/questions/tagged/L0CV)（英文）
 3. [Segment Fault](https://segmentfault.com/t/L0CV)（中文）
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 致谢
 <a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 参考文献
 
 感谢前人的杰出工作，我才得以写出此书。感谢 [<b>参考文献</b>](docs/REFERENCE.md) 中列出及未列出的，所有对此开源工作有帮助的前辈！
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 关注我们
 <div align=center>
@@ -733,12 +733,12 @@ import L0CV
 
 - <em>请尽管表达你们的意见和建议，GitHub issues 和 电子书下方都可以留言，也可写邮件给我，我一定会回！</em>
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可。
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## CONTRIBUTION
 
@@ -775,7 +775,7 @@ import L0CV
 </tr>
 <table>
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## Citation
 
@@ -791,7 +791,7 @@ Use this bibtex to cite this repository:
 }
 ```
 
-[Index](#一种结合了代码数据集和html的数字学习媒介)
+[Index](#一种结合了代码图示和html的在线学习媒介)
 	
 ## Stargazers Over Time
 
