@@ -47,4 +47,11 @@
     </a>
 </p>
 
+
+## 1.2.1 softmax回归模型
+
+## 1.2.2 从零开始实现softmax回归
+
+## 1.2.3 softmax回归的简洁实现
+
 Comming soon ...
