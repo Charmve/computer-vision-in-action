@@ -1,4 +1,4 @@
-## 一种结合了代码、数据集和HTML的数字学习媒介
+## 一种结合了代码、图示和HTML的在线学习媒介
 <br>
 
 <table align="center">
@@ -31,7 +31,7 @@
 🏷️ `fig_book_org`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/book_org.png" width=80% alt="book_org.png">
+  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/book_org.png" width=90% alt="book_org.png">
 </p> 
 
 <p align="right">
@@ -76,7 +76,9 @@
 
     根本解决办法还是科学上网，也可以尝试修改host文件看下是否能解决。
 
-    [windows解决方案：修改host文件](https://blog.csdn.net/u011583927/article/details/104384169)
+    [windows解决方案：修改host文件](https://zhuanlan.zhihu.com/p/107196957)
+    
+    [Mac解决方案 `/etc/hosts`](https://www.jianshu.com/p/25e5e07b2464)
 
 - **公式无法正常显示解决办法**：
 
@@ -92,7 +94,7 @@
 
 ## 参考文献
 
-感谢前人的杰出工作，我才得以写出此书。点击[<b>这里</b>](REFERENCE.md)，查看全部参考文献列表
+感谢前人的杰出工作，我才得以写出此书。点击[<b>这里</b>](REFERENCE.md)，查看全部参考文献列表。
 
 ## 关注我们
 <div align=center>

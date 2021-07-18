@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>计算机视觉实战演练</title>
+  <title>计算机视觉实战演练：算法与应用🌱</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/favicon.ico" media="screen" />
+  
+  <!---
+  <!-- Adsense 资源投放 --
+  <script data-ad-client="ca-pub-1890271224952559" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 谷歌站点收录 --
+  <meta name="google-site-verification" content="qTFCf1hJ275saQ7H1kin5t2DVpznBKAj0Gi50XMOVMo" />
+  <!-- 百度站点收录--
+  <meta name="baidu-site-verification" content="SZyWUIzWiU" />
+  --->
 
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
@@ -19,23 +28,45 @@
     }
   </style>
   <style>
-      nav.app-nav li ul {
+       nav.app-nav li ul {
         min-width: 100px;
+      }
+      .app-nav{
+        position: fixed;
+        margin: 0;
+        /*padding: 10px 50px 10px 0;*/
+        padding: 10px 0 10px 0;/*上、右、下、左*/
+        width: calc(100% - 325px);
+        background-color: #fff;
+        height: 55px;
+        border-bottom: 1px solid #eee;
       }
 
       #carbonads {
         box-shadow: none !important;
         width: auto !important;
       }
-    </style>
+  </style>
+  <style>
+  /*滚动条样式 start*/
+    /* 滚动条宽度 */
+    ::-webkit-scrollbar{width:5px;}
+    /* 滚动条颜色 */
+    ::-webkit-scrollbar-thumb{
+      background: #33a9dc;
+      background-image: linear-gradient(#6ecd56, #33a9dc, #cb6196, #c16290);
+      border-radius: 2em;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
   <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1/index.js"></script>
   <script>
     window.$docsify = {
       name: '计算机视觉实战演练 L0CV',
+      nameLink: 'https://charmve.github.io/L0CV-web/',
       loadSidebar: true,
       maxLevel: 4,
       subMaxLevel: 2,
@@ -43,8 +74,13 @@
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
-      coverpage: true,
+      loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
+      mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
+      coverpage: false,
+      onlyCover: true,
+      topMargin: 60,//调整top
       repo: 'https://github.com/Charmve/computer-vision-in-action',
+      externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
       search: {
         paths: 'auto',
         placeholder: {
@@ -59,8 +95,9 @@
         depth: 6,
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
       },//添加搜索框
+      ga: 'UA-164658031-2',// 谷歌分析 SEO
       plugins: [
-        <!-- DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),
+        <!-- DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'), // 标题下的广告
         -->
         function(hook, vm) {
           hook.beforeEach(function (html) {
@@ -116,11 +153,22 @@
       repo: 'computer-vision-in-action',
       owner: 'Charmve',
       admin: ['Charmve'],
+      // 每个网页独立的gitalk
+      //title: location.hash.match(/#(.*?)([?]|$)/)[1],
+      //id: location.hash.match(/#(.*?)([?]|$)/)[1],
       // facebook-like distraction free mode
       labels: ['Gitalk'],
       perPage: 50,
       distractionFreeMode: false
     })
+    // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+    window.onhashchange = function(event){
+      if(event.newURL.split('#')[0] !== event.oldURL.split('#')[0]) {
+        location.reload()
+      }
+    }
+    // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
+    // gitalk.render('gitalk-container')
   </script>
   
   <!-- alert 样式 -->
@@ -155,7 +203,7 @@
   <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能
   <script>
     ((window.gitter = {}).chat = {}).options = {
-      room: 'enjoytoshare/community'
+      room: 'L0CV/community'
     };
   </script>
   <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/sidecar.v1.js" async defer></script>
@@ -187,6 +235,16 @@
         "opacityOnHover": 0.2
       }
     });
+  </script>
+  
+  <!-- 谷歌分析 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+
+  <!-- 实现离线化 -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('pwa.js')
+    }
   </script>
 
   <!-- json 颜色显示 -->

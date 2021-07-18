@@ -19,7 +19,27 @@
 
 ---
 
-### 一种结合了代码、数据集和HTML的数字学习媒介
+<!--
+<table>
+<tr>
+<td>
+
+## ✨ News! ✨
+
+- <b>2020.07.12:</b> 📝  进阶篇 更新Transformer、强化学习、迁移学习、视频理解 !
+- <b>2021.06.20:</b> 📘  在线电子书发布  ! <a href="https://charmve.github.io/computer-vision-in-action/" target="_blank"><img src="https://img.shields.io/badge/在线阅读-简体中文-000000.svg?style=flat-square&amp;logo=GitBook" alt="中文电子书"></a>
+- <b>2020.06.10:</b> 💻  L0CV 项目主页发布 ！ <a href="https://charmve.github.io/L0CV-web/" target="_blank"><img src="https://img.shields.io/badge/项目主页-L0CV-000000.svg?style=flat-square&amp;logo=GitBook" alt="L0CV Website"></a>
+
+更多更新日志会同步到 [CHANGELOG](CHANGELOG.md)，持续更新中，感谢大家的支持与喜欢！
+
+</tr>
+</td>
+</table>
+-->
+<br>
+
+## ✨ 以用促学，先会后懂 ✨
+### 一种结合了代码、图示和HTML的在线学习媒介
 <br>
 
 <table align="center">
@@ -29,29 +49,29 @@
 <h1> 计算机视觉实战演练：算法与应用 <sup> 📌</sup>
 <br><em>Computer Vision in Action</em></h1>
 
-作者：张伟（Charmve）
+[作者：张伟（Charmve）](https://github.com/Charmve)
 
 <p align="center">
-  <a href="https://github.com/Charmve"><img src="https://img.shields.io/badge/作者-@Charmve-000000.svg?logo=GitHub" alt="GitHub"></a>
-  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://img.shields.io/badge/CV-in%20Action-yellow" alt="CV-Action"></a>
-  <a href="https://github.com/Charmve/computer-vision-in-action/code/"><img src="https://img.shields.io/badge/-@PyTorch-000000.svg?logo=PyTorch" alt="PyTorch"></a>
-  <a href="https://github.com/Charmve/computer-vision-in-action/notebooks/"><img src="https://img.shields.io/badge/-@notebook-000000.svg?logo=jupyter" alt="jupyter"></a>
+	<a href="https://charmve.github.io/L0CV-web/" target="_blank"><img src="https://img.shields.io/badge/项目主页-L0CV-000000.svg?logo=GitHub" alt="L0CV Website"></a>
+	<a href="https://charmve.github.io/computer-vision-in-action/" target="_blank"><img src="https://img.shields.io/badge/在线阅读-简体中文-000000.svg?logo=GitBook" alt="中文电子书"></a>
+	<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/-@PyTorch-000000.svg?logo=PyTorch" alt="PyTorch"></a>
+  <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/notebooks/"><img src="https://img.shields.io/badge/-@notebook-000000.svg?logo=jupyter" alt="jupyter"></a>
   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/stars/Charmve/computer-vision-in-action?style=social" alt="Stars"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/forks/Charmve/computer-vision-in-action?style=social" alt="Forks"></a>
 </p>
 
 <div align="center">
-	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" width="220px" alt="logo:maiwei" title="有疑问，跑起来就会变成一朵花 ❀">
+	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" width="220px" alt="logo:L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
 </div>
-
+	
 <br>
 
-> <h4>在线阅读（内容实时更新）</h4>
+> <h4>在线阅读（优先更新实战篇和进阶篇）</h4>
 > - 地址：https://charmve.github.io/computer-vision-in-action/
 
 > <h4>最新版PDF下载</h4>
-> - 地址：~~https://github.com/charmve/computer-vision-in-action/releases~~ (马上来 ...)
+> - 地址：https://github.com/charmve/computer-vision-in-action/releases (马上来 ...)
 
 </tr>
 </td>
@@ -59,9 +79,8 @@
 
 <div align="right">
 
-  Share on [QQ](http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action) | [WeChat](http://mp.weixin.qq.com/intent/wechat?text=https://github.com/Charmve/computer-vision-in-action) | [Weibo](http://weibo.com/intent/weibo?text=https://github.com/Charmve/computer-vision-in-action) | [Twitter](http://twitter.com/intent/tweet?text=https://github.com/Charmve/computer-vision-in-action)
+分享到 [QQ](http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action) | [微信](http://mp.weixin.qq.com/intent/wechat?text=https://github.com/Charmve/computer-vision-in-action) | [微博](http://weibo.com/intent/weibo?text=https://github.com/Charmve/computer-vision-in-action) | [推特](http://twitter.com/intent/tweet?text=https://github.com/Charmve/computer-vision-in-action)
 </div> 
-
 
 ## 全书组织
 :label: `fig_book_org`
@@ -86,6 +105,8 @@
 
 * 第三部分讨论最近几年出现的<b>“网红”模型</b>，诸如：Transformer、Attention、知识蒸馏、迁移学习、生成对抗模型等。这部分也是此份资料的力挺之作。最后，在 `chap_optimization` 中，我们讨论了用于训练深度学习模型的几种常用优化算法，如：模型压缩、模型剪枝、微调、蒸馏等。
 
+[Index](#一种结合了代码图示和html的在线学习媒介)
+
 ## 愿景
 
 本开源项目代表了我们的一种尝试：我们将教给读者概念、背景知识和代码；我们将在同一个地方阐述剖析问题所需的批判性思维、解决问题所需的数学知识，以及实现解决方案所需的工程技能。
@@ -97,9 +118,11 @@
 4. 允许我们和整个[社区](https://github.com/Charmve/computer-vision-in-action/discussions)不断快速迭代内容，从而紧跟仍在高速发展的计算机视觉领域；
 5. 由包含有关技术细节问答的论坛作为补充，使大家可以相互答疑并交换经验。
 
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 目录
-
+<details><summary>📘 详细目录</summary>
+	
 <table align="center">
 <tr>
 <td>
@@ -518,36 +541,69 @@
 <br>
 - <b>更新中 ...</b>
 
+<br>[收起](#目录)
 </tr>
 </td>
 </table>
+
+</details>
+
+[Index](#一种结合了代码图示和html的在线学习媒介)
+
+## 🔍 仓库文件浏览
+
+按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
+
+> - 📁 <code>L0CV/</code> - 专为本项目建立的 ``💮 L0CV`` 包 
+> - 📁 <code>code/</code> - 书中完整代码
+> - 📁 <code>datasets/</code> - 本书所用数据集
+>   - 📁 <code>images/</code> - 经典图像处理图片
+> - 📁 <code>docs/</code> - 全书按照一下几个篇目进行编写
+>   - 📁 <code>0_绪论/</code> - 全书绪论
+>   - 📁 <code>1_理论篇/</code> - 基本理论和算法基础
+>   - 📁 <code>2_实战篇/</code> - 项目实战教程
+>   - 📁 <code>3_进阶篇/</code> - 最新CV模型和算法
+>   - 📁 <code>附件/</code> - 所需数学和统计学知识
+>   - 📁 <code>img/</code> - 各章节所使用的插图
+> - 📁 <code>models/</code> - 封装可用的预训练模型
+> - 📁 <code>notebooks/</code> - 🚩 全书 Colab notebook，可在线测试
+>   - 📁 <code>chapter01_neural-networks/</code> - 第 1 章 - 神经网络 Jupyter Notebook 实现
+>   - 📁 <code>chapter02_CNN/</code> - 第 2 章 - 卷积神经网络 Jupyter Notebook 实现
+>   - 📁 <code>chapter03_Image-Classification</code> - 第 3 章 - 图像分类 Jupyter Notebook 实现
+>   - 📁 <code>chapter04_recurrent-neural-networks/</code> - 第 4 章 - 递归神经网络 Jupyter Notebook 实现
+>   - 📁 <code>chapter05_graph-neural-network/</code> - 第 5 章 - 图神经网络 Jupyter Notebook 实现
+>   - 📁 <code>chapter07_optimization/</code> - 第 6 章 - 模型拟合与优化算法 Jupyter Notebook 实现
+>   - 📁 <code>chapter08_environment-setup-and-tool-use/</code> - 第 7 章 - 软件环境搭建与工具使用 Jupyter Notebook 实现
+>   - 📁 <code>chapter09_convolutional-neural-networks/</code> - 第 8 章 - 经典神经网络架构：原理与PyTorch实现 Jupyter Notebook 实现
+>   - 📁 <code>chapter12_practice-projects</code> - 第 12 章 - 计算机视觉课题研究初探 Jupyter Notebook 实现
+>   - 📁 <code>chapter13_Understanding-and-Visualizing/</code> - 第 13 章 - 可视化与理解卷积神经网络 Jupyter Notebook 实现
+>   - 📁 <code>chapter14_GAN/</code> - 第 14 章 - 生成对抗模型 Jupyter Notebook 实现
+>   - 📁 <code>chapter15_Transfer-Learning/</code> - 第 15 章 - 迁移学习 Jupyter Notebook 实现
+>   - 📁 <code>chapter16_Attention/</code> - 第 16 章 - 注意力机制 Jupyter Notebook 实现
+>   - 📁 <code>chapter17_Transformers/</code> - 第 17 章 - Transformers Jupyter Notebook 实现
+>   - ...
+>   - 📁 <code>imgs/</code> - Jupyter Notebook 中用到的图片
+> - 📁 <code>docker/</code> - 为降低读者的学习成本，目前未进行搭建
+> - 📁 <code>res/</code> - ui 图片及全书思维导图PDF
+> - 📄 <code>README.md</code> - 全书介绍及目录
+
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 如何食用
 
 :label:`sec_code`
 
 <p align="center">
-  <img src="res/ui/L0CV.png" alt="L0CV architecture">
+  <img src="res/ui/L0CV.png" width=70% alt="L0CV architecture" title="L0CV architecture">
+  <br>
+  图1 L0CV 结构图
 </p> 
 
-### 1. 本地运行
-- 依赖包安装
-```shell
-sudo apt-get update
-pip3 install -r requirements.txt
-```
-- 创建 L0CV
-```shell
-python3 setup.py
-```
-- 测试环境
+<details><summary>详细攻略</summary>
 
-```shell
-cd code
-python3 L0CV_test.py
-```
+### 方式一 Jupyter Notebook (推荐方式 ✨)
 
-### 2. Colab 运行
+#### 1. 本地运行
 
 - 依赖包安装
 ```
@@ -567,44 +623,54 @@ cd notebooks
 jupyter notesbook
 ```
 
-### 3. 结合文章/notebook阅读
+#### 2. Google Colab 运行
 
-按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
+- 打开每章节首页，点击 <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> 可直接打开 Google Colab ，点击 [Copy to Drive] 即可在线运行测试。 
 
-## 🔍 仓库文件浏览
-- 📁 <code>L0CV/</code> - 专为本项目建立的 L0CV 包 
-- 📁 <code>code/</code> - 书中完整代码
-- 📁 <code>datasets/</code> - 本书所用数据集
-  - 📁 <code>images/</code> - 经典图像处理图片
-- 📁 <code>docs/</code> - 全书按照一下几个篇目进行编写
-  - 📁 <code>0_绪论/</code> - 全书绪论
-  - 📁 <code>1_理论篇/</code> - 基本理论和算法基础
-  - 📁 <code>2_实战篇/</code> - 项目实战教程
-  - 📁 <code>3_进阶篇/</code> - 最新CV模型和算法
-  - 📁 <code>附件/</code> - 所需数学和统计学知识
-  - 📁 <code>img/</code> - 各章节所使用的插图
-- 📁 <code>models/</code> - 封装可用的预训练模型
-- 📁 <code>notebooks/</code> - 全书 Colab notebook，可在线测试
-  - 📁 <code>chapter01_neural-networks/</code> - 第 1 章 - 神经网络 Jupyter Notebook 实现
-  - 📁 <code>chapter02_CNN/</code> - 第 2 章 - 卷积神经网络 Jupyter Notebook 实现
-  - 📁 <code>chapter03_Image-Classification</code> - 第 3 章 - 图像分类 Jupyter Notebook 实现
-  - 📁 <code>chapter04_recurrent-neural-networks/</code> - 第 4 章 - 递归神经网络 Jupyter Notebook 实现
-  - 📁 <code>chapter05_graph-neural-network/</code> - 第 5 章 - 图神经网络 Jupyter Notebook 实现
-  - 📁 <code>chapter07_optimization/</code> - 第 6 章 - 模型拟合与优化算法 Jupyter Notebook 实现
-  - 📁 <code>chapter08_environment-setup-and-tool-use/</code> - 第 7 章 - 软件环境搭建与工具使用 Jupyter Notebook 实现
-  - 📁 <code>chapter09_convolutional-neural-networks/</code> - 第 8 章 - 经典神经网络架构：原理与PyTorch实现 Jupyter Notebook 实现
-  - 📁 <code>chapter12_practice-projects</code> - 第 12 章 - 计算机视觉课题研究初探 Jupyter Notebook 实现
-  - 📁 <code>chapter13_Understanding-and-Visualizing/</code> - 第 13 章 - 可视化与理解卷积神经网络 Jupyter Notebook 实现
-  - 📁 <code>chapter14_GAN/</code> - 第 14 章 - 生成对抗模型 Jupyter Notebook 实现
-  - 📁 <code>chapter15_Transfer-Learning/</code> - 第 15 章 - 迁移学习 Jupyter Notebook 实现
-  - 📁 <code>chapter16_Attention/</code> - 第 16 章 - 注意力机制 Jupyter Notebook 实现
-  - 📁 <code>chapter17_Transformers/</code> - 第 17 章 - Transformers Jupyter Notebook 实现
-  - ...
-  - 📁 <code>imgs/</code> - Jupyter Notebook 中用到的图片
-- 📁 <code>docker/</code> - 为降低读者的学习成本，目前未进行搭建
-- 📁 <code>res/</code> - ui 图片及全书思维导图PDF
-- 📄 <code>README.md</code> - 全书介绍及目录
+- 点击 <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb\"><img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter"></a> 也可在 ``mybinder`` 查看和在线运行。
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/29084184/126031057-1e6ca67f-4475-47c1-a6ff-66375cb86908.png" width=60% alt="Run on Colab" title="Run on Colab">
+  <br>
+  图2 例子：12.3.3 样式迁移
+</p> 
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/29084184/126031137-14e349cd-1e89-4f98-9c56-0f1d3007ed89.png" width=60% alt="点击 Copy to Drive">
+  <br>图3 例子：12.3.3 样式迁移 Colab 点击 [Copy to Drive]
+</p>
+
+### 方式二 使用 ``/code`` 
+#### 1. 运行环境 + L0CV 加载
+- 依赖包安装
+```shell
+sudo apt-get update
+pip3 install -r requirements.txt
+```
+- 创建 L0CV
+```shell
+python3 setup.py
+```
+- 测试环境
+
+```shell
+cd code
+python3 L0CV_test.py
+```
+
+#### 2. 直接调用每个章节的代码测试
+
+```python3
+import L0CV
+```
+
+<br>
+
+[收起](#如何食用)
+																  
+</details>
+
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 常见问题
 
@@ -618,7 +684,7 @@ jupyter notesbook
 
     根本解决办法还是科学上网，也可以尝试修改host文件看下是否能解决。
 
-    [windows解决方案：修改host文件](https://blog.csdn.net/u011583927/article/details/104384169)
+    解决方案: 修改host文件 [windows](https://blog.csdn.net/u011583927/article/details/104384169) | [Mac](https://www.jianshu.com/p/25e5e07b2464)
 
 - **公式无法正常显示解决办法**：
 
@@ -628,13 +694,32 @@ jupyter notesbook
 
 - **Jupyter Notebook 无法在 GitHub 上呈现？** [使用 nbviewer](https://leaherb.com/notebook_wont_render_use_nbviewer/)。
 
+[Index](#一种结合了代码图示和html的在线学习媒介)
+
+## 👥 社区互助
+
+如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。
+
+- 通过 GitHub Discussions 提问时，建议使用 `Q&A` 标签。
+
+- 通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 `L0CV` 标签。
+
+1. [GitHub Discussions](https://github.com/Charmve/computer-vision-in-action/discussions)
+2. [Stack Overflow](http://stackoverflow.com/questions/tagged/L0CV)（英文）
+3. [Segment Fault](https://segmentfault.com/t/L0CV)（中文）
+
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 致谢
 <a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
 
+[Index](#一种结合了代码图示和html的在线学习媒介)
+
 ## 参考文献
 
---> Go to see [<b>REFERENCE.md</b>](docs/REFERENCE.md), &nbsp; 感谢前人的杰出工作，我才得以写出此书。
+感谢前人的杰出工作，我才得以写出此书。感谢 [<b>参考文献</b>](docs/REFERENCE.md) 中列出及未列出的，所有对此开源工作有帮助的前辈！
+
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## 关注我们
 <div align=center>
@@ -643,10 +728,17 @@ jupyter notesbook
 </div>
 
 - 若本书里没有你想要理论和实战项目，或者你发现本书哪个地方有错误，请毫不犹豫地去本仓库的 Issues（ 地址 https://github.com/charmve/computer-vision-in-action/issues ）进行反馈，在对应版块提交你希望补充的内容或者勘误信息，作者通常会在 24 小时以内给您回复，超过 24 小时未回复的话可以邮件联系我（微信 MaiweiE_com）；
+
 - 同时，我也欢迎大家加入本项目的建设中来，欢迎 [pull request](https://github.com/charmve/computer-vision-in-action/pulls)！
+
+- <em>请尽管表达你们的意见和建议，GitHub issues 和 电子书下方都可以留言，也可写邮件给我，我一定会回！</em>
+
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可。
+
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## CONTRIBUTION
 
@@ -683,6 +775,7 @@ jupyter notesbook
 </tr>
 <table>
 
+[Index](#一种结合了代码图示和html的在线学习媒介)
 
 ## Citation
 
@@ -698,24 +791,22 @@ Use this bibtex to cite this repository:
 }
 ```
 
+[Index](#一种结合了代码图示和html的在线学习媒介)
+	
 ## Stargazers Over Time
 
+<div class="main">
+	<p align="center">	
+		<b>Awesome!</b>	
+		<a href="https://github.com/Charmve/computer-vision-in-action"><em>Charmve/computer-vision-in-action</em></a>
+		was created 3 months ago
+		and now has <b>950</b> stars.
+  </p>
+</div>
+	
 [![Stargazers over time](https://starchart.cc/Charmve/computer-vision-in-action.svg)](https://starchart.cc/Charmve/computer-vision-in-action)
 
-<br>
+<br><br>
 <p align="center">Feel free to ask any questions, open a PR if you feel something can be done differently!</p>
-<h2 align="center">🌟Star this repository🌟</h2>
-<p align="center">Created by <a href="https://github.com/Charmve">Charmve</a> & <a href="https://github.com/MaiweiAI">maiwei.ai</a> Community | Deployed on <a href="https://app.gitbook.com/@charmve/s/computer-vision-in-action/">GitBook</a></p>
-
-<br>
-* <i>Update on Apr 29，2021 @<a href="https://github.com/Charmve" target="_blank">Charmve</a>, 
-    <a class="github-button"
-        href="https://github.com/Charmve/Surface-Defect-Detection"
-        data-icon="octicon-star" data-show-count="true"
-        aria-label="Star Charmve/Surface-Defect-Detection on GitHub">Star</a> 
-    and 
-    <a class="github-button"
-        href="https://github.com/Charmve/Surface-Defect-Detection/fork"
-        data-icon="octicon-repo-forked" data-show-count="true"
-        aria-label="Fork Charmve/Surface-Defect-Detection on GitHub">Fork</a>
-</i>
+<h2 align="center">🌟 Star this repository 🌟</h2>
+<p align="center">Created by <a href="https://github.com/Charmve">Charmve</a> & <a href="https://github.com/MaiweiAI">maiwei.ai</a> Community | Deployed on <a href="https://charmve.github.io/computer-vision-in-action/">GitHub Page</a></p>
