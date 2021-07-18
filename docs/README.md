@@ -1,4 +1,4 @@
-## 一种结合了代码、数据集和HTML的数字学习媒介
+## 一种结合了代码、图示和HTML的在线学习媒介
 <br>
 
 <table align="center">
@@ -31,7 +31,7 @@
 🏷️ `fig_book_org`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/book_org.png" width=80% alt="book_org.png">
+  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/book_org.png" width=90% alt="book_org.png">
 </p> 
 
 <p align="right">
@@ -94,7 +94,7 @@
 
 ## 参考文献
 
-感谢前人的杰出工作，我才得以写出此书。点击[<b>这里</b>](REFERENCE.md)，查看全部参考文献列表
+感谢前人的杰出工作，我才得以写出此书。点击[<b>这里</b>](REFERENCE.md)，查看全部参考文献列表。
 
 ## 关注我们
 <div align=center>
