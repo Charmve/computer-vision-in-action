@@ -13,7 +13,8 @@
 
 ## Maiwei AI Lab - 迈微AI研习社
 
-<a href="https://www.github.com/Charmve" target="_blank"><img src="https://img.shields.io/badge/创始人-@Charmve-000000.svg?style=flat-square&logo=GitHub"></a>  [![CircleCI](https://circleci.com/gh/Charmve/computer-vision-in-action.svg?style=svg)](https://circleci.com/gh/Charmve/computer-vision-in-action)
+<a href="https://www.github.com/Charmve" target="_blank"><img src="https://img.shields.io/badge/创始人-@Charmve-000000.svg?style=flat-square&logo=GitHub"></a>
+<a href="https://github.com/Charmve/computer-vision-in-action#关注我们" target="_blank"><img src="https://img.shields.io/badge/公众号-@迈微AI研习社-000000.svg?style=flat-square&logo=wechat"></a>
 
 作者系迈微AI研习社创始人、CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。公众号底部有菜单分类，关注我们，一起学习成长。
 
@@ -52,11 +53,16 @@
 [作者：张伟（Charmve）](https://github.com/Charmve)
 
 <p align="center">
-	<a href="https://charmve.github.io/L0CV-web/" target="_blank"><img src="https://img.shields.io/badge/项目主页-L0CV-000000.svg?logo=GitHub" alt="L0CV Website"></a>
-	<a href="https://charmve.github.io/computer-vision-in-action/" target="_blank"><img src="https://img.shields.io/badge/在线阅读-简体中文-000000.svg?logo=GitBook" alt="中文电子书"></a>
-	<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/-@PyTorch-000000.svg?logo=PyTorch" alt="PyTorch"></a>
-  <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/notebooks/"><img src="https://img.shields.io/badge/-@notebook-000000.svg?logo=jupyter" alt="jupyter"></a>
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a>
+	<a href="https://circleci.com/gh/Charmve/computer-vision-in-action"><img src="https://circleci.com/gh/Charmve/computer-vision-in-action.svg?style=svg" alt="CircleCI" title="CircleCI"></a>
+	<a href="https://charmve.github.io/computer-vision-in-action"><img src="https://readthedocs.org/projects/pyod/badge/?version=latest" alt="Documentation status"></a>
+	<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/license-Apache%202.0-red?logo=apache" alt="Code License"></a>
+  <a rel="DocLicense" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/docs%20license-CC%20BY--NC--SA%204.0-green?logo=creativecommons" title="CC BY--NC--SA 4.0"/></a>
+	<br><a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Python-v3.8.10-000000.svg?logo=Python&color=brightgreen" alt="Python version"></a>
+  <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/notebooks/"><img src="https://img.shields.io/badge/Juypter-v4.7.1-000000.svg?logo=jupyter&color=orange" alt="jupyter version"></a>
+  <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-v1.9.0-000000.svg?logo=PyTorch&color=lightred" alt="PyTorch version"></a>
+	<br><a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/master"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
+	<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Run%20on-Colab-000000.svg?logo=googlecolab&color=yellow" alt="Run on Colab"></a>
+	<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/docker"><img src="https://img.shields.io/badge/Docker%20Hub-v1.0.1-000000.svg?logo=Docker&color=blue" alt="Docker"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/stars/Charmve/computer-vision-in-action?style=social" alt="Stars"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/forks/Charmve/computer-vision-in-action?style=social" alt="Forks"></a>
 </p>
@@ -64,9 +70,13 @@
 <div align="center">
 	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" width="220px" alt="logo:L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
 </div>
-	
-<br>
 
+<br><br>
+<a href="https://charmve.github.io/L0CV-web/" target="_blank"><img src="https://img.shields.io/badge/项目主页-L0CV-000000.svg?logo=GitHub" alt="L0CV Website"></a>
+<a href="https://charmve.github.io/computer-vision-in-action/" target="_blank"><img src="https://img.shields.io/badge/在线阅读-简体中文-000000.svg?logo=GitBook" alt="中文电子书"></a>
+
+跨平台，只需一个浏览器即可！
+<br>
 > <h4>在线阅读（优先更新实战篇和进阶篇）</h4>
 > - 地址：https://charmve.github.io/computer-vision-in-action/
 
@@ -79,8 +89,11 @@
 
 <div align="right">
 
-分享到 [QQ](http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action) | [微信](http://mp.weixin.qq.com/intent/wechat?text=https://github.com/Charmve/computer-vision-in-action) | [微博](http://weibo.com/intent/weibo?text=https://github.com/Charmve/computer-vision-in-action) | [推特](http://twitter.com/intent/tweet?text=https://github.com/Charmve/computer-vision-in-action)
-</div> 
+分享到 <code><a href="http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126457763-5f826c4f-83c6-4b03-85e9-248787171a80.png" alt="QQ" title="QQ"></a></code>
+<code><a href="http://mp.weixin.qq.com/intent/wechat?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126457951-90f94403-b071-4476-bc75-4c3d66f984ce.png" alt="WeChat" title="WeChat"></a></code>
+<code><a href="http://weibo.com/intent/weibo?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126458756-84e58b3d-924a-4105-bcf5-072fe7fc3b12.png" alt="Weibo" title="Weibo"></a></code>
+<code><a href="http://twitter.com/intent/tweet?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126458017-8c629fcb-ff69-4a9a-ba0a-e47d17d3f9b4.png" alt="Twitter" title="Twitter"></a></code>
+</div>
 
 ## 全书组织
 :label: `fig_book_org`
@@ -684,7 +697,7 @@ import L0CV
 
     根本解决办法还是科学上网，也可以尝试修改host文件看下是否能解决。
 
-    解决方案: 修改host文件 [windows](https://blog.csdn.net/u011583927/article/details/104384169) | [Mac](https://www.jianshu.com/p/25e5e07b2464)
+    解决方案: 修改host文件 <code><a href="https://www.jianshu.com/p/25e5e07b2464"><img height="20" src="https://user-images.githubusercontent.com/29084184/126457822-d431fb90-6b9e-4a4e-bedc-3c598e9e2ee2.png" alt="Apple" title="Apple"></code> Mac</a> <code><a href="https://blog.csdn.net/u011583927/article/details/104384169"><img height="20" src="https://user-images.githubusercontent.com/29084184/126457902-0c1a71c2-f920-45a1-a143-ce8b5c435fe7.png" alt="Win10" title="Win10"></code> Windows</a>
 
 - **公式无法正常显示解决办法**：
 
@@ -696,17 +709,30 @@ import L0CV
 
 [Index](#一种结合了代码图示和html的在线学习媒介)
 
+## LICENSE
+
+<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/license-Apache%202.0-red?logo=apache" alt="Code License"></a> <a rel="DocLicense" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/docs%20license-CC%20BY--NC--SA%204.0-green?logo=creativecommons" title="CC BY--NC--SA 4.0"/></a>
+	
+- ``L0CV``代码部分采用 [Apache 2.0协议](https://www.apache.org/licenses/LICENSE-2.0) 进行许可，包括名为 <b><em>L0CV</em></b> 的原创第三方库、``/code``和``/notebook``下的源代码。遵循许可的前提下，你可以自由地对代码进行修改，再发布，可以将代码用作商业用途。但要求你：
+  - **署名**：在原有代码和衍生代码中，保留原作者署名及代码来源信息。
+  - **保留许可证**：在原有代码和衍生代码中，保留``Apache 2.0``协议文件。
+
+- ``L0CV``文档部分采用 [知识共享署名 4.0 国际许可协议](http://creativecommons.org/licenses/by/4.0/) 进行许可。 遵循许可的前提下，你可以自由地共享，包括在任何媒介上以任何形式复制、发行本作品，亦可以自由地演绎、修改、转换或以本作品为基础进行二次创作。但要求你：
+  - **署名**：应在使用本文档的全部或部分内容时候，注明原作者及来源信息。
+  - **非商业性使用**：不得用于商业出版或其他任何带有商业性质的行为。如需商业使用，请联系作者。
+  - **相同方式共享的条件**：在本文档基础上演绎、修改的作品，应当继续以知识共享署名 4.0国际许可协议进行许可。
+
+[Index](#一种结合了代码图示和html的在线学习媒介)
+
 ## 👥 社区互助
 
 如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。
 
-- 通过 GitHub Discussions 提问时，建议使用 `Q&A` 标签。
+- 通过 <a href="https://github.com/Charmve/computer-vision-in-action/discussions" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/GitHub-Discussions-green?logo=github" alt="GitHub Discuss"></a> 提问时，建议使用 `Q&A` 标签。
 
-- 通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 `L0CV` 标签。
+- 通过 <a href="http://stackoverflow.com/questions/tagged/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/-Stack%20Overflow-gray?logo=stackoverflow" alt="Stack Overflow"></a> 或者 <a href="https://segmentfault.com/t/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/-Segment%20Fault-gray?logo=mongodb" alt="Segment Fault"></a> 提问时，建议加上 `L0CV` 标签。
 
-1. [GitHub Discussions](https://github.com/Charmve/computer-vision-in-action/discussions)
-2. [Stack Overflow](http://stackoverflow.com/questions/tagged/L0CV)（英文）
-3. [Segment Fault](https://segmentfault.com/t/L0CV)（中文）
+- <a href="https://segmentfault.com/t/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/朋友圈-L0CV-green?logo=wechat" alt="Segment Fault"></a> 微信、知乎、微博开话题可以生成tag，如微信聊天、朋友圈加 ``#L0CV`` 可话题交流。
 
 [Index](#一种结合了代码图示和html的在线学习媒介)
 
@@ -732,11 +758,6 @@ import L0CV
 - 同时，我也欢迎大家加入本项目的建设中来，欢迎 [pull request](https://github.com/charmve/computer-vision-in-action/pulls)！
 
 - <em>请尽管表达你们的意见和建议，GitHub issues 和 电子书下方都可以留言，也可写邮件给我，我一定会回！</em>
-
-[Index](#一种结合了代码图示和html的在线学习媒介)
-
-## LICENSE
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可。
 
 [Index](#一种结合了代码图示和html的在线学习媒介)
 
