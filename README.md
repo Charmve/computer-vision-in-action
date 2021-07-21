@@ -1,3 +1,8 @@
+<p align="right">
+<a href="https://github.com/Charmve">
+    <img src="https://badges.pufler.dev/visits/Charmve/computer-vision-in-action?color=black&logo=github">
+</a>
+</p>
 
 <div id="outputFigDisplay" class="fig">
     <pre id="taag_output_text" style="left;" class="flag" contenteditable="true">
@@ -60,7 +65,7 @@
 	<br><a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Python-v3.8.10-000000.svg?logo=Python&color=brightgreen" alt="Python version"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/notebooks/"><img src="https://img.shields.io/badge/Juypter-v4.7.1-000000.svg?logo=jupyter&color=orange" alt="jupyter version"></a>
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-v1.9.0-000000.svg?logo=PyTorch&color=lightred" alt="PyTorch version"></a>
-	<br><a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/master"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
+	<br><a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
 	<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Run%20on-Colab-000000.svg?logo=googlecolab&color=yellow" alt="Run on Colab"></a>
 	<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/docker"><img src="https://img.shields.io/badge/Docker%20Hub-v1.0.1-000000.svg?logo=Docker&color=blue" alt="Docker"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/stars/Charmve/computer-vision-in-action?style=social" alt="Stars"></a>
@@ -579,7 +584,7 @@
 >   - 📁 <code>附件/</code> - 所需数学和统计学知识
 >   - 📁 <code>img/</code> - 各章节所使用的插图
 > - 📁 <code>models/</code> - 封装可用的预训练模型
-> - 📁 <code>notebooks/</code> - 🚩 全书 Colab notebook，可在线测试
+> - 📁 <code>notebooks/</code> - 🚩 全书 Colab notebook，可在线测试 <a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
 >   - 📁 <code>chapter01_neural-networks/</code> - 第 1 章 - 神经网络 Jupyter Notebook 实现
 >   - 📁 <code>chapter02_CNN/</code> - 第 2 章 - 卷积神经网络 Jupyter Notebook 实现
 >   - 📁 <code>chapter03_Image-Classification</code> - 第 3 章 - 图像分类 Jupyter Notebook 实现
@@ -636,11 +641,11 @@ cd notebooks
 jupyter notesbook
 ```
 
-#### 2. Google Colab 运行
+#### 2. 远程运行
 
-- 打开每章节首页，点击 <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> 可直接打开 Google Colab ，点击 [Copy to Drive] 即可在线运行测试。 
+- 打开每章节首页，点击 <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> 可直接打开 Google Colab ，点击 <code><img height="20" src="https://user-images.githubusercontent.com/29084184/126463073-90077dff-fb7a-42d3-af6b-63c357d6db9f.png" alt="Copy to Drive" title="Copy to Drive"></code> [Copy to Drive] 即可在线运行测试。 
 
-- 点击 <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb\"><img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter"></a> 也可在 ``mybinder`` 查看和在线运行。
+- 点击 <a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a> 也可在 ``mybinder`` 查看和在线运行。
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/29084184/126031057-1e6ca67f-4475-47c1-a6ff-66375cb86908.png" width=60% alt="Run on Colab" title="Run on Colab">
@@ -650,8 +655,9 @@ jupyter notesbook
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/29084184/126031137-14e349cd-1e89-4f98-9c56-0f1d3007ed89.png" width=60% alt="点击 Copy to Drive">
-  <br>图3 例子：12.3.3 样式迁移 Colab 点击 [Copy to Drive]
+  <br>图3 例子：12.3.3 样式迁移 Colab 点击 <code><img height="20" src="https://user-images.githubusercontent.com/29084184/126463073-90077dff-fb7a-42d3-af6b-63c357d6db9f.png" alt="Copy to Drive" title="Copy to Drive"></code> [Copy to Drive]
 </p>
+
 
 ### 方式二 使用 ``/code`` 
 #### 1. 运行环境 + L0CV 加载
@@ -705,7 +711,7 @@ import L0CV
     
     当然如果你还想跑一下运行相关代码的话还是得把本项目clone下来，然后运行code文件夹下相关代码。
 
-- **Jupyter Notebook 无法在 GitHub 上呈现？** [使用 nbviewer](https://leaherb.com/notebook_wont_render_use_nbviewer/)。
+- **Jupyter Notebook 无法在 GitHub 上呈现？** [使用 nbviewer](https://leaherb.com/notebook_wont_render_use_nbviewer/)。 <a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
 
 [Index](#一种结合了代码图示和html的在线学习媒介)
 
