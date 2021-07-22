@@ -63,7 +63,7 @@
 	<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/license-Apache%202.0-red?logo=apache" alt="Code License"></a>
   <a rel="DocLicense" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/docs%20license-CC%20BY--NC--SA%204.0-green?logo=creativecommons" title="CC BY--NC--SA 4.0"/></a>
 	<br><a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Python-v3.8.10-000000.svg?logo=Python&color=brightgreen" alt="Python version"></a>
-  <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/notebooks/"><img src="https://img.shields.io/badge/Juypter-v4.7.1-000000.svg?logo=jupyter&color=orange" alt="jupyter version"></a>
+  <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/notebooks/"><img src="https://img.shields.io/badge/Jupyter-v4.7.1-000000.svg?logo=jupyter&color=orange" alt="jupyter version"></a>
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-v1.9.0-000000.svg?logo=PyTorch&color=lightred" alt="PyTorch version"></a>
 	<br><a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
 	<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Run%20on-Colab-000000.svg?logo=googlecolab&color=yellow" alt="Run on Colab"></a>
@@ -738,7 +738,7 @@ import L0CV
 
 - 通过 <a href="http://stackoverflow.com/questions/tagged/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/-Stack%20Overflow-gray?logo=stackoverflow" alt="Stack Overflow"></a> 或者 <a href="https://segmentfault.com/t/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/-Segment%20Fault-gray?logo=mongodb" alt="Segment Fault"></a> 提问时，建议加上 `L0CV` 标签。
 
-- <a href="https://segmentfault.com/t/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/朋友圈-L0CV-green?logo=wechat" alt="Segment Fault"></a> 微信、知乎、微博开话题可以生成tag，如微信聊天、朋友圈加 ``#L0CV`` 可话题交流。
+- <a href="https://segmentfault.com/t/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/微信-L0CV-green?logo=wechat" alt="Segment Fault"></a> 微信、知乎、微博开话题可以生成tag，如微信聊天、朋友圈加 ``#L0CV`` 可话题交流。
 
 [Index](#一种结合了代码图示和html的在线学习媒介)
 
