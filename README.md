@@ -94,7 +94,8 @@
 
 <div align="right">
 
-分享到 <code><a href="http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126457763-5f826c4f-83c6-4b03-85e9-248787171a80.png" alt="QQ" title="QQ"></a></code>
+分享到 <details><summary><code><a target="_blank" href="https://user-images.githubusercontent.com/29084184/126729326-cad7a288-e424-4f69-a47a-90f61e7d9879.png"><img height="20" src="https://user-images.githubusercontent.com/29084184/126728953-c1e0ad62-3a24-47fa-b461-e6584885b294.png" alt="Scan QR" title="Scan QR"></a></code></summary><img src="./res/ui/L0CV-GitHub-qr.png" width=20% alt="L0CV QR" title="L0CV QR"></details>
+<code><a href="http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126457763-5f826c4f-83c6-4b03-85e9-248787171a80.png" alt="QQ" title="QQ"></a></code>
 <code><a href="http://mp.weixin.qq.com/intent/wechat?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126457951-90f94403-b071-4476-bc75-4c3d66f984ce.png" alt="WeChat" title="WeChat"></a></code>
 <code><a href="http://weibo.com/intent/weibo?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126458756-84e58b3d-924a-4105-bcf5-072fe7fc3b12.png" alt="Weibo" title="Weibo"></a></code>
 <code><a href="http://twitter.com/intent/tweet?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126458017-8c629fcb-ff69-4a9a-ba0a-e47d17d3f9b4.png" alt="Twitter" title="Twitter"></a></code>
@@ -826,8 +827,8 @@ Use this bibtex to cite this repository:
 	<p align="center">	
 		<b>Awesome!</b>	
 		<a href="https://github.com/Charmve/computer-vision-in-action"><em>Charmve/computer-vision-in-action</em></a>
-		was created 3 months ago
-		and now has <b>950</b> stars.
+		was created 2 months ago
+		and now has <b>956</b> stars.
   </p>
 </div>
 	
