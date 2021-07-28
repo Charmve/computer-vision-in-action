@@ -91,14 +91,14 @@
       subMaxLevel: 4, // 生成目录的最大层级
       auto2top: true,
       alias: { // 定义路由别名，可以更自由的定义路由规则。 支持正则
-        '/.*/_sidebar.md': '/_sidebar.md', //防止意外回退
-        '/.*/_navbar.md': '/_navbar.md'
+        '/.*/_sidebar.md': '/_sidebar.md' //防止意外回退
+        // '/.*/_navbar.md': '/_navbar.md'
       },
       loadSidebar: true,// 加载自定义侧边栏
       loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
       mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
       coverpage: true,
-      onlyCover: true,
+      onlyCover: false,
       topMargin: 60,//调整top
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
       search: {
