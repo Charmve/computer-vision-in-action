@@ -90,15 +90,15 @@
       maxLevel: 3, // 默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
       subMaxLevel: 4, // 生成目录的最大层级
       auto2top: true,
+      coverpage: true,
+      onlyCover: true,
       alias: { // 定义路由别名，可以更自由的定义路由规则。 支持正则
-        '/.*/_sidebar.md': '/_sidebar.md' //防止意外回退
-        // '/.*/_navbar.md': '/_navbar.md'
+        '/.*/_sidebar.md': '/_sidebar.md', //防止意外回退
+        '/.*/_navbar.md': '/_navbar.md'
       },
       loadSidebar: true,// 加载自定义侧边栏
       loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
       mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
-      coverpage: true,
-      onlyCover: false,
       topMargin: 60,//调整top
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
       search: {
@@ -129,29 +129,29 @@
               + 'Last modified {docsify-updated} '
               + editHtml
           });
-          hook.doneEach(function() {
-            var label, domObj, main, divEle, gitalk;
-            label = vm.route.path.split("/").pop();
-            domObj = Docsify.dom;
-            main = domObj.getNode("#main");
+//           hook.doneEach(function() {
+//             var label, domObj, main, divEle, gitalk;
+//             label = vm.route.path.split("/").pop();
+//             domObj = Docsify.dom;
+//             main = domObj.getNode("#main");
 
-            Array.apply(
-              null,
-              document.querySelectorAll("div.gitalk-container")
-            ).forEach(function(ele) {
-              ele.remove();
-            });
+//             Array.apply(
+//               null,
+//               document.querySelectorAll("div.gitalk-container")
+//             ).forEach(function(ele) {
+//               ele.remove();
+//             });
 
-            divEle = domObj.create("div");
-            divEle.id = "gitalk-container-" + label;
-            divEle.className = "gitalk-container";
-            divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
-            domObj.appendTo(domObj.find(".content"), divEle);
-            gitalk = new Gitalk(
-              Object.assign(gitalkConfig, { id: !label ? "home" : label })
-            );
-            gitalk.render("gitalk-container-" + label);
-          });
+//             divEle = domObj.create("div");
+//             divEle.id = "gitalk-container-" + label;
+//             divEle.className = "gitalk-container";
+//             divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
+//             domObj.appendTo(domObj.find(".content"), divEle);
+//             gitalk = new Gitalk(
+//               Object.assign(gitalkConfig, { id: !label ? "home" : label })
+//             );
+//             gitalk.render("gitalk-container-" + label);
+//           });
         }
       ]
     };
@@ -234,7 +234,7 @@
   <script>
     document.body.oncopy = function () {
      swal("复制成功 🎉",
-          "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by Charmve",
+          "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 <a href="https://github.com/Charmve/computer-vision-in-action">GitHub</a> 给个 Star 吧 😊   - by Charmve",
           "success"); };
   </script>
 
