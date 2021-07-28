@@ -74,31 +74,22 @@
   <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
   <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1/index.js"></script>
   <script>
-    var gitalkConfig = {
-      clientID: 'c41595e0999dd2834af4',
-      clientSecret: '4ad47f16f60a04c2870a1939406a6ad87bf219ec',
-      accessToken: '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',
-      repo: 'computer-vision-in-action',
-      owner: 'Charmve',
-      admin: ['Charmve'],
-      distractionFreeMode: false
-    };
     window.$docsify = {
       name: '计算机视觉实战演练 L0CV',
       nameLink: 'https://charmve.github.io/L0CV-web/',
       repo: 'https://github.com/Charmve/computer-vision-in-action',
-      maxLevel: 3, // 默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
-      subMaxLevel: 4, // 生成目录的最大层级
+      loadSidebar: true,
+      maxLevel: 4,
+      subMaxLevel: 2,
       auto2top: true,
-      coverpage: true,
-      onlyCover: true,
       alias: { // 定义路由别名，可以更自由的定义路由规则。 支持正则
         '/.*/_sidebar.md': '/_sidebar.md', //防止意外回退
         '/.*/_navbar.md': '/_navbar.md'
       },
-      loadSidebar: true,// 加载自定义侧边栏
       loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
       mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
+      coverpage: false,
+      onlyCover: true,
       topMargin: 60,//调整top
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
       search: {
@@ -116,7 +107,6 @@
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
       },//添加搜索框
       ga: 'UA-164658031-2',// 谷歌分析 SEO
-      count:{ countable:true, fontsize:'0.9em', color:'rgb(90,90,90)', language:'chinese' },
       plugins: [
         <!-- DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'), // 标题下的广告
         -->
@@ -128,32 +118,9 @@
               + '\n----\n'
               + 'Last modified {docsify-updated} '
               + editHtml
-          });
-//           hook.doneEach(function() {
-//             var label, domObj, main, divEle, gitalk;
-//             label = vm.route.path.split("/").pop();
-//             domObj = Docsify.dom;
-//             main = domObj.getNode("#main");
-
-//             Array.apply(
-//               null,
-//               document.querySelectorAll("div.gitalk-container")
-//             ).forEach(function(ele) {
-//               ele.remove();
-//             });
-
-//             divEle = domObj.create("div");
-//             divEle.id = "gitalk-container-" + label;
-//             divEle.className = "gitalk-container";
-//             divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
-//             domObj.appendTo(domObj.find(".content"), divEle);
-//             gitalk = new Gitalk(
-//               Object.assign(gitalkConfig, { id: !label ? "home" : label })
-//             );
-//             gitalk.render("gitalk-container-" + label);
-//           });
+          })
         }
-      ]
+      ],
     };
   </script>
   
@@ -189,17 +156,6 @@
   <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
   
-  <!-- 放大图片-->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-  
-  <!-- 访问量统计 -->
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
-<!--
   <script>
     const gitalk = new Gitalk({
       id: decodeURI('{{ page.url }}'),
@@ -225,8 +181,7 @@
     // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
     // gitalk.render('gitalk-container')
   </script>
--->  
-
+  
   <!-- alert 样式 -->
   <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
   <!-- 复制提醒 -->
@@ -234,11 +189,11 @@
   <script>
     document.body.oncopy = function () {
      swal("复制成功 🎉",
-          "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 <a href="https://github.com/Charmve/computer-vision-in-action">GitHub</a> 给个 Star 吧 😊   - by Charmve",
+          "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by Charmve",
           "success"); };
   </script>
 
-<!-- 
+  <!-- 
   <!-- 回到顶部功能 
   <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.goup.js"></script>
@@ -253,9 +208,9 @@
       });
     });
   </script>
--->
+  -->
 
-<!-- 
+  <!-- 
   <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能
   <script>
     ((window.gitter = {}).chat = {}).options = {
@@ -263,7 +218,7 @@
     };
   </script>
   <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/sidecar.v1.js" async defer></script>
--->
+  -->
 
   <!-- 右下角添加 live2d -->
   <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
