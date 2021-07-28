@@ -982,7 +982,9 @@ test_loader = torch.utils.data.DataLoader(train_data,
 
 ## 小练习: ``pycocoDemo.ipynb`` 解读
 
-下面我们来解读一下 [pycocoDemo.ipynb](https://www.cnblogs.com/q735613050/p/8969452.html)。由于 COCO API 对 Windows 不是那么友好，为了避免去调试各种 Bug，下面我们先在 Linux 系统下来使用 COCO API。下面我是在 Jupyter Notebook 下运行代码的。
+<a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter10_dataset-and-benchmark/pycocoDemo.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter10_dataset-and-benchmark/pycocoDemo.ipynb\"><img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter"></a>
+
+下面我们来解读一下 [pycocoDemo.ipynb](https://github.com/Charmve/computer-vision-in-action/blob/main/notebooks/chapter10_dataset-and-benchmark/pycocoDemo.ipynb)。由于 COCO API 对 Windows 不是那么友好，为了避免去调试各种 Bug，下面我们先在 Linux 系统下来使用 COCO API。下面我是在 Jupyter Notebook 下运行代码的。
 
 ```python
 %matplotlib inline
