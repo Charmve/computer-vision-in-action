@@ -88,7 +88,7 @@
       },
       loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
       mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
-      coverpage: false,
+      coverpage: true,
       onlyCover: true,
       topMargin: 60,//调整top
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
@@ -156,6 +156,16 @@
   <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
   
+  <!-- 放大图片-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  
+  <!-- 访问量统计 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
   <script>
     const gitalk = new Gitalk({
       id: decodeURI('{{ page.url }}'),
@@ -189,7 +199,7 @@
   <script>
     document.body.oncopy = function () {
      swal("复制成功 🎉",
-          "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by Charmve",
+          "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 <a href="https://github.com/Charmve/computer-vision-in-action">GitHub</a> 给个 Star 吧 😊   - by Charmve",
           "success"); };
   </script>
 
