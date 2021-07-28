@@ -74,7 +74,17 @@
 <body>
   <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
   <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1/index.js"></script>
+     
   <script>
+    var gitalkConfig = {
+       clientID: 'c41595e0999dd2834af4',
+       clientSecret: '4ad47f16f60a04c2870a1939406a6ad87bf219ec',
+       accessToken: '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',
+       repo: 'computer-vision-in-action',
+       owner: 'Charmve',
+       admin: ['Charmve'],
+       distractionFreeMode: false
+     };
     window.$docsify = {
       name: '计算机视觉实战演练 L0CV',
       nameLink: 'https://charmve.github.io/L0CV-web/',
@@ -88,7 +98,7 @@
       },
       loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
       mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
-      coverpage: true,
+      coverpage: false,
       onlyCover: false,
       topMargin: 60,//调整top
       repo: 'https://github.com/Charmve/computer-vision-in-action',
@@ -124,7 +134,30 @@
               + '\n----\n'
               + 'Last modified {docsify-updated} '
               + editHtml
-          })
+          });
+          hook.doneEach(function() {
+            var label, domObj, main, divEle, gitalk;
+            label = vm.route.path.split("/").pop();
+            domObj = Docsify.dom;
+            main = domObj.getNode("#main");
+
+            Array.apply(
+              null,
+              document.querySelectorAll("div.gitalk-container")
+            ).forEach(function(ele) {
+              ele.remove();
+            });
+
+            divEle = domObj.create("div");
+            divEle.id = "gitalk-container-" + label;
+            divEle.className = "gitalk-container";
+            divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
+            domObj.appendTo(domObj.find(".content"), divEle);
+            gitalk = new Gitalk(
+              Object.assign(gitalkConfig, { id: !label ? "home" : label })
+            );
+            gitalk.render("gitalk-container-" + label);
+          });
         }
       ],
     };
@@ -172,7 +205,7 @@
   <!-- 访问量统计 -->
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
-  <script>
+<!--   <script>
     const gitalk = new Gitalk({
       id: decodeURI('{{ page.url }}'),
       clientID: 'c41595e0999dd2834af4',
@@ -196,7 +229,7 @@
     }
     // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
     // gitalk.render('gitalk-container')
-  </script>
+  </script> -->
   
   <!-- alert 样式 -->
   <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
