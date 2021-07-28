@@ -6,13 +6,11 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 15 章 迁移学习
+**第 15 章 迁移学习**
 
 作者: 张伟 (Charmve)
 
 日期: 2021/05/22
-
-## 目录
 
   - 第 15 章 [迁移学习](chapter15_迁移学习概述.md)
     - [15.1 概述](chapter15_迁移学习概述.md#151-迁移学习概述)

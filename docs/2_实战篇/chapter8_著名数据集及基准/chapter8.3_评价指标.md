@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 8 章 著名数据集及基准
+**第 8 章 著名数据集及基准**
 
 - 第 8 章 [著名数据集及基准](https://charmve.github.io/computer-vision-in-action/#/chapter8/chapter8)
     - 8.1 数据集
@@ -26,7 +26,7 @@
 
 --- 
 
-## 8.3 评价指标
+# 8.3 评价指标
 
 作者: 张伟 (Charmve)
 
@@ -34,7 +34,7 @@
 
 <br>
 
-### 8.3.1 常用指标
+## 8.3.1 常用指标
 
 1. **每个检测物体的分类准确度**；
 
@@ -46,7 +46,7 @@
 
 5. **召回率**：$recall = TP / (TP + FN)$。指找到的某一类别物体的数量比上图像中所有这类物体的数量。
 
-### 8.3.2 真阳、假阳与真阴、假阴详解
+## 8.3.2 真阳、假阳与真阴、假阴详解
 
 - True Positive(TP)：既是正样本又被预测为正样本的个数，即检测正确，检测中的IOU≥阈值。
 
@@ -56,7 +56,7 @@
 
 - True Negative(TN)：正样本被预测为了负样本的个数。TN最后不会被应用于评价算法的性能。阈值和评价的尺度有关，通常被设定为0.5，0.75或者0.95。
 
-### 8.3.3 IOU（Intersection Over Union）详解
+## 8.3.3 IOU（Intersection Over Union）详解
 
 IOU用于计算两个边界框之间的交集。它需要一个ground truth边界框Bgt和一个预测边界框Bp。通过应用IOU，我们可以判断检测是否有效（TP）或不有效（FP）。
 
@@ -64,7 +64,7 @@ IOU由预测边界框和ground truth边界框之间的重叠区域除以它们�
 
 $$IOU = \frac{area(B_p \bigcap B_{gt})}{area(B_p \bigcup  B_{gt})}$$
 
-### 8.3.4 性能指标
+## 8.3.4 性能指标
 
 评价一个目标检测算法是否有效，我们通常关注精度和速度两个方面。精度的评价指标通常有两个：检测准确率（Precision）以及召回率（Recall）。速度的评价指标通常为检测速度（Speed）。计算检测准确率和召回率的公式如下：
 

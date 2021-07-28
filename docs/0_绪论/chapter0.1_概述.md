@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 0 章 计算机视觉概述
+**第 0 章 计算机视觉概述**
 
 作者: 张伟 (Charmve)
 

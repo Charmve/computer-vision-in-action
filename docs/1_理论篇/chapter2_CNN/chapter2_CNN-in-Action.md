@@ -6,13 +6,11 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 2 章 卷积神经网络
+**第 2 章 卷积神经网络**
 
 作者: 张伟 (Charmve)
 
 日期: 2021/04/29
-
-## 目录
 
   - 第 2 章 [卷积神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
     - [2.1 从神经网络到卷积神经网络](chapter2_CNN.md#21-从神经网络到卷积神经网络)
@@ -46,7 +44,7 @@
     - [小结](#小结)
     - [参考文献](#参考文献)
 
-<h2></h2>
+---
 
 <p align="center">
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/11_Convolutional_Neural_Networks.ipynb">
@@ -1146,8 +1144,7 @@ def img_conv_layer(input,
 　　本文主要讲解了卷积神经网络中反向传播的一些技巧，包括卷积层和池化层的反向传播与传统的反向传播的区别，并实现了一个完整的CNN，后续大家可以自己修改一些代码，譬如当水平滑动长度与垂直滑动长度不同时需要怎么调整等等，最后研究了一下paddlepaddle中CNN中的卷积层的实现过程，对比自己写的CNN，总结了4个优点，底层是C++实现的，有兴趣的可以自己再去深入研究。写的比较粗糙，如果有问题欢迎留言：）
 
 
-
-## 参考文章
+## 参考资料
 
 1. 卷积神经网络(CNN)反向传播算法 https://www.cnblogs.com/pinard/p/6494810.html
 

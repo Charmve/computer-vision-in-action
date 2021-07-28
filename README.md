@@ -238,13 +238,14 @@
     - 3.6 [实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
     - [小结](./docs/1_理论篇/chapter3_Image-Classification/README.md#小结)
     - [参考文献](./docs/1_理论篇/chapter3_Image-Classification/README.md#参考文献)
-  - 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
-    - 4.1 [递归神经网络 RNN](/docs/1_理论篇/chapter4_递归神经网络/chapter4.1_递归神经网络.md)
-    - 4.2 [循环神经网络的从零开始实现](/docs/1_理论篇/chapter4_递归神经网络/chapter4.2_循环神经网络的从零开始实现.md)
-    - 4.3 [循环神经网络的简洁实现](/docs/1_理论篇/chapter4_递归神经网络/chapter4.3_循环神经网络的简洁实现.md)
-    - 4.4 [长短期记忆人工神经网络 LSTM](/docs/1_理论篇/chapter4_递归神经网络/chapter4.4_长短期记忆人工神经网络LSTM.md)
-    - 4.5 [门控循环单元（GRU）](/docs/1_理论篇/chapter4_递归神经网络/chapter4.5_门控循环单元.md)
+  - 第 4 章 循环神经网络
+    - [4.1 循环神经网络 RNN](/docs/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md)
+    - [4.2 循环神经网络的从零开始实现](/docs/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md)
+    - [4.3 循环神经网络的简洁实现](/docs/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md)
+    - [4.4 长短期记忆人工神经网络 LSTM](/docs/1_理论篇/chapter4_循环神经网络/chapter4.4_长短期记忆人工神经网络LSTM.md)
+    - [4.5 门控循环单元（GRU）](/docs/1_理论篇/chapter4_循环神经网络/chapter4.5_门控循环单元.md)
     - 小结
+    - 练习
     - 参考文献
   - 第 5 章 [图神经网络](/docs/1_理论篇/chapter5_图神经网络/chapter5_图神经网络.md)
     - 5.1 [历史脉络](/docs/1_理论篇/chapter5_图神经网络/chapter5_图神经网络.md#51-历史脉络)

@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 3 章 图像分类
+**第 3 章 图像分类**
 
 作者: 张伟 (Charmve)
 
@@ -40,7 +40,7 @@
 
 ---
 
-## 3.3 支持向量机
+# 3.3 支持向量机
 
 <p align="center">
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter03/3_support_vector_machine.ipynb">
@@ -48,4 +48,8 @@
     </a>
 </p>
 
-Comming soon ...
+## 3.3.1 概述
+## 3.3.2 线性支持向量机
+## 3.3.3 SVM vs Softmax
+## 3.3.4 从零开始实现支持向量机
+## 3.3.5 支持向量机的简洁实现

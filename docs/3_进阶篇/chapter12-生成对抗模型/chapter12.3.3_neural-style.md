@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 12 章 生成对抗模型
+**第 12 章 生成对抗模型**
 
 - 第 12 章 [生成对抗模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 12.1 Pixel RNN/CNN
@@ -40,7 +40,7 @@
 
 <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb\"><img src="https://img.shields.io/badge/-View%20on%20Binder-yellow.svg?logo=jupyter"></a>
 
-## 12.3.3 样式迁移
+# 12.3.3 样式迁移
 
 如果你是一位摄影爱好者，也许接触过滤镜。它能改变照片的颜色样式，从而使风景照更加锐利或者令人像更加美白。但一个滤镜通常只能改变照片的某个方面。如果要照片达到理想中的样式，经常需要尝试大量不同的组合，其复杂程度不亚于模型调参。
 
@@ -52,7 +52,7 @@
 
 <div align=center>图12.12 输入内容图像和样式图像，输出样式迁移后的合成图像</div>
 
-### 12.3.3.1 方法
+## 12.3.3.1 方法
 
 图12.13用一个例子来阐述基于卷积神经网络的样式迁移方法。首先，我们初始化合成图像，例如将其初始化成内容图像。该合成图像是样式迁移过程中唯一需要更新的变量，即样式迁移所需迭代的模型参数。然后，我们选择一个预训练的卷积神经网络来抽取图像的特征，其中的模型参数在训练中无须更新。深度卷积神经网络凭借多个层逐级抽取图像的特征。我们可以选择其中某些层的输出作为内容特征或样式特征。以图9.13为例，这里选取的预训练的神经网络含有3个卷积层，其中第二层输出图像的内容特征，而第一层和第三层的输出被作为图像的样式特征。接下来，我们通过正向传播（实线箭头方向）计算样式迁移的损失函数，并通过反向传播（虚线箭头方向）迭代模型参数，即不断更新合成图像。样式迁移常用的损失函数由3部分组成：内容损失（content loss）使合成图像与内容图像在内容特征上接近，样式损失（style loss）令合成图像与样式图像在样式特征上接近，而总变差损失（total variation loss）则有助于减少合成图像中的噪点。最后，当模型训练结束时，我们输出样式迁移的模型参数，即得到最终的合成图像。
 
@@ -80,7 +80,7 @@ import L0CV
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 ```
 
-### 12.3.3.2 读取内容图像和样式图像
+## 12.3.3.2 读取内容图像和样式图像
 
 首先，我们分别读取内容图像和样式图像。从打印出的图像坐标轴可以看出，它们的尺寸并不一样。
 
@@ -102,7 +102,7 @@ L0CV.plt.imshow(style_img)
 <img width="400" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter12/9.11_output2.png?raw=true"/>
 </div>
 
-### 12.3.3.3 预处理和后处理图像
+## 12.3.3.3 预处理和后处理图像
 
 下面定义图像的预处理函数和后处理函数。预处理函数`preprocess`对先对更改输入图像的尺寸，然后再将PIL图片转成卷积神经网络接受的输入格式，再在RGB三个通道分别做标准化，由于预训练模型是在均值为[0.485, 0.456, 0.406]标准差为[0.229, 0.224, 0.225]的图片数据上预训练的，所以我们要将图片标准化保持相同的均值和标准差。后处理函数`postprocess`则将输出图像中的像素值还原回标准化之前的值。由于图像每个像素的浮点数值在0到1之间，我们使用`clamp`函数对小于0和大于1的值分别取0和1。
 
@@ -128,7 +128,7 @@ def postprocess(img_tensor):
     return to_PIL_image(inv_normalize(img_tensor[0].cpu()).clamp(0, 1))
 ```
 
-### 12.3.3.4 抽取特征
+## 12.3.3.4 抽取特征
 
 我们使用基于ImageNet数据集预训练的VGG-19模型来抽取图像特征 [1]。
 
@@ -243,11 +243,11 @@ def get_styles(image_shape, device):
     return style_X, styles_Y
 ```
 
-### 12.3.3.5 定义损失函数
+## 12.3.3.5 定义损失函数
 
 下面我们来描述样式迁移的损失函数。它由内容损失、样式损失和总变差损失3部分组成。
 
-#### 12.3.3.5.1 内容损失
+### 12.3.3.5.1 内容损失
 
 与线性回归中的损失函数类似，内容损失通过平方误差函数衡量合成图像与内容图像在内容特征上的差异。平方误差函数的两个输入均为`extract_features`函数计算所得到的内容层的输出。
 
@@ -256,7 +256,7 @@ def content_loss(Y_hat, Y):
     return F.mse_loss(Y_hat, Y)
 ```
 
-#### 12.3.3.5.2 样式损失
+### 12.3.3.5.2 样式损失
 
 样式损失也一样通过平方误差函数衡量合成图像与样式图像在样式上的差异。为了表达样式层输出的样式，我们先通过`extract_features`函数计算样式层的输出。假设该输出的样本数为1，通道数为$c$，高和宽分别为$h$和$w$，我们可以把输出变换成$c$行$hw$列的矩阵$\boldsymbol{X}$。矩阵$\boldsymbol{X}$可以看作是由$c$个长度为$hw$的向量$\boldsymbol{x}_1, \ldots, \boldsymbol{x}_c$组成的。其中向量$\boldsymbol{x}_i$代表了通道$i$上的样式特征。这些向量的格拉姆矩阵（Gram matrix）$\boldsymbol{X}\boldsymbol{X}^\top \in \mathbb{R}^{c \times c}$中$i$行$j$列的元素$x_{ij}$即向量$\boldsymbol{x}_i$与$\boldsymbol{x}_j$的内积，它表达了通道$i$和通道$j$上样式特征的相关性。我们用这样的格拉姆矩阵表达样式层输出的样式。需要注意的是，当$hw$的值较大时，格拉姆矩阵中的元素容易出现较大的值。此外，格拉姆矩阵的高和宽皆为通道数$c$。为了让样式损失不受这些值的大小影响，下面定义的`gram`函数将格拉姆矩阵除以了矩阵中元素的个数，即$chw$。
 
@@ -274,7 +274,7 @@ def style_loss(Y_hat, gram_Y):
     return F.mse_loss(gram(Y_hat), gram_Y)
 ```
 
-#### 12.3.3.5.3 总变差损失
+### 12.3.3.5.3 总变差损失
 
 有时候，我们学到的合成图像里面有大量高频噪点，即有特别亮或者特别暗的颗粒像素。一种常用的降噪方法是总变差降噪（total variation denoising）。假设$x_{i,j}$表示坐标为$(i,j)$的像素值，降低总变差损失
 
@@ -288,7 +288,7 @@ def tv_loss(Y_hat):
                   F.l1_loss(Y_hat[:, :, :, 1:], Y_hat[:, :, :, :-1]))
 ```
 
-#### 12.3.3.5.4 损失函数
+### 12.3.3.5.4 损失函数
 
 样式迁移的损失函数即内容损失、样式损失和总变差损失的加权和。通过调节这些权值超参数，我们可以权衡合成图像在保留内容、迁移样式以及降噪三方面的相对重要性。
 
@@ -307,7 +307,7 @@ def compute_loss(X, contents_Y_hat, styles_Y_hat, contents_Y, styles_Y_gram):
     return contents_l, styles_l, tv_l, l
 ```
 
-### 12.3.3.6 创建和初始化合成图像
+## 12.3.3.6 创建和初始化合成图像
 
 在样式迁移中，合成图像是唯一需要更新的变量。因此，我们可以定义一个简单的模型`GeneratedImage`，并将合成图像视为模型参数。模型的前向计算只需返回模型参数即可。
 
@@ -332,7 +332,7 @@ def get_inits(X, device, lr, styles_Y):
     return gen_img(), styles_Y_gram, optimizer
 ```
 
-### 12.3.3.7 训练
+## 12.3.3.7 训练
 
 在训练模型时，我们不断抽取合成图像的内容特征和样式特征，并计算损失函数。
 
@@ -436,31 +436,31 @@ L0CV.plt.imshow(postprocess(big_output));
 从训练得到的图12.15中可以看到，此时的合成图像因为尺寸更大，所以保留了更多的细节。合成图像里面不仅有大块的类似样式图像的油画色彩块，色彩块中甚至出现了细微的纹理。
 
 
-### 小结
+## 小结
 
 * 样式迁移常用的损失函数由3部分组成：内容损失使合成图像与内容图像在内容特征上接近，样式损失令合成图像与样式图像在样式特征上接近，而总变差损失则有助于减少合成图像中的噪点。
 * 可以通过预训练的卷积神经网络来抽取图像的特征，并通过最小化损失函数来不断更新合成图像。
 * 用格拉姆矩阵表达样式层输出的样式。
 
 
-### 练习
+## 练习
 
 * 选择不同的内容和样式层，输出有什么变化？
 * 调整损失函数中的权值超参数，输出是否保留更多内容或减少更多噪点？
 * 替换实验中的内容图像和样式图像，你能创作出更有趣的合成图像吗？
 
-# 进阶实战
+## 进阶实战
 
-## 体验
+### 体验
 <div align=center>
     <img width="600" src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/imgs/chapter12/fast-photo-style.png?raw=true"/>
 </div>
 
 https://github.com/NVIDIA/FastPhotoStyle
 
-## 动手
+### 动手
 
-### 参考文献
+## 参考文献
 
 [1] Gatys, L. A., Ecker, A. S., & Bethge, M. (2016). Image style transfer using convolutional neural networks. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2414-2423).
 

@@ -6,17 +6,17 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 4 章 递归神经网络
+**第 4 章 循环神经网络**
 
 作者: 张伟 (Charmve)
 
 日期: 2021/06/10
 
 
-- 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
-    - 4.1 [递归神经网络 RNN](chapter4.1_递归神经网络.md)
-    - 4.2 [循环神经网络的从零开始实现](chapter4.2_循环神经网络的从零开始实现.md)
-    - 4.3 [循环神经网络的简洁实现](chapter4.3_循环神经网络的简洁实现.md)
+- 第 4 章 [循环神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
+    - [4.1 循环神经网络 RNN](chapter4.1_循环神经网络.md#41-循环神经网络-RNN)
+    - [4.2 循环神经网络的从零开始实现](chapter4.1_循环神经网络.md#42-循环神经网络的从零开始实现)
+    - [4.3 循环神经网络的简洁实现](chapter4.1_循环神经网络.md#43-循环神经网络的简洁实现)
     - 4.4 [长短期记忆人工神经网络 LSTM](chapter4.4_长短期记忆人工神经网络LSTM.md)
     - 4.5 [门控循环单元（GRU）](chapter4.5_门控循环单元.md)
       - 4.5.1 [门控循环单元](#451-门控循环单元)
@@ -26,7 +26,7 @@
     - 小结
     - 参考文献
 
-## 4.5 门控循环单元（GRU）
+# 4.5 门控循环单元（GRU）
 
 <p align="center">
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter04_recurrent-neural-networks/Gated_Recurrent_Units.ipynb">
@@ -42,11 +42,11 @@
 门控循环神经网络（gated recurrent neural network）的提出，正是为了更好地捕捉时间序列中时间步距离较大的依赖关系。它通过可以学习的门来控制信息的流动。其中，门控循环单元（gated recurrent unit，GRU）是一种常用的门控循环神经网络 [1, 2]。另一种常用的门控循环神经网络则将在下一节中介绍。
 
 
-### 4.5.1 门控循环单元
+## 4.5.1 门控循环单元
 
 下面将介绍门控循环单元的设计。它引入了重置门（reset gate）和更新门（update gate）的概念，从而修改了循环神经网络中隐藏状态的计算方式。
 
-#### 4.5.1.1 重置门和更新门
+### 4.5.1.1 重置门和更新门
 
 如图4.4所示，门控循环单元中的重置门和更新门的输入均为当前时间步输入$X_t$与上一时间步隐藏状态$H_{t-1}$，输出由激活函数为sigmoid函数的全连接层计算得到。
 
@@ -68,7 +68,7 @@ $$
 
 其中$W_{xr}, W_{xz} \in \mathbb{R}^{d \times h}$和$W_{hr}, W_{hz} \in \mathbb{R}^{h \times h}$是权重参数，$b_r, b_z \in \mathbb{R}^{1 \times h}$是偏差参数。1.3节（[多层感知机](../chapter1_Neural-Networks/chapter1_3-多层感知器MLP.md)）节中介绍过，sigmoid函数可以将元素的值变换到0和1之间。因此，重置门$R_t$和更新门$Z_t$中每个元素的值域都是$[0, 1]$。
 
-#### 4.5.1.2 候选隐藏状态
+### 4.5.1.2 候选隐藏状态
 
 接下来，门控循环单元将计算候选隐藏状态来辅助稍后的隐藏状态计算。如图6.5所示，我们将当前时间步重置门的输出与上一时间步隐藏状态做按元素乘法（符号为$\odot$）。如果重置门中元素值接近0，那么意味着重置对应隐藏状态元素为0，即丢弃上一时间步的隐藏状态。如果元素值接近1，那么表示保留上一时间步的隐藏状态。然后，将按元素乘法的结果与当前时间步的输入连结，再通过含激活函数tanh的全连接层计算出候选隐藏状态，其所有元素的值域为$[-1, 1]$。
 
@@ -84,7 +84,7 @@ $$\tilde{H}_t = \text{tanh}(X_t W_{xh} + \left(R_t \odot H_{t-1}\right) W_{hh} +
 
 其中$W_{xh} \in \mathbb{R}^{d \times h}$和$W_{hh} \in \mathbb{R}^{h \times h}$是权重参数，$b_h \in \mathbb{R}^{1 \times h}$是偏差参数。从上面这个公式可以看出，重置门控制了上一时间步的隐藏状态如何流入当前时间步的候选隐藏状态。而上一时间步的隐藏状态可能包含了时间序列截至上一时间步的全部历史信息。因此，重置门可以用来丢弃与预测无关的历史信息。
 
-#### 4.5.1.3 隐藏状态
+### 4.5.1.3 隐藏状态
 
 最后，时间步$t$的隐藏状态$H_t \in \mathbb{R}^{n \times h}$的计算使用当前时间步的更新门$Z_t$来对上一时间步的隐藏状态$H_{t-1}$和当前时间步的候选隐藏状态$\tilde{H}_t$做组合：
 
@@ -103,7 +103,7 @@ $$H_t = Z_t \odot H_{t-1}  + (1 - Z_t) \odot \tilde{H}_t.$$
 * 重置门有助于捕捉时间序列里短期的依赖关系；
 * 更新门有助于捕捉时间序列里长期的依赖关系。
 
-### 4.5.2 读取数据集
+## 4.5.2 读取数据集
 
 为了实现并展示门控循环单元，下面依然使用周杰伦歌词数据集来训练模型作词。这里除门控循环单元以外的实现已在4.1节（[循环神经网络](chapter4.1_递归神经网络.md)）中介绍过。以下为读取数据集部分。
 
@@ -121,11 +121,11 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 (corpus_indices, char_to_idx, idx_to_char, vocab_size) = L0CV.load_data_jay_lyrics()
 ```
 
-### 4.5.3 从零开始实现
+## 4.5.3 从零开始实现
 
 我们先介绍如何从零开始实现门控循环单元。
 
-#### 4.5.3.1 初始化模型参数
+### 4.5.3.1 初始化模型参数
 
 下面的代码对模型参数进行初始化。超参数`num_hiddens`定义了隐藏单元的个数。
 
@@ -152,7 +152,7 @@ def get_params():
     return nn.ParameterList([W_xz, W_hz, b_z, W_xr, W_hr, b_r, W_xh, W_hh, b_h, W_hq, b_q])
 ```
 
-#### 4.5.3.2 定义模型
+### 4.5.3.2 定义模型
 
 下面的代码定义隐藏状态初始化函数`init_gru_state`。同4.2节（[循环神经网络的从零开始实现](chapter4.2_循环神经网络的从零开始实现.md)）中定义的`init_rnn_state`函数一样，它返回由一个形状为(批量大小, 隐藏单元个数)的值为0的`Tensor`组成的元组。
 
@@ -178,7 +178,7 @@ def gru(inputs, state, params):
     return outputs, (H,)
 ```
 
-#### 4.5.3.3 训练模型并创作歌词
+### 4.5.3.3 训练模型并创作歌词
 
 我们在训练模型时只使用相邻采样。设置好超参数后，我们将训练模型并根据前缀“分开”和“不分开”分别创作长度为50个字符的一段歌词。
 
@@ -212,7 +212,7 @@ epoch 160, perplexity 1.442282, time 1.51 sec
  - 不分开 你已经离开我 不知不觉 我跟了这节奏 后知后觉 又过了一个秋 后知后觉 我该好好生活 我该好好生活
 ```
 
-### 4.5.4 简洁实现
+## 4.5.4 简洁实现
 
 在PyTorch中我们直接调用`nn`模块中的`GRU`类即可。
 
@@ -241,7 +241,7 @@ epoch 160, perplexity 1.018370, time 1.05 sec
  - 不分开始 担心今天的你过得好不好 整个画面是你 想你想的睡不著 嘴嘟嘟那可爱的模样 还有在你身上香香的味道
 ```
 
-### 小结
+## 小结
 
 * 门控循环神经网络可以更好地捕捉时间序列中时间步距离较大的依赖关系。
 * 门控循环单元引入了门的概念，从而修改了循环神经网络中隐藏状态的计算方式。它包括重置门、更新门、候选隐藏状态和隐藏状态。
@@ -249,7 +249,7 @@ epoch 160, perplexity 1.018370, time 1.05 sec
 * 更新门有助于捕捉时间序列里长期的依赖关系。
 
 
-### 参考文献
+## 参考文献
 
 [1] Cho, K., Van Merriënboer, B., Bahdanau, D., & Bengio, Y. (2014). On the properties of neural machine translation: Encoder-decoder approaches. arXiv preprint arXiv:1409.1259.
 

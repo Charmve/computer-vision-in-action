@@ -6,27 +6,39 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 4 章 递归神经网络
+**第 4 章 递归神经网络**
 
 作者: 张伟 (Charmve)
 
 日期: 2021/06/10
 
 
-- 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
-    - 4.1 [递归神经网络 RNN](chapter4.1_递归神经网络.md)
-    - 4.2 循环神经网络的从零开始实现
-    - 4.3 [循环神经网络的简洁实现](chapter4.3_循环神经网络的简洁实现.md)
-    - 4.4 [长短期记忆人工神经网络 LSTM](chapter4.4_长短期记忆人工神经网络LSTM.md)
-    - 4.5 [门控循环单元（GRU）](chapter4.5_门控循环单元.md)
+- 第 4 章 [循环神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
+    - [4.1 循环神经网络 RNN](chapter4.1_循环神经网络.md#41-循环神经网络-RNN)
+    - [4.2 循环神经网络的从零开始实现](chapter4.1_循环神经网络.md#42-循环神经网络的从零开始实现)
+    - [4.3 循环神经网络的简洁实现](chapter4.1_循环神经网络.md#43-循环神经网络的简洁实现)
+    - [4.4 长短期记忆人工神经网络 LSTM](chapter4.4_长短期记忆人工神经网络LSTM.md)
+    - [4.5 门控循环单元（GRU）](chapter4.5_门控循环单元.md)
     - 小结
     - 参考文献
 
-## 4.2 循环神经网络的从零开始实现
+---
+
+# 4.1 循环神经网络 RNN
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter04_recurrent-neural-networks/chapter04_recurrent-neural-networks/Recurrent_Neural_Networks.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter04_recurrent-neural-networks/Recurrent_Neural_Networks.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
+    <a target="_blank\" href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter04_recurrent-neural-networks/Recurrent_Neural_Networks.ipynb">
+    <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png\">
+    View on nbViewer</a>
 </p>
 
+## 4.1 递归神经网络 RNN
+
+## 4.2 循环神经网络的从零开始实现
+
+## 4.3 循环神经网络的简洁实现
+
+Comming soon ...

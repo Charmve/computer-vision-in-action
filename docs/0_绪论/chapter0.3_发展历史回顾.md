@@ -6,7 +6,11 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 0 章 计算机视觉概述
+**第 0 章 计算机视觉概述**
+
+作者: 张伟 (Charmve)
+
+日期: 2021/06/12
 
 - 第 0 章 计算机视觉概述
   - 0.1 [概述](chapter0.1_概述.md)
@@ -40,7 +44,7 @@
 图3 （左）八张 ILSVRC-2010 测试图像和我们模型认为最有可能的五个标签。 正确的标签写在每张图像下，分配给正确标签的概率也用红色条显示（如果它恰好在前 5 个）。 （右）第一列中的五个 ILSVRC 2010 测试图像。 剩余的列显示了六个训练图像，它们在最后一个隐藏层中产生特征向量，与测试图像的特征向量的欧几里德距离最小。
 
 
-## 0.3 发展历史回顾
+# 0.3 发展历史回顾
 
 作者: 张伟 (Charmve)
 

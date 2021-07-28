@@ -6,19 +6,20 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 4 章 递归神经网络
+# 第 4 章 循环神经网络
 
 作者: 张伟 (Charmve)
 
 日期: 2021/06/10
 
-- 第 4 章 递归神经网络
-    - 4.1 [递归神经网络 RNN](chapter4.1_递归神经网络.md)
-    - 4.2 [循环神经网络的从零开始实现](chapter4.2_循环神经网络的从零开始实现.md)
-    - 4.3 [循环神经网络的简洁实现](chapter4.3_循环神经网络的简洁实现.md)
-    - 4.4 [长短期记忆人工神经网络 LSTM](chapter4.4_长短期记忆人工神经网络LSTM.md)
-    - 4.5 [门控循环单元（GRU）](chapter4.5_门控循环单元.md)
+- 第 4 章 循环神经网络
+    - [4.1 循环神经网络 RNN](/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md)
+    - [4.2 循环神经网络的从零开始实现](/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md)
+    - [4.3 循环神经网络的简洁实现](/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md)
+    - [4.4 长短期记忆人工神经网络 LSTM](/1_理论篇/chapter4_循环神经网络/chapter4.4_长短期记忆人工神经网络LSTM.md)
+    - [4.5 门控循环单元（GRU）](/1_理论篇/chapter4_循环神经网络/chapter4.5_门控循环单元.md)
     - 小结
+    - 练习
     - 参考文献
     
 

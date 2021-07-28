@@ -1,4 +1,12 @@
-# 第 11 章 可视化和理解
+<p align="left">
+  <a href="https://github.com/Charmve"><img src="https://img.shields.io/badge/GitHub-@Charmve-000000.svg?logo=GitHub" alt="GitHub" target="_blank"></a>
+  <a href="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9aTmRoV05pYjNJUkIzZk5ldWVGZEQ4YnZ4cXlzbXRtRktUTGdFSXZOMUdnTHhDNXV0Y1VBZVJ0T0lJa0hTZTVnVGowamVtZUVOQTJJMHhiU0xjQ3VrVVEvNjQw?x-oss-process=image/format,png" target="_blank" ><img src="https://img.shields.io/badge/公众号-@迈微AI研习社-000000.svg?style=flat-square&amp;logo=WeChat" alt="微信公众号"/></a>
+  <a href="https://www.zhihu.com/people/MaiweiE-com" target="_blank" ><img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-@Charmve-000000.svg?style=flat-square&amp;logo=Zhihu" alt="知乎"/></a>
+  <a href="https://space.bilibili.com/62079686" target="_blank"><img src="https://img.shields.io/badge/B站-@Charmve-000000.svg?style=flat-square&amp;logo=Bilibili" alt="B站"/></a>
+  <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
+</p>
+
+**第 11 章 可视化和理解**
 
 作者: 张伟 (Charmve)
 
@@ -20,9 +28,9 @@
     - 小结
     - 参考文献
 
+---
 
-
-## 11.4 实战项目 10: PyTorch 如何使用TensorBoard
+# 11.4 实战项目 10: PyTorch 如何使用TensorBoard
 
 通过这份文档的学习，我们会了解到如何往TensorBoard里面送入图片、图表、模型、scalars(损失值、权值、偏置等)、构建embeddings、PR曲线等，其中送入的图片或图表数据主要是多张图片合成的网格图片，利用torchvision.utils.make_grid函数或fig.add_subplot构建，细节内容请往下看。
 
@@ -134,7 +142,7 @@ criterion = nn.CrossEntropyLoss() #结合了softmax和negative log loss
 optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 ```
 
-### 11.4.1 创建 TensorBoard
+## 11.4.1 创建 TensorBoard
 
 接下来我们设置TensorBoard。从 ``torch.utils`` 中导入 ``tensorboard``，并定义一个 ``SummaryWiriter``，作为我们写信息到TensorBoard的主要对象。
 
@@ -146,7 +154,7 @@ writer = SummaryWriter('runs/fashion_mnist_experiment_1') # 创建一个folder�
 ```
 提示：仅第四行代码创建一个用于存储需要记录数据的文件夹, ``runs/fashion_mnist_experiment_1``。
 
-### 11.4.2 写入 TensorBoard
+## 11.4.2 写入 TensorBoard
 
 现在让我们写入一张图片在TensorBoard中，网格化记录图片。
 
@@ -193,7 +201,7 @@ writer.add_image('four_fashion_mnist_images', img_grid)
 图11.3 TensorBoard 的 IMAGES 分页
 
 
-### 11.4.3 使用 TensorBoard 检查模型
+## 11.4.3 使用 TensorBoard 检查模型
 
 TensorBoard 的优势之一是其可视化复杂模型结构的能力。 让我们可视化我们构建的模型。
 
@@ -211,7 +219,7 @@ writer.close()
 TensorBoard 有一个非常方便的功能，可以在低维空间中可视化高维数据，例如图像数据，我们接下来会介绍这个。
 
 
-### 11.4.4 向 TensorBoard 添加 "Projector"
+## 11.4.4 向 TensorBoard 添加 "Projector"
 
 我们可以通过 ``add_embedding`` 方法可视化高维数据的低维表示。
 
@@ -249,7 +257,7 @@ writer.close()
 现在我们已经彻底检查了我们的数据，让我们展示 TensorBoard 如何让跟踪模型训练和评估更清晰，从训练开始。
 
 
-### 11.4.5 使用 TensorBoard 跟踪模型训练
+## 11.4.5 使用 TensorBoard 跟踪模型训练
 
 现在，我们将把运行损失记录到 TensorBoard，同时查看模型通过 ``plot_classes_preds`` 函数所做的预测。
 
@@ -349,7 +357,7 @@ print('Finished Training')
 在这里，我们将使用 TensorBoard 为每个类绘制精确召回曲线（precision-recall curves）。
 
 
-### 11.4.6 使用 TensorBoard 评估训练好的模型
+## 11.4.6 使用 TensorBoard 评估训练好的模型
 
 ```python
 # 1. gets the probability predictions in a test_size x num_classes Tensor
@@ -404,7 +412,7 @@ for i in range(len(classes)):
 
 图11.8 PR Curves
 
-### 小结
+## 小结
 
 这是 TensorBoard 和 PyTorch 与其集成的介绍。 当然，您可以在 Jupyter Notebook 中完成 TensorBoard 所做的一切，但使用 TensorBoard，您可以获得默认交互的视觉效果。
 

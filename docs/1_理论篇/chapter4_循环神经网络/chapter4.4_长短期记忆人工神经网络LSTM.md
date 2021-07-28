@@ -6,18 +6,18 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 4 章 递归神经网络
+**第 4 章 循环神经网络**
 
 作者: 张伟 (Charmve)
 
 日期: 2021/06/10
 
 
-- 第 4 章 [递归神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
-    - 4.1 [递归神经网络 RNN](chapter4.1_递归神经网络.md)
-    - 4.2 [循环神经网络的从零开始实现](chapter4.2_循环神经网络的从零开始实现.md)
-    - 4.3 [循环神经网络的简洁实现](chapter4.3_循环神经网络的简洁实现.md)
-    - 4.4 长短期记忆人工神经网络 LSTM
+- 第 4 章 [循环神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter4/chapter4)
+    - [4.1 循环神经网络 RNN](chapter4.1_循环神经网络.md#41-循环神经网络-RNN)
+    - [4.2 循环神经网络的从零开始实现](chapter4.1_循环神经网络.md#42-循环神经网络的从零开始实现)
+    - [4.3 循环神经网络的简洁实现](chapter4.1_循环神经网络.md#43-循环神经网络的简洁实现)
+    - 4.4 [长短期记忆人工神经网络 LSTM](chapter4.4_长短期记忆人工神经网络LSTM.md)
       - 4.4.1 [长短期记忆](#441-长短期记忆)
       - 4.4.2 [读取数据集](#442-读取数据集)
       - 4.4.3 [从零开始实现](#443-从零开始实现)
@@ -27,7 +27,7 @@
     - 小结
     - 参考文献
 
-## 4.4 长短期记忆人工神经网络 LSTM
+# 4.4 长短期记忆人工神经网络 LSTM
 
 <p align="center">
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter04_recurrent-neural-networks/Long_Short_Term_Memory.ipynb">
@@ -37,12 +37,12 @@
 
 本节将介绍另一种常用的门控循环神经网络：长短期记忆（long short-term memory，LSTM）[1]。它比门控循环单元的结构稍微复杂一点。
 
-### 4.4.1 长短期记忆
+## 4.4.1 长短期记忆
 
 LSTM 中引入了3个门，即输入门（input gate）、遗忘门（forget gate）和输出门（output gate），以及与隐藏状态形状相同的记忆细胞（某些文献把记忆细胞当成一种特殊的隐藏状态），从而记录额外的信息。
 
 
-#### 4.4.1.1 输入门、遗忘门和输出门
+### 4.4.1.1 输入门、遗忘门和输出门
 
 与门控循环单元中的重置门和更新门一样，如图6.7所示，长短期记忆的门的输入均为当前时间步输入$\boldsymbol{X}_t$与上一时间步隐藏状态$\boldsymbol{H}_{t-1}$，输出由激活函数为sigmoid函数的全连接层计算得到。如此一来，这3个门元素的值域均为$[0,1]$。
 
@@ -67,7 +67,7 @@ $$
 其中的$\boldsymbol{W}_{xi}, \boldsymbol{W}_{xf}, \boldsymbol{W}_{xo} \in \mathbb{R}^{d \times h}$和$\boldsymbol{W}_{hi}, \boldsymbol{W}_{hf}, \boldsymbol{W}_{ho} \in \mathbb{R}^{h \times h}$是权重参数，$\boldsymbol{b}_i, \boldsymbol{b}_f, \boldsymbol{b}_o \in \mathbb{R}^{1 \times h}$是偏差参数。
 
 
-#### 4.4.1.2 候选记忆细胞
+### 4.4.1.2 候选记忆细胞
 
 接下来，长短期记忆需要计算候选记忆细胞$\tilde{\boldsymbol{C}}_t$。它的计算与上面介绍的3个门类似，但使用了值域在$[-1, 1]$的tanh函数作为激活函数，如图6.8所示。
 
@@ -86,7 +86,7 @@ $$
 其中$\boldsymbol{W}_{xc} \in \mathbb{R}^{d \times h}$和$\boldsymbol{W}_{hc} \in \mathbb{R}^{h \times h}$是权重参数，$\boldsymbol{b}_c \in \mathbb{R}^{1 \times h}$是偏差参数。
 
 
-#### 4.4.1.3 记忆细胞
+### 4.4.1.3 记忆细胞
 
 我们可以通过元素值域在$[0, 1]$的输入门、遗忘门和输出门来控制隐藏状态中信息的流动，这一般也是通过使用按元素乘法（符号为$\odot$）来实现的。当前时间步记忆细胞$\boldsymbol{C}_t \in \mathbb{R}^{n \times h}$的计算组合了上一时间步记忆细胞和当前时间步候选记忆细胞的信息，并通过遗忘门和输入门来控制信息的流动：
 
@@ -101,7 +101,7 @@ $$\boldsymbol{C}_t = \boldsymbol{F}_t \odot \boldsymbol{C}_{t-1} + \boldsymbol{I
 <div align=center>图4.9 长短期记忆中记忆细胞的计算</div>
 <br>
 
-#### 4.4.1.4 隐藏状态
+### 4.4.1.4 隐藏状态
 
 有了记忆细胞以后，接下来我们还可以通过输出门来控制从记忆细胞到隐藏状态$\boldsymbol{H}_t \in \mathbb{R}^{n \times h}$的信息的流动：
 
@@ -115,7 +115,7 @@ $$\boldsymbol{H}_t = \boldsymbol{O}_t \odot \text{tanh}(\boldsymbol{C}_t).$$
 <div align=center>图4.10 长短期记忆中隐藏状态的计算</div>
 <br>
 
-### 4.4.2 读取数据集
+## 4.4.2 读取数据集
 
 下面我们开始实现并展示长短期记忆。和前几节中的实验一样，这里依然使用周杰伦歌词数据集来训练模型作词。
 
@@ -133,11 +133,11 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 (corpus_indices, char_to_idx, idx_to_char, vocab_size) = L0CV.load_data_jay_lyrics()
 ```
 
-### 4.4.3 从零开始实现
+## 4.4.3 从零开始实现
 
 我们先介绍如何从零开始实现长短期记忆。
 
-#### 4.4.3.1 初始化模型参数
+### 4.4.3.1 初始化模型参数
 
 下面的代码对模型参数进行初始化。超参数`num_hiddens`定义了隐藏单元的个数。
 
@@ -165,7 +165,7 @@ def get_params():
     return nn.ParameterList([W_xi, W_hi, b_i, W_xf, W_hf, b_f, W_xo, W_ho, b_o, W_xc, W_hc, b_c, W_hq, b_q])
 ```
 
-### 4.4.4 定义模型
+## 4.4.4 定义模型
 
 在初始化函数中，长短期记忆的隐藏状态需要返回额外的形状为(批量大小, 隐藏单元个数)的值为0的记忆细胞。
 
@@ -194,7 +194,7 @@ def lstm(inputs, state, params):
     return outputs, (H, C)
 ```
 
-#### 4.4.4.1 训练模型并创作歌词
+### 4.4.4.1 训练模型并创作歌词
 
 同上一节一样，我们在训练模型时只使用相邻采样。设置好超参数后，我们将训练模型并根据前缀“分开”和“不分开”分别创作长度为50个字符的一段歌词。
 
@@ -228,7 +228,7 @@ epoch 160, perplexity 4.274031, time 1.35 sec
  - 不分开 我想你这生堡 我知好烦 你不的节我 后知后觉 我该了这节奏 后知后觉 又过了一个秋 后知后觉 我该
 ```
 
-### 4.4.5 简洁实现
+## 4.4.5 简洁实现
 
 在Gluon中我们可以直接调用`rnn`模块中的`LSTM`类。
 
@@ -258,7 +258,7 @@ epoch 160, perplexity 1.017492, time 1.42 sec
 ```
 
 
-### 小结
+## 小结
 
 * 长短期记忆的隐藏层输出包括隐藏状态和记忆细胞。只有隐藏状态会传递到输出层。
 * 长短期记忆的输入门、遗忘门和输出门可以控制信息的流动。
@@ -266,7 +266,7 @@ epoch 160, perplexity 1.017492, time 1.42 sec
 
 
 
-### 参考文献
+## 参考文献
 
 [1] Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural computation, 9(8), 1735-1780.
 

@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 8 章 著名数据集及基准
+**第 8 章 著名数据集及基准**
 
 作者: 张伟 (Charmve)
 
@@ -27,18 +27,18 @@
     - 参考文献
     
 
-## 8.2 基准
+# 8.2 基准
 
-### 8.2.1 Benchmark简介
+## 8.2.1 Benchmark简介
 Benchmark是一个评价方式，在整个计算机领域有着长期的应用。正如维基百科上的解释“As computer architecture advanced, it became more difficult to compare the performance of various computer systems simply by looking at their specifications.Therefore, tests were developed that allowed comparison of different architectures.”Benchmark在计算机领域应用最成功的就是性能测试，主要测试负载的执行时间、传输速度、吞吐量、资源占用率等。
 
 性能调优的两大利器是Benchmark和profile工具。Benchmark用压力测试挖掘整个系统的性能状况，而profile工具最大限度地呈现系统的运行状态和性能指标，方便用户诊断性能问题和进行调优。
 
-### 8.2.2 Benchmark的组成
+## 8.2.2 Benchmark的组成
 
 Benchmark的核心由3部分组成：数据集、 工作负载、度量指标。
 
-#### 8.2.2.1 数据集
+### 8.2.2.1 数据集
 数据类型分为结构化数据、半结构化数据和非结构化数据。由于大数据环境下的数据类型复杂，负载多样，所以大数据Benchmark需要生成3种类型的数据和对应负载。
 
 - 结构化数据：传统的关系数据模型，可用二维表结构表示。典型场景有电商交易、财务系统、医疗HIS数据库、政务信息化系统等等；
@@ -47,7 +47,7 @@ Benchmark的核心由3部分组成：数据集、 工作负载、度量指标。
 
 - 非结构化数据：各种文档、图片、视频和音频等。典型的应用有视频网站、图片相册、交通视频监控等等。
 
-#### 8.2.2.2 工作负载
+### 8.2.2.2 工作负载
 互联网领域数据庞大，用户量大，成为大数据问题产生的天然土壤。对工作负载理解和设计可以从以下几个维度来看
 
 - 密集计算类型：CPU密集型计算、IO密集型计算、网络密集型计算；
@@ -58,7 +58,7 @@ Benchmark的核心由3部分组成：数据集、 工作负载、度量指标。
 
 - 应用领域：搜索引擎、社交网络、电子商务、地理位置、媒体、游戏。
 
-#### 8.2.2.3 度量指标
+### 8.2.2.3 度量指标
 
 性能高估的两大利器就是Benchmark和Profile工具。Benchmark用压力测试挖掘整个系统的性能状况，而Profile工具最大限度地呈现系统的运行时状态和性能指标，方便用户诊断性能问题和进行调优。
 
@@ -73,7 +73,7 @@ Benchmark的核心由3部分组成：数据集、 工作负载、度量指标。
 - 从Spark系统资源利用率的角度度量：CPU在指定时间段的利用率、内存在指定时间段的利用率、磁盘在指定时间段的利用率、网络带宽在指定时间段的利用率；
 - 从扩展性的角度度量：数据量扩展、集群节点数据扩展（scale out）、单机性能扩展（scale up）。
 
-#### 8.2.3 Benchmark的运用
+### 8.2.3 Benchmark的运用
 
 - Hibench：由Intel开发的针对Hadoop的基准测试工具，开源的，用户可以到Github库中下载
 
@@ -89,7 +89,7 @@ Benchmark的核心由3部分组成：数据集、 工作负载、度量指标。
 
 - 其他的Benchmark：Malstone、Cloud Harmony、YCSB、SWIM、LinkBench、DFSIO、Hive performance Benchmark(Pavlo)等等
 
-### 8.2.4 Benchmark和baseline比较
+## 8.2.4 Benchmark和baseline比较
 
 Benchmark和baseline都有性能比较的意思。
 
@@ -111,5 +111,5 @@ Benchmark和baseline都有性能比较的意思。
 
 - baseline一般是自己算法优化和调参过程中自己和自己比较，目标是越来越好，当性能超过benchmark时，可以发表了，当性能甚至超过SOTA时，恭喜你，考虑投顶会顶刊啦。
 
-### 8.2.4 计算机视觉典型问题的基准
+## 8.2.4 计算机视觉典型问题的基准
 

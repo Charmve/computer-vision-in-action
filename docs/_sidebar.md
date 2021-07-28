@@ -2,11 +2,8 @@
 - <b><h4>[序言](book_preface.md)</h4></b>
 - <b><h4>主要符号表</h4></b>
 - <b><h4>绪论篇</h4></b>
-  - [第 0 章  计算机视觉概述](/0_绪论/README.md)
+  - 第 0 章  计算机视觉概述
     - [0.1 概述](/0_绪论/chapter0.1_概述.md)
-      - 0.1.1 什么是计算机视觉
-      - 0.1.2 计算机视觉解决什么问题
-      - 0.1.3 行业应用
     - [0.2 计算机视觉基本概念](/0_绪论/chapter0.2_基本概念辨析.md)
     - [0.3 发展历史回顾](/0_绪论/chapter0.3_发展历史回顾.md)
     - [0.4 典型的计算机视觉任务](/0_绪论/chapter0.4_典型的计算机视觉任务.md)
@@ -15,19 +12,10 @@
     - 练习
     - 参考文献
 - <b><h4>理论篇</h4></b>
-  - [第 1 章 神经网络](/1_理论篇/chapter1_Neural-Networks/README.md)
+  - 第 1 章 神经网络
     - [1.1 线性回归](/1_理论篇/chapter1_Neural-Networks/chapter1.1_line-regression.md)
-      - 1.1.1 基本原理
-      - 1.1.2 从零实现线性回归
-      - 1.1.3 线性回归的简洁实现
-    - [1.2 Softmax 回归](/1_理论篇/chapter3_Image-Classification/chapter1.2_Softmax回归.md)
-      - 1.2.1 softmax回归模型
-      - 1.2.2 从零开始实现softmax回归
-      - 1.2.3 softmax回归的简洁实现
+    - [1.2 Softmax 回归](/1_理论篇/chapter1_Neural-Networks/chapter1.2_Softmax回归.md)
     - [1.3 多层感知器](/1_理论篇/chapter1_Neural-Networks/chapter1.3_多层感知器MLP.md)
-      - 1.3.1 基本原理
-      - 1.3.2 从零开始实现多层感知器
-      - 1.3.3 多层感知器的简洁实现
     - [1.4 反向传播算法](/1_理论篇/chapter1_Neural-Networks/chapter1.4_Back-Propagation.md)
     - [1.5 神经网络](/1_理论篇/chapter1_Neural-Networks/chapter1.5_neural-networks.md)
       - [1.5.1 神经学观点](/1_理论篇/chapter1_Neural-Networks/chapter1.4_神经学观点.md)
@@ -39,47 +27,31 @@
     - 小结
     - 练习
     - 参考文献
-  - [第 2 章 卷积神经网络](/1_理论篇/chapter2_CNN/README.md)
-    - [2.1 从神经网络到卷积神经网络](/1_理论篇/chapter2_CNN/chapter2_CNN.md#21-从神经网络到卷积神经网络)
-    - [2.2 卷积网络的层级结构](/1_理论篇/chapter2_CNN/chapter2_CNN.md#22-卷积网络的层级结构)
-    - [2.3 卷积神经网络的几点说明](/1_理论篇/chapter2_CNN/chapter2_CNN.md#23-卷积神经网络的几点说明)
-    - [2.4 实战项目 2 - 动手搭建一个卷积神经网络](/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
+  - 第 2 章 卷积神经网络
+    - [2.1 卷积神经网络](/1_理论篇/chapter2_CNN/chapter2_CNN.md)
+    - [2.2 实战项目 2 - 动手搭建一个卷积神经网络](/1_理论篇/chapter2_CNN/chapter2_CNN-in-Action.md)
     - 小结
     - 练习
     - 参考文献
-  - [第 3 章 图像分类](/1_理论篇/chapter3_Image-Classification/README.md)
+  - 第 3 章 图像分类
     - [3.1 数据驱动方法](https://cs231n.github.io/classification/)
       - 3.1.1 语义上的差别
       - 3.1.2 图像分类任务面临着许多挑战
       - 3.1.3 数据驱动的方法
     - [3.2 k 最近邻算法](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md)
-      - [3.2.1 k 近邻模型](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md#321-k-近邻模型)
-      - [3.2.2 k 近邻模型三个基本要素](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md#322-k-近邻模型三个基本要素)
-      - [3.2.3 KNN算法的决策过程](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md#323-knn算法的决策过程)
-      - [3.2.4 k 近邻算法Python实现](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md#324-k-近邻算法python实现)
-      - 小结
-      - 参考文献
     - [3.3 支持向量机](/1_理论篇/chapter3_Image-Classification/chapter3.3_支持向量机.md)
-      - 3.3.1 概述
-      - 3.3.2 线性支持向量机
-      - 3.3.3 SVM vs Softmax
-      - 3.3.4 从零开始实现支持向量机
-      - 3.3.5 支持向量机的简洁实现
     - [3.4 逻辑回归 LR](/1_理论篇/chapter3_Image-Classification/chapter3.4_Logistic-Regression.md)
-      - 3.5.1 逻辑回归模型
-      - 3.5.2 从零开始实现逻辑回归
-      - 3.5.3 逻辑回归的简洁实现
     - [3.5 实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
     - [3.6 实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
     - [小结](/1_理论篇/chapter3_Image-Classification/README.md#小结)
     - 练习
     - [参考文献](/1_理论篇/chapter3_Image-Classification/README.md#参考文献)
-  - 第 4 章 递归神经网络
-    - [4.1 递归神经网络 RNN](/1_理论篇/chapter4_递归神经网络/chapter4.1_递归神经网络.md)
-    - [4.2 循环神经网络的从零开始实现](/1_理论篇/chapter4_递归神经网络/chapter4.2_循环神经网络的从零开始实现.md)
-    - [4.3 循环神经网络的简洁实现](/1_理论篇/chapter4_递归神经网络/chapter4.3_循环神经网络的简洁实现.md)
-    - [4.4 长短期记忆人工神经网络 LSTM](/1_理论篇/chapter4_递归神经网络/chapter4.4_长短期记忆人工神经网络LSTM.md)
-    - [4.5 门控循环单元（GRU）](/1_理论篇/chapter4_递归神经网络/chapter4.5_门控循环单元.md)
+  - 第 4 章 循环神经网络
+    - [4.1 循环神经网络 RNN](/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md#_41-递归神经网络-rnn)
+    - [4.2 循环神经网络的从零开始实现](/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md#_42-循环神经网络的从零开始实现)
+    - [4.3 循环神经网络的简洁实现](/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md#_43-循环神经网络的简洁实现)
+    - [4.4 长短期记忆人工神经网络 LSTM](/1_理论篇/chapter4_循环神经网络/chapter4.4_长短期记忆人工神经网络LSTM.md)
+    - [4.5 门控循环单元（GRU）](/1_理论篇/chapter4_循环神经网络/chapter4.5_门控循环单元.md)
     - 小结
     - 练习
     - 参考文献
@@ -147,11 +119,8 @@
     - 小结
     - 练习
     - 参考文献
-  - [第 10 章 著名数据集及基准](/2_实战篇/chapter8_著名数据集及基准/README.md)
+  - 第 10 章 著名数据集及基准
     - [10.1 数据集](/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md)
-        - [10.1.1 常见数据集](/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#811-常见数据集)
-        - [10.1.2 Pytorch数据集及读取方法简介](/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#812-pytorch数据集及读取方法简介)
-        - [10.1.3 数据增强简介](/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md#813-数据增强简介)
     - [10.2 基准测试](/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
     - [10.3 评价指标](/2_实战篇/chapter8_著名数据集及基准/chapter8.3_评价指标.md)
     - [10.4 实战项目 6 - Kaggle比赛：图像分类（CIFAR-10）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
@@ -167,9 +136,6 @@
       - 11.2.1 常用网络
       - 11.2.2 实战项目 9 - 基于PyTorch的YOLO5目标检测项目实战
     - [11.3 实例分割](/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md)
-      - 11.3.1 常用网络
-      - 11.3.2 实战项目 10 - 实时高分辨率背景抠图
-      - 11.3.3 新方法：滑动窗口, PolarMask
     - 小结
     - 练习
     - 参考文献
@@ -209,11 +175,6 @@
       - 14.3.5 项目实战案例StyleGAN
       - [14.3.6 实战项目 11 - 图像风格迁移](/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
     - [14.4 变分自编码器 Variational Auto-encoder, VAE](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
-      - [14.4.1 概述](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1241-概述)
-      - [14.4.2 基本原理](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1242-基本原理)
-      - [14.4.3 VAE v.s. AE 区别与联系](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1243-vae-vs-ae-区别与联系)
-      - [14.4.4 变分自编码器的代码实现](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1244-变分自编码器的代码实现)
-      - [14.4.5 卷积变分自编码器的实现与简单应用](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md#1245-卷积变分自编码器的实现与简单应用)
       - [14.4.6 实战项目 13 - 旧照片修复](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life)
       - [14.4.6 实战项目 14 - 动漫头像生成](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter12_practice-projects/Anime-StyleGAN2.ipynb)
     - 小结
@@ -234,25 +195,9 @@
     - 练习
     - [参考文献](/3_进阶篇/chapter13-深度增强学习/chapter13-深度增强学习.md#参考文献)
   - [第 16 章 视频理解](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md)
-    - [16.1 概述](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#141-概述)
-    - [16.2 视频理解场景中的主要问题](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#142-视频理解场景中的主要问题)
-    - [16.3 常用数据集](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#143-常用数据集)
-    - [16.4 主流方法与模型架构](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#144-主流方法与模型架构)
-    - [16.5 指标 METRICS](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#145-指标-metrics)
-    - [16.6 可能的未来方向](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#146-可能的未来方向)
-    - [16.7 项目实战 15 - 视频理解项目实战 SlowFast + Multi-Moments in Time](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#147-视频理解项目实战)
-    - [小结](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#小结)
-    - 练习
-    - [参考文献](/3_进阶篇/chapter14-视频理解/chapter14-视频理解.md#参考文献)
-  - [第 17 章 迁移学习](3_进阶篇/chapter15_迁移学习/README.md)
+  - [第 17 章 迁移学习](3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md)
     - [17.1 概述](3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#151-迁移学习概述)
-    - [17.2 基于实例的迁移](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#152-基于实例的迁移)
-    - [17.3 基于特征的迁移](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#153-基于特征的迁移)
-    - [17.4 基于共享参数的迁移](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#154-基于共享参数的迁移)
-    - [17.5 深度学习和迁移学习结合](/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习概述.md#155-深度学习和迁移学习结合)
     - [17.7 实战项目 16 - 蚂蚁和蜜蜂的分类问题](3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md)
-      - 17.7.1 迁移学习在计算机视觉领域的应用
-      - 17.7.2 实战项目: 蚂蚁和蜜蜂的分类问题
     - [小结](#小结)
     - 练习
     - [参考文献](#参考文献)
@@ -273,26 +218,7 @@
     - 练习
     - 参考文献
   - [第 19 章 跨界模型 Transformer](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md)
-    - [19.1 思想和框图](/3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#%E4%B8%80%E6%80%9D%E6%83%B3%E5%92%8C%E6%A1%86%E5%9B%BE)
-    - [19.2 实现细节](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#二实现细节)
-      - 19.2.1 Encoder
-      - 19.2.2 Decoder
-      - 19.2.3 Self-Attention
-      - 19.2.4 Multi-Headed Attention
-      - 19.2.5 Positional Encoding
-    - [19.3 应用任务和结果](/3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#三-应用任务和结果)
-      - [19.3.1 NLP领域](/3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#3-1-NLP领域)
-      - [19.3.2 CV领域](/3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#3-2-CV领域)
-        - 19.3.2.1 检测DETR
-        - 19.3.2.2 分类ViT
-        - 19.3.2.3 分割SETR
-        - 19.3.2.4 Deformable-DETR
-    - [19.4 优点及分析](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#四-优点及分析)
-    - [19.5 缺点及分析](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#五-缺点及分析)
     - [实战项目 17 - 基于Transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803)
-    - 小结
-    - 练习
-    - [参考文献](3_进阶篇/chapter17-跨界模型%20Transformer/chapter17_Transformer.md#六-参考文献)
   - [第 20 章 知识蒸馏](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA)
     - 20.1 概要
     - 20.2 KD主要方法

@@ -8,9 +8,10 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/favicon.ico" media="screen" />
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> 
-  <!--   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">-->
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
   
   <!---
   <!-- Adsense 资源投放 --
@@ -39,18 +40,18 @@
     }
   </style>
   <style>
-       nav.app-nav li ul {
+      nav.app-nav li ul {
         min-width: 100px;
       }
       .app-nav{
         position: fixed;
         margin: 0;
-        /*padding: 10px 50px 10px 0;*/
-        padding: 10px 0 10px 0;/*上、右、下、左*/
+        padding: 10px 50px 10px 0; /*上、右、下、左*/
+        /*padding: 10px 0 10px 0;*/
         width: calc(100% - 325px);
-        background-color: #fff;
+        background-color: transparent;
         height: 55px;
-        border-bottom: 1px solid #eee;
+        /* border-bottom: 1px solid #eee; */
       }
 
       #carbonads {
@@ -77,20 +78,22 @@
      
   <script>
     var gitalkConfig = {
-       clientID: 'c41595e0999dd2834af4',
-       clientSecret: '4ad47f16f60a04c2870a1939406a6ad87bf219ec',
-       accessToken: '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',
-       repo: 'computer-vision-in-action',
-       owner: 'Charmve',
-       admin: ['Charmve'],
-       distractionFreeMode: false
-     };
+      clientID: 'c41595e0999dd2834af4',
+      clientSecret: '4ad47f16f60a04c2870a1939406a6ad87bf219ec',
+      accessToken: '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',
+      repo: 'computer-vision-in-action',
+      owner: 'Charmve',
+      admin: ['Charmve'],
+      id: location.pathname,      // Ensure uniqueness and length less than 50
+      distractionFreeMode: false // Facebook-like distraction free mode
+    };
+     
     window.$docsify = {
       name: '计算机视觉实战演练 L0CV',
-      nameLink: 'https://charmve.github.io/L0CV-web/',
+      // nameLink: 'https://charmve.github.io/L0CV-web/',
       loadSidebar: true,
-      maxLevel: 3, // 默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
-      subMaxLevel: 4, // 生成目录的最大层级
+      maxLevel: 4, // 默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
+      subMaxLevel: 2, // 生成目录的最大层级
       auto2top: true,
       alias: { // 定义路由别名，可以更自由的定义路由规则。 支持正则
         '/.*/_sidebar.md': '/_sidebar.md',//防止意外回退
@@ -98,8 +101,8 @@
       },
       loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载
       mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
-      coverpage: false,
-      onlyCover: false,
+      coverpage: true,
+      onlyCover: true,
       topMargin: 60,//调整top
       repo: 'https://github.com/Charmve/computer-vision-in-action',
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
@@ -124,8 +127,8 @@
       },
       ga: 'UA-164658031-2',// 谷歌分析 SEO
       plugins: [
-        <!-- DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'), // 标题下的广告
-        -->
+        /* DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),  //标题下的广告 */
+
         function(hook, vm) {
           hook.beforeEach(function (html) {
             var url = 'https://github.com//Charmve/computer-vision-in-action/blob/main/docs/' + vm.route.file
@@ -171,10 +174,7 @@
   <!-- CDN files for docsify-katex -->
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
   <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex/dist/docsify-katex.js"></script> -->
-  <link
-    rel="stylesheet"
-    href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"
-  />
+  
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   
   <!-- 翻页插件-->
@@ -191,14 +191,13 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   
-  <!-- gitalk -->
-  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <!-- gitalk 
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>-->
   <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
   
-<!--   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script> -->
+  <!-- 字数统计 -->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-  
+
   <!-- 放大图片-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   
@@ -238,7 +237,7 @@
   <script>
     document.body.oncopy = function () {
      swal("复制成功 🎉",
-          "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 <a href="https://github.com/Charmve/computer-vision-in-action">GitHub</a> 给个 Star 吧 😊   - by Charmve",
+          "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 <a href=\"https://github.com/Charmve/computer-vision-in-action\">GitHub</a> 给个 Star 吧 😊   - by Charmve",
           "success"); };
   </script>
 

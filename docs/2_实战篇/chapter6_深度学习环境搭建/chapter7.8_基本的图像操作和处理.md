@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 7 章 软件环境搭建与工具使用
+**第 6 章 深度学习环境搭建**
 
 - 第 7 章 [软件环境搭建与工具使用](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 7.1 [深度学习环境搭建指南](docs/2_实战篇/chapter6_深度学习环境搭建/chapter6.1_深度学习环境搭建指南.md)

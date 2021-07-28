@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 1 章 神经网络
+**第 1 章 神经网络**
 
 作者: 张伟 (Charmve)
 
@@ -54,5 +54,6 @@
 ## 1.1.2 从零实现线性回归
 
 ## 1.1.3 线性回归的简洁实现
+
 
 Comming soon ...

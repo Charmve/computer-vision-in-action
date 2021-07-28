@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 6 章 深度学习环境搭建
+**第 6 章 深度学习环境搭建**
 
 作者: 张伟 (Charmve)
 

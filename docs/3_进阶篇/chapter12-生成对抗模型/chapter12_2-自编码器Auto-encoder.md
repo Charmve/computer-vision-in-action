@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 12 章 生成对抗模型
+**第 12 章 生成对抗模型**
 
 - 第 12 章 [生成对抗模型](https://charmve.github.io/computer-vision-in-action/#/chapter6/chapter6)
     - 12.1 Pixel RNN/CNN
@@ -38,7 +38,7 @@
 
 ------
 
-## 12.2 自编码器 Auto-encoder
+# 12.2 自编码器 Auto-encoder
 
 作者: 张伟 (Charmve)
 

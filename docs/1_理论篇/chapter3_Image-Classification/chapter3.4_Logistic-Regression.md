@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 3 章 图像分类
+**第 3 章 图像分类**
 
 作者: 张伟 (Charmve)
 
@@ -54,7 +54,7 @@
 --- 
 
 
-# 3.4 逻辑回归 LR
+# 3.4 逻辑回归 (LR)
 
 <p align="center">
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter03_Image-Classification/04_Logistic_Regression.ipynb">
@@ -72,7 +72,7 @@
 
 当你的目标变量是分类变量时，才会考虑逻辑回归，并且主要用于两分类问题。
 
-## 3.4.1 逻辑回归 LR
+## 3.4.1 逻辑回归模型
 **LR 模型可以被认为就是一个被Sigmoid函数（logistic方程）所归一化后的线性回归模型！**
 
 逻辑回归(Logistic Regression, LR)模型其实仅在**线性回归**的基础上，套用了一个逻辑函数，但也就由于这个逻辑函数，使得逻辑回归模型成为了机器学习领域一颗耀眼的明星，更是计算广告学的核心。
@@ -340,7 +340,7 @@ AUC正是衡量分类正确度的方法，将训练集中的label看两类{0，1
 从公式5可以看到，λλ越大，θjθj衰减得越快。另一个理解可以参考图2，λλ越大，L2圆的半径越小，最后求得代价函数最值时各参数也会变得很小。
 <br>
  
-## 3.4.4 代码实现（Python）
+## 3.4.4 逻辑回归的代码实现（Python）
 
 ```python
 # -*- coding: utf-8 -*-

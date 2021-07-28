@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 0 章 计算机视觉概述
+**第 0 章 计算机视觉概述**
 
 作者: 张伟 (Charmve)
 
@@ -28,7 +28,7 @@
   
 ---
 
-## 0.5 国内外优秀的计算机视觉团队汇总<br>计算机视觉名人堂
+# 0.5 国内外优秀的计算机视觉团队汇总<br>计算机视觉名人堂
 
 本汇总还在更新中，国内外优秀的计算机视觉团队有很多，我这里只是列举了自己从知乎、CSDN等网站上收集到的，排名不分先后，如有遗漏，还请谅解。同时欢迎小伙伴提<a href="https://github.com/Charmve/computer-vision-in-action/pulls">``国内外优秀的计算机视觉团队汇总增加补充``PR</a>，我会及时更新，谢谢~
 
@@ -44,7 +44,7 @@
 - 中科院研究所：自动化所、计算所、信工所、深圳先进所
 - 工业界研究院：微软、腾讯、阿里、京东、旷视、商汤、依图、图森等
 
-## 中国内地大学
+## 0.5.1 中国内地院校
 
 ### 清华大学
 
@@ -220,6 +220,8 @@
 ### 中科院深圳先进技术研究院
 - 乔宇 Welcome to Yu Qiao's homepage!
 
+## 0.5.2 中国内地企业研究院
+
 ### MSRA
 - 王井东 Jingdong Wang
 - 曾文军（IEEE Fellow）Wenjun Zeng - Microsoft Research
@@ -262,11 +264,9 @@
 - 侯晓迪 Xiaodi Hou's Homepage
 - 王乃岩 Naiyan Wang - Home
 
-## 国外高校研究团队
-
-## 香港高校
-
-### 香港中文大学
+## 0.5.3 国外高校研究团队
+### 香港高校
+#### 香港中文大学
 
 - 汤晓鸥（IEEE Fellow） [Xiaoou Tang - Google Scholar Citations](http://scholar.google.com/citations%3Fuser%3DqpBtpGsAAAAJ%26hl%3Dzh-CN)
 - 贾佳亚（IEEE Fellow） [Jiaya Jia](https://jiaya.me/)
@@ -276,7 +276,7 @@
 - 周博磊 [Bolei Zhou - The Chinese University of Hong Kong](http://bzhou.ie.cuhk.edu.hk/)
 - Chi-Wing Fu, Philip [Chi-Wing FU's Homepage](https://www.cse.cuhk.edu.hk/~cwfu/)
 
-### 香港科技大学
+#### 香港科技大学
 
 - 权龙（IEEE Fellow） [Long QUAN's Web home page](https://www.cse.ust.hk/~quan/)
 - 陈启峰 [Qifeng Chen (陳启峰)](https://cqf.io/)
@@ -284,17 +284,17 @@
 - Dit-Yan YEUNG [Dit-Yan Yeung - Google Scholar Citations](https://scholar.google.com/citations?user=nEsOOx8AAAAJ&hl=zh-CN)
 - Sai-Kit Yeung [Dr. Sai-Kit Yeung](http://www.saikit.org/)
 
-### 香港理工大学
+#### 香港理工大学
 
 - 张磊（IEEE Fellow） [Lei Zhang's Homepage (HK-PolyU)](https://www4.comp.polyu.edu.hk/~cslzhang/)
 
-### 香港城市大学
+#### 香港城市大学
 
 - Antoni B. Chan [Dr. Antoni B. Chan](https://www.cs.cityu.edu.hk/~abchan/)
 - Rynson W.H. Lau [Home Page: Rynson W.H. Lau](https://www.cs.cityu.edu.hk/~rynson/)
 - 廖菁 [LIAO Jing]()
 
-### 香港中文大学（深圳）
+#### 香港中文大学（深圳）
 
 - 韩晓光 https://sse.cuhk.edu.cn/faculty/hanxiaoguang
 

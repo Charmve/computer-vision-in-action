@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 2 章 卷积神经网络
+**第 2 章 卷积神经网络**
 
 作者: 张伟 (Charmve)
 
@@ -17,8 +17,6 @@
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
     </a>
 </p>
-
-## 目录
 
   - 第 2 章 [卷积神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
     - [2.1 从神经网络到卷积神经网络](#21-从神经网络到卷积神经网络)
@@ -74,7 +72,7 @@
 ### 2.1.1 定义
 简而言之，卷积神经网络（Convolutional Neural Networks,CNN）是一种深度学习模型或类似于人工神经网络的多层感知器，常用来分析视觉图像。卷积神经网络的创始人是着名的计算机科学家 Yann LeCun <sup>1</sup>，目前在 Facebook 工作，他是第一个通过卷积神经网络在 MNIST 数据集上解决手写数字问题的人。
 
-### 2.1.2 卷积神经网络的架构
+## 2.1.2 卷积神经网络的架构
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200315015847839.png#pic_center)
 
@@ -240,6 +238,7 @@ K 是过滤器尺寸，那么输入和输出内容就总能保持一致的空间
 图12 参数共享机制
 
 ### 2.2.3 非线性层（或激活层）
+
 把卷积层输出结果做非线性映射。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200315020104203.png#pic_center)

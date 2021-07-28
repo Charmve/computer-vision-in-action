@@ -6,7 +6,7 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 8 章 著名数据集及基准
+**第 8 章 著名数据集及基准**
 
 作者: 张伟 (Charmve)
 
@@ -30,7 +30,7 @@
 
 ---
 
-## 8.1 数据集
+# 8.1 数据集
 
 本节将介绍PyTorch中数据集相关知识，包括常见数据集的介绍，如何自定义数据集，数据的读取以及扩充等内容。只有清晰理解了数据集构建和使用方法，才能够为后续CV学习铺平道路。本节涵盖的主要内容如下：
 
@@ -39,11 +39,11 @@
 - 数据增强简介
 - 总结：读取数据并进行数据扩增的完整示例
 
-### 8.1.1 常见数据集
+## 8.1.1 常见数据集
 
 学习CV，最重要的就是先有图像数据集，现在互联网中也已经有很多开源的图像数据集供我们学习选择。在CV中较为“出名”，使用频率较高的几个数据集有：[MNIST](http://yann.lecun.com/exdb/mnist/)、[CIFAR](http://www.cs.toronto.edu/~kriz/cifar.html)、[PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/)、[ImageNet](http://image-net.org/index)、[MS COCO](http://cocodataset.org/)、[Open Image Dataset](https://storage.googleapis.com/openimages/web/index.html)等。这些数据集都是根据具体的应用场景(如分类、检测、分割等)，为了更好的促进学术研究的进展，耗费大量人力进行标注的。除此之外，当然还有很多特定领域的数据集，这里不再一一罗列，感兴趣的读者可以自行检索。下面将对分类任务常见的数据集进行介绍。
 
-#### 8.1.1.1 [ImageNet](https://image-net.org/)
+### 8.1.1.1 [ImageNet](https://image-net.org/)
 
 **简介**    
 
@@ -84,7 +84,7 @@ ImageNet有5种下载方式，如下图8.3所示：
    *  下载Object Attributes： http://image-net.org/download-attributes 
    *  官网：http://image-net.org/download-attributes
 
-#### 8.1.1.2 [MNIST](http://yann.lecun.com/exdb/mnist/)
+### 8.1.1.2 [MNIST](http://yann.lecun.com/exdb/mnist/)
 
 **简介**
 
@@ -109,9 +109,9 @@ MNIST数据集(Mixed National Institute of Standards and Technology database)是
   * [t10k-images-idx3-ubyte.gz:](http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz) test set images (1648877 bytes)
   * [t10k-labels-idx1-ubyte.gz:](http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz)  test set labels (4542 bytes)
 
-#### 8.1.1.3 [COCO](https://cocodataset.org/)
+### 8.1.1.3 [COCO](https://cocodataset.org/)
 
-##### 8.1.1.3.1 COCO简介
+#### 8.1.1.3.1 COCO简介
 
 COCO数据集是微软团队获取的一个可以用来图像recognition+segmentation+captioning 数据集，其官方说明网址：https://cocodataset.org/。
 
@@ -135,7 +135,7 @@ COCO数据集是微软团队获取的一个可以用来图像recognition+segment
 图8.6 COCO 数据集。虽然以前的对象识别数据集专注于 (a) 图像分类、(b) 对象边界框定位或 (c) 语义像素级分割，但该数据集专注于 (d) 分割单个对象实例，引入了一个大型的、注释丰富的数据集，其中包含描绘自然环境中常见物体的复杂日常场景的图像。
 
 
-##### 8.1.1.3.2 数据集分类
+#### 8.1.1.3.2 数据集分类
 
 
 
@@ -159,8 +159,7 @@ COCO数据集是微软团队获取的一个可以用来图像recognition+segment
 
 一些数据集如Middlebury datasets，包含立体相对，多视角立体像对和光流；同时还有Berkeley Segmentation Data Set (BSDS500)，可以评价segmentation和edge detection算法。
 
-
-##### 8.1.1.3.3 COCO展示
+#### 8.1.1.3.3 COCO展示
 
 该数据集标记流程，如图8.8所示。
 
@@ -185,9 +184,9 @@ COCO数据集分两部分发布，前部分于2014年发布，后部分于2015�
 图8.10 MS COCO 数据集中带注释的图像样本
 
 
-#### 8.1.1.4 CIFAR-10
+### 8.1.1.4 CIFAR-10
 
-##### 8.1.1.4.1 CIFAR-10简介
+#### 8.1.1.4.1 CIFAR-10简介
 
 官网链接：[The CIFAR-10 dataset](http://www.cs.toronto.edu/~kriz/cifar.html)
 
@@ -233,7 +232,7 @@ CIFAR-10是一个更接近普适物体的彩色图像数据集。CIFAR-10 是由
 | readme.html | 数据集介绍文件|
 
 
-##### 8.1.1.4.2 CIFAR-10下载
+#### 8.1.1.4.2 CIFAR-10下载
 
 下载CIFAR-10 数据集的全部数据。
 
@@ -261,7 +260,7 @@ cifar10.maybe_download_and_extract()
 Successfully downloaded cifar-10-binary.tar.gz 170052171 bytes.
 ```
 
-##### 8.1.1.4.3 CIFAR-10使用方法
+#### 8.1.1.4.3 CIFAR-10使用方法
 
 使用TF读取CIFAR-10 数据。
 
@@ -270,12 +269,12 @@ Successfully downloaded cifar-10-binary.tar.gz 170052171 bytes.
 3. 调用``tf. train.start_ queue_ runners`` 。
 4. 最后，通过``sess.run()``取出图片结果。
 
-### 8.1.2 Pytorch数据集及读取方法简介 
+## 8.1.2 Pytorch数据集及读取方法简介 
 
 
 我们已经了解了部分分类任务的常用数据集，下面我们来介绍在pytorch中是如何定义和读取这些数据集的。在pytorch中已经包含了部分常用数据集的定义，可以直接使用，但在实际工程应用中仅仅使用pytorch自带的数据集远远不够，有时还需要自定义数据集来满足需求。下面内容中，我们将从pytorch自带数据集和自定义数据集两部分介绍数据集制作和读取方法。
 
-#### 8.1.2.1 pytorch自带数据集及读取方法
+### 8.1.2.1 pytorch自带数据集及读取方法
 
 pytorch中所有的数据集均继承自torch.utils.data.Dataset，它们都需要实现了 \_\_getitem\_\_ 和 \_\_len\_\_ 两个接口，因此，实现一个数据集的核心也就是实现这两个接口。
 
@@ -376,7 +375,7 @@ train_loader = torch.utils.data.DataLoader(train_data,
 
 这里batch_size设置了批量大小，shuffle设置为True在装载过程中为随机乱序，num_workers>=1表示多进程读取数据，在Win下num_workers只能设置为0，否则会报错。
 
-#### 8.1.2.2 自定义数据集及读取方法
+### 8.1.2.2 自定义数据集及读取方法
 
 除了pytorch自带的数据集外，在实际应用中，我们可能还需要从其他各种不同的数据集或自己构建的数据集（将其统称为自定义数据集）中读取图像，这些图像可能来自于开源数据集网站，也可能是我们自己整理得到的。对于这样的图像数据：首先，我们要确定是否包含标签文件，如果没有就要自己先创建标签文件；然后，我们就可以使用pytorch来读取数据集了。道理是不是很简单？接下来，该小节我们将着重讲解pytorch自定义数据集的制作和读取方法。
 
@@ -386,7 +385,7 @@ train_loader = torch.utils.data.DataLoader(train_data,
 
 图像数据不必多说，就是训练测试模型使用的图片。这里的索引文件指的就是记录数据标注信息的文件，我们必须有一个这样的文件来充当“引路人”，告诉程序哪个图片对应哪些标注信息，例如图片`img_0013.jpg`对应的类别为狗。之后便可以像套公式一样使用Dataset和DataLoader两个类完成数据读取。下面我们会根据这个流程用实例指引你实现自制数据集的构建和读取。
 
-##### 8.1.2.2.1 图像索引文件制作
+#### 8.1.2.2.1 图像索引文件制作
 
 图像索引文件只要能够合理记录标注信息即可，内容可以简单也可以复杂，但有一条要注意：**内容是待读取图像的名称（或路径）及标签，并且读取后能够方便实现索引**。该文件可以是txt文件，csv文件等多种形式，甚至是一个list都可以，只要是能够被Dataset类索引到即可。
 
@@ -470,7 +469,7 @@ convert_to_img(save_path, False)
 
 通过上面的示例，其实是为了展示自制分类数据集的数据形式与索引文件之间的关系，以方便后续构建自己的Dataset。
 
-##### 8.1.2.2.2 构建自己的Dataset
+#### 8.1.2.2.2 构建自己的Dataset
 
 想要读取我们自己数据集中的数据，就需要写一个Dataset的子类来定义我们的数据集，并必须对 \_\_init\_\_、\_\_getitem\_\_ 和 \_\_len\_\_ 方法进行重载。下面我们看一下构建Dataset类的基本结构： 
 
@@ -622,7 +621,7 @@ train num: 60000
 
 需要注意的是，当 Dataset 创建好后并没有将数据生产出来，我们只是定义了数据及标签生产的流水线，只有在真正使用时，如手动调用 next(iter(train_dataset))，或被 DataLoader调用，才会触发数据集内部的 \_\_getitem\_\_() 函数来读取数据，通常CV入门者对于这一块会存在困惑。
 
-##### 8.1.2.2.3 使用DataLoader批量读取数据
+#### 8.1.2.2.3 使用DataLoader批量读取数据
 
 在构建好自己的 Dataset 之后，就可以使用 DataLoader 批量的读取数据，相当于帮我们完成一个batch的数据组装工作。Dataloader 为一个迭代器，最基本的使用方法就是传入一个 Dataset 对象，在Dataloader中，会触发Dataset对象中的 \_\_gititem\_\_() 函数，逐次读取数据，并根据 batch_size 产生一个 batch 的数据，实现批量化的数据读取。
 
@@ -736,7 +735,7 @@ batch20000:images shape info-->torch.Size([3, 1, 28, 28]) labels-->tensor([9., 7
 
 我们将DataLoader与Dataset分别处理后的数据比较可以发现出两者的不同：Dataset是对本地数据读取逻辑的定义；而DataLoader是对Dataset对象的封装，执行调度，将一个batch size的图像数据组装在一起，实现批量读取数据。
 
-#### 8.1.2.3 分类任务通用的ImageFolder读取形式
+### 8.1.2.3 分类任务通用的ImageFolder读取形式
 
 我们已经学会了通过构建自己的Dataset类来读取数据，这是具有一般性的数据读取方式，无论是分类、检测等等都能够通过这种方式读取图像及标签。但对于图像分类问题，torchvision还提供了一种文件目录组织形式可供调用，即`ImageFolder`，因为利用了分类任务的特性，此时就不用再另行创建一份标签文件了。这种文件目录组织形式，要求数据集已经自觉按照待分配的类别分成了不同的文件夹，一种类别的文件夹下面只存放同一种类别的图片。
 
@@ -813,7 +812,7 @@ test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=
 
 ---
 
-### 8.1.3 数据增强简介
+## 8.1.3 数据增强简介
 
 <p align="center">
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter13_Understanding-and-Visualizing/Improving_Image_Quality.ipynb">
@@ -930,7 +929,7 @@ img_tansform = transform(im)
 
 ---
 
-### 小结    
+## 小结    
 
 前文对数据读取和数据增广方法分别进行了详细介绍，篇幅很长，最后这部分做个小小的总结。
 
@@ -981,7 +980,7 @@ test_loader = torch.utils.data.DataLoader(train_data,
 
 本文第一部分对常用数据集进行了简单介绍，第二部分讲解了pytorch中的各种数据集读取方法，包括torchvision自带数据集的读取方法，ImageFolder格式数据集读取方法和任意数据集的一般化自定义读取方案。第三部分介绍了常见的数据增强方法且展示了可视化效果，最后给出了一个数据加载的完整示例。
 
-### 8.1.4 小练习: ``pycocoDemo.ipynb`` 解读
+## 小练习: ``pycocoDemo.ipynb`` 解读
 
 下面我们来解读一下 [pycocoDemo.ipynb](https://www.cnblogs.com/q735613050/p/8969452.html)。由于 COCO API 对 Windows 不是那么友好，为了避免去调试各种 Bug，下面我们先在 Linux 系统下来使用 COCO API。下面我是在 Jupyter Notebook 下运行代码的。
 
@@ -1116,7 +1115,7 @@ print('图片的尺寸：', img.shape)
 图片的尺寸： (480, 640, 3)
 ```
 
-#### 8.1.4.1 获取标签信息（利用官方给定教程）
+### 8.1.4.1 获取标签信息（利用官方给定教程）
 
 这里有一个坑 (由 PIL 引发) ``import skimage.io as io`` 在 Windows 下可能会报错，我的解决办法是：
 
@@ -1148,7 +1147,7 @@ Constructor of Microsoft COCO helper class for reading and visualizing annotatio
 :param image_folder (str): location to the folder that hosts images.
 ```
 
-#### 8.1.4.2 COCO 类别和超类别
+### 8.1.4.2 COCO 类别和超类别
 ```
 cats = coco.loadCats(coco.getCatIds())
 nms = [cat['name'] for cat in cats]
@@ -1211,7 +1210,7 @@ plt.show()
 
 图8.19 读取一张图片
 
-#### 8.1.4.3 载入和展示：实例注解
+### 8.1.4.3 载入和展示：实例注解
 ```
 plt.imshow(I)
 plt.axis('off')
@@ -1225,7 +1224,7 @@ coco.showAnns(anns)
 图8.20 载入和展示：实例注解
 
 
-#### 8.1.4.4 载入人体关键点标注
+### 8.1.4.4 载入人体关键点标注
 初始化人体关键点标注（person keypoints annotations）的 COCO api。
 ```
 annFile = '{}/annotations/person_keypoints_{}.json'.format(dataDir, dataType)
@@ -1250,7 +1249,7 @@ coco_kps.showAnns(anns)
 
 图8.21 人体关键点
 
-#### 8.1.4.5 载入和展示：标题注释
+### 8.1.4.5 载入和展示：标题注释
 ```
 annFile = '{}/annotations/captions_{}.json'.format(dataDir, dataType)
 coco_caps = COCO(annFile)
@@ -1282,7 +1281,7 @@ caption
 图8.22 载入和展示：标题注释
 
 
-### 参考资料
+## 参考资料
 
 小武, 阿水, 袁明坤,安晟. @datawhalechina/dive-into-cv-pytorch. 数据读取与数据扩增.md
 

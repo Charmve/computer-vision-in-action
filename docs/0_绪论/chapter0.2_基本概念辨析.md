@@ -6,7 +6,11 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 0 章 计算机视觉概述
+**第 0 章 计算机视觉概述**
+
+作者: 张伟 (Charmve)
+
+日期: 2021/06/12
 
 - 第 0 章 计算机视觉概述
   - 0.1 [概述](chapter0.1_概述.md)
@@ -24,11 +28,11 @@
   
 ---
 
-## 0.2 计算机视觉基本概念
+# 0.2 计算机视觉基本概念
 
 作者: 张伟 (Charmve)
 日期: 2021/04/29
 
 
 
-[10张图带你认识图像分割的前世今生](../../res/10张图带你认识图像分割的前世今生.pdf)
+## [10张图带你认识图像分割的前世今生](../../res/10张图带你认识图像分割的前世今生.pdf)
