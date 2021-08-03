@@ -56,6 +56,19 @@ jupyter notesbook
 
 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试，方法如下面的示例。
 
+## To-do 
+
+| Scenario | Description |
+| -------- | ----------- |
+| - [ ] [Classification](classification) | Image Classification is a supervised machine learning technique to learn and predict the category of a given image. |
+| - [ ] [Similarity](similarity)  | Image Similarity is a way to compute a similarity score given a pair of images. Given an image, it allows you to identify the most similar image in a given dataset.  |
+| - [ ] [Detection](detection) | Object Detection is a technique that allows you to detect the bounding box of an object within an image. |
+| - [ ] [Keypoints](keypoints) | Keypoint Detection can be used to detect specific points on an object. A pre-trained model is provided to detect body joints for human pose estimation. |
+| - [ ] [Segmentation](segmentation) | Image Segmentation assigns a category to each pixel in an image. |
+| - [ ] [Action Recognition](action_recognition) | Action Recognition (also known as activity recognition) consists of classifying various actions from a sequence of frames, such as "reading" or "drinking". |
+| - [ ] [Tracking](tracking) | Tracking allows to detect and track multiple objects in a video sequence over time. |
+
+*Cite from [<b><em>microsoft/computervision-recipes</em></b>](https://github.com/microsoft/computervision-recipes)
 
 ## 👥 Community
 
