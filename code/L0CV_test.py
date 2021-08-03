@@ -30,13 +30,13 @@ asciichart = '\n   ______ __________________    __\n   ___  / __  __ \_  ____/_ 
 def main():
     printAsciiChart() # logo chat
 
-    #sys.path.append("..") 
+    sys.path.append("..") 
 
-    #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') # 均已测试
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') # 均已测试
     
-    #temp = "%-15s %-15s %15s" 
-    #print(temp % ("device", "torch version", "L0CV version"))
-    #print(temp % (device, torch.__version__, L0CV.__version__))
+    temp = "%-15s %-15s %15s" 
+    print(temp % ("device", "torch version", "L0CV version"))
+    print(temp % (device, torch.__version__, L0CV.__version__))
     
     return 0
 
