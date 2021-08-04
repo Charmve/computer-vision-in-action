@@ -1,3 +1,3 @@
 # 📡 utils_l0cv
 
-test scripts for source code used in book
+test scripts for source code used in this book
