@@ -16,13 +16,13 @@
     </pre>
 </div>
 
-## Maiwei AI Lab - 迈微AI研习社
+## Maiwei AI Lab - <ins>迈微AI研习社</ins><sup><a href="https://mp.weixin.qq.com/s/jr6h1lXxWsQLF8GZnek7Fg">[?]</a></sup>
 
 <a href="https://www.github.com/Charmve" target="_blank"><img src="https://img.shields.io/badge/创始人-@Charmve-000000.svg?style=flat-square&logo=GitHub"></a>
 <a href="https://github.com/Charmve/computer-vision-in-action#关注我们" target="_blank"><img src="https://img.shields.io/badge/公众号-@迈微AI研习社-000000.svg?style=flat-square&logo=wechat"></a>
 
 作者系迈微AI研习社创始人、CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。公众号底部有菜单分类，关注我们，一起学习成长。
-
+ 
 ---
 
 <!--
@@ -45,7 +45,7 @@
 <br>
 
 ## ✨ 以用促学，先会后懂 ✨
-### 一种结合了代码、图示和HTML的在线学习媒介
+### L0CV <sup><a href="https://charmve.github.io/L0CV-web/">`🔊`</a></sup> &nbsp; 一种结合了代码、图示和HTML的在线学习媒介
 <br>
 
 <table align="center">
@@ -73,7 +73,7 @@
 </p>
 
 <div align="center">
-	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" width="220px" alt="logo:L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
+	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" width="200px" alt="logo:L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
 </div>
 
 <br><br>
@@ -82,7 +82,7 @@
 
 跨平台，只需一个浏览器即可！
 <br>
-> <h4>在线阅读（优先更新实战篇和进阶篇）</h4>
+> <h4>👉  在线阅读（优先更新实战篇和进阶篇）</h4>
 > - 地址：https://charmve.github.io/computer-vision-in-action/
 
 > <h4>最新版PDF下载</h4>
@@ -94,14 +94,38 @@
 
 <div align="right">
 
-分享到 <details><summary><code><a target="_blank" href="https://user-images.githubusercontent.com/29084184/126729326-cad7a288-e424-4f69-a47a-90f61e7d9879.png"><img height="20" src="https://user-images.githubusercontent.com/29084184/126728953-c1e0ad62-3a24-47fa-b461-e6584885b294.png" alt="Scan QR" title="Scan QR"></a></code></summary><img src="./res/ui/L0CV-GitHub-qr.png" width=20% alt="L0CV QR" title="L0CV QR"></details>
+<details><summary>分享 <code><a target="_blank" href="https://user-images.githubusercontent.com/29084184/126729326-cad7a288-e424-4f69-a47a-90f61e7d9879.png"><img height="20" src="https://user-images.githubusercontent.com/29084184/126728953-c1e0ad62-3a24-47fa-b461-e6584885b294.png" alt="Scan QR" title="Scan QR"></a></code> 到 </summary><img src="./res/ui/L0CV-GitHub-qr.png" width=20% alt="L0CV QR" title="L0CV QR"></details>
 <code><a href="http://qq.com/intent/qq?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126457763-5f826c4f-83c6-4b03-85e9-248787171a80.png" alt="QQ" title="QQ"></a></code>
 <code><a href="http://mp.weixin.qq.com/intent/wechat?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126457951-90f94403-b071-4476-bc75-4c3d66f984ce.png" alt="WeChat" title="WeChat"></a></code>
 <code><a href="http://weibo.com/intent/weibo?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126458756-84e58b3d-924a-4105-bcf5-072fe7fc3b12.png" alt="Weibo" title="Weibo"></a></code>
 <code><a href="http://twitter.com/intent/tweet?text=https://github.com/Charmve/computer-vision-in-action"><img height="20" src="https://user-images.githubusercontent.com/29084184/126458017-8c629fcb-ff69-4a9a-ba0a-e47d17d3f9b4.png" alt="Twitter" title="Twitter"></a></code>
+<code><a href="https://www.zhihu.com/"><img height="23" src="https://user-images.githubusercontent.com/29084184/128186720-4018601a-edff-423c-94a4-06738604d0c5.png" alt="Zhihu" title="Zhihu"></a></code>
+<code><a href="https://blink.csdn.net/"><img height="20" src="https://user-images.githubusercontent.com/29084184/128187038-ddd65949-5293-4b29-b609-f3bcbb54e953.png" alt="CSDN" title="CSDN"></a></code>
+
 </div>
 
-## 全书组织
+## Index
+
+<img align="right" src="res/ui/L0CV.png" width=62% alt="L0CV architecture" title="L0CV architecture">
+
+- [💠 全书组织](#-全书组织)
+- [🌈 愿景](#-愿景)
+- [📘 本书目录](#-本书目录)
+- [🔍 文件浏览](#-文件浏览)
+- [🔑 如何食用](#-如何食用)
+- [❓ 常见问题](#-常见问题)
+- [👥 社区互助](#-社区互助)
+- [:heart: 致谢](#致谢)
+- [📄 LICENSE](#license)
+- [👐 参与项目](#contribution)
+- [🤝 关注我们](#关注我们)
+- [📎 Citation](#citation)
+
+<p align="right">
+	:label: <code>sec_code</code> <b>图1 L0CV 结构图</b>
+</p> 
+
+## 💠 全书组织
 :label: `fig_book_org`
 
 <p align="center">
@@ -124,9 +148,9 @@
 
 * 第三部分讨论最近几年出现的<b>“网红”模型</b>，诸如：Transformer、Attention、知识蒸馏、迁移学习、生成对抗模型等。这部分也是此份资料的力挺之作。最后，在 `chap_optimization` 中，我们讨论了用于训练深度学习模型的几种常用优化算法，如：模型压缩、模型剪枝、微调、蒸馏等。
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
-## 愿景
+## 🌈 愿景
 
 本开源项目代表了我们的一种尝试：我们将教给读者概念、背景知识和代码；我们将在同一个地方阐述剖析问题所需的批判性思维、解决问题所需的数学知识，以及实现解决方案所需的工程技能。
 
@@ -137,9 +161,13 @@
 4. 允许我们和整个[社区](https://github.com/Charmve/computer-vision-in-action/discussions)不断快速迭代内容，从而紧跟仍在高速发展的计算机视觉领域；
 5. 由包含有关技术细节问答的论坛作为补充，使大家可以相互答疑并交换经验。
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
-## 目录
+## 📘 本书目录
+
+> <h4>👉  在线阅读（优先更新实战篇和进阶篇）</h4>
+> - 地址：https://charmve.github.io/computer-vision-in-action/
+
 <details><summary>📘 详细目录</summary>
 	
 <table align="center">
@@ -568,9 +596,9 @@
 
 </details>
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
-## 🔍 仓库文件浏览
+## 🔍 文件浏览
 
 按书中内容先后顺序逐章阅读，或者选取特定章节祥读 📁 <code>docs/</code> <sup>1</sup>，动手实践章节代码，在代码文件 📁 <code>code/</code> <sup>2</sup> 下找到对应代码，本地测试或者Colab 📁 <code>notebooks/</code> <sup>3</sup> 在线测试。
 
@@ -598,26 +626,19 @@
 >   - 📁 <code>chapter12_practice-projects</code> - 第 12 章 - 计算机视觉课题研究初探 Jupyter Notebook 实现
 >   - 📁 <code>chapter13_Understanding-and-Visualizing/</code> - 第 13 章 - 可视化与理解卷积神经网络 Jupyter Notebook 实现
 >   - 📁 <code>chapter14_GAN/</code> - 第 14 章 - 生成对抗模型 Jupyter Notebook 实现
+>   - <a href="https://github.com/Charmve/computer-vision-in-action#-以用促学先会后懂-"><img align="right" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/dd292873828228a753a9bd2de4576dbf8cc3902c/res/ui/footer-rocket.svg" height="260" title="Do what you like, and do it best!"/></a>
 >   - 📁 <code>chapter15_Transfer-Learning/</code> - 第 15 章 - 迁移学习 Jupyter Notebook 实现
 >   - 📁 <code>chapter16_Attention/</code> - 第 16 章 - 注意力机制 Jupyter Notebook 实现
 >   - 📁 <code>chapter17_Transformers/</code> - 第 17 章 - Transformers Jupyter Notebook 实现
 >   - ...
 >   - 📁 <code>imgs/</code> - Jupyter Notebook 中用到的图片
-> - 📁 <code>docker/</code> - 为降低读者的学习成本，目前未进行搭建
-> - 📁 <code>res/</code> - ui 图片及全书思维导图PDF
-> - 📄 <code>README.md</code> - 全书介绍及目录
+>   - 📁 <code>docker/</code> - 为降低读者的学习成本，目前未进行搭建
+>   - 📁 <code>res/</code> - ui 图片及全书思维导图PDF
+>   - 📄 <code>README.md</code> - 全书介绍及目录
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
-## 如何食用
-
-:label:`sec_code`
-
-<p align="center">
-  <img src="res/ui/L0CV.png" width=70% alt="L0CV architecture" title="L0CV architecture">
-  <br>
-  图1 L0CV 结构图
-</p> 
+## 🔑 如何食用
 
 <details><summary>详细攻略</summary>
 
@@ -691,9 +712,9 @@ import L0CV
 																  
 </details>
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
-## 常见问题
+## ❓ 常见问题
 
 - **在线教程页面无法打开**：
 
@@ -715,7 +736,7 @@ import L0CV
 
 - **Jupyter Notebook 无法在 GitHub 上呈现？** [使用 nbviewer](https://leaherb.com/notebook_wont_render_use_nbviewer/)。 <a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
 ## LICENSE
 
@@ -730,7 +751,7 @@ import L0CV
   - **非商业性使用**：不得用于商业出版或其他任何带有商业性质的行为。如需商业使用，请联系作者。
   - **相同方式共享的条件**：在本文档基础上演绎、修改的作品，应当继续以知识共享署名 4.0国际许可协议进行许可。
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
 ## 👥 社区互助
 
@@ -742,18 +763,18 @@ import L0CV
 
 - <a href="https://segmentfault.com/t/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/微信-L0CV-green?logo=wechat" alt="Segment Fault"></a> 微信、知乎、微博开话题可以生成tag，如微信聊天、朋友圈加 ``#L0CV`` 可话题交流。
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
 ## 致谢
 <a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
 ## 参考文献
 
 感谢前人的杰出工作，我才得以写出此书。感谢 [<b>参考文献</b>](docs/REFERENCE.md) 中列出及未列出的，所有对此开源工作有帮助的前辈！
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
 ## 关注我们
 <div align=center>
@@ -767,44 +788,44 @@ import L0CV
 
 - <em>请尽管表达你们的意见和建议，GitHub issues 和 电子书下方都可以留言，也可写邮件给我，我一定会回！</em>
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
 ## CONTRIBUTION
 
 作者会尽最大努力来确保书中内容的准确性，但难免会存在疏漏与不妥之处。欢迎您将发现的问题反馈给我们，帮助提升本开放资源的质量。
 
-<table>
-<tr>
-<td>
-<div class="f5 contribution">
-  <h3 class="f4">Help us make these docs great!</h3>
-  <p class="color-text-secondary f6">All <b><i>VC-action</i></b> docs are open source. See something that's wrong or unclear? <a href="https://github.com/Charmve/computer-vision-in-action/pulls">Submit a pull request</a>.</p>
-  <a class="btn btn-outline" href="https://github.com/Charmve/computer-vision-in-action/edit/main/README.md">
-    <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-git-pull-request" aria-hidden="true"><path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"></path></svg>
-    Make a contribution
-  </a></div>
-  <br><p class="color-text-secondary f6 mt-2">Or, <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/CONTRIBUTING.md" target="_blank">learn how to contribute.</a></p>
-
-
-<div>
-  <h3 class="mb-2 f4">
-    Still need help?
-  </h3>
-  <a id="ask-community" href="https://github.com/Charmve/computer-vision-in-action/discussions" class="btn btn-outline mr-4 mt-2">
-    <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-people" aria-hidden="true"><path fill-rule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z"></path></svg>
-    Ask our community
-  </a>
-  <a id="contact-us" href="https://github.com/Charmve" class="btn btn-outline mt-2">
-    <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-comment-discussion" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 2.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v5.5a.25.25 0 01-.25.25h-3.5a.75.75 0 00-.53.22L3.5 11.44V9.25a.75.75 0 00-.75-.75h-1a.25.25 0 01-.25-.25v-5.5zM1.75 1A1.75 1.75 0 000 2.75v5.5C0 9.216.784 10 1.75 10H2v1.543a1.457 1.457 0 002.487 1.03L7.061 10h3.189A1.75 1.75 0 0012 8.25v-5.5A1.75 1.75 0 0010.25 1h-8.5zM14.5 4.75a.25.25 0 00-.25-.25h-.5a.75.75 0 110-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0114.25 12H14v1.543a1.457 1.457 0 01-2.487 1.03L9.22 12.28a.75.75 0 111.06-1.06l2.22 2.22v-2.19a.75.75 0 01.75-.75h1a.25.25 0 00.25-.25v-5.5z"></path></svg>
-    Contact support
-  </a>
+<div align="center">
+	<table>
+	<tr>
+	<td>
+		<div class="f5 contribution">
+			<h3 class="f4">Help us make these docs great!</h3>
+			<p class="color-text-secondary f6">All <b><i>VC-action</i></b> docs are open source. See something that's wrong or unclear? <a href="https://github.com/Charmve/computer-vision-in-action/pulls">Submit a pull request</a>.</p>
+			<a class="btn btn-outline" href="https://github.com/Charmve/computer-vision-in-action/edit/main/README.md">
+				<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-git-pull-request" aria-hidden="true"><path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"></path></svg>
+				Make a contribution
+			</a>
+			<br><p class="color-text-secondary f6 mt-2">Or, <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/CONTRIBUTING.md" target="_blank">learn how to contribute.</a></p>
+		</div>
+		<div>
+			<h3 class="mb-2 f4">
+				Still need help?
+			</h3>
+			<a id="ask-community" href="https://github.com/Charmve/computer-vision-in-action/discussions" class="btn btn-outline mr-4 mt-2">
+				<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-people" aria-hidden="true"><path fill-rule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z"></path></svg>
+				Ask our community
+			</a>
+			<a id="contact-us" href="https://github.com/Charmve" class="btn btn-outline mt-2">
+				<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-comment-discussion" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 2.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v5.5a.25.25 0 01-.25.25h-3.5a.75.75 0 00-.53.22L3.5 11.44V9.25a.75.75 0 00-.75-.75h-1a.25.25 0 01-.25-.25v-5.5zM1.75 1A1.75 1.75 0 000 2.75v5.5C0 9.216.784 10 1.75 10H2v1.543a1.457 1.457 0 002.487 1.03L7.061 10h3.189A1.75 1.75 0 0012 8.25v-5.5A1.75 1.75 0 0010.25 1h-8.5zM14.5 4.75a.25.25 0 00-.25-.25h-.5a.75.75 0 110-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0114.25 12H14v1.543a1.457 1.457 0 01-2.487 1.03L9.22 12.28a.75.75 0 111.06-1.06l2.22 2.22v-2.19a.75.75 0 01.75-.75h1a.25.25 0 00.25-.25v-5.5z"></path></svg>
+				Contact support
+			</a>
+		</div>
+	</td>
+	</tr>
+	</table>
 </div>
-<br>
-</td>
-</tr>
-<table>
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 
 ## Citation
 
@@ -820,7 +841,7 @@ Use this bibtex to cite this repository:
 }
 ```
 
-[Index](#一种结合了代码图示和html的在线学习媒介)
+[Index](#-以用促学先会后懂-)
 	
 ## Stargazers Over Time
 
@@ -835,7 +856,8 @@ Use this bibtex to cite this repository:
 	
 [![Stargazers over time](https://starchart.cc/Charmve/computer-vision-in-action.svg)](https://starchart.cc/Charmve/computer-vision-in-action)
 
-<br><br>
+<br><a href="https://github.com/Charmve/computer-vision-in-action#-以用促学先会后懂-"><img align="right" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/dd292873828228a753a9bd2de4576dbf8cc3902c/res/ui/footer-rocket.svg" height="220" title="Do what you like, and do it best!"/></a>
+<br>
 <p align="center">Feel free to ask any questions, open a PR if you feel something can be done differently!</p>
 <h2 align="center">🌟 Star this repository 🌟</h2>
 <p align="center">Created by <a href="https://github.com/Charmve">Charmve</a> & <a href="https://github.com/MaiweiAI">maiwei.ai</a> Community | Deployed on <a href="https://charmve.github.io/computer-vision-in-action/">GitHub Page</a></p>
