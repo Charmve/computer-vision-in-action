@@ -106,7 +106,7 @@
 
 ## Index
 
-<img align="right" src="res/ui/L0CV.png" width=62% alt="L0CV architecture" title="L0CV architecture">
+<img align="right" src="res/ui/L0CV.png" width=63% alt="L0CV architecture" title="L0CV architecture">
 
 - [💠 全书组织](#-全书组织)
 - [🌈 愿景](#-愿景)
@@ -626,8 +626,8 @@
 >   - 📁 <code>chapter12_practice-projects</code> - 第 12 章 - 计算机视觉课题研究初探 Jupyter Notebook 实现
 >   - 📁 <code>chapter13_Understanding-and-Visualizing/</code> - 第 13 章 - 可视化与理解卷积神经网络 Jupyter Notebook 实现
 >   - 📁 <code>chapter14_GAN/</code> - 第 14 章 - 生成对抗模型 Jupyter Notebook 实现
->   - <a href="https://github.com/Charmve/computer-vision-in-action#-以用促学先会后懂-"><img align="right" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/dd292873828228a753a9bd2de4576dbf8cc3902c/res/ui/footer-rocket.svg" height="260" title="Do what you like, and do it best!"/></a>
 >   - 📁 <code>chapter15_Transfer-Learning/</code> - 第 15 章 - 迁移学习 Jupyter Notebook 实现
+>   - <a href="https://github.com/Charmve/computer-vision-in-action#-以用促学先会后懂-"><img align="right" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/dd292873828228a753a9bd2de4576dbf8cc3902c/res/ui/footer-rocket.svg" height="260" title="Do what you like, and do it best!"/></a>
 >   - 📁 <code>chapter16_Attention/</code> - 第 16 章 - 注意力机制 Jupyter Notebook 实现
 >   - 📁 <code>chapter17_Transformers/</code> - 第 17 章 - Transformers Jupyter Notebook 实现
 >   - ...
@@ -640,7 +640,7 @@
 
 ## 🔑 如何食用
 
-<details><summary>详细攻略</summary>
+<details><summary>🔎 详细攻略展开</summary>
 
 ### 方式一 Jupyter Notebook (推荐方式 ✨)
 
@@ -708,7 +708,7 @@ import L0CV
 
 <br>
 
-[收起](#如何食用)
+[收起](#-如何食用)
 																  
 </details>
 
