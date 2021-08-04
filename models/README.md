@@ -91,11 +91,12 @@ You can see visualizations of each model's network architecture by using [Netron
 | [Compression]( https://github.com/tensorflow/models/tree/master/research/compression)  | Compressing and decompressing images using a pre-trained Residual GRU network.     | `Tensorflow`| [Apache License]( https://raw.githubusercontent.com/tensorflow/models/master/LICENSE )
 | [AttentionOCR]( https://github.com/tensorflow/models/tree/master/research/attention_ocr)  | A model for real-world image text extraction.     | `Tensorflow`| [Apache License]( https://raw.githubusercontent.com/tensorflow/models/master/LICENSE )
 
+* comes from [<b><em>balavenkatesh3322/CV-pretrained-model</em></b>](https://github.com/balavenkatesh3322/CV-pretrained-model)
+
 <div align="right">
     <b><a href="#index">↥ Back To Top</a></b>
 </div>
 
-* comes from [<b><em>balavenkatesh3322/CV-pretrained-model</em></b>](https://github.com/balavenkatesh3322/CV-pretrained-model)
 
 # Repo: Semantic Segmentation in PyTorch
 This repository contains some models for semantic segmentation and the pipeline of training and testing models, 
@@ -135,7 +136,7 @@ I'm going to implement <a href="https://github.com/Charmve/PaperWeeklyAI/tree/ma
 Use this bibtex to cite this repository:
 ```
 @misc{PyTorch for Semantic Segmentation in Action,
-  title={Some Implementation of Semantic Segmentation in PyTorch},
+  title={Some Implementations of Semantic Segmentation in PyTorch},
   author={Charmve},
   year={2020.10},
   publisher={Github},
