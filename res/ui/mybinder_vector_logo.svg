@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="281.5014mm"
+   height="359.65723mm"
+   viewBox="0 0 281.5014 359.65723"
+   version="1.1"
+   id="svg102"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="MyBinderOnlyLogo.svg">
+  <defs
+     id="defs96" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-345.17168"
+     inkscape:cy="716.81002"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1148"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata99">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(60.619755,21.167908)">
+    <g
+       transform="matrix(8.4666664,0,0,8.4666664,-116.42271,-122.59772)"
+       id="g80">
+      <circle
+         style="fill:none;stroke:#f5a252;stroke-width:4.83419991;stroke-miterlimit:10"
+         id="circle16"
+         r="9.5419998"
+         cy="23.938999"
+         cx="27.879"
+         stroke-miterlimit="10" />
+      <circle
+         style="fill:none;stroke:#579aca;stroke-width:4.83419991;stroke-miterlimit:10"
+         id="circle18"
+         r="9.5430002"
+         cy="42.499001"
+         cx="27.879"
+         stroke-miterlimit="10" />
+      <circle
+         style="fill:none;stroke:#e66581;stroke-width:4.83419991;stroke-miterlimit:10"
+         id="circle20"
+         r="9.5430002"
+         cy="33.289001"
+         cx="18.551001"
+         stroke-miterlimit="10" />
+      <path
+         style="fill:none;stroke:#579aca;stroke-width:4.83419991;stroke-miterlimit:10"
+         inkscape:connector-curvature="0"
+         id="path22"
+         d="m 20.196,36.836 c 0.759,-1.031 1.74,-1.927 2.921,-2.607 4.566,-2.63 10.401,-1.06 13.031,3.507"
+         stroke-miterlimit="10" />
+      <path
+         style="fill:none;stroke:#f5a252;stroke-width:4.83419991;stroke-miterlimit:10"
+         inkscape:connector-curvature="0"
+         id="path24"
+         d="M 19.61,28.701 C 16.98,24.135 18.549,18.3 23.117,15.669 c 4.567,-2.63 10.401,-1.059 13.031,3.508"
+         stroke-miterlimit="10" />
+    </g>
+  </g>
+</svg>

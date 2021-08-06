@@ -3,3 +3,7 @@
 - [:octocat: GitHub](https://github.com/Charmve/computer-vision-in-action)
 - [📕 关于本书](book_preface.md)
 - [⛷ 读者微信交流群](https://mp.weixin.qq.com/s/jr6h1lXxWsQLF8GZnek7Fg)
+- [🌌 L0CV Universe](https://github.com/Charmve/computer-vision-in-action/tree/main/L0CV-Universe)
+  - [🌼 Demo Day](https://github.com/Charmve/computer-vision-in-action/tree/main/L0CV-Universe/DemoDays.md)
+  - [🍁 Meet Up](https://github.com/Charmve/computer-vision-in-action/tree/main/L0CV-Universe/MeetUp.md)
+  - [🍀 Challenges](https://github.com/Charmve/computer-vision-in-action/tree/main/L0CV-Universe/Challenges.md)
