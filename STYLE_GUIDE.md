@@ -14,7 +14,7 @@
 * 字符串
     * 使用中文双引号
 * 符号描述
-    * 时刻t（不是t时刻）
+    * 时刻 t（不是t时刻）
 	* 形状使用英文标点
         * (10, 20) 不是 （10，20）
 * 人称
@@ -50,7 +50,7 @@
     * 每行长度
 * 引用
     * 上式和下式
-    * 以上N式，以下N式
+    * 以上 N 式，以下N式
 * 公式末放英文标点
     * 逗号：,
     * 句号：.
@@ -60,7 +60,7 @@
 ## 图片
 
 * 软件
-    * 使用OmniGraffle制图，以100%的大小导出pdf（infinite canvas），再使用pdf2svg转成svg
+    * 使用 OmniGraffle 制图，以 100% 的大小导出 pdf（infinite canvas），再使用 pdf2svg 转成 svg
 * 样式
     * 格式：
         * svg
@@ -96,9 +96,9 @@
 
 ## 代码
 
-* 使用utils.py封装多次使用函数
+* 使用 `utils.py` 封装多次使用函数
     * 首次出现函数，书里给出函数实现
-* Python规范一致
+* Python 规范一致
     * PEP8
         * 二元操作符换行：操作符和后一元一起换行 (https://www.python.org/dev/peps/pep-0008/#should-a-line-break-before-or-after-a-binary-operator)
 * 将相邻赋值语句尽可能合并为同一行
@@ -139,9 +139,9 @@
     * from mxnet.gluon import data as gdata, loss as gloss, nn, utils as gutils
 * 打印名称
     * epoch（从1开始计数）, lr, loss, train acc, time
-    * 5行左右
+    * 5 行左右
 * 打印变量
-    * 代码块最后一行尽量不用print()语句，例如`x, y`而不是`print('x:', x, 'y:', y)`
+    * 代码块最后一行尽量不用 print() 语句，例如 `x, y` 而不是 `print('x:', x, 'y:', y)`
 * 字符串
     * 使用单引号
 * 其他
@@ -155,10 +155,10 @@
 ## 超链接
 
 * 内链格式
-    * [“线性回归”](linear-reg.md)一节
+    * [“线性回归”](https://github.com/Charmve/computer-vision-in-action/blob/main/docs/1_理论篇/chapter1_Neural-Networks/chapter1.1_line-regression.md)一节
 * 外链
     * [层](http:bla)
-    * 无需暴露URL
+    * 无需暴露 URL
 
 ## 英翻汉的常见问题
 
