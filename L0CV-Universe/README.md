@@ -1,9 +1,8 @@
 
 <p align="center">
-  <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/front-head.jpg" title="L0CV Universe" height=240 width="100%">
+  <img src="https://user-images.githubusercontent.com/29084184/128619999-51d3fb62-50ee-40b2-a078-7c321ddd5f91.png" title="L0CV Universe" height=240 width="100%">
 </p>
 <br>
-
 
 <a href="https://github.com/Charmve/computer-vision-in-action#-全书组织">💠 全书组织</a> | <a href="https://github.com/Charmve/computer-vision-in-action#-本书目录">📘 本书目录</a> | <a href="https://github.com/Charmve/computer-vision-in-action#-如何食用">🔎 如何食用</a> | <a href="https://github.com/Charmve/computer-vision-in-action#-常见问题">❓ 常见问题</a> | <a href="https://github.com/Charmve/computer-vision-in-action#-社区互助">👥 社区互助 </a>
 
@@ -71,7 +70,7 @@
             <a href="./DemoDays.md"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/demoday.png" title="L0CV Demo Day" width=300></a>
         </td>
         <td>
-            <a href="./DemoDays.md"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/challenges.png" title="L0CV Challenges" width=300></a>
+            <a href="./Challenges.md"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/challenges.png" title="L0CV Challenges" width=300></a>
         </td>
         <td>
             <a href="./MeetUp.md"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/meetup.png" title="L0CV Meet Up" width=300></a>
@@ -104,13 +103,13 @@
             <div class="mdl-grid running" align="center" style="text-align:center">
                 <div class="running-item">
                     <a href="https://charmve.github.io/computer-vision-in-action/#/README?id=🔎-如何食用">
-                    <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/laptop_jupyter.png" width="30">
+                    <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/laptop_jupyter.png" width="60">
                     <p>Run<br>locally</p>
                     </a>
                 </div>
                 <div class="running-item">
                     <a href="https://charmve.github.io/computer-vision-in-action/#/README?id=🔎-如何食用">
-                    <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/colab.png" width="30">
+                    <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/colab.png" width="60">
                     <p>Google<br>Colab</p>
                     </a>
                 </div>
@@ -175,7 +174,7 @@
 </p>
 
 <div align="left">
-    <a href="https://opencollective.com/surfacedd#sponsors" target="_blank"><img src="https://opencollective.com/surfacedd/sponsors.svg?width=200"></a>
+    <a href="https://opencollective.com/l0cv#sponsors" target="_blank"><img src="https://opencollective.com/l0cv/sponsors.svg?width=200"></a>
 </div>
 
 <div id="donateBox" class="absolute center">
@@ -186,9 +185,9 @@
 		<li id="btc">
             <img src="https://img.shields.io/badge/-BitCoin-yellow.svg?logo=BitCoin">
 		</li>
-		<li id="ali">
+		<li id="ali&wexin">
 			<div id="alib">
-                <a href="https://charmve.github.io/sponsor.html" target="_blank"><img src="https://img.shields.io/badge/-AliPay-blue.svg?logo=AliPay"></a> | <a href="https://charmve.github.io/sponsor.html" target="_blank"><img src="https://img.shields.io/badge/-WeChat-blue.svg?logo=WeChat"></a>
+                <a href="https://charmve.github.io/sponsor.html" target="_blank"><img src="https://img.shields.io/badge/-AliPay-blue.svg?logo=AliPay"></a> | <a href="https://charmve.github.io/sponsor.html" target="_blank"><img src="https://img.shields.io/badge/-WeChat-lightgreen.svg?logo=WeChat"></a>
 			</div>
 		</li>
 	</ul>
