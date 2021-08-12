@@ -90,6 +90,15 @@
 </p>
 
 <br>
+<div>
+    <p align="center"><img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/l0cv-architecture.png" alt="L0CV architecture" title="L0CV architecture"></p>
+    <p align = right>
+        * This image uses independently developed image watermarking technology for copyright certification, as shown in the figure <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>below</b></a>.
+        <br>本图片采用作者独立研发的图片水印技术作版权认证，<a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>点击查看</b></a>。
+    </p>
+</div>
+
+<br>
 
 <table class="table table-striped table-bordered table-vcenter">
     <tbody class=ai-notebooks-table-content>
