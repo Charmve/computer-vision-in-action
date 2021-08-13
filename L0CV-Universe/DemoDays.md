@@ -34,6 +34,9 @@
 *《计算机视觉实战演练：算法与应用》V1.2 *部分项目还在更新中*
 
 <br>
+<p align="left">
+  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="../res/ui/workswith1.png" title="Works with L0CV" width="120"></a>
+</p>
 
 | 实战项目 | 章节 | Binder | Google Colab | 
 | :-- | :---| :---:| :---: |
@@ -51,9 +54,9 @@
 | [实战项目 12 - PyTorch 如何使用TensorBoard](/docs/3_进阶篇/chapter11-可视化和理解/chapter11-可视化和理解.md) | 第 11 章 - 可视化和理解 | | |
 | [实战项目 13 - 图像样式迁移]() | 第 12 章 生成对抗模型 | <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb#/"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a> | <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> |
 | [实战项目 13 - 旧照片修复](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life) | 第 12 章 - 生成对抗模型 | <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter12_practice-projects/Bringing-Old-Photo-Back-to-Life.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a> | <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> |
-| | [实战项目 14 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md) | 第 15 章 - 迁移学习 | <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter15_Transfer-Learning/TL-ants-bees-classification.ipynb#/" /> <img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a> | <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> |
+| [实战项目 14 - 蚂蚁和蜜蜂的分类问题](https://github.com/Charmve/computer-vision-in-action/tree/main/docs/3_进阶篇/chapter15_迁移学习/chapter15_迁移学习的应用.md) | 第 15 章 - 迁移学习 | <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter15_Transfer-Learning/TL-ants-bees-classification.ipynb#/" /> <img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a> | <a target="_blank" href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter09_computer-vision/9.11_neural-style.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" ></a> |
 | [实战项目 15 - 基于Transformer的视频实例分割网络VisTR (CVPR2021)](https://blog.csdn.net/Charmve/article/details/115339803) | 第 17 章 - 跨界模型 Transformer | | |
-| | [实战项目 16 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)| 第 18 章 - 知识蒸馏 | | |
+| [实战项目 16 - 支付宝CVPR细粒度视觉分类挑战赛夺冠方案解读](https://mp.weixin.qq.com/s/RTkBQJ7Uj86Wxt7HmwWKzA)| 第 18 章 - 知识蒸馏 | | |
 | ...  | ... | ... |
 
 
