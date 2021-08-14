@@ -94,9 +94,19 @@
     <p align="center"><img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/l0cv-architecture.png" alt="L0CV architecture" title="L0CV architecture"></p>
     <p align = right>
         * This image uses independently developed image watermarking technology for copyright certification, as shown in the figure <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>below</b></a>.
-        <br>本图片采用作者独立研发的图片水印技术作版权认证，<a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>点击查看</b></a>。
+        <br>本图片采用作者独立研发的图片水印技术作为版权认证，<a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>点击查看</b></a>。
     </p>
 </div>
+
+<br><br>
+
+## Overview of Book
+
+:label: `fig_book_org`
+
+<p align="center">
+  <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/book_org.png" alt="book_org.png">
+</p>
 
 <br>
 
@@ -106,7 +116,7 @@
         <td colspan="1" rowspan="1" class="ai-notebooks-table-points ai-orange-link">
         <div class="mdl-cell mdl-cell--5-col mdl-cell--middle">
             <div class="content">
-            <h2 style="text-align:center">每一小节都是可以运行的 <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/notebooks">Jupyter 记事本</a></h2>
+            <h2 style="text-align:center">每一小节都是可以运行的 <a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/">Jupyter 记事本</a></h2>
             <p>你可以自由修改代码和超参数来获取及时反馈，从而积累深度学习的实战经验。</p>
             </div>
             <div class="mdl-grid running" align="center" style="text-align:center">
@@ -204,7 +214,61 @@
 
 <div class="sponsor-level">
     <h2 align="center">Our Sponsors</h2>
-    <h2><em>Waiting for you!</em></h2>
+    <h4 align="center">Get MORE Exposure for Your Products</h4>
+    <h3><em>Waiting for you!</em></h3>
+    <a href="" target="_blank"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/OurSponsors.png" alt="Our Sponsors" title="Our Sponsors"></a>
+</div>
+
+<br>
+<div class="sponsor-level">
+    <h2 align="center">Our Backers</h2>
+    <h4 align="center"><em>Waiting for you, code with ❤️ ！</em></h4>
+    <!--<h3><em>Waiting for you, Code with ❤️ ！</em></h3>-->
+    <a href="https://opencollective.com/l0cv#backers" target="_blank"><img src="https://opencollective.com/l0cv/backers.svg?width=200"></a>
+    <table align="center">
+      <tbody>
+	 <th>
+	   <td>
+		   日期📅 
+	   </td>
+	   <td>
+		   老板👵 
+	   </td>
+	   <td>
+		   金额💰
+	   </td>
+	   <td>
+		   方式♥️
+	   </td>
+	   <td>
+		   留言:speech_balloon:
+	   </td>
+	 </th>
+	 <tr>
+           <td>
+		   01
+	   </td>
+           <td>
+	   </td>
+           <td>
+	   </td>
+           <td>
+	   </td>
+           <td>
+	   </td>
+           <td>
+	   </td>
+         </tr>
+      </tbody>
+    </table>
+    *说明：因为微信和支付宝并不支持个人的接口调用，所以赞助名单上的信息都是我手动添加的，可能更新会存在延时。以防万一，您也可以发起 Issue 说明您对应的赞助，以及您希望得到的帮助，添加/解决后我会关闭对应 Issue。
+</div>
+
+<br>
+<div class="sponsor-level">
+    <h2 align="center">合作院校</h2>
+    <h4 align="center">教材或参考书等其他合作项目</h4>
+    <h3><em>期待你们的加入！</em></h3>
     <a href="" target="_blank"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/CoUniversity.JPG" alt="Cooperation with University" title="Cooperation with University"></a>
 </div>
 
