@@ -175,11 +175,11 @@
 
 ## &nbsp;&nbsp; Supporting
 
-&nbsp;&nbsp;&nbsp;&nbsp;  Support this project by becoming a sponsor. Your logo will show up here with a link to your website. 🙏
+&nbsp;&nbsp;&nbsp;&nbsp;  Support this project by becoming a sponsor. Your logo will show up <b>our homepage</b> with a link to your website. 🙏
 
 <br>
 <p align="center">
-    <a href="https://charmve.github.io/L0CV-web/door/" target="_blank"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/playagame.png" alt="Buy Me A Coffee" width="300" ></a>
+    <a href="https://charmve.github.io/L0CV-web/door/" target="_blank"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/playagame.png" alt="Play a Game with Me" width="300" ></a>
 </p>
 
 <div align="left">
@@ -195,17 +195,17 @@
             <img src="https://img.shields.io/badge/-BitCoin-yellow.svg?logo=BitCoin">
 		</li>
 		<li id="ali&wexin">
-			<div id="alib">
+			<div id="alipay">
                 <a href="https://charmve.github.io/sponsor.html" target="_blank"><img src="https://img.shields.io/badge/-AliPay-blue.svg?logo=AliPay"></a> | <a href="https://charmve.github.io/sponsor.html" target="_blank"><img src="https://img.shields.io/badge/-WeChat-lightgreen.svg?logo=WeChat"></a>
 			</div>
 		</li>
 	</ul>
 </div>
 
-
 <div class="sponsor-level">
     <h2 align="center">Our Sponsors</h2>
     <h2><em>Waiting for you!</em></h2>
+    <a href="" target="_blank"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/CoUniversity.JPG" alt="Cooperation with University" title="Cooperation with University"></a>
 </div>
 
 <br>

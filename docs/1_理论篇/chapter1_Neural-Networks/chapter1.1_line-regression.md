@@ -42,11 +42,13 @@
 
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter01_Neural-Networks/01_line-regression.ipynb">
-        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter01_Neural-Networks/01_line-regression.ipynb" target="_blank\">
+      <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+    </a> 
+    <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter01_Neural-Networks/01_line-regression.ipynb\" target="_blank\">
+      <img src="https://mybinder.org/badge_logo.svg" align="center" alt="Open in Binder">
     </a>
 </p>
-
 
 
 ## 1.1.1 基本原理

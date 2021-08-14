@@ -47,8 +47,11 @@
 ---
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/11_Convolutional_Neural_Networks.ipynb">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter02_CNN/Pytorch_MNIST.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+    </a>
+    <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter02_CNN/Pytorch_MNIST.ipynb" target="_blank\">
+      <img src="https://mybinder.org/badge_logo.svg" align="center" alt="Open in Binder">
     </a>
 </p>
 

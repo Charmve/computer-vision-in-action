@@ -12,12 +12,6 @@
 
 日期: 2021/05/22
 
-<p align="center">
-    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/08_Neural_Networks.ipynb">
-        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
-    </a>
-</p>
-
   - 第 2 章 [卷积神经网络](https://charmve.github.io/computer-vision-in-action/#/chapter3/chapter3)
     - [2.1 从神经网络到卷积神经网络](#21-从神经网络到卷积神经网络)
       - [2.1.1 定义](#211-定义)
@@ -50,6 +44,16 @@
     - [小结](#小结)
     - [参考文献](#参考文献)
 
+---
+
+<p align="center">
+    <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter02_CNN/1_Convolutional_Neural_Networks.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
+    </a>
+    <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter02_CNN/1_Convolutional_Neural_Networks.ipynb" target="_blank\">
+      <img src="https://mybinder.org/badge_logo.svg" align="center" alt="Open in Binder">
+    </a>
+</p>
 
 ## 2.1 从神经网络到卷积神经网络
 
