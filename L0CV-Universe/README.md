@@ -1,3 +1,27 @@
+<!--
+*Spooned by
+<div align="center">
+	<a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
+		<img src="https://raw.githubusercontent.com/sindresorhus/css-in-readme-like-wat/main/header.svg" width="156" height="78" alt="Click to see the source">
+	</a>
+	<a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
+		<img src="https://raw.githubusercontent.com/sindresorhus/css-in-readme-like-wat/main/header.svg" width="156" height="78" alt="Click to see the source">
+	</a>
+	<a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
+		<img src="https://raw.githubusercontent.com/sindresorhus/css-in-readme-like-wat/main/header.svg" width="156" height="78" alt="Click to see the source">
+	</a>
+	<a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
+		<img src="https://raw.githubusercontent.com/sindresorhus/css-in-readme-like-wat/main/header.svg" width="156" height="78" alt="Click to see the source">
+	</a>
+	<a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
+		<img src="https://raw.githubusercontent.com/sindresorhus/css-in-readme-like-wat/main/header.svg" width="156" height="78" alt="Click to see the source">
+	</a>
+	<a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
+		<img src="https://raw.githubusercontent.com/sindresorhus/css-in-readme-like-wat/main/header.svg" width="156" height="78" alt="Click to see the source">
+	</a>
+	<br>
+</div>
+-->
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/29084184/128619999-51d3fb62-50ee-40b2-a078-7c321ddd5f91.png" title="L0CV Universe" height=240 width="100%">
@@ -92,13 +116,15 @@
 <br>
 <div>
     <p align="center"><img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/l0cv-architecture.png" alt="L0CV architecture" title="L0CV architecture"></p>
-    <p align = right>
-        * This image uses independently developed image watermarking technology for copyright certification, as shown in the figure <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>below</b></a>.
-        <br>本图片采用作者独立研发的图片水印技术作为版权认证，<a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>点击查看</b></a>。
+    <p align="right">
+        <details><summary><b>版权所有，🈲️ 止商用</b></summary>
+        * This image uses independently developed image watermarking technology for copyright certification, <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>as shown in the figure</b></a>.
+        <br>本图片采用作者独立研发的图片水印技术作为版权认证 <kbd>CC-BY-NC 4.0</kbd>（署名可任意转载），<a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>点击查看</b></a>。
+        </details>
     </p>
 </div>
 
-<br><br>
+<br>
 
 ## Overview of Book
 
@@ -215,8 +241,10 @@
 <div class="sponsor-level">
     <h2 align="center">Our Sponsors</h2>
     <h4 align="center">Get MORE Exposure for Your Products</h4>
-    <h3><em>Waiting for you!</em></h3>
-    <a href="" target="_blank"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/OurSponsors.png" alt="Our Sponsors" title="Our Sponsors"></a>
+    <h3><em>Waiting for you!<br>虚席以待</em></h3>
+    <p align="center" >
+        <a href="" target="_blank"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/OurSponsors.png" width=80% alt="Our Sponsors" title="Our Sponsors"></a>
+    </p>
 </div>
 
 <br>
@@ -261,10 +289,10 @@
          </tr>
       </tbody>
     </table>
-    *说明：因为微信和支付宝并不支持个人的接口调用，所以赞助名单上的信息都是我手动添加的，可能更新会存在延时。以防万一，您也可以发起 Issue 说明您对应的赞助，以及您希望得到的帮助，添加/解决后我会关闭对应 Issue。
+    <br>
+    <sup>* 说明：因为微信和支付宝并不支持个人的接口调用，所以赞助名单上的信息都是我手动添加的，可能更新会存在延时。以防万一，您也可以发起 Issue 说明您对应的赞助，以及您希望得到的帮助，添加/解决后我会关闭对应 Issue。</sup>
 </div>
 
-<br>
 <div class="sponsor-level">
     <h2 align="center">合作院校</h2>
     <h4 align="center">教材或参考书等其他合作项目</h4>
