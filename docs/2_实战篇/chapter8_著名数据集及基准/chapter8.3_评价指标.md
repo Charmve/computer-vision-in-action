@@ -124,6 +124,12 @@ psnr = skimage.measure.compare_psnr(im1, im2, 255)
 SSIM，Structural SIMilarity 结构相似性。$SSIM$ 公式基于样本 $x$ 和 $y$ 之间的三个比较衡量：**亮度 (luminance)**、**对比度 (contrast)** 和**结构 (structure)**。
 
 $$
+l(x,y) = {2 \mu _x \mu _y + c_1 \over {\mu _x}^2 + {\mu _y}^2 + c_1}\\ 
+s(x,y) = {2 \sigma _xy + c_3 \over \sigma _x \sigma _y + c_3}\\ 
+c(x,y) = {2 \sigma _x \sigma _y + c_2 \over {\sigma _x}^2 + {\sigma _y}^2 + c_2}
+$$
+
+$$
 \left\{\begin{matrix}
 l(x,y) = {2 \mu _x \mu _y + c_1 \over {\mu _x}^2 + {\mu _y}^2 + c_1}\\ 
 s(x,y) = {2 \sigma _xy + c_3 \over \sigma _x \sigma _y + c_3}\\ 
@@ -135,8 +141,8 @@ $$
 
 - $\mu _x$ 为 $x$ 的均值
 - $\mu _x$ 为 $y$ 的均值
-- $\sigma _x}^2$ 为 $x$ 的方差
-- $\sigma _y}^2$]为 $y$ 的方差
+- ${\sigma_x}^2$ 为 $x$ 的方差
+- ${\sigma_y}^2$ 为 $y$ 的方差
 - $\sigma _xy$ 为 $x$ 和 $y$ 的协方差
 - $c_1 = (k_{1}L)^2$, $c_2=(k_{2}L)^2$ 为两个常数，避免除零
 - $L$ 为像素值的范围，$2^B-1$
@@ -151,8 +157,7 @@ $$
 将$\alpha, \beta, \gamma$设为 1，可以得到
 
 $$
-SSIM (x,y) = (2 \mu _x \mu _y + c_1)(2 \sigma_{xy} + c_2) \over (\mu _x^2 + \mu _y^2 + c_1）)(\sigma _x^2
- + \sigma _y^2 +c_2)
+SSIM (x,y) = (2 \mu _x \mu _y + c_1)(2 \sigma_{xy} + c_2) \over (\mu _x^2 + \mu _y^2 + c_1）)(\sigma _x^2 + \sigma _y^2 +c_2)
 $$
 
 每次计算的时候都从图片上取一个 $N×N$ 的窗口，然后不断滑动窗口进行计算，最后取平均值作为全局的 SSIM。
