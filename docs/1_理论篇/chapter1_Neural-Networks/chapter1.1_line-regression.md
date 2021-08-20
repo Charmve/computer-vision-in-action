@@ -55,64 +55,63 @@
 </p>
 
 
-<h2> 1.1 基本原理 <a class="headerlink" href="#线性回归的基本要素" title="永久链接至标题">¶</a></h2>
+<h2> 1.1 基本原理</h2>
 
 <p>线性回归输出是一个连续值，因此适用于回归问题。回归问题在实际中很常见，如预测房屋价格、气温、销售额等连续值的问题。与回归问题不同，分类问题中模型的最终输出是一个离散值。我们所说的图像分类、垃圾邮件识别、疾病检测等输出为离散值的问题都属于分类问题的范畴。softmax回归则适用于分类问题。</p>
 
 <p>由于线性回归和softmax回归都是单层神经网络，它们涉及的概念和技术同样适用于大多数的深度学习模型。我们首先以线性回归为例，介绍大多数深度学习模型的基本要素和表示方法。</p>
 
-<h2>1.1.1 线性回归的基本要素 <a class="headerlink" href="#线性回归的基本要素" title="永久链接至标题">¶</a></h2>
+<h2>1.1.1 线性回归的基本要素</h2>
 <p>我们以一个简单的房屋价格预测作为例子来解释线性回归的基本要素。这个应用的目标是预测一栋房子的售出价格（元）。我们知道这个价格取决于很多因素，如房屋状况、地段、市场行情等。为了简单起见，这里我们假设价格只取决于房屋状况的两个因素，即面积（平方米）和房龄（年）。接下来我们希望探索价格与这两个因素的具体关系。</p>
 
-<h3>1.1.1.1 模型 <a class="headerlink" href="#模型" title="永久链接至标题">¶</a></h3>
+<h3>1.1.1.1 模型</h3>
 <p>设房屋的面积为 $\(x_1\)$ ，房龄为 $\(x_2\)$ ，售出价格为 $\(y\)$ 。我们需要建立基于输入 $\(x_1\)$ 和 $\(x_2\)$ 来计算输出 $\(y\)$ 的表达式，也就是模型（model）。顾名思义，线性回归假设输出与各个输入之间是线性关系：</p>
 
-$$
 \[\hat{y} = x_1 w_1 + x_2 w_2 + b,\]
-$$
 
 <p>其中 $\(w_1\)$ 和 $\(w_2\)$ 是权重（weight）， $\(b\)$ 是偏差（bias），且均为标量。它们是线性回归模型的参数（parameter）。模型输出 $\(\hat{y}\)$ 是线性回归对真实价格 $\(y\)$ 的预测或估计。我们通常允许它们之间有一定误差。</p>
 
-<h3>1.1.1.2. 模型训练 <a class="headerlink" href="#模型训练" title="永久链接至标题">¶</a></h3>
+<h3>1.1.1.2. 模型训练</h3>
+
 <p>接下来我们需要通过数据来寻找特定的模型参数值，使模型在数据上的误差尽可能小。这个过程叫作模型训练（model
 training）。下面我们介绍模型训练所涉及的3个要素。</p>
 
-<h4>1.1.1.2.1. 训练数据 <a class="headerlink" href="#训练数据" title="永久链接至标题">¶</a></h4>
+<h4>训练数据 <a class="headerlink" href="#训练数据" title="永久链接至标题">¶</a></h4>
 
 <p>我们通常收集一系列的真实数据，例如多栋房屋的真实售出价格和它们对应的面积和房龄。我们希望在这个数据上面寻找模型参数来使模型的预测价格与真实价格的误差最小。在机器学习术语里，该数据集被称为训练数据集（training
 data set）或训练集（training
 set），一栋房屋被称为一个样本（sample），其真实售出价格叫作标签（label），用来预测标签的两个因素叫作特征（feature）。特征用来表征样本的特点。</p>
 <p>假设我们采集的样本数为 $\(n\)$ ，索引为 $\(i\)$ 的样本的特征为 $\(x_1^{(i)}\)$和 $\(x_2^{(i)}\)$ ，标签为 $\(y^{(i)}\)$ 。对于索引为 $\(i\)$ 的房屋，线性回归模型的房屋价格预测表达式为</p>
 
-$$
 \[\hat{y}^{(i)} = x_1^{(i)} w_1 + x_2^{(i)} w_2 + b.\]</div>
-$$
 
-<h4>1.1.1.2.2. 损失函数 <a class="headerlink" href="#损失函数" title="永久链接至标题">¶</a></h4>
+<h4>损失函数 <a class="headerlink" href="#损失函数" title="永久链接至标题">¶</a></h4>
 <p>在模型训练中，我们需要衡量价格预测值与真实值之间的误差。通常我们会选取一个非负数作为误差，且数值越小表示误差越小。一个常用的选择是平方函数。它在评估索引为 $\(i\)$ 的样本误差的表达式为</p>
 
-$$
 \[\ell^{(i)}(w_1, w_2, b) = \frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2,\]
-$$
+
 
 <p>其中常数 $\(1/2\)$ 使对平方项求导后的常数系数为1，这样在形式上稍微简单一些。显然，误差越小表示预测价格与真实价格越相近，且当二者相等时误差为0。给定训练数据集，这个误差只与模型参数相关，因此我们将它记为以模型参数为参数的函数。在机器学习里，将衡量误差的函数称为损失函数（loss
 function）。这里使用的平方误差函数也称为平方损失（square loss）。</p>
 <p>通常，我们用训练数据集中所有样本误差的平均来衡量模型预测的质量，即</p>
 
-$$
-\[\ell(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \ell^{(i)}(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \frac{1}{2}\left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right)^2.\]</div>
-<p>在模型训练中，我们希望找出一组模型参数，记为 $\(w_1^*, w_2^*, b^*\)$ ，来使训练样本平均损失最小：</p>
-<div class="math notranslate nohighlight">
-\[w_1^*, w_2^*, b^* = \operatorname*{argmin}_{w_1, w_2, b}\  \ell(w_1, w_2, b).\]
-$$
+\[\ell(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \ell^{(i)}(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \frac{1}{2}\left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right)^2.\]
 
-<h4>1.1.1.2.3. 优化算法<a class="headerlink" href="#优化算法" title="永久链接至标题">¶</a></h4>
+<p>在模型训练中，我们希望找出一组模型参数，记为 $\(w_1^*, w_2^*, b^*\)$ ，来使训练样本平均损失最小：</p>
+
+\[w_1^*, w_2^*, b^* = \operatorname*{argmin}_{w_1, w_2, b}\  \ell(w_1, w_2, b).\]
+
+
+<h4>优化算法<a class="headerlink" href="#优化算法" title="永久链接至标题">¶</a></h4>
+
 <p>当模型和损失函数形式较为简单时，上面的误差最小化问题的解可以直接用公式表达出来。这类解叫作解析解（analytical
 solution）。本节使用的线性回归和平方误差刚好属于这个范畴。然而，大多数深度学习模型并没有解析解，只能通过优化算法有限次迭代模型参数来尽可能降低损失函数的值。这类解叫作数值解（numerical
 solution）。</p>
+
 <p>在求数值解的优化算法中，小批量随机梯度下降（mini-batch stochastic
 gradient
 descent）在深度学习中被广泛使用。它的算法很简单：先选取一组模型参数的初始值，如随机选取；接下来对参数进行多次迭代，使每次迭代都可能降低损失函数的值。在每次迭代中，先随机均匀采样一个由固定数目训练数据样本所组成的小批量（mini-batch） $\(\mathcal{B}\)$ ，然后求小批量中数据样本的平均损失有关模型参数的导数（梯度），最后用此结果与预先设定的一个正数的乘积作为模型参数在本次迭代的减小量。</p>
+
 <p>在训练本节讨论的线性回归模型的过程中，模型的每个参数将作如下迭代：</p>
 
 $$
@@ -128,9 +127,10 @@ size）， $\(\eta\)$ 称作学习率（learning
 rate）并取正数。需要强调的是，这里的批量大小和学习率的值是人为设定的，并不是通过模型训练学出的，因此叫作超参数（hyperparameter）。我们通常所说的“调参”指的正是调节超参数，例如通过反复试错来找到超参数合适的值。在少数情况下，超参数也可以通过模型训练学出。本书对此类情况不做讨论。</p>
 
 <h3>1.1.1.3. 模型预测 <a class="headerlink" href="#模型预测" title="永久链接至标题">¶</a></h3>
+
 <p>模型训练完成后，我们将模型参数 $\(w_1, w_2, b\)$ 在优化算法停止时的值分别记作 $\(\hat{w}_1, \hat{w}_2, \hat{b}\)$ 。注意，这里我们得到的并不一定是最小化损失函数的最优解 $\(w_1^*, w_2^*, b^*\)$ ，而是对最优解的一个近似。然后，我们就可以使用学出的线性回归模型 $\(x_1 \hat{w}_1 + x_2 \hat{w}_2 + \hat{b}\)$ 来估算训练数据集以外任意一栋面积（平方米）为 $\(x_1\)$ 、房龄（年）为 $\(x_2\)$ 的房屋的价格了。这里的估算也叫作模型预测、模型推断或模型测试。</p>
 
-<h2>1.1.2. 线性回归的表示方法 <a class="headerlink" href="#线性回归的表示方法" title="永久链接至标题">¶</a></h2>
+<h2>1.1.2 线性回归的表示方法 <a class="headerlink" href="#线性回归的表示方法" title="永久链接至标题">¶</a></h2>
 <p>我们已经阐述了线性回归的模型表达式、训练和预测。下面我们解释线性回归与神经网络的联系，以及线性回归的矢量计算表达式。</p>
 
 <h3>1.1.2.1. 神经网络图 <a class="headerlink" href="#神经网络图" title="永久链接至标题">¶</a></h3>
@@ -211,16 +211,15 @@ layer）或稠密层（dense layer）。</p>
 <p>结果很明显，后者比前者更省时。因此，我们应该尽可能采用矢量计算，以提升计算效率。</p>
 <p>让我们再次回到本节的房价预测问题。如果我们对训练数据集里的3个房屋样本（索引分别为1、2和3）逐一预测价格，将得到</p>
 
-$$
 \[\begin{split}\begin{aligned}
 \hat{y}^{(1)} &amp;= x_1^{(1)} w_1 + x_2^{(1)} w_2 + b,\\
 \hat{y}^{(2)} &amp;= x_1^{(2)} w_1 + x_2^{(2)} w_2 + b,\\
 \hat{y}^{(3)} &amp;= x_1^{(3)} w_1 + x_2^{(3)} w_2 + b.
 \end{aligned}\end{split}\]
-$$
+
 <p>现在，我们将上面3个等式转化成矢量计算。设</p>
 
-$$
+
 \[\begin{split}\boldsymbol{\hat{y}} =
 \begin{bmatrix}
     \hat{y}^{(1)} \\
@@ -238,7 +237,7 @@ $$
     w_1 \\
     w_2
 \end{bmatrix}.\end{split}\]
-$$
+
 
 <p>对3个房屋样本预测价格的矢量计算表达式为 $\(\boldsymbol{\hat{y}} = \boldsymbol{X} \boldsymbol{w} + b,\)$ 
 其中的加法运算使用了广播机制（参见<a class="reference internal" href="../chapter_prerequisite/ndarray.html"><span class="doc">“数据操作”</span></a>一节）。例如：</p>
@@ -272,28 +271,30 @@ $\[\boldsymbol{\hat{y}} = \boldsymbol{X} \boldsymbol{w} + b,\]$
 批量数据样本特征 $\(\boldsymbol{X} \in \mathbb{R}^{n \times d}\)$ ，权重 $\(\boldsymbol{w} \in \mathbb{R}^{d \times 1}\)$ ，
 偏差 $\(b \in \mathbb{R}\)$ 。相应地，批量数据样本标签 $\(\boldsymbol{y} \in \mathbb{R}^{n \times 1}\)$ 。设模型参数 $\(\boldsymbol{\theta} = [w_1, w_2, b]^\top\)$ ，我们可以重写损失函数为</p>
 
-$$\[\ell(\boldsymbol{\theta})=\frac{1}{2n}(\boldsymbol{\hat{y}}-\boldsymbol{y})^\top(\boldsymbol{\hat{y}}-\boldsymbol{y}).\]$$
+\[\ell(\boldsymbol{\theta})=\frac{1}{2n}(\boldsymbol{\hat{y}}-\boldsymbol{y})^\top(\boldsymbol{\hat{y}}-\boldsymbol{y}).\]
 
 <p>小批量随机梯度下降的迭代步骤将相应地改写为</p>
 
-$$\[\boldsymbol{\theta} \leftarrow \boldsymbol{\theta} -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}   \nabla_{\boldsymbol{\theta}} \ell^{(i)}(\boldsymbol{\theta}),\]$$
+$$
+\[\boldsymbol{\theta} \leftarrow \boldsymbol{\theta} -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}   \nabla_{\boldsymbol{\theta}} \ell^{(i)}(\boldsymbol{\theta}),\]
+$$
 
 <p>其中梯度是损失有关3个为标量的模型参数的偏导数组成的向量：</p>
 
 $$
-\[\begin{split}\nabla_{\boldsymbol{\theta}} \ell^{(i)}(\boldsymbol{\theta})=
-\begin{bmatrix}
+\[\begin{split}\nabla_{\boldsymbol{\theta}} \ell^{(i)}(\boldsymbol{\theta})=\\
+\begin{bmatrix}\\
     \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_1} \\
     \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_2} \\
-    \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial b}
-\end{bmatrix}
-=
+    \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial b}\\
+\end{bmatrix}\\
+=\\
 \begin{bmatrix}
     x_1^{(i)} (x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}) \\
     x_2^{(i)} (x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}) \\
-    x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}
-\end{bmatrix}
-=
+    x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\\
+\end{bmatrix}\\
+= \\
 \begin{bmatrix}
     x_1^{(i)} \\
     x_2^{(i)} \\
@@ -305,7 +306,7 @@ $$
 </div>
 </div>
 <div class="section" id="小结">
-<h2>1.1.3. 小结 <a class="headerlink" href="#小结" title="永久链接至标题">¶</a></h2>
+<h3>1.1.3. 小结 <a class="headerlink" href="#小结" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>和大多数深度学习模型一样，对于线性回归这样一种单层神经网络，它的基本要素包括模型、训练数据、损失函数和优化算法。</li>
 <li>既可以用神经网络图表示线性回归，又可以用矢量计算表示该模型。</li>
@@ -313,15 +314,596 @@ $$
 </ul>
 </div>
 <div class="section" id="练习">
-<h2>1.1.4. 练习 <a class="headerlink" href="#练习" title="永久链接至标题">¶</a></h2>
+<h3>1.1.4. 练习 <a class="headerlink" href="#练习" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>使用其他包（如NumPy）或其他编程语言（如MATLAB），比较相加两个向量的两种方法的运行时间。</li>
 </ul>
 </div>
 
-## 1.1.2 从零实现线性回归
+<h2> 1.2 从零实现线性回归</h2>
 
-## 1.1.3 线性回归的简洁实现
+<p>在了解了线性回归的背景知识之后，现在我们可以动手实现它了。尽管强大的深度学习框架可以减少大量重复性工作，但若过于依赖它提供的便利，会导致我们很难深入理解深度学习是如何工作的。因此，本节将介绍如何只利用<code class="docutils literal notranslate"><span class="pre">NDArray</span></code>和<code class="docutils literal notranslate"><span class="pre">autograd</span></code>来实现一个线性回归的训练。</p>
+<p>首先，导入本节中实验所需的包或模块，其中的matplotlib包可用于作图，且设置成嵌入显示。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [1]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">mxnet</span> <span class="kn">import</span> <span class="n">autograd</span><span class="p">,</span> <span class="n">nd</span>
+<span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="生成数据集">
+<h3>1.2.1. 生成数据集<a class="headerlink" href="#生成数据集" title="永久链接至标题">¶</a></h3>
+<p>我们构造一个简单的人工训练数据集，它可以使我们能够直观比较学到的参数和真实的模型参数的区别。设训练数据集样本数为1000，输入个数（特征数）为2。给定随机生成的批量样本特征<span class="math notranslate nohighlight">\(\boldsymbol{X} \in \mathbb{R}^{1000 \times 2}\)</span>，我们使用线性回归模型真实权重<span class="math notranslate nohighlight">\(\boldsymbol{w} = [2, -3.4]^\top\)</span>和偏差<span class="math notranslate nohighlight">\(b = 4.2\)</span>，以及一个随机噪声项<span class="math notranslate nohighlight">\(\epsilon\)</span>来生成标签</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{y} = \boldsymbol{X}\boldsymbol{w} + b + \epsilon,\]</div>
+<p>其中噪声项<span class="math notranslate nohighlight">\(\epsilon\)</span>服从均值为0、标准差为0.01的正态分布。噪声代表了数据集中无意义的干扰。下面，让我们生成数据集。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [2]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">num_inputs</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">num_examples</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">true_w</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.4</span><span class="p">]</span>
+<span class="n">true_b</span> <span class="o">=</span> <span class="mf">4.2</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">num_examples</span><span class="p">,</span> <span class="n">num_inputs</span><span class="p">))</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">true_w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">features</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">true_w</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">features</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">true_b</span>
+<span class="n">labels</span> <span class="o">+=</span> <span class="n">nd</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">labels</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>注意，<code class="docutils literal notranslate"><span class="pre">features</span></code>的每一行是一个长度为2的向量，而<code class="docutils literal notranslate"><span class="pre">labels</span></code>的每一行是一个长度为1的向量（标量）。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [3]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[3]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>(
+ [2.2122064 0.7740038]
+ &lt;NDArray 2 @cpu(0)&gt;,
+ [6.000587]
+ &lt;NDArray 1 @cpu(0)&gt;)
+</pre></div>
+</div>
+</div>
+<p>通过生成第二个特征<code class="docutils literal notranslate"><span class="pre">features[:,</span> <span class="pre">1]</span></code>和标签 <code class="docutils literal notranslate"><span class="pre">labels</span></code>
+的散点图，可以更直观地观察两者间的线性关系。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [4]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">use_svg_display</span><span class="p">():</span>
+    <span class="c1"># 用矢量图显示</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">set_matplotlib_formats</span><span class="p">(</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">set_figsize</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)):</span>
+    <span class="n">use_svg_display</span><span class="p">()</span>
+    <span class="c1"># 设置图的尺寸</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">figsize</span>
+
+<span class="n">set_figsize</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">features</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">(),</span> <span class="n">labels</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">(),</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1"># 加分号只显示图</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+
+<div class="output_area docutils container">
+<img alt="" src="../../imags/chapter03/chapter_deep-learning-basics_linear-regression-scratch_7_0.svg" /></div>
+</div>
+
+<p>我们将上面的<code class="docutils literal notranslate"><span class="pre">plt</span></code>作图函数以及<code class="docutils literal notranslate"><span class="pre">use_svg_display</span></code>函数和<code class="docutils literal notranslate"><span class="pre">set_figsize</span></code>函数定义在<code class="docutils literal notranslate"><span class="pre">d2lzh</span></code>包里。以后在作图时，我们将直接调用<code class="docutils literal notranslate"><span class="pre">d2lzh.plt</span></code>。由于<code class="docutils literal notranslate"><span class="pre">plt</span></code>在<code class="docutils literal notranslate"><span class="pre">d2lzh</span></code>包中是一个全局变量，我们在作图前只需要调用<code class="docutils literal notranslate"><span class="pre">d2lzh.set_figsize()</span></code>即可打印矢量图并设置图的尺寸。</p>
+</div>
+<div class="section" id="读取数据集">
+<h3>1.2.2. 读取数据集 <a class="headerlink" href="#读取数据集" title="永久链接至标题">¶</a></h3>
+<p>在训练模型的时候，我们需要遍历数据集并不断读取小批量数据样本。这里我们定义一个函数：它每次返回<code class="docutils literal notranslate"><span class="pre">batch_size</span></code>（批量大小）个随机样本的特征和标签。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [5]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># 本函数已保存在d2lzh包中方便以后使用</span>
+<span class="k">def</span> <span class="nf">data_iter</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="n">num_examples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_examples</span><span class="p">))</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>  <span class="c1"># 样本的读取顺序是随机的</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_examples</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">num_examples</span><span class="p">)])</span>
+        <span class="k">yield</span> <span class="n">features</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">j</span><span class="p">),</span> <span class="n">labels</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>  <span class="c1"># take函数根据索引返回对应元素</span>
+</pre></div>
+</div>
+</div>
+<p>让我们读取第一个小批量数据样本并打印。每个批量的特征形状为(10,
+2)，分别对应批量大小和输入个数；标签形状为批量大小。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [6]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">data_iter</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+[[-0.62958384  0.3508038 ]
+ [ 1.4136469  -1.416811  ]
+ [ 0.22276424  0.2804388 ]
+ [ 0.377959   -0.34565544]
+ [-0.613936   -2.6247382 ]
+ [-0.05510042 -0.5667109 ]
+ [-1.3360355   1.0035783 ]
+ [-2.338083   -0.32677847]
+ [-0.18353732  0.5803962 ]
+ [ 0.7247974  -0.8402941 ]]
+&lt;NDArray 10x2 @cpu(0)&gt;
+[ 1.7371575 11.866432   3.6991339  6.1261005 11.895512   6.0134444
+ -1.8906523  0.6198239  1.8458312  8.513775 ]
+&lt;NDArray 10 @cpu(0)&gt;
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="初始化模型参数">
+<h3>1.2.3. 初始化模型参数 <a class="headerlink" href="#初始化模型参数" title="永久链接至标题">¶</a></h3>
+<p>我们将权重初始化成均值为0、标准差为0.01的正态随机数，偏差则初始化成0。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [7]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">w</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">num_inputs</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+</pre></div>
+</div>
+</div>
+<p>之后的模型训练中，需要对这些参数求梯度来迭代参数的值，因此我们需要创建它们的梯度。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [8]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">w</span><span class="o">.</span><span class="n">attach_grad</span><span class="p">()</span>
+<span class="n">b</span><span class="o">.</span><span class="n">attach_grad</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="定义模型">
+<h3>1.2.4. 定义模型 <a class="headerlink" href="#定义模型" title="永久链接至标题">¶</a></h3>
+<p>下面是线性回归的矢量计算表达式的实现。我们使用<code class="docutils literal notranslate"><span class="pre">dot</span></code>函数做矩阵乘法。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [9]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">linreg</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>  <span class="c1"># 本函数已保存在d2lzh包中方便以后使用</span>
+    <span class="k">return</span> <span class="n">nd</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="定义损失函数">
+<h3>1.2.5. 定义损失函数 <a class="headerlink" href="#定义损失函数" title="永久链接至标题">¶</a></h3>
+<p>我们使用上一节描述的平方损失来定义线性回归的损失函数。在实现中，我们需要把真实值<code class="docutils literal notranslate"><span class="pre">y</span></code>变形成预测值<code class="docutils literal notranslate"><span class="pre">y_hat</span></code>的形状。以下函数返回的结果也将和<code class="docutils literal notranslate"><span class="pre">y_hat</span></code>的形状相同。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [10]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">squared_loss</span><span class="p">(</span><span class="n">y_hat</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>  <span class="c1"># 本函数已保存在d2lzh包中方便以后使用</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">y_hat</span> <span class="o">-</span> <span class="n">y</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">y_hat</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="定义优化算法">
+<h3>1.2.6. 定义优化算法 <a class="headerlink" href="#定义优化算法" title="永久链接至标题">¶</a></h3>
+<p>以下的<code class="docutils literal notranslate"><span class="pre">sgd</span></code>函数实现了上一节中介绍的小批量随机梯度下降算法。它通过不断迭代模型参数来优化损失函数。这里自动求梯度模块计算得来的梯度是一个批量样本的梯度和。我们将它除以批量大小来得到平均值。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [11]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">sgd</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>  <span class="c1"># 本函数已保存在d2lzh包中方便以后使用</span>
+    <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">params</span><span class="p">:</span>
+        <span class="n">param</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">param</span> <span class="o">-</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">param</span><span class="o">.</span><span class="n">grad</span> <span class="o">/</span> <span class="n">batch_size</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="训练模型">
+<h3>1.2.7. 训练模型 <a class="headerlink" href="#训练模型" title="永久链接至标题">¶</a></h3>
+<p>在训练中，我们将多次迭代模型参数。在每次迭代中，我们根据当前读取的小批量数据样本（特征<code class="docutils literal notranslate"><span class="pre">X</span></code>和标签<code class="docutils literal notranslate"><span class="pre">y</span></code>），通过调用反向函数<code class="docutils literal notranslate"><span class="pre">backward</span></code>计算小批量随机梯度，并调用优化算法<code class="docutils literal notranslate"><span class="pre">sgd</span></code>迭代模型参数。由于我们之前设批量大小<code class="docutils literal notranslate"><span class="pre">batch_size</span></code>为10，每个小批量的损失<code class="docutils literal notranslate"><span class="pre">l</span></code>的形状为(10,
+1)。回忆一下<a class="reference internal" href="../chapter_prerequisite/autograd.html"><span class="doc">“自动求梯度”</span></a>一节。由于变量<code class="docutils literal notranslate"><span class="pre">l</span></code>并不是一个标量，运行<code class="docutils literal notranslate"><span class="pre">l.backward()</span></code>将对<code class="docutils literal notranslate"><span class="pre">l</span></code>中元素求和得到新的变量，再求该变量有关模型参数的梯度。</p>
+<p>在一个迭代周期（epoch）中，我们将完整遍历一遍<code class="docutils literal notranslate"><span class="pre">data_iter</span></code>函数，并对训练数据集中所有样本都使用一次（假设样本数能够被批量大小整除）。这里的迭代周期个数<code class="docutils literal notranslate"><span class="pre">num_epochs</span></code>和学习率<code class="docutils literal notranslate"><span class="pre">lr</span></code>都是超参数，分别设3和0.03。在实践中，大多超参数都需要通过反复试错来不断调节。虽然迭代周期数设得越大模型可能越有效，但是训练时间可能过长。我们会在后面“优化算法”一章中详细介绍学习率对模型的影响。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [12]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lr</span> <span class="o">=</span> <span class="mf">0.03</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">linreg</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">squared_loss</span>
+
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>  <span class="c1"># 训练模型一共需要num_epochs个迭代周期</span>
+    <span class="c1"># 在每一个迭代周期中，会使用训练数据集中所有样本一次（假设样本数能够被批量大小整除）。X</span>
+    <span class="c1"># 和y分别是小批量样本的特征和标签</span>
+    <span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">data_iter</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">autograd</span><span class="o">.</span><span class="n">record</span><span class="p">():</span>
+            <span class="n">l</span> <span class="o">=</span> <span class="n">loss</span><span class="p">(</span><span class="n">net</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># l是有关小批量X和y的损失</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>  <span class="c1"># 小批量的损失对模型参数求梯度</span>
+        <span class="n">sgd</span><span class="p">([</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="n">lr</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>  <span class="c1"># 使用小批量随机梯度下降迭代模型参数</span>
+    <span class="n">train_l</span> <span class="o">=</span> <span class="n">loss</span><span class="p">(</span><span class="n">net</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;epoch </span><span class="si">%d</span><span class="s1">, loss </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">epoch</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">train_l</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+epoch 1, loss 0.040563
+epoch 2, loss 0.000153
+epoch 3, loss 0.000051
+</pre></div></div>
+</div>
+<p>训练完成后，我们可以比较学到的参数和用来生成训练集的真实参数。它们应该很接近。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [13]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">true_w</span><span class="p">,</span> <span class="n">w</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[13]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>([2, -3.4],
+ [[ 1.9995433]
+  [-3.3996048]]
+ &lt;NDArray 2x1 @cpu(0)&gt;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [14]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">true_b</span><span class="p">,</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[14]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>(4.2,
+ [4.1994247]
+ &lt;NDArray 1 @cpu(0)&gt;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="小结">
+<h3>1.2.8. 小结 <a class="headerlink" href="#小结" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>可以看出，仅使用<code class="docutils literal notranslate"><span class="pre">NDArray</span></code>和<code class="docutils literal notranslate"><span class="pre">autograd</span></code>模块就可以很容易地实现一个模型。接下来，本书会在此基础上描述更多深度学习模型，并介绍怎样使用更简洁的代码（见下一节）来实现它们。</li>
+</ul>
+</div>
+<div class="section" id="练习">
+<h3>1.2.9. 练习 <a class="headerlink" href="#练习" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>为什么<code class="docutils literal notranslate"><span class="pre">squared_loss</span></code>函数中需要使用<code class="docutils literal notranslate"><span class="pre">reshape</span></code>函数？</li>
+<li>尝试使用不同的学习率，观察损失函数值的下降快慢。</li>
+<li>如果样本个数不能被批量大小整除，<code class="docutils literal notranslate"><span class="pre">data_iter</span></code>函数的行为会有什么变化？</li>
+</ul>
+</div>
+
+<h2> 1.3 线性回归的简洁实现</h2>
 
 
-> 本文引用自 李沐 《动手写深度学习》 d2l-zh.ai
+<p>随着深度学习框架的发展，开发深度学习应用变得越来越便利。实践中，我们通常可以用比上一节更简洁的代码来实现同样的模型。在本节中，我们将介绍如何使用MXNet提供的Gluon接口更方便地实现线性回归的训练。</p>
+<div class="section" id="生成数据集">
+<h3>3.3.1. 生成数据集 <a class="headerlink" href="#生成数据集" title="永久链接至标题">¶</a></h3>
+<p>我们生成与上一节中相同的数据集。其中<code class="docutils literal notranslate"><span class="pre">features</span></code>是训练数据特征，<code class="docutils literal notranslate"><span class="pre">labels</span></code>是标签。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [1]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">mxnet</span> <span class="kn">import</span> <span class="n">autograd</span><span class="p">,</span> <span class="n">nd</span>
+
+<span class="n">num_inputs</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">num_examples</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">true_w</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.4</span><span class="p">]</span>
+<span class="n">true_b</span> <span class="o">=</span> <span class="mf">4.2</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">num_examples</span><span class="p">,</span> <span class="n">num_inputs</span><span class="p">))</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">true_w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">features</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">true_w</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">features</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">true_b</span>
+<span class="n">labels</span> <span class="o">+=</span> <span class="n">nd</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">labels</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="读取数据集">
+<h3>1.3.2. 读取数据集 <a class="headerlink" href="#读取数据集" title="永久链接至标题">¶</a></h3>
+<p>Gluon提供了<code class="docutils literal notranslate"><span class="pre">data</span></code>包来读取数据。由于<code class="docutils literal notranslate"><span class="pre">data</span></code>常用作变量名，我们将导入的<code class="docutils literal notranslate"><span class="pre">data</span></code>模块用添加了Gluon首字母的假名<code class="docutils literal notranslate"><span class="pre">gdata</span></code>代替。在每一次迭代中，我们将随机读取包含10个数据样本的小批量。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [2]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">mxnet.gluon</span> <span class="kn">import</span> <span class="n">data</span> <span class="k">as</span> <span class="n">gdata</span>
+
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="c1"># 将训练数据的特征和标签组合</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gdata</span><span class="o">.</span><span class="n">ArrayDataset</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+<span class="c1"># 随机读取小批量</span>
+<span class="n">data_iter</span> <span class="o">=</span> <span class="n">gdata</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>这里<code class="docutils literal notranslate"><span class="pre">data_iter</span></code>的使用与上一节中的一样。让我们读取并打印第一个小批量数据样本。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [3]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">data_iter</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[[-0.88425034  1.1412233 ]
+ [ 0.9561315  -0.8629183 ]
+ [ 0.74419165  0.30639967]
+ [ 0.9676651   0.5122743 ]
+ [-0.1824717  -0.6532737 ]
+ [-0.19343433 -0.4232046 ]
+ [-1.1197332  -1.0690794 ]
+ [-1.1318913   0.33254048]
+ [ 0.6360805  -0.5844077 ]
+ [-0.5839395  -0.19038047]]
+&lt;NDArray 10x2 @cpu(0)&gt;
+[-1.4545211   9.049869    4.6543612   4.405501    6.064423    5.259082
+  5.6068754   0.79540896  7.460776    3.688919  ]
+&lt;NDArray 10 @cpu(0)&gt;
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="定义模型">
+<h3>1.3.3. 定义模型 <a class="headerlink" href="#定义模型" title="永久链接至标题">¶</a></h3>
+<p>在上一节从零开始的实现中，我们需要定义模型参数，并使用它们一步步描述模型是怎样计算的。当模型结构变得更复杂时，这些步骤将变得更烦琐。其实，Gluon提供了大量预定义的层，这使我们只需关注使用哪些层来构造模型。下面将介绍如何使用Gluon更简洁地定义线性回归。</p>
+<p>首先，导入<code class="docutils literal notranslate"><span class="pre">nn</span></code>模块。实际上，“nn”是neural
+networks（神经网络）的缩写。顾名思义，该模块定义了大量神经网络的层。我们先定义一个模型变量<code class="docutils literal notranslate"><span class="pre">net</span></code>，它是一个<code class="docutils literal notranslate"><span class="pre">Sequential</span></code>实例。在Gluon中，<code class="docutils literal notranslate"><span class="pre">Sequential</span></code>实例可以看作是一个串联各个层的容器。在构造模型时，我们在该容器中依次添加层。当给定输入数据时，容器中的每一层将依次计算并将输出作为下一层的输入。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [4]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">mxnet.gluon</span> <span class="kn">import</span> <span class="n">nn</span>
+
+<span class="n">net</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>回顾图3.1中线性回归在神经网络图中的表示。作为一个单层神经网络，线性回归输出层中的神经元和输入层中各个输入完全连接。因此，线性回归的输出层又叫全连接层。在Gluon中，全连接层是一个<code class="docutils literal notranslate"><span class="pre">Dense</span></code>实例。我们定义该层输出个数为1。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [5]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">net</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<p>值得一提的是，在Gluon中我们无须指定每一层输入的形状，例如线性回归的输入个数。当模型得到数据时，例如后面执行<code class="docutils literal notranslate"><span class="pre">net(X)</span></code>时，模型将自动推断出每一层的输入个数。我们将在之后“深度学习计算”一章详细介绍这种机制。Gluon的这一设计为模型开发带来便利。</p>
+</div>
+<div class="section" id="初始化模型参数">
+<h3>1.3.4. 初始化模型参数 <a class="headerlink" href="#初始化模型参数" title="永久链接至标题">¶</a></h3>
+<p>在使用<code class="docutils literal notranslate"><span class="pre">net</span></code>前，我们需要初始化模型参数，如线性回归模型中的权重和偏差。我们从MXNet导入<code class="docutils literal notranslate"><span class="pre">init</span></code>模块。该模块提供了模型参数初始化的各种方法。这里的<code class="docutils literal notranslate"><span class="pre">init</span></code>是<code class="docutils literal notranslate"><span class="pre">initializer</span></code>的缩写形式。我们通过<code class="docutils literal notranslate"><span class="pre">init.Normal(sigma=0.01)</span></code>指定权重参数每个元素将在初始化时随机采样于均值为0、标准差为0.01的正态分布。偏差参数默认会初始化为零。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [6]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">mxnet</span> <span class="kn">import</span> <span class="n">init</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">init</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="n">sigma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="定义损失函数">
+<h2>1.3.5. 定义损失函数 <a class="headerlink" href="#定义损失函数" title="永久链接至标题">¶</a></h2>
+<p>在Gluon中，<code class="docutils literal notranslate"><span class="pre">loss</span></code>模块定义了各种损失函数。我们用假名<code class="docutils literal notranslate"><span class="pre">gloss</span></code>代替导入的<code class="docutils literal notranslate"><span class="pre">loss</span></code>模块，并直接使用它提供的平方损失作为模型的损失函数。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [7]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">mxnet.gluon</span> <span class="kn">import</span> <span class="n">loss</span> <span class="k">as</span> <span class="n">gloss</span>
+
+<span class="n">loss</span> <span class="o">=</span> <span class="n">gloss</span><span class="o">.</span><span class="n">L2Loss</span><span class="p">()</span>  <span class="c1"># 平方损失又称L2范数损失</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="定义优化算法">
+<h3>1.3.6. 定义优化算法 <a class="headerlink" href="#定义优化算法" title="永久链接至标题">¶</a></h3>
+<p>同样，我们也无须实现小批量随机梯度下降。在导入Gluon后，我们创建一个<code class="docutils literal notranslate"><span class="pre">Trainer</span></code>实例，并指定学习率为0.03的小批量随机梯度下降（<code class="docutils literal notranslate"><span class="pre">sgd</span></code>）为优化算法。该优化算法将用来迭代<code class="docutils literal notranslate"><span class="pre">net</span></code>实例所有通过<code class="docutils literal notranslate"><span class="pre">add</span></code>函数嵌套的层所包含的全部参数。这些参数可以通过<code class="docutils literal notranslate"><span class="pre">collect_params</span></code>函数获取。</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [8]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">mxnet</span> <span class="kn">import</span> <span class="n">gluon</span>
+
+<span class="n">trainer</span> <span class="o">=</span> <span class="n">gluon</span><span class="o">.</span><span class="n">Trainer</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">collect_params</span><span class="p">(),</span> <span class="s1">&#39;sgd&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.03</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="训练模型">
+<h3>1.3.7. 训练模型 <a class="headerlink" href="#训练模型" title="永久链接至标题">¶</a></h3>
+<p>在使用Gluon训练模型时，我们通过调用<code class="docutils literal notranslate"><span class="pre">Trainer</span></code>实例的<code class="docutils literal notranslate"><span class="pre">step</span></code>函数来迭代模型参数。上一节中我们提到，由于变量<code class="docutils literal notranslate"><span class="pre">l</span></code>是长度为<code class="docutils literal notranslate"><span class="pre">batch_size</span></code>的一维<code class="docutils literal notranslate"><span class="pre">NDArray</span></code>，执行<code class="docutils literal notranslate"><span class="pre">l.backward()</span></code>等价于执行<code class="docutils literal notranslate"><span class="pre">l.sum().backward()</span></code>。按照小批量随机梯度下降的定义，我们在<code class="docutils literal notranslate"><span class="pre">step</span></code>函数中指明批量大小，从而对批量中样本梯度求平均。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [9]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_epochs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">data_iter</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">autograd</span><span class="o">.</span><span class="n">record</span><span class="p">():</span>
+            <span class="n">l</span> <span class="o">=</span> <span class="n">loss</span><span class="p">(</span><span class="n">net</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+        <span class="n">trainer</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">loss</span><span class="p">(</span><span class="n">net</span><span class="p">(</span><span class="n">features</span><span class="p">),</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;epoch </span><span class="si">%d</span><span class="s1">, loss: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">epoch</span><span class="p">,</span> <span class="n">l</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+epoch 1, loss: 0.040660
+epoch 2, loss: 0.000151
+epoch 3, loss: 0.000051
+</pre></div></div>
+</div>
+<p>下面我们分别比较学到的模型参数和真实的模型参数。我们从<code class="docutils literal notranslate"><span class="pre">net</span></code>获得需要的层，并访问其权重（<code class="docutils literal notranslate"><span class="pre">weight</span></code>）和偏差（<code class="docutils literal notranslate"><span class="pre">bias</span></code>）。学到的参数和真实的参数很接近。</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [10]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">dense</span> <span class="o">=</span> <span class="n">net</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">true_w</span><span class="p">,</span> <span class="n">dense</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[10]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>([2, -3.4],
+ [[ 1.9999468 -3.4000072]]
+ &lt;NDArray 1x2 @cpu(0)&gt;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [11]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<span></span><span class="n">true_b</span><span class="p">,</span> <span class="n">dense</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">data</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[11]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>(4.2,
+ [4.1993876]
+ &lt;NDArray 1 @cpu(0)&gt;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="小结">
+<h3>1.3.8. 小结 <a class="headerlink" href="#小结" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>使用Gluon可以更简洁地实现模型。</li>
+<li>在Gluon中，<code class="docutils literal notranslate"><span class="pre">data</span></code>模块提供了有关数据处理的工具，<code class="docutils literal notranslate"><span class="pre">nn</span></code>模块定义了大量神经网络的层，<code class="docutils literal notranslate"><span class="pre">loss</span></code>模块定义了各种损失函数。</li>
+<li>MXNet的<code class="docutils literal notranslate"><span class="pre">initializer</span></code>模块提供了模型参数初始化的各种方法。</li>
+</ul>
+</div>
+<div class="section" id="练习">
+<h3>1.3.9. 练习 <a class="headerlink" href="#练习" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>如果将<code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">loss(net(X),</span> <span class="pre">y)</span></code>替换成<code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">loss(net(X),</span> <span class="pre">y).mean()</span></code>，我们需要将<code class="docutils literal notranslate"><span class="pre">trainer.step(batch_size)</span></code>相应地改成<code class="docutils literal notranslate"><span class="pre">trainer.step(1)</span></code>。这是为什么呢？</li>
+<li>查阅MXNet文档，看看<code class="docutils literal notranslate"><span class="pre">gluon.loss</span></code>和<code class="docutils literal notranslate"><span class="pre">init</span></code>模块里提供了哪些损失函数和初始化方法。</li>
+<li>如何访问<code class="docutils literal notranslate"><span class="pre">dense.weight</span></code>的梯度？</li>
+</ul>
+</div>
+
+<br>
+
+> 本文引用自 李沐 《动手写深度学习》 d2l-zh.ai 非常感谢, <a href = "https://charmve.github.io/computer-vision-in-action/#/REFERENCE">参考文献</a>!
+
