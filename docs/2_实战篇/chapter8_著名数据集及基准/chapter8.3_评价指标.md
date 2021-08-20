@@ -71,7 +71,102 @@ $$IOU = \frac{area(B_p \bigcap B_{gt})}{area(B_p \bigcup  B_{gt})}$$
 $$Precision = \frac{TP}{TP + FP} = \frac{TP}{all detections}$$
 $$Recall = \frac{TP}{TP + FN} = \frac{TP}{all ground truths}$$
 
-最常用的评价指标为检测平均精度( Average Precision，AP)，它被定义为正确识别的物体数占总识别的物体个数的百分数。而评估所有类别的检测准确度的指标为平均精度均值( Mean Average Precision，mAP)，定义为所有类别检测的平均准确度，通常将mAP作为检测算法性能评估的最终指标。平均召回率( Avreage Recall，AR) 表示正确识别的物体数占测试集中识别的物体个数的百分数。此外，为了评估一个检测器的实时性，通常采用每秒处理帧数(Frames Per Second，FPS)指标评价其执行速度。FPS值越大，说明检测器的实时性越好。【张索非】
+最常用的评价指标为检测平均精度( Average Precision，AP)，它被定义为正确识别的物体数占总识别的物体个数的百分数。而评估所有类别的检测准确度的指标为平均精度均值( Mean Average Precision，mAP)，定义为所有类别检测的平均准确度，通常将mAP作为检测算法性能评估的最终指标。平均召回率( Avreage Recall，AR) 表示正确识别的物体数占测试集中识别的物体个数的百分数。此外，为了评估一个检测器的实时性，通常采用每秒处理帧数(Frames Per Second，FPS)指标评价其执行速度。FPS值越大，说明检测器的实时性越好。
+
+
+## 8.3.5 图像质量评价指标
+### PSNR
+
+PSNR, Peak Signal-to-Noise Ratio 峰值信噪比。
+
+给定一个大小为 $m×n$ 的干净图像 $I$ 和噪声图像 $K$ ，均方误差 $MSE$ 定义为：
+
+$$
+MSE = {1\over mn} \sum_{i=0}^{m-1}\sum_{j=0}^{n-1} [I(i,j) - K(i,j)]^2 
+$$
+
+然后 $PSNR(dB)$ 就定义为：
+
+$$
+PSNR = 10 \cdot log_{10}{{MAX_I}^2\over MSE} 
+$$
+
+其中 ${MAX_I}^2$ 为图片可能的最大像素值。如果每个像素都由 8 位二进制来表示，那么就为 255。通常，如果像素值由 $B$ 位二进制来表示，那么 $ MAX_I = 2^B - 1$。
+
+一般地，针对 ``uint8`` 数据，最大像素值为 255,；针对浮点型数据，最大像素值为 1。
+
+上面是针对灰度图像的计算方法，如果是彩色图像，通常有三种方法来计算。
+
+- 分别计算 RGB 三个通道的 PSNR，然后取平均值。
+- 计算 RGB 三通道的 MSE ，然后再除以 3 。
+- 将图片转化为 YCbCr 格式，然后只计算 Y 分量也就是亮度分量的 PSNR。
+
+其中，第二和第三种方法比较常见。
+
+```python3
+# im1 和 im2 都为灰度图像，uint8 类型
+
+# method 1
+diff = im1 - im2
+mse = np.mean(np.square(diff))
+psnr = 10 * np.log10(255 * 255 / mse)
+
+# method 2
+psnr = skimage.measure.compare_psnr(im1, im2, 255)
+```
+
+``compare_psnr(im_true, im_test, data_range=None)`` 函数原型可见, [此处](https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.compare_psnr)。
+
+针对超光谱图像，我们需要针对不同波段分别计算 PSNR，然后取平均值，这个指标称为 MPSNR。
+
+### SSIM
+
+SSIM，Structural SIMilarity 结构相似性。$SSIM$ 公式基于样本 $x$ 和 $y$ 之间的三个比较衡量：**亮度 (luminance)**、**对比度 (contrast)** 和**结构 (structure)**。
+
+$$
+\left\{\begin{matrix}
+l(x,y) = {2 \mu _x \mu _y + c_1 \over {\mu _x}^2 + {\mu _y}^2 + c_1}\\ 
+s(x,y) = {2 \sigma _xy + c_3 \over \sigma _x \sigma _y + c_3}\\ 
+c(x,y) = {2 \sigma _x \sigma _y + c_2 \over {\sigma _x}^2 + {\sigma _y}^2 + c_2}
+\end{matrix}\right.
+$$
+
+一般取 $ c_3 = c_2 /2 $。
+
+- $\mu _x$ 为 $x$ 的均值
+- $\mu _x$ 为 $y$ 的均值
+- $\sigma _x}^2$ 为 $x$ 的方差
+- $\sigma _y}^2$]为 $y$ 的方差
+- $\sigma _xy$ 为 $x$ 和 $y$ 的协方差
+- $c_1 = (k_{1}L)^2$, $c_2=(k_{2}L)^2$ 为两个常数，避免除零
+- $L$ 为像素值的范围，$2^B-1$
+- $k_1= 0.01, k_2 = 0.03$ 为默认值
+
+那么
+
+$$
+SSIM(x,y) = [l(x,y)^\alpha \cdot c(x,y)^\beta  \cdot s(x,y)^\gamma]
+$$
+
+将$\alpha, \beta, \gamma$设为 1，可以得到
+
+$$
+SSIM (x,y) = (2 \mu _x \mu _y + c_1)(2 \sigma_{xy} + c_2) \over (\mu _x^2 + \mu _y^2 + c_1）)(\sigma _x^2
+ + \sigma _y^2 +c_2)
+$$
+
+每次计算的时候都从图片上取一个 $N×N$ 的窗口，然后不断滑动窗口进行计算，最后取平均值作为全局的 SSIM。
+
+```python3
+# im1 和 im2 都为灰度图像，uint8 类型
+ssim = skimage.measure.compare_ssim(im1, im2, data_range=255)
+```
+
+``compare_ssim(X, Y, win_size=None, gradient=False, data_range=None, multichannel=False, gaussian_weights=False, full=False, **kwargs)`` 函数原型可见, [此处](https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.compare_ssim)。
+
+针对超光谱图像，我们需要针对不同波段分别计算 SSIM，然后取平均值，这个指标称为 ``MSSIM``。
+
+----
 
 表1 COCO 数据集主要评价指标
 
