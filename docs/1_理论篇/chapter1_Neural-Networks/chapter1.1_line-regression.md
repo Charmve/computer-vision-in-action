@@ -44,7 +44,6 @@
 
 # 1 线性回归
 
-
 <p align="center">
     <a href="https://colab.research.google.com/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter01_Neural-Networks/01_line-regression.ipynb" target="_blank\">
       <img src="https://colab.research.google.com/assets/colab-badge.svg" align="center" alt="Open in Colab">
@@ -55,52 +54,60 @@
 </p>
 
 
-<h2> 1.1 基本原理</h2>
+<h2>1.1 基本原理 <a class="headerlink" href="#练习">¶</a></h2>
 
 <p>线性回归输出是一个连续值，因此适用于回归问题。回归问题在实际中很常见，如预测房屋价格、气温、销售额等连续值的问题。与回归问题不同，分类问题中模型的最终输出是一个离散值。我们所说的图像分类、垃圾邮件识别、疾病检测等输出为离散值的问题都属于分类问题的范畴。softmax回归则适用于分类问题。</p>
 
 <p>由于线性回归和softmax回归都是单层神经网络，它们涉及的概念和技术同样适用于大多数的深度学习模型。我们首先以线性回归为例，介绍大多数深度学习模型的基本要素和表示方法。</p>
 
-<h2>1.1.1 线性回归的基本要素</h2>
+<h2>1.1.1 线性回归的基本要素 <a class="headerlink" href="#练习">¶</a></h2>
 <p>我们以一个简单的房屋价格预测作为例子来解释线性回归的基本要素。这个应用的目标是预测一栋房子的售出价格（元）。我们知道这个价格取决于很多因素，如房屋状况、地段、市场行情等。为了简单起见，这里我们假设价格只取决于房屋状况的两个因素，即面积（平方米）和房龄（年）。接下来我们希望探索价格与这两个因素的具体关系。</p>
 
-<h3>1.1.1.1 模型</h3>
+<h3>1.1.1.1. 模型 <a class="headerlink" href="#练习">¶</a></h3>
 <p>设房屋的面积为 $\(x_1\)$ ，房龄为 $\(x_2\)$ ，售出价格为 $\(y\)$ 。我们需要建立基于输入 $\(x_1\)$ 和 $\(x_2\)$ 来计算输出 $\(y\)$ 的表达式，也就是模型（model）。顾名思义，线性回归假设输出与各个输入之间是线性关系：</p>
 
+$$
 \[\hat{y} = x_1 w_1 + x_2 w_2 + b,\]
+$$
 
 <p>其中 $\(w_1\)$ 和 $\(w_2\)$ 是权重（weight）， $\(b\)$ 是偏差（bias），且均为标量。它们是线性回归模型的参数（parameter）。模型输出 $\(\hat{y}\)$ 是线性回归对真实价格 $\(y\)$ 的预测或估计。我们通常允许它们之间有一定误差。</p>
 
-<h3>1.1.1.2. 模型训练</h3>
+<h3>1.1.1.2. 模型训练 <a class="headerlink" href="#练习">¶</a></h3>
 
 <p>接下来我们需要通过数据来寻找特定的模型参数值，使模型在数据上的误差尽可能小。这个过程叫作模型训练（model
 training）。下面我们介绍模型训练所涉及的3个要素。</p>
 
-<h4>训练数据 <a class="headerlink" href="#训练数据" title="永久链接至标题">¶</a></h4>
+<h4>训练数据 <a class="headerlink" href="#训练数据">¶</a></h4>
 
 <p>我们通常收集一系列的真实数据，例如多栋房屋的真实售出价格和它们对应的面积和房龄。我们希望在这个数据上面寻找模型参数来使模型的预测价格与真实价格的误差最小。在机器学习术语里，该数据集被称为训练数据集（training
 data set）或训练集（training
 set），一栋房屋被称为一个样本（sample），其真实售出价格叫作标签（label），用来预测标签的两个因素叫作特征（feature）。特征用来表征样本的特点。</p>
 <p>假设我们采集的样本数为 $\(n\)$ ，索引为 $\(i\)$ 的样本的特征为 $\(x_1^{(i)}\)$和 $\(x_2^{(i)}\)$ ，标签为 $\(y^{(i)}\)$ 。对于索引为 $\(i\)$ 的房屋，线性回归模型的房屋价格预测表达式为</p>
 
+$$
 \[\hat{y}^{(i)} = x_1^{(i)} w_1 + x_2^{(i)} w_2 + b.\]</div>
+$$
 
 <h4>损失函数 <a class="headerlink" href="#损失函数" title="永久链接至标题">¶</a></h4>
 <p>在模型训练中，我们需要衡量价格预测值与真实值之间的误差。通常我们会选取一个非负数作为误差，且数值越小表示误差越小。一个常用的选择是平方函数。它在评估索引为 $\(i\)$ 的样本误差的表达式为</p>
 
+$$
 \[\ell^{(i)}(w_1, w_2, b) = \frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2,\]
-
+$$
 
 <p>其中常数 $\(1/2\)$ 使对平方项求导后的常数系数为1，这样在形式上稍微简单一些。显然，误差越小表示预测价格与真实价格越相近，且当二者相等时误差为0。给定训练数据集，这个误差只与模型参数相关，因此我们将它记为以模型参数为参数的函数。在机器学习里，将衡量误差的函数称为损失函数（loss
 function）。这里使用的平方误差函数也称为平方损失（square loss）。</p>
 <p>通常，我们用训练数据集中所有样本误差的平均来衡量模型预测的质量，即</p>
 
+$$
 \[\ell(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \ell^{(i)}(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \frac{1}{2}\left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right)^2.\]
+$$
 
 <p>在模型训练中，我们希望找出一组模型参数，记为 $\(w_1^*, w_2^*, b^*\)$ ，来使训练样本平均损失最小：</p>
 
+$$
 \[w_1^*, w_2^*, b^* = \operatorname*{argmin}_{w_1, w_2, b}\  \ell(w_1, w_2, b).\]
-
+$$
 
 <h4>优化算法<a class="headerlink" href="#优化算法" title="永久链接至标题">¶</a></h4>
 
@@ -211,15 +218,17 @@ layer）或稠密层（dense layer）。</p>
 <p>结果很明显，后者比前者更省时。因此，我们应该尽可能采用矢量计算，以提升计算效率。</p>
 <p>让我们再次回到本节的房价预测问题。如果我们对训练数据集里的3个房屋样本（索引分别为1、2和3）逐一预测价格，将得到</p>
 
+$$
 \[\begin{split}\begin{aligned}
 \hat{y}^{(1)} &amp;= x_1^{(1)} w_1 + x_2^{(1)} w_2 + b,\\
 \hat{y}^{(2)} &amp;= x_1^{(2)} w_1 + x_2^{(2)} w_2 + b,\\
 \hat{y}^{(3)} &amp;= x_1^{(3)} w_1 + x_2^{(3)} w_2 + b.
 \end{aligned}\end{split}\]
-
+$$
+  
 <p>现在，我们将上面3个等式转化成矢量计算。设</p>
 
-
+$$
 \[\begin{split}\boldsymbol{\hat{y}} =
 \begin{bmatrix}
     \hat{y}^{(1)} \\
@@ -237,7 +246,7 @@ layer）或稠密层（dense layer）。</p>
     w_1 \\
     w_2
 \end{bmatrix}.\end{split}\]
-
+$$
 
 <p>对3个房屋样本预测价格的矢量计算表达式为 $\(\boldsymbol{\hat{y}} = \boldsymbol{X} \boldsymbol{w} + b,\)$ 
 其中的加法运算使用了广播机制（参见<a class="reference internal" href="../chapter_prerequisite/ndarray.html"><span class="doc">“数据操作”</span></a>一节）。例如：</p>
@@ -270,9 +279,11 @@ $\[\boldsymbol{\hat{y}} = \boldsymbol{X} \boldsymbol{w} + b,\]$
 <p>其中模型输出 $\(\boldsymbol{\hat{y}} \in \mathbb{R}^{n \times 1}\)$，
 批量数据样本特征 $\(\boldsymbol{X} \in \mathbb{R}^{n \times d}\)$ ，权重 $\(\boldsymbol{w} \in \mathbb{R}^{d \times 1}\)$ ，
 偏差 $\(b \in \mathbb{R}\)$ 。相应地，批量数据样本标签 $\(\boldsymbol{y} \in \mathbb{R}^{n \times 1}\)$ 。设模型参数 $\(\boldsymbol{\theta} = [w_1, w_2, b]^\top\)$ ，我们可以重写损失函数为</p>
-
+  
+$$
 \[\ell(\boldsymbol{\theta})=\frac{1}{2n}(\boldsymbol{\hat{y}}-\boldsymbol{y})^\top(\boldsymbol{\hat{y}}-\boldsymbol{y}).\]
-
+$$
+  
 <p>小批量随机梯度下降的迭代步骤将相应地改写为</p>
 
 $$
@@ -887,7 +898,7 @@ epoch 3, loss: 0.000051
 </div>
 </div>
 <div class="section" id="小结">
-<h3>1.3.8. 小结 <a class="headerlink" href="#小结" title="永久链接至标题">¶</a></h3>
+<h3>1.3.8. 小结 <a class="headerlink" href="#小结">¶</a></h3>
 <ul class="simple">
 <li>使用Gluon可以更简洁地实现模型。</li>
 <li>在Gluon中，<code class="docutils literal notranslate"><span class="pre">data</span></code>模块提供了有关数据处理的工具，<code class="docutils literal notranslate"><span class="pre">nn</span></code>模块定义了大量神经网络的层，<code class="docutils literal notranslate"><span class="pre">loss</span></code>模块定义了各种损失函数。</li>
@@ -895,7 +906,7 @@ epoch 3, loss: 0.000051
 </ul>
 </div>
 <div class="section" id="练习">
-<h3>1.3.9. 练习 <a class="headerlink" href="#练习" title="永久链接至标题">¶</a></h3>
+<h3>1.3.9. 练习 <a class="headerlink" href="#练习">¶</a></h3>
 <ul class="simple">
 <li>如果将<code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">loss(net(X),</span> <span class="pre">y)</span></code>替换成<code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">loss(net(X),</span> <span class="pre">y).mean()</span></code>，我们需要将<code class="docutils literal notranslate"><span class="pre">trainer.step(batch_size)</span></code>相应地改成<code class="docutils literal notranslate"><span class="pre">trainer.step(1)</span></code>。这是为什么呢？</li>
 <li>查阅MXNet文档，看看<code class="docutils literal notranslate"><span class="pre">gluon.loss</span></code>和<code class="docutils literal notranslate"><span class="pre">init</span></code>模块里提供了哪些损失函数和初始化方法。</li>
