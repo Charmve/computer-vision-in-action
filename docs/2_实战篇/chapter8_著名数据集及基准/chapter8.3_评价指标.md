@@ -115,7 +115,7 @@ psnr = 10 * np.log10(255 * 255 / mse)
 psnr = skimage.measure.compare_psnr(im1, im2, 255)
 ```
 
-``compare_psnr(im_true, im_test, data_range=None)`` 函数原型可见, [此处](https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.compare_psnr)。
+备注：``compare_psnr(im_true, im_test, data_range=None)`` 函数原型可见, [此处](https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.compare_psnr)。
 
 针对超光谱图像，我们需要针对不同波段分别计算 PSNR，然后取平均值，这个指标称为 MPSNR。
 
@@ -125,15 +125,19 @@ SSIM，Structural SIMilarity 结构相似性。$SSIM$ 公式基于样本 $x$ 和
 
 $$
 l(x,y) = {2 \mu _x \mu _y + c_1 \over {\mu _x}^2 + {\mu _y}^2 + c_1}\\ 
-s(x,y) = {2 \sigma _xy + c_3 \over \sigma _x \sigma _y + c_3}\\ 
-c(x,y) = {2 \sigma _x \sigma _y + c_2 \over {\sigma _x}^2 + {\sigma _y}^2 + c_2}
+$$
+$$
+c(x,y) = {2 \sigma _x \sigma _y + c_2 \over {\sigma _x}^2 + {\sigma _y}^2 + c_2}\\ 
+$$
+$$
+s(x,y) = {\sigma _{xy} + c_3 \over \sigma _x \sigma _y + c_3}
 $$
 
 $$
 \left\{\begin{matrix}
 l(x,y) = {2 \mu _x \mu _y + c_1 \over {\mu _x}^2 + {\mu _y}^2 + c_1}\\ 
-s(x,y) = {2 \sigma _xy + c_3 \over \sigma _x \sigma _y + c_3}\\ 
-c(x,y) = {2 \sigma _x \sigma _y + c_2 \over {\sigma _x}^2 + {\sigma _y}^2 + c_2}
+c(x,y) = {2 \sigma _x \sigma _y + c_2 \over {\sigma _x}^2 + {\sigma _y}^2 + c_2}\\ 
+s(x,y) = {\sigma _{xy} + c_3 \over \sigma _x \sigma _y + c_3}
 \end{matrix}\right.
 $$
 
@@ -143,7 +147,7 @@ $$
 - $\mu _x$ 为 $y$ 的均值
 - ${\sigma_x}^2$ 为 $x$ 的方差
 - ${\sigma_y}^2$ 为 $y$ 的方差
-- $\sigma _xy$ 为 $x$ 和 $y$ 的协方差
+- $\sigma _{xy}$ 为 $x$ 和 $y$ 的协方差
 - $c_1 = (k_{1}L)^2$, $c_2=(k_{2}L)^2$ 为两个常数，避免除零
 - $L$ 为像素值的范围，$2^B-1$
 - $k_1= 0.01, k_2 = 0.03$ 为默认值
@@ -157,7 +161,7 @@ $$
 将$\alpha, \beta, \gamma$设为 1，可以得到
 
 $$
-SSIM (x,y) = (2 \mu _x \mu _y + c_1)(2 \sigma_{xy} + c_2) \over (\mu _x^2 + \mu _y^2 + c_1）)(\sigma _x^2 + \sigma _y^2 +c_2)
+SSIM (x,y) = {(2 \mu _x \mu _y + c_1)(2 \sigma_{xy} + c_2)} \over {(\mu _x^2 + \mu _y^2 + c_1）)(\sigma _x^2 + \sigma _y^2 +c_2)}
 $$
 
 每次计算的时候都从图片上取一个 $N×N$ 的窗口，然后不断滑动窗口进行计算，最后取平均值作为全局的 SSIM。
@@ -167,9 +171,11 @@ $$
 ssim = skimage.measure.compare_ssim(im1, im2, data_range=255)
 ```
 
-``compare_ssim(X, Y, win_size=None, gradient=False, data_range=None, multichannel=False, gaussian_weights=False, full=False, **kwargs)`` 函数原型可见, [此处](https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.compare_ssim)。
+备注：``compare_ssim(X, Y, win_size=None, gradient=False, data_range=None, multichannel=False, gaussian_weights=False, full=False, **kwargs)`` 函数原型可见, [此处](https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.compare_ssim)。
 
 针对超光谱图像，我们需要针对不同波段分别计算 SSIM，然后取平均值，这个指标称为 ``MSSIM``。
+
+<br>
 
 ----
 
