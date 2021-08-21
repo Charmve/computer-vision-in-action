@@ -271,6 +271,7 @@
     - 小结
     - 练习
     - 参考文献
+  - [第 23 章 大安全时代下的计算机视觉](/3_进阶篇/chapter23-大安全时代下的计算机视觉/chapter23-大安全时代下的计算机视觉.md)
   - <b><h4>附录</h4></b>
     - A 矩阵
     - [B 常用激活函数总结](https://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw==&mid=2247484495&idx=1&sn=0bbb2094d93169baf20eedb284bc668f)
@@ -279,5 +280,7 @@
     - [E 深入理解计算机视觉中的损失函数](https://blog.csdn.net/Charmve/article/details/105094371)
   - <b><h4>[后记](/book_postscript.md)</h4></b>
   - <b><h4>[参考文献](REFERENCE.md)</h4></b>
+  - <b><h4>[更新日志](https://github.com/Charmve/computer-vision-in-action/blob/main/CHANGELOG.md)</h4></b>
+  - <b><h4>[赞助 ❤️](https://github.com/Charmve/computer-vision-in-action/tree/main/L0CV-Universe#-supporting)</h4></b>
 
   - <b>更新中 ...</b>
