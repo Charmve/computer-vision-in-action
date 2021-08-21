@@ -87,14 +87,14 @@ set），一栋房屋被称为一个样本（sample），其真实售出价格�
 假设我们采集的样本数为 $n$ ，索引为 $i$ 的样本的特征为 $x_1^{(i)}$和 $x_2^{(i)}$ ，标签为 $y^{(i)}$ 。对于索引为 $i$ 的房屋，线性回归模型的房屋价格预测表达式为
 
 $$
-\[\hat{y}^{(i)} = x_1^{(i)} w_1 + x_2^{(i)} w_2 + b.\]</div>
+[hat{y}^{(i)} = x_1^{(i)} w_1 + x_2^{(i)} w_2 + b.]
 $$
 
 <h4>损失函数 <a class="headerlink" href="#损失函数">¶</a></h4>
 在模型训练中，我们需要衡量价格预测值与真实值之间的误差。通常我们会选取一个非负数作为误差，且数值越小表示误差越小。一个常用的选择是平方函数。它在评估索引为 $i$ 的样本误差的表达式为
 
 $$
-\[\ell^{(i)}(w_1, w_2, b) = \frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2,\]
+[ell^{(i)}(w_1, w_2, b) = frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2,\]
 $$
 
 其中常数 $1/2$ 使对平方项求导后的常数系数为1，这样在形式上稍微简单一些。显然，误差越小表示预测价格与真实价格越相近，且当二者相等时误差为0。给定训练数据集，这个误差只与模型参数相关，因此我们将它记为以模型参数为参数的函数。在机器学习里，将衡量误差的函数称为损失函数（loss
@@ -109,7 +109,7 @@ $$
 在模型训练中，我们希望找出一组模型参数，记为 $w_1^*, w_2^*, b^*$ ，来使训练样本平均损失最小：
 
 $$
-\[w_1^*, w_2^*, b^* = \operatorname*{argmin}_{w_1, w_2, b}\  \ell(w_1, w_2, b).\]
+[w_1^*, w_2^*, b^* = \operatorname*{argmin}_{w_1, w_2, b}\  \ell(w_1, w_2, b).\]
 $$
 
 <h4>优化算法<a class="headerlink" href="#优化算法">¶</a></h4>
@@ -442,7 +442,7 @@ $$
 </div>
 
 <div class="output_area docutils container">
-<img alt="" src="../../imags/chapter03/chapter_deep-learning-basics_linear-regression-scratch_7_0.svg" /></div>
+<img alt="" src="../../imags/chapter03/chapter_deep-learning-basics_linear-regression-scratch_7_0.svg" />
 </div>
 
 我们将上面的 ``plt`` 作图函数以及 ``use_svg_display`` 函数和 ``set_figsize`` 函数定义在 ``d2lzh`` 包里。以后在作图时，我们将直接调用 ``d2lzh.plt`` 。由于 ``plt`` 在 ``d2lzh`` 包中是一个全局变量，我们在作图前只需要调用 ``d2lzh.set_figsize()`` 即可打印矢量图并设置图的尺寸。
