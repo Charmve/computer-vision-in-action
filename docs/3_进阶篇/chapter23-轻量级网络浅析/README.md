@@ -6,33 +6,43 @@
   <a href="https://blog.csdn.net/Charmve" target="_blank"><img src="https://img.shields.io/badge/CSDN-@Charmve-000000.svg?style=flat-square&amp;logo=CSDN" alt="CSDN"/></a>
 </p>
 
-# 第 22 章 模型压缩与裁剪
+# 第 23 章 轻量级网络浅析
 
 作者: 张伟 (Charmve)
 
-日期: 2021/06/06
+日期: 2021/08/23
 
-- 第 22 章 [模型压缩与裁剪](https://mp.weixin.qq.com/s/e3c_-rs2rncmWhbm-cU5rA) 
-    - 22.1 概述
-    - 22.2 模型压缩
-      - 22.2.1 线性或非线性量化（1990~2014 - 至今）
-      - 22.2.2 结构或非结构剪枝（1989~2014 - 至今
-      - 22.2.3 网络结构搜索（2016 - 至今）
-      - 22.2.4 权重矩阵的低秩分解（）
-      - 22.2.5 知识蒸馏（2014-至今）
-    - 22.3 模型优化加速
-      - 22.3.1 Op-Level 的快速算法
-      - 22.3.2 Layer0-level 的快速算法
-      - 22.3.3 硬件计算单元优化算法
-      	- CPU、GPU和NPU
-      	- ASIC 和 FPGA
-      	- PIM（NDP）
-    - 22.4 优化工具与库
-      - 22.4.1 TensorRT Nvidia)
-      - 22.4.2 TVM (Tensor Virtual Machine)
-      - 22.4.3 Tensor Comprehension  (Facebook)
-      - 22.4.4 Distiller (Intel)
+- 第 23 章 轻量级网络浅析
+    - 23.1 概述
+    - 23.2 回顾基本卷积运算
+      - 23.2.1 标准卷积
+      - 23.2.2 Grouped Convolution
+      - 23.2.3 Depthwise convolution
+      - 23.2.4 Pointwise convolution
+      - 23.2.5 Channel Shuffle
+    - 23.3 MobileNet
+      - 23.3.1 MobileNet V1
+      - 23.3.2 MobileNet V2
+    - 23.4 ShuffleNet
+      - 23.4.1 ShuffleNet V1
+      - 23.4.2 ShuffleNet V2
+    - 23.5 GhostNet
+    - 23.6 SqueezeNet
+      - 23.6.1 SqueezeNet的压缩策略
+      - 23.6.2 Fire模块
+      - 23.6.3 SqueezeNet的网络架构
+      - .6.4 SqueezeNet的性能以及深度压缩
+      - 23.6.5 小结
+    - 23.7 EfficientNet
+      - 23.7.1 如何统一三个维度的量度
+      - 23.7.2 Efficient 网络架构
+    - 23.8 MicroNet
+    - 23.9 YOLO系列
+    - 23.10 SSD系列
     - 小结
-    - [参考文献](#六-参考文献)
+    - 小练习
+    - 参考文献
 
 --- 
+
+📘 在线电子书 https://charmve.github.io/computer-vision-in-action/#/3_进阶篇/chapter23-轻量级网络浅析/chapter23-轻量级网络浅析
