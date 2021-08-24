@@ -471,10 +471,9 @@ SqueezeNet的压缩策略是依靠将 ![[公式]](https://www.zhihu.com/equation
 
 对网络深度、宽度和分辨率中的任何维度进行缩放都可以提高精度，但是当模型足够大时，这种放大的收益会减弱。因此为了追去更好的精度和效率，在缩放时平衡网络所有维度至关重要。之前的一些工作已经开始在任意缩放网络深度和宽度，但是他们仍然需要复杂的人工微调。在本篇论文中，作者提出了一个新的复合缩放方法——使用一个复合系数$ϕ$统一缩放网络宽度、深度和分辨率，如下图所示。
 
-![image-20210823173118090](C:\Users\zhangwei13\AppData\Roaming\Typora\typora-user-images\image-20210823173118090.png)
+![image-20210823173118090](https://user-images.githubusercontent.com/29084184/130550502-86049529-ac0a-4b5e-8091-36a050a4051d.png)
 
 这里的 $α,β,γ$ 都是由一个很小范围的网络搜索得到的常量，直观上来讲，$ϕ$ 是一个特定的系数，可以控制用于资源的使用量，$α,β,γ$ 决定了具体是如何分配资源的。
-
 
 
 ### 23.7.2 Efficient 网络架构
@@ -487,7 +486,7 @@ Efficient是一种基于移动应用的baseline模型。受到MnasNet的启发�
 
 表2 EfficientNet-B0 基准网络（Baseline Network）—— 每一行描述一个阶段 i，有 $L^i $层，输入分辨率为 $hH^i$，$W^ii$ 和输出通道 $C^i$。
 
-![image-20210823173606377](C:\Users\zhangwei13\AppData\Roaming\Typora\typora-user-images\image-20210823173606377.png)
+![image-20210823173606377](https://user-images.githubusercontent.com/29084184/130550476-b95e792a-4ec2-465e-8e56-480e6035e114.png)
 
 - 论文地址 https://arxiv.org/pdf/1905.11946.pdf
 
@@ -513,9 +512,7 @@ MicroNet主要是在MobileNet系列上进行改进和对比，提出了两项改
 
 ## 23.9 YOLO系列
 
-
-
-<img src="https://img-blog.csdn.net/20160317163739691" alt="img" style="zoom:67%;" />
+<img src="https://user-images.githubusercontent.com/29084184/130550566-152cea05-c552-4815-81f4-66b8d97cc10d.png" alt="img" style="zoom:67%;" />
 
 参考链接
 
