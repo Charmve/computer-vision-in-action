@@ -1,4 +1,4 @@
-<svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 600 200" width="600" height="200" xmlns="http://www.w3.org/2000/svg">
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<style>
@@ -51,7 +51,7 @@
 					width: 100%;
 					height: 400px;
 					background: linear-gradient(-45deg, #fc5c7d, #6a82fb, #05dfd7);
-					background-size: 600% 400%;
+					background-size: 600% 200%;
 					animation: gradientBackground 10s ease infinite;
 					border-radius: 10px;
 					color: white;
@@ -77,8 +77,8 @@
 				}
 			</style>
 			<div class="container">
-				<h1>tool-chain for computer vision<br/>with MLOps, AutoML and Data Security</h1>
-				<p>Easy-to-go</p>
+				<h1>Tool-chain for computer vision<br/>with MLOps, AutoML and Data Security</h1>
+				<p>Easy-to-go 🚀</p>
 			</div>
 		</div>
 	</foreignObject>
