@@ -1,9 +1,9 @@
-🌍 English | [简体中文](./res/docs/README-zh_CN.md)| [日本語](./res/docs/README-jp_JP.md) | [Українською](./res/docs/README-uk_UA.md)
+🌍 English | [简体中文](README-zh_CN.md)| [日本語](README-jp_JP.md) | [Українською](README-uk_UA.md)
 <br>
 
 <div align="center">
-	<a href="https://github.com/Charmve/computer-vision-in-action/blame/main/L0CV/images/header.svg">
-		<img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/header.svg" width="90%" alt="Click to see the more details">
+	<a href="https://charmve.github.io/L0CV-web">
+		<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/header.svg" width="90%" alt="Click to see the more details">
 	</a>
     <br>
     <p>
@@ -33,11 +33,13 @@ The goal of this repo is to build an easy-to-go computer vision tool-chain to re
 ### Features <a name="index"></a>
 
 - 📕 [Summary](#📘-summary)
-- 🍃 [MongoDB](#🍃-mongodb-)
-- ⛳ [GLPI](#⛳-glpi-)
-- 🐾 [LDAP](#🐾-ldap-)
-- 🍀 [GPG](#🍀-gpg-)
-- 🌴 [SMTP](#🌴-smtp-) 
+- 🍃 [Data & Models Version Control - DVC](#🍃-DVC-)
+- ⛳ [Model Packaging - ONNX](#⛳-ONNX-)
+- 🐾 [Model Packaging - Docker](#🐾-Docker-)
+- 🍀 [CI/CD - GitHub Actions](#🍀-CICD-)
+- ⭐️ [Serverless Deployment - AWS Lambda](#⭐️-lambda-)
+- 🌴 [Container Registry - AWS ECR](#🌴-AWSECR-)
+- ⏳ [Prediction Monitoring - Kibana](#⏳-kibana-) 
 
 
 ## 📘 Summary<a name="summary"></a>
@@ -53,8 +55,6 @@ The goal of this repo is to build an easy-to-go computer vision tool-chain to re
 </div>
 
 <br>
-
-<img src="images/DVC-logo.png">
 
 ## 🍃 Data & Models Version Control - DVC <a name="DVC"></a>
 
@@ -82,7 +82,7 @@ Why do we need model packaging? Models can be built using any machine learning f
 This is acheived by a community project ``ONNX``.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/onnx.jpeg" alt="Model Packaging - ONNX" title="Model Packaging - ONNX">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/onnx.jpeg" width="80%" alt="Model Packaging - ONNX" title="Model Packaging - ONNX">
 </p>
 
 Following tech stack is used:
@@ -109,7 +109,7 @@ By containerizing/packaging the application, we can run the application on any c
 The most prominent tool to do the packaging of application is Docker 🛳
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/docker_flow.png" alt="Docker" title="Docker">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/docker_flow.png" width="60%" alt="Docker" title="Docker">
 </p>
 
 [Index](#features)
@@ -126,7 +126,7 @@ CI/CD is a coding philosophy and set of practices with which you can continuousl
 This iterative process helps reduce the chance that you develop new code based on a buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/basic_flow.png" alt="CI/CD" title="CI/CD">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/basic_flow.png" width="80%" alt="CI/CD" title="CI/CD">
 </p>
 
 [Index](#features)
@@ -140,7 +140,7 @@ A container registry is a place to store container images. A container image is 
 Amazon Simple Storage Service (S3) is a storage for the internet. It is designed for large-capacity, low-cost storage provision across multiple geographical regions.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/ecr_flow.png" alt="AWS ECR" title="AWS ECR">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/ecr_flow.png" width="80%" alt="AWS ECR" title="AWS ECR">
 </p>
 
 
@@ -154,7 +154,7 @@ Amazon Simple Storage Service (S3) is a storage for the internet. It is designed
 A serverless architecture is a way to build and run applications and services without having to manage infrastructure. The application still runs on servers, but all the server management is done by third party service (AWS). We no longer have to provision, scale, and maintain servers to run the applications. By using a serverless architecture, developers can focus on their core product instead of worrying about managing and operating servers or runtimes, either in the cloud or on-premises.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/lambda_flow.png" alt="AWS Lambda" title="AWS Lambda">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/lambda_flow.png" width="80%" alt="AWS Lambda" title="AWS Lambda">
 </p>
 
 
@@ -172,7 +172,7 @@ Things we want to monitor during and training and inference are different. Durin
 But, during inference, We like to have confidence that our model is making correct predictions.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/kibana_flow.png" alt="Kibana" title="Kibana">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/kibana_flow.png" width="80%" alt="Kibana" title="Kibana">
 </p>
 
 
