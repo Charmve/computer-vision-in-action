@@ -86,7 +86,7 @@
 > - 地址：https://charmve.github.io/computer-vision-in-action/
 
 > <h4>最新版PDF下载</h4>
-> - 地址：https://github.com/charmve/computer-vision-in-action/releases (马上来 ...)
+> - 地址：https://github.com/charmve/computer-vision-in-action/releases <b>(马上来 ...)</b>
 
 </tr>
 </td>
