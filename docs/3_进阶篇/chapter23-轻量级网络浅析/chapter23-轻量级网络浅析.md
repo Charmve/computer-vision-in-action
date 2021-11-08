@@ -13,19 +13,19 @@
 
 
 - 第 23 章 轻量级网络浅析
-    - 23.1 概述
-    - 23.2 回顾基本卷积运算
-    - 23.3 MobileNets
-    - 23.4 ShuffleNets
-    - 23.5 GhostNet
-    - 23.6 SqueezeNet
-    - 23.7 EfficientNets
-    - 23.8 MicroNet
-    - 23.9 YOLO系列
-    - 23.10 SSD系列
-    - 小结
-    - 小练习
-    - [参考文献](#六-参考文献)
+    - [23.1 概述](#231-概述)
+    - [23.2 回顾基本卷积运算](#232-回顾基本卷积运算)
+    - [23.3 MobileNets](#233-MobileNets)
+    - [23.4 ShuffleNets](#234-ShuffleNets)
+    - [23.5 GhostNet](#235-GhostNet)
+    - [23.6 SqueezeNet](#236-SqueezeNet)
+    - [23.7 EfficientNets](#237-EfficientNets)
+    - [23.8 MicroNet](#238-MicroNet)
+    - [23.9 YOLO系列](#239-YOLO系列)
+    - [23.10 SSD系列](#2310-SSD系列)
+    - [小结](#小结)
+    - [小练习](#小练习)
+    - [参考文献](#参考文献)
 
 ---
 
