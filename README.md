@@ -112,6 +112,7 @@
 - [🌈 愿景](#-愿景)
 - [📘 本书目录](#-本书目录)
 - [🔍 文件浏览](#-文件浏览)
+- [🌼 L0CV-DemoDay](#l0cv-demoday)
 - [🔑 如何食用](#-如何食用)
 - [❓ 常见问题](#-常见问题)
 - [👥 社区互助](#-社区互助)
@@ -162,6 +163,8 @@
 5. 由包含有关技术细节问答的论坛作为补充，使大家可以相互答疑并交换经验。
 
 [Index](#-以用促学先会后懂-)
+
+<br>
 
 ## 📘 本书目录
 
@@ -648,15 +651,45 @@
 
 <h5 align="center"><i>以用促学，先会后懂。理解深度学习的最佳方法是学以致用。</i></h5>
 
-<p align="center">
-  <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter02_CNN/Pytorch_MNIST.ipynb" target="_blank"><img width="300"  src="https://user-images.githubusercontent.com/29084184/128386334-e0273125-5d51-4e33-a6e7-f2e732fb0836.png"></a>
-  <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/2__实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md" target="_blank"><img width="300"  src="https://user-images.githubusercontent.com/29084184/128386363-dc0c987c-b374-4e43-9e56-65c30f7a1899.png"></a>
-  <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md" target="_blank"><img width="300"  src="https://user-images.githubusercontent.com/29084184/128386468-ca555572-a98d-44c5-bdef-442371322ee7.png"></a>
-  <br>
-  <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter12_practice-projects/Bringing-Old-Photo-Back-to-Life.ipynb" target="_blank"><img width="300"  src="https://user-images.githubusercontent.com/29084184/128386504-25a9f798-be68-430d-b771-bd8db607c151.png"></a>
-  <a href="https://github.com/Charmve/Awesome-Lane-Detection/tree/main/lane-detector" target="_blank"><img width="300"  src="https://user-images.githubusercontent.com/29084184/128386530-d64210f0-d903-4004-9f6c-eb480d326241.png"></a>
-  <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md" target="_blank"><img width="300"  src="https://user-images.githubusercontent.com/29084184/128386405-4223b171-a318-4f76-93b3-0fff016aa39f.png"></a>
-</p>
+<table class="table table-striped table-bordered table-vcenter">
+    <tbody class=ai-notebooks-table-content>
+    <tr>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter02_CNN/Pytorch_MNIST.ipynb" target="_blank"><img width="%40"  src="https://user-images.githubusercontent.com/29084184/128386334-e0273125-5d51-4e33-a6e7-f2e732fb0836.png"></a>
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/2__实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md" target="_blank"><img width="%40"  src="https://user-images.githubusercontent.com/29084184/128386363-dc0c987c-b374-4e43-9e56-65c30f7a1899.png"></a>
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md" target="_blank"><img width="%40"  src="https://user-images.githubusercontent.com/29084184/128386468-ca555572-a98d-44c5-bdef-442371322ee7.png"></a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <a href="https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter12_practice-projects/Bringing-Old-Photo-Back-to-Life.ipynb" target="_blank"><img width="%40"  src="https://user-images.githubusercontent.com/29084184/128386504-25a9f798-be68-430d-b771-bd8db607c151.png"></a>
+                </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <a href="https://github.com/Charmve/Awesome-Lane-Detection/tree/main/lane-detector" target="_blank"><img width="%40"  src="https://user-images.githubusercontent.com/29084184/128386530-d64210f0-d903-4004-9f6c-eb480d326241.png"></a>
+                </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md" target="_blank"><img width="%40"  src="https://user-images.githubusercontent.com/29084184/128386405-4223b171-a318-4f76-93b3-0fff016aa39f.png"></a>
+                </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
 
 *《计算机视觉实战演练：算法与应用》V1.2 *部分项目还在更新中*
 
@@ -689,6 +722,7 @@
 | ...  | ... | ... |
 
 <br>
+
 [Index](#-以用促学先会后懂-)
 
 ## 🔑 如何食用
@@ -764,6 +798,71 @@ import L0CV
 [收起](#-如何食用)
 																  
 </details>
+
+<table class="table table-striped table-bordered table-vcenter">
+    <tbody class=ai-notebooks-table-content>
+    <tr>
+        <td colspan="1" rowspan="1" class="ai-notebooks-table-points ai-orange-link">
+        <div class="mdl-cell mdl-cell--5-col mdl-cell--middle">
+            <div class="content">
+            <h2 style="text-align:center">每一小节都是可以运行的 <a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/">Jupyter 记事本</a></h2>
+            <p>你可以自由修改代码和超参数来获取及时反馈，从而积累深度学习的实战经验。</p>
+            </div>
+            <div class="mdl-grid running" align="center" style="text-align:center">
+                <div class="running-item">
+                    <a href="https://charmve.github.io/computer-vision-in-action/#/README?id=🔎-如何食用">
+                    <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/laptop_jupyter.png" width="60">
+                    <p>Run<br>locally</p>
+                    </a>
+                </div>
+                <div class="running-item">
+                    <a href="https://charmve.github.io/computer-vision-in-action/#/README?id=🔎-如何食用">
+                    <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/colab.png" width="60">
+                    <p>Google<br>Colab</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--7-col">
+                <img class="illustration_img" src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/notebook.gif"/>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<table class="table table-striped table-bordered table-vcenter">
+    <tbody class=ai-notebooks-table-content>
+    <tr>
+        <td colspan="3" rowspan="1" class="ai-notebooks-table-points ai-orange-link">
+            <div class="features-2 mdl-grid">
+                <h2 style="text-align:center">公式 + 图示 + 代码</h2>
+                <p>我们不仅结合文字、公式和图示来阐明深度学习里常用的模型和算法，还提供代码来演示如何从零开始实现它们，并使用真实数据来提供一个交互式的学习体验。</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/eq.jpg"></img>
+                </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/figure.jpg"/>
+                </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/code.jpg"/>
+                </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
 
 [Index](#-以用促学先会后懂-)
 
