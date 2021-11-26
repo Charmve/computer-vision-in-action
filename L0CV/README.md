@@ -25,9 +25,7 @@
 
 
 ----
-<b>Note: Please raise an issue for any suggestions, corrections, and feedback.</b>
 
-The goal of this repo is to build an easy-to-go computer vision tool-chain to realise the basics of MLOps like model building, monitoring, configurations, testing, packaging, deployment, cicd, etc.
 
 
 ### Features <a name="index"></a>
@@ -55,6 +53,17 @@ The goal of this repo is to build an easy-to-go computer vision tool-chain to re
 </div>
 
 <br>
+
+# L0CV-MLOps
+
+<b>Note: Please raise an issue for any suggestions, corrections, and feedback.</b>
+
+The goal of this repo is to build an easy-to-go computer vision tool-chain to realise the basics of MLOps like model building, monitoring, configurations, testing, packaging, deployment, cicd, etc.
+
+<p align="center">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/summary.png" alt="MLOps" title="MLOps">
+</p>
+
 
 ## 🍃 Data & Models Version Control - DVC <a name="DVC"></a>
 
