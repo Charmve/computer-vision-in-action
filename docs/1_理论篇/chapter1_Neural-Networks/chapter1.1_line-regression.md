@@ -69,7 +69,7 @@
 设房屋的面积为 $x_1$ ，房龄为 $x_2$ ，售出价格为 $y$ 。我们需要建立基于输入 $x_1$ 和 $x_2$ 来计算输出 $y$ 的表达式，也就是模型（model）。顾名思义，线性回归假设输出与各个输入之间是线性关系：
 
 $$
-\[\hat{y} = x_1 w_1 + x_2 w_2 + b,\]
+\hat{y} = x_1 w_1 + x_2 w_2 + b
 $$
 
 其中 $w_1$ 和 $w_2$ 是权重（weight）， $b$ 是偏差（bias），且均为标量。它们是线性回归模型的参数（parameter）。模型输出 $\hat{y}$ 是线性回归对真实价格 $y$ 的预测或估计。我们通常允许它们之间有一定误差。
@@ -81,20 +81,18 @@ training）。下面我们介绍模型训练所涉及的3个要素。
 
 <h4>训练数据 <a class="headerlink" href="#训练数据">¶</a></h4>
 
-我们通常收集一系列的真实数据，例如多栋房屋的真实售出价格和它们对应的面积和房龄。我们希望在这个数据上面寻找模型参数来使模型的预测价格与真实价格的误差最小。在机器学习术语里，该数据集被称为训练数据集（training
-data set）或训练集（training
-set），一栋房屋被称为一个样本（sample），其真实售出价格叫作标签（label），用来预测标签的两个因素叫作特征（feature）。特征用来表征样本的特点。
+我们通常收集一系列的真实数据，例如多栋房屋的真实售出价格和它们对应的面积和房龄。我们希望在这个数据上面寻找模型参数来使模型的预测价格与真实价格的误差最小。在机器学习术语里，该数据集被称为训练数据集（training data set）或训练集（training set），一栋房屋被称为一个样本（sample），其真实售出价格叫作标签（label），用来预测标签的两个因素叫作特征（feature）。特征用来表征样本的特点。
 假设我们采集的样本数为 $n$ ，索引为 $i$ 的样本的特征为 $x_1^{(i)}$和 $x_2^{(i)}$ ，标签为 $y^{(i)}$ 。对于索引为 $i$ 的房屋，线性回归模型的房屋价格预测表达式为
 
 $$
-[hat{y}^{(i)} = x_1^{(i)} w_1 + x_2^{(i)} w_2 + b.]
+\hat{y}^{(i)} = x_1^{(i)} w_1 + x_2^{(i)} w_2 + b
 $$
 
 <h4>损失函数 <a class="headerlink" href="#损失函数">¶</a></h4>
 在模型训练中，我们需要衡量价格预测值与真实值之间的误差。通常我们会选取一个非负数作为误差，且数值越小表示误差越小。一个常用的选择是平方函数。它在评估索引为 $i$ 的样本误差的表达式为
 
 $$
-[ell^{(i)}(w_1, w_2, b) = frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2,\]
+ell^{(i)}(w_1, w_2, b) = frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2
 $$
 
 其中常数 $1/2$ 使对平方项求导后的常数系数为1，这样在形式上稍微简单一些。显然，误差越小表示预测价格与真实价格越相近，且当二者相等时误差为0。给定训练数据集，这个误差只与模型参数相关，因此我们将它记为以模型参数为参数的函数。在机器学习里，将衡量误差的函数称为损失函数（loss
@@ -103,31 +101,29 @@ function）。这里使用的平方误差函数也称为平方损失（square lo
 通常，我们用训练数据集中所有样本误差的平均来衡量模型预测的质量，即
 
 $$
-\[\ell(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \ell^{(i)}(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \frac{1}{2}\left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right)^2.\]
+ell(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \ell^{(i)}(w_1, w_2, b) =\frac{1}{n} \sum_{i=1}^n \frac{1}{2}\left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right)^2
 $$
 
-在模型训练中，我们希望找出一组模型参数，记为 $w_1^*, w_2^*, b^*$ ，来使训练样本平均损失最小：
+在模型训练中，我们希望找出一组模型参数，记为 $w_1^{*}$, $w_2^*$, $b^*$ ，来使训练样本平均损失最小：
 
 $$
-[w_1^*, w_2^*, b^* = \operatorname*{argmin}_{w_1, w_2, b}\  \ell(w_1, w_2, b).\]
+w_1^*, w_2^*, b^* = \operatorname*{argmin}_{w_1, w_2, b}\  \ell(w_1, w_2, b).
 $$
 
 <h4>优化算法<a class="headerlink" href="#优化算法">¶</a></h4>
 
-当模型和损失函数形式较为简单时，上面的误差最小化问题的解可以直接用公式表达出来。这类解叫作解析解（analytical
-solution）。本节使用的线性回归和平方误差刚好属于这个范畴。然而，大多数深度学习模型并没有解析解，只能通过优化算法有限次迭代模型参数来尽可能降低损失函数的值。这类解叫作数值解（numerical
-solution）。
+当模型和损失函数形式较为简单时，上面的误差最小化问题的解可以直接用公式表达出来。这类解叫作解析解（analytical solution）。本节使用的线性回归和平方误差刚好属于这个范畴。然而，大多数深度学习模型并没有解析解，只能通过优化算法有限次迭代模型参数来尽可能降低损失函数的值。这类解叫作数值解（numerical solution）。
 
 在求数值解的优化算法中，小批量随机梯度下降（mini-batch stochastic gradient descent）在深度学习中被广泛使用。它的算法很简单：先选取一组模型参数的初始值，如随机选取；接下来对参数进行多次迭代，使每次迭代都可能降低损失函数的值。在每次迭代中，先随机均匀采样一个由固定数目训练数据样本所组成的小批量（mini-batch） $\mathcal{B}$ ，然后求小批量中数据样本的平均损失有关模型参数的导数（梯度），最后用此结果与预先设定的一个正数的乘积作为模型参数在本次迭代的减小量。
 
 在训练本节讨论的线性回归模型的过程中，模型的每个参数将作如下迭代：
 
 $$
-\[\begin{split}\begin{aligned}
-w_1 &amp;\leftarrow w_1 -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_1} = w_1 -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}x_1^{(i)} \left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right),\\
-w_2 &amp;\leftarrow w_2 -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_2} = w_2 -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}x_2^{(i)} \left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right),\\
-b &amp;\leftarrow b -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial b} = b -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}\left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right).
-\end{aligned}\end{split}\]
+\begin{split}\begin{aligned}
+w_1 &\leftarrow w_1 -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_1} = w_1 -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}x_1^{(i)} \left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right),\\
+w_2 &\leftarrow w_2 -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_2} = w_2 -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}x_2^{(i)} \left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right),\\
+b &\leftarrow b -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial b} = b -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}\left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right).
+\end{aligned}\end{split}
 $$
 
 在上式中， $|\mathcal{B}|$ 代表每个小批量中的样本个数（批量大小，batch size）， $\eta$ 称作学习率（learning rate）并取正数。需要强调的是，这里的批量大小和学习率的值是人为设定的，并不是通过模型训练学出的，因此叫作超参数（hyperparameter）。我们通常所说的“调参”指的正是调节超参数，例如通过反复试错来找到超参数合适的值。在少数情况下，超参数也可以通过模型训练学出。本书对此类情况不做讨论。
@@ -227,17 +223,17 @@ layer）或稠密层（dense layer）。
 让我们再次回到本节的房价预测问题。如果我们对训练数据集里的3个房屋样本（索引分别为1、2和3）逐一预测价格，将得到
 
 $$
-\[\begin{split}\begin{aligned}
-\hat{y}^{(1)} &amp;= x_1^{(1)} w_1 + x_2^{(1)} w_2 + b,\\
-\hat{y}^{(2)} &amp;= x_1^{(2)} w_1 + x_2^{(2)} w_2 + b,\\
-\hat{y}^{(3)} &amp;= x_1^{(3)} w_1 + x_2^{(3)} w_2 + b.
-\end{aligned}\end{split}\]
+\begin{split}\begin{aligned}
+\hat{y}^{(1)} &= x_1^{(1)} w_1 + x_2^{(1)} w_2 + b,\\
+\hat{y}^{(2)} &= x_1^{(2)} w_1 + x_2^{(2)} w_2 + b,\\
+\hat{y}^{(3)} &= x_1^{(3)} w_1 + x_2^{(3)} w_2 + b.
+\end{aligned}\end{split}
 $$
   
 现在，我们将上面3个等式转化成矢量计算。设
 
 $$
-\[\begin{split}\boldsymbol{\hat{y}} =
+\begin{split}\boldsymbol{\hat{y}} =
 \begin{bmatrix}
     \hat{y}^{(1)} \\
     \hat{y}^{(2)} \\
@@ -245,15 +241,15 @@ $$
 \end{bmatrix},\quad
 \boldsymbol{X} =
 \begin{bmatrix}
-    x_1^{(1)} &amp; x_2^{(1)} \\
-    x_1^{(2)} &amp; x_2^{(2)} \\
-    x_1^{(3)} &amp; x_2^{(3)}
+    x_1^{(1)} & x_2^{(1)} \\
+    x_1^{(2)} & x_2^{(2)} \\
+    x_1^{(3)} & x_2^{(3)}
 \end{bmatrix},\quad
 \boldsymbol{w} =
 \begin{bmatrix}
     w_1 \\
     w_2
-\end{bmatrix}.\end{split}\]
+\end{bmatrix}.\end{split}
 $$
 
 对3个房屋样本预测价格的矢量计算表达式为 $\boldsymbol{\hat{y}} = \boldsymbol{X} \boldsymbol{w} + b,$
@@ -268,7 +264,7 @@ $$
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre>
 <span></span><span class="n">a</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">a</span> <span class="o">+$  <span class="n">b</span>
+<span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
 </div>
 </div>
@@ -278,6 +274,7 @@ $$
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+
 <span></span>[11. 11. 11.]
 &lt;NDArray 3 @cpu(0)&gt;
 </pre></div>
@@ -285,54 +282,55 @@ $$
 </div>
 
 广义上讲，当数据样本数为 $n$ ，特征数为 $d$ 时，线性回归的矢量计算表达式为
-$$\[\boldsymbol{\hat{y}} = \boldsymbol{X} \boldsymbol{w} + b,\]$$
+
+$$
+  \boldsymbol{\hat{y}} = \boldsymbol{X} \boldsymbol{w} + b,
+$$
   
 其中模型输出 $\boldsymbol{\hat{y}} \in \mathbb{R}^{n \times 1}$，批量数据样本特征 $\boldsymbol{X} \in \mathbb{R}^{n \times d}$ ，权重 $\boldsymbol{w} \in \mathbb{R}^{d \times 1}$ ，偏差 $b \in \mathbb{R}$ 。相应地，批量数据样本标签 $\boldsymbol{y} \in \mathbb{R}^{n \times 1}$ 。
   
 设模型参数 $\boldsymbol{\theta} = [w_1, w_2, b]^\top$ ，我们可以重写损失函数为
   
 $$
-\[\ell(\boldsymbol{\theta})=\frac{1}{2n}(\boldsymbol{\hat{y}}-\boldsymbol{y})^\top(\boldsymbol{\hat{y}}-\boldsymbol{y}).\]
+\ell(\boldsymbol{\theta})=\frac{1}{2n}(\boldsymbol{\hat{y}}-\boldsymbol{y})^\top(\boldsymbol{\hat{y}}-\boldsymbol{y}).
 $$
   
 小批量随机梯度下降的迭代步骤将相应地改写为
 
 $$
-\[\boldsymbol{\theta} \leftarrow \boldsymbol{\theta} -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}   \nabla_{\boldsymbol{\theta}} \ell^{(i)}(\boldsymbol{\theta}),\]
+\boldsymbol{\theta} \leftarrow \boldsymbol{\theta} -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}   \nabla_{\boldsymbol{\theta}} \ell^{(i)}(\boldsymbol{\theta}),
 $$
 
 其中梯度是损失有关3个为标量的模型参数的偏导数组成的向量：
 
 $$
-\[\begin{split}\nabla_{\boldsymbol{\theta}} \ell^{(i)}(\boldsymbol{\theta})=\\
-\begin{bmatrix}\\
+\begin{split}\nabla_{\boldsymbol{\theta}} \ell^{(i)}(\boldsymbol{\theta})=
+\begin{bmatrix}
     \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_1} \\
     \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_2} \\
-    \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial b}\\
-\end{bmatrix}\\
-=\\
+    \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial b}
+\end{bmatrix}
+=
 \begin{bmatrix}
     x_1^{(i)} (x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}) \\
     x_2^{(i)} (x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}) \\
-    x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\\
-\end{bmatrix}\\
-= \\
+    x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}
+\end{bmatrix}
+=
 \begin{bmatrix}
     x_1^{(i)} \\
     x_2^{(i)} \\
     1
 \end{bmatrix}
-(\hat{y}^{(i)} - y^{(i)}).\end{split}\]
+(\hat{y}^{(i)} - y^{(i)}).\end{split}
 $$
 
 
 <h3>1.1.3. 小结 <a class="headerlink" href="#小结" >¶</a></h3>
-<ul class="simple">
-<li>和大多数深度学习模型一样，对于线性回归这样一种单层神经网络，它的基本要素包括模型、训练数据、损失函数和优化算法。</li>
-<li>既可以用神经网络图表示线性回归，又可以用矢量计算表示该模型。</li>
-<li>应该尽可能采用矢量计算，以提升计算效率。</li>
-</ul>
-
+  
+- 和大多数深度学习模型一样，对于线性回归这样一种单层神经网络，它的基本要素包括模型、训练数据、损失函数和优化算法。
+- 既可以用神经网络图表示线性回归，又可以用矢量计算表示该模型。
+- 应该尽可能采用矢量计算，以提升计算效率。
 
 <h3>1.1.4. 练习 <a class="headerlink" href="#练习" >¶</a></h3>
   
@@ -366,7 +364,7 @@ $$
 我们构造一个简单的人工训练数据集，它可以使我们能够直观比较学到的参数和真实的模型参数的区别。设训练数据集样本数为1000，输入个数（特征数）为2。给定随机生成的批量样本特征 $\boldsymbol{X} \in \mathbb{R}^{1000 \times 2}$ ，我们使用线性回归模型真实权重 $\boldsymbol{w} = [2, -3.4]^\top$ 和偏差 $b = 4.2$ ，以及一个随机噪声项 $\epsilon$ 来生成标签
   
 $$
-\[\boldsymbol{y} = \boldsymbol{X}\boldsymbol{w} + b + \epsilon,\]
+\boldsymbol{y} = \boldsymbol{X}\boldsymbol{w} + b + \epsilon,
 $$
 
 其中噪声项 $\epsilon$ 服从均值为0、标准差为0.01的正态分布。噪声代表了数据集中无意义的干扰。下面，让我们生成数据集。
@@ -961,4 +959,5 @@ epoch 3, loss: 0.000051
 <br>
 
 > 本文引用自 李沐 《动手写深度学习》 d2l-zh.ai 非常感谢, <a href = "https://charmve.github.io/computer-vision-in-action/#/REFERENCE">参考文献</a>!
+> https://zh.d2l.ai/chapter_deep-learning-basics/linear-regression.html
 
