@@ -187,7 +187,6 @@
 - 高盛华 SVIP LAB
 - 屠可伟 Kewei Tu's Homepage | 屠可伟的主页
 
-
 ### 南方科技大学
 - 郑锋 南方科技大学教师个人主页
 
@@ -219,6 +218,39 @@
 
 ### 中科院深圳先进技术研究院
 - 乔宇 Welcome to Yu Qiao's homepage!
+
+### 香港高校
+#### 香港中文大学
+
+- 汤晓鸥（IEEE Fellow） [Xiaoou Tang - Google Scholar Citations](http://scholar.google.com/citations%3Fuser%3DqpBtpGsAAAAJ%26hl%3Dzh-CN)
+- 贾佳亚（IEEE Fellow） [Jiaya Jia](https://jiaya.me/)
+- 王晓刚 [Welcome to Xiaogang Wang](http://www.ee.cuhk.edu.hk/~xgwang/)
+- 李鸿升 [Hongsheng Li at CUHK - EE, CUHK](http://www.ee.cuhk.edu.hk/~hsli/)
+- 林达华 [Dahua Lin](http://dahua.site/)
+- 周博磊 [Bolei Zhou - The Chinese University of Hong Kong](http://bzhou.ie.cuhk.edu.hk/)
+- Chi-Wing Fu, Philip [Chi-Wing FU's Homepage](https://www.cse.cuhk.edu.hk/~cwfu/)
+
+#### 香港科技大学
+
+- 权龙（IEEE Fellow） [Long QUAN's Web home page](https://www.cse.ust.hk/~quan/)
+- 陈启峰 [Qifeng Chen (陳启峰)](https://cqf.io/)
+- Chi Keung Tang [Chi Keung Tang's CV - HKUST CSE Dept.](http://www.cs.ust.hk/~cktang/bio-sketch-review.htm)
+- Dit-Yan YEUNG [Dit-Yan Yeung - Google Scholar Citations](https://scholar.google.com/citations?user=nEsOOx8AAAAJ&hl=zh-CN)
+- Sai-Kit Yeung [Dr. Sai-Kit Yeung](http://www.saikit.org/)
+
+#### 香港理工大学
+
+- 张磊（IEEE Fellow） [Lei Zhang's Homepage (HK-PolyU)](https://www4.comp.polyu.edu.hk/~cslzhang/)
+
+#### 香港城市大学
+
+- Antoni B. Chan [Dr. Antoni B. Chan](https://www.cs.cityu.edu.hk/~abchan/)
+- Rynson W.H. Lau [Home Page: Rynson W.H. Lau](https://www.cs.cityu.edu.hk/~rynson/)
+- 廖菁 [LIAO Jing]()
+
+#### 香港中文大学（深圳）
+
+- 韩晓光 https://sse.cuhk.edu.cn/faculty/hanxiaoguang
 
 ## 0.5.2 中国内地企业研究院
 
@@ -265,38 +297,6 @@
 - 王乃岩 Naiyan Wang - Home
 
 ## 0.5.3 国外高校研究团队
-### 香港高校
-#### 香港中文大学
-
-- 汤晓鸥（IEEE Fellow） [Xiaoou Tang - Google Scholar Citations](http://scholar.google.com/citations%3Fuser%3DqpBtpGsAAAAJ%26hl%3Dzh-CN)
-- 贾佳亚（IEEE Fellow） [Jiaya Jia](https://jiaya.me/)
-- 王晓刚 [Welcome to Xiaogang Wang](http://www.ee.cuhk.edu.hk/~xgwang/)
-- 李鸿升 [Hongsheng Li at CUHK - EE, CUHK](http://www.ee.cuhk.edu.hk/~hsli/)
-- 林达华 [Dahua Lin](http://dahua.site/)
-- 周博磊 [Bolei Zhou - The Chinese University of Hong Kong](http://bzhou.ie.cuhk.edu.hk/)
-- Chi-Wing Fu, Philip [Chi-Wing FU's Homepage](https://www.cse.cuhk.edu.hk/~cwfu/)
-
-#### 香港科技大学
-
-- 权龙（IEEE Fellow） [Long QUAN's Web home page](https://www.cse.ust.hk/~quan/)
-- 陈启峰 [Qifeng Chen (陳启峰)](https://cqf.io/)
-- Chi Keung Tang [Chi Keung Tang's CV - HKUST CSE Dept.](http://www.cs.ust.hk/~cktang/bio-sketch-review.htm)
-- Dit-Yan YEUNG [Dit-Yan Yeung - Google Scholar Citations](https://scholar.google.com/citations?user=nEsOOx8AAAAJ&hl=zh-CN)
-- Sai-Kit Yeung [Dr. Sai-Kit Yeung](http://www.saikit.org/)
-
-#### 香港理工大学
-
-- 张磊（IEEE Fellow） [Lei Zhang's Homepage (HK-PolyU)](https://www4.comp.polyu.edu.hk/~cslzhang/)
-
-#### 香港城市大学
-
-- Antoni B. Chan [Dr. Antoni B. Chan](https://www.cs.cityu.edu.hk/~abchan/)
-- Rynson W.H. Lau [Home Page: Rynson W.H. Lau](https://www.cs.cityu.edu.hk/~rynson/)
-- 廖菁 [LIAO Jing]()
-
-#### 香港中文大学（深圳）
-
-- 韩晓光 https://sse.cuhk.edu.cn/faculty/hanxiaoguang
 
 ### 美国
 - 加州大学伯克利分校：机器视觉小组
