@@ -31,8 +31,9 @@
 # 0.2 计算机视觉基本概念
 
 作者: 张伟 (Charmve)
+
 日期: 2021/04/29
 
 
 
-## [10张图带你认识图像分割的前世今生](../../res/10张图带你认识图像分割的前世今生.pdf)
+## [10张图带你认识图像分割的前世今生](https://github.com/Charmve/computer-vision-in-action/blob/main/res/10张图带你认识图像分割的前世今生.pdf)
