@@ -4,6 +4,7 @@
 </a>
 </p>
 
+<!--
 <div id="outputFigDisplay" class="fig">
     <pre id="taag_output_text" style="left;" class="flag" contenteditable="true">
     <code>
@@ -24,7 +25,7 @@
 作者系迈微AI研习社创始人、CSDN博客专家，主要分享机器学习算法、计算机视觉等相关内容，每周研读顶会论文，持续关注前沿技术动态。公众号底部有菜单分类，关注我们，一起学习成长。
  
 ---
-
+-->
 <!--
 <table>
 <tr>
@@ -928,6 +929,8 @@ import L0CV
 
 [Index](#-以用促学先会后懂-)
 
+<!--
+
 ## 关注我们
 <div align=center>
 <p>扫描下方二维码，然后回复关键词“<b>计算机视觉实战教程</b>”，即可加入“读者交流群”</p>
@@ -941,6 +944,7 @@ import L0CV
 - <em>请尽管表达你们的意见和建议，GitHub issues 和 电子书下方都可以留言，也可写邮件给我，我一定会回！</em>
 
 [Index](#-以用促学先会后懂-)
+-->
 
 ## CONTRIBUTION
 
@@ -1002,7 +1006,7 @@ Use this bibtex to cite this repository:
 		<b>Awesome!</b>	
 		<a href="https://github.com/Charmve/computer-vision-in-action"><em>Charmve/computer-vision-in-action</em></a>
 		was created 2 months ago
-		and now has <b>956</b> stars.
+		and now has <b>1276</b> stars.
   </p>
 </div>
 	
