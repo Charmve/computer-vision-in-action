@@ -891,6 +891,17 @@ import L0CV
 
 [Index](#-以用促学先会后懂-)
 
+## 致谢
+<a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
+
+[Index](#-以用促学先会后懂-)
+
+## 参考文献
+
+感谢前人的杰出工作，我才得以写出此书。感谢 [<b>参考文献</b>](docs/REFERENCE.md) 中列出及未列出的，所有对此开源工作有帮助的前辈！
+
+[Index](#-以用促学先会后懂-)
+
 ## LICENSE
 
 <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/license-Apache%202.0-red?logo=apache" alt="Code License"></a> <a rel="DocLicense" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/docs%20license-CC%20BY--NC--SA%204.0-green?logo=creativecommons" title="CC BY--NC--SA 4.0"/></a>
@@ -916,18 +927,15 @@ import L0CV
 
 - <a href="https://segmentfault.com/t/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/微信-L0CV-green?logo=wechat" alt="Segment Fault"></a> 微信、知乎、微博开话题可以生成tag，如微信聊天、朋友圈加 ``#L0CV`` 可话题交流。
 
-[Index](#-以用促学先会后懂-)
+## 🍮 Community
 
-## 致谢
-<a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
-
-[Index](#-以用促学先会后懂-)
-
-## 参考文献
-
-感谢前人的杰出工作，我才得以写出此书。感谢 [<b>参考文献</b>](docs/REFERENCE.md) 中列出及未列出的，所有对此开源工作有帮助的前辈！
+- QQ Group: 734758251 (password：哈哈哈)
+- WeChat Group ID: Yida_Zhang2
+- Email: yidazhang1#gmail.com 
 
 [Index](#-以用促学先会后懂-)
+
+
 
 <!--
 
@@ -1006,7 +1014,7 @@ Use this bibtex to cite this repository:
 		<b>Awesome!</b>	
 		<a href="https://github.com/Charmve/computer-vision-in-action"><em>Charmve/computer-vision-in-action</em></a>
 		was created 2 months ago
-		and now has <b>1276</b> stars.
+		and now has <b>1426</b> stars.
   </p>
 </div>
 	
