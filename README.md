@@ -1,10 +1,11 @@
 <p align="right">
 <a href="https://github.com/Charmve">
     <img src="https://badges.pufler.dev/visits/Charmve/computer-vision-in-action?color=black&logo=github">
+	<!---- comesfrom https://techsini.com/multi-mockup/index.php --->
 </a>
 </p>
 
-<!--
+<!-- maiweilab
 <div id="outputFigDisplay" class="fig">
     <pre id="taag_output_text" style="left;" class="flag" contenteditable="true">
     <code>
@@ -26,24 +27,26 @@
  
 ---
 -->
+
 <!--
 <table>
 <tr>
-<td>
+	<td>
+	## ✨ News! ✨
 
-## ✨ News! ✨
+	- <b>2020.07.12:</b> 📝  进阶篇 更新Transformer、强化学习、迁移学习、视频理解 !
+	- <b>2021.06.20:</b> 📘  在线电子书发布  ! <a href="https://charmve.github.io/computer-vision-in-action/" target="_blank"><img src="https://img.shields.io/badge/在线阅读-简体中文-000000.svg?style=flat-square&amp;logo=GitBook" alt="中文电子书"></a>
+	- <b>2020.06.10:</b> 💻  L0CV 项目主页发布 ！ <a href="https://charmve.github.io/L0CV-web/" target="_blank"><img src="https://img.shields.io/badge/项目主页-L0CV-000000.svg?style=flat-square&amp;logo=GitBook" alt="L0CV Website"></a>
 
-- <b>2020.07.12:</b> 📝  进阶篇 更新Transformer、强化学习、迁移学习、视频理解 !
-- <b>2021.06.20:</b> 📘  在线电子书发布  ! <a href="https://charmve.github.io/computer-vision-in-action/" target="_blank"><img src="https://img.shields.io/badge/在线阅读-简体中文-000000.svg?style=flat-square&amp;logo=GitBook" alt="中文电子书"></a>
-- <b>2020.06.10:</b> 💻  L0CV 项目主页发布 ！ <a href="https://charmve.github.io/L0CV-web/" target="_blank"><img src="https://img.shields.io/badge/项目主页-L0CV-000000.svg?style=flat-square&amp;logo=GitBook" alt="L0CV Website"></a>
-
-更多更新日志会同步到 [CHANGELOG](CHANGELOG.md)，持续更新中，感谢大家的支持与喜欢！
-
+	更多更新日志会同步到 [CHANGELOG](CHANGELOG.md)，持续更新中，感谢大家的支持与喜欢！
+	</td>
 </tr>
-</td>
 </table>
 -->
-<br>
+
+<a href="https://charmve.github.io/computer-vision-in-action">
+    <img src="./res/ui/mutil-platform.png" width=="">
+</a>
 
 ## ✨ 以用促学，先会后懂 ✨
 ### L0CV <sup><a href="https://charmve.github.io/L0CV-web/">`🔊`</a></sup> &nbsp; 一种结合了代码、图示和HTML的在线学习媒介
@@ -927,14 +930,16 @@ import L0CV
 
 - <a href="https://segmentfault.com/t/L0CV" target="_blank" style="display:inline-block"><img src="https://img.shields.io/badge/微信-L0CV-green?logo=wechat" alt="Segment Fault"></a> 微信、知乎、微博开话题可以生成tag，如微信聊天、朋友圈加 ``#L0CV`` 可话题交流。
 
-## 🍮 Community
-
-- QQ Group: 734758251 (password：哈哈哈)
-- WeChat Group ID: Yida_Zhang2
-- Email: yidazhang1#gmail.com 
+- L0CV 读者微信交流群 (加我微信Yida_Zhang2，备注：L0CV-高校/企业-称呼)
 
 [Index](#-以用促学先会后懂-)
 
+
+## 💖 Support this project
+
+Donating to help me continue working on this project. I'm appreciate all you in [backer list](https://charmve.github.io/sponsor.html). <a href="https://charmve.github.io/sponsor.html"><img src="https://img.shields.io/badge/style--5eba00.svg?label=Coffee&amp;logo=ko-fi&amp;style=social" alt="BuymeaCoffee"/></a>
+
+<a href="https://charmve.github.io/sponsor.html" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" width="180" ></a>
 
 
 <!--
@@ -1014,7 +1019,7 @@ Use this bibtex to cite this repository:
 		<b>Awesome!</b>	
 		<a href="https://github.com/Charmve/computer-vision-in-action"><em>Charmve/computer-vision-in-action</em></a>
 		was created 2 months ago
-		and now has <b>1426</b> stars.
+		and now has <b>1546</b> stars.
   </p>
 </div>
 	
