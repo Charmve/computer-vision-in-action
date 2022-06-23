@@ -44,6 +44,8 @@
 </table>
 -->
 
+> "如果你只是看了这个项目的在线文档，那么你并没有利用好这个项目。太可惜！"
+
 <a href="https://charmve.github.io/computer-vision-in-action">
     <img src="./res/ui/mutil-platform.png" width=="">
 </a>
@@ -175,7 +177,7 @@
 > <h4>👉  在线阅读（优先更新实战篇和进阶篇）</h4>
 > - 地址：https://charmve.github.io/computer-vision-in-action/
 
-<details><summary>📘 详细目录</summary>
+<details><summary>📘 详细目录(点击展开)</summary>
 	
 <table align="center">
 <tr>
