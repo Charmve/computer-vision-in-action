@@ -303,27 +303,7 @@ $$
 
 其中梯度是损失有关3个为标量的模型参数的偏导数组成的向量：
 
-$$
-\begin{split}\nabla_{\boldsymbol{\theta}} \ell^{(i)}(\boldsymbol{\theta})=
-\begin{bmatrix}
-    \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_1} \\
-    \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial w_2} \\
-    \frac{ \partial \ell^{(i)}(w_1, w_2, b)  }{\partial b}
-\end{bmatrix}
-=
-\begin{bmatrix}
-    x_1^{(i)} (x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}) \\
-    x_2^{(i)} (x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}) \\
-    x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}
-\end{bmatrix}
-=
-\begin{bmatrix}
-    x_1^{(i)} \\
-    x_2^{(i)} \\
-    1
-\end{bmatrix}
-(\hat{y}^{(i)} - y^{(i)}).\end{split}
-$$
+![image](https://user-images.githubusercontent.com/29084184/188129567-1816c29d-bd6a-4f5f-bc65-bcc08e76037a.png)
 
 
 <h3>1.1.3. 小结 <a class="headerlink" href="#小结" >¶</a></h3>
