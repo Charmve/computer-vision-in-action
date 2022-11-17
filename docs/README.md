@@ -80,7 +80,7 @@
 ## L0CV DemoDay
 
 <p align="center">
-  <img src="/res/ui/demoday.png" title="L0CV Demo Day"> <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/L0CV-Universe">L0CV-Universe</a>
+  <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/demoday.png" title="L0CV Demo Day"> <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/L0CV-Universe">L0CV-Universe</a>
 </p>
 
 如果你也是从这里出发，在开源的项目中应用进去，并在标题下给出引用 <a href="https://github.com/Charmve/computer-vision-in-action/" target="_blank"><img src="https://img.shields.io/badge/-💮 %20L0CV-lightgreen.svg" alt="L0CV" title="L0CV"></a>，您的项目将会在这里展现！
@@ -131,7 +131,7 @@
 
 <br>
 <p align="left">
-  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="/res/ui/workswith1.png" title="Works with L0CV" width="120"></a>
+  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/workswith1.png" title="Works with L0CV" width="120"></a>
 </p>
 
 | 实战项目 | 章节 | Binder | Google Colab | 
