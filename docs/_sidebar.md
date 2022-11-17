@@ -35,16 +35,16 @@
     - 参考文献
   - 第 3 章 图像分类
     - [3.1 数据驱动方法](https://cs231n.github.io/classification/)
-      - 3.1.1 语义上的差别
-      - 3.1.2 图像分类任务面临着许多挑战
-      - 3.1.3 数据驱动的方法
+      - [3.1.1 语义上的差别]()
+      - [3.1.2 图像分类任务面临着许多挑战]()
+      - [3.1.3 数据驱动的方法]()
     - [3.2 k 最近邻算法](/1_理论篇/chapter3_Image-Classification/chapter3.2_knn.md)
     - [3.3 支持向量机](/1_理论篇/chapter3_Image-Classification/chapter3.3_支持向量机.md)
     - [3.4 逻辑回归 LR](/1_理论篇/chapter3_Image-Classification/chapter3.4_Logistic-Regression.md)
     - [3.5 实战项目 3 - 表情识别](https://blog.csdn.net/charmve/category_9754344.html)
     - [3.6 实战项目 4 - 使用卷积神经网络对CIFAR10图片进行分类](http://mp.weixin.qq.com/s?__biz=MzIxMjg1Njc3Mw%3D%3D&chksm=97bef597a0c97c813e185e1bbf987b93d496c6ead8371364fd175d9bac46e6dcf7059cf81cb2&idx=1&mid=2247487293&scene=21&sn=89684d1c107177983dc1b4dca8c20a5b#wechat_redirect)
     - [小结](/1_理论篇/chapter3_Image-Classification/README.md#小结)
-    - 练习
+    - [练习]()
     - [参考文献](/1_理论篇/chapter3_Image-Classification/README.md#参考文献)
   - 第 4 章 循环神经网络
     - [4.1 循环神经网络 RNN](/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md#_41-递归神经网络-rnn)
@@ -52,9 +52,9 @@
     - [4.3 循环神经网络的简洁实现](/1_理论篇/chapter4_循环神经网络/chapter4.1_循环神经网络.md#_43-循环神经网络的简洁实现)
     - [4.4 长短期记忆人工神经网络 LSTM](/1_理论篇/chapter4_循环神经网络/chapter4.4_长短期记忆人工神经网络LSTM.md)
     - [4.5 门控循环单元（GRU）](/1_理论篇/chapter4_循环神经网络/chapter4.5_门控循环单元.md)
-    - 小结
-    - 练习
-    - 参考文献
+    - [小结]()
+    - [练习]()
+    - [参考文献]()
   - 第 5 章 图神经网络
     - [5.1 历史脉络](/1_理论篇/chapter5_图神经网络/chapter5_图神经网络.md#51-历史脉络)
     - [5.2 图神经网络(Graph Neural Network)](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_1.html)
@@ -62,21 +62,21 @@
     - [5.4 图卷积神经网络(GCNN)](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_2.html)
     - [5.5 生成图表示](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_3.html)
     - [5.6 图神经网络在计算机视觉上的应用](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_3.html)
-    - 小结
-    - 练习
-    - 参考文献
+    - [小结]()
+    - [练习]()
+    - [参考文献]()
   - 第 6 章 模型选择、欠拟合和过拟合
     - [6.1 训练误差和泛化误差](../notebooks/)
     - [6.2 模型选择](../notebooks/)
     - [6.3 欠拟合和过拟合](../notebooks/)
     - [6.4 多项式函数拟合实验](../notebooks/)
     - [6.5 如何应对模型过拟合问题](../notebooks/)
-      - 6.5.1 权重衰减
-      - 6.5.2 丢弃法
+      - [6.5.1 权重衰减]()
+      - [6.5.2 丢弃法]()
     - [6.6 数值稳定性和模型初始化](../notebooks/)
-    - 小结
-    - 练习
-    - 参考文献
+    - [小结]()
+    - [练习]()
+    - [参考文献]()
   - 第 7 章 模型拟合与优化算法
     - [7.1 优化与深度学习](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.1_optimization-intro.ipynb)
     - [7.2 梯度下降和随机梯度下降](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.2_gd-sgd.ipynb)
@@ -86,9 +86,9 @@
     - [7.6 RMSProp算法](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.6_rmsprop.ipynb)
     - [7.7 AdaDelta算法](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.7_adadelta.ipynb)
     - [7.8 Adam算法](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter07_optimization/7.8_adam.ipynb)
-    - 小结
-    - 练习
-    - 参考文献
+    - [小结]()
+    - [练习]()
+    - [参考文献]()
 - <b><h4>实战篇</h4></b>
   - [第 8 章 软件环境搭建与工具使用](/2_实战篇/chapter6_深度学习环境搭建/README.md)
     - [8.1 深度学习环境搭建指南](/2_实战篇/chapter6_深度学习环境搭建/chapter6.1_深度学习环境搭建指南.md)
@@ -98,11 +98,11 @@
     - [8.5 Pandas 基础使用](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter08_environment-setup-and-tool-use/04_Pandas.ipynb)
     - [8.6 OpenCV 安装及基础使用](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter08_environment-setup-and-tool-use/OpenCV-ImageStitching.ipynb)
     - [8.7 Jupyter Notebook 配置及基础使用](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter08_environment-setup-and-tool-use/01_Notebooks.ipynb)
-    - [8.8 基本的图像操作和处理](/2_实战篇/chapter6_深度学习环境搭建/chapter6.8_基本的图像操作和处理.md)
+    - [8.8 基本的图像操作和处理](/2_实战篇/chapter6_深度学习环境搭建/chapter7.8_基本的图像操作和处理.md)
     - [8.9 实战项目 5 - 使用OpenCV进行图像全景拼接](https://blog.csdn.net/Charmve/article/details/107897468)
-    - 小结
-    - 练习
-    - 参考文献
+    - [小结]()
+    - [练习]()
+    - [参考文献]()
   - [第 9 章 经典卷积神经网络架构：原理与PyTorch实现](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/README.md)
     - [9.1 卷积神经网络（LeNet）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.1%20卷积神经网络（LeNet）.md)
     - [9.2 深度卷积神经网络（AlexNet）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.2%20深度卷积神经网络（AlexNet）.md)
@@ -116,25 +116,25 @@
     - [9.10 区域卷积神经网络（R-CNN）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/chapter7.10_区域卷积神经网络-RCNN.md)
     - [9.11 全卷积网络（FCN）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/chapter7.11_全卷积网络-FCN.md)
     - [9.12 YOLO: 实时目标检测](https://pjreddie.com/darknet/yolo/)
-    - 小结
-    - 练习
-    - 参考文献
+    - [小结]()
+    - [练习]()
+    - [参考文献]()
   - 第 10 章 著名数据集及基准
     - [10.1 数据集](/2_实战篇/chapter8_著名数据集及基准/chapter8.1_著名数据集.md)
     - [10.2 基准测试](/2_实战篇/chapter8_著名数据集及基准/chapter8.2_基准BenchMark.md)
     - [10.3 评价指标](/2_实战篇/chapter8_著名数据集及基准/chapter8.3_评价指标.md)
     - [10.4 实战项目 6 - Kaggle比赛：图像分类（CIFAR-10）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.12%20实战Kaggle比赛：图像分类（CIFAR-10）.md)
     - [10.5 实战项目 7 - Kaggle比赛：狗的品种识别（ImageNet Dogs）](/2_实战篇/chapter7_经典卷积神经网络架构-原理与PyTorch实现/7.13%20实战Kaggle比赛：狗的品种识别（ImageNet%20Dogs）.md)
-    - 小结
-    - 练习
-    - 参考文献
+    - [小结]()
+    - [练习]()
+    - [参考文献]()
   - 第 11 章 检测与分割实战项目
     - 11.1 语义分割
-      - 11.1.1 语义分割 PyTorch 版
-      - 11.1.2 实战项目 8 - 基于PolarNet的点云端到端语义分割项目实战
+      - [11.1.1 语义分割 PyTorch 版]()
+      - [11.1.2 实战项目 8 - 基于PolarNet的点云端到端语义分割项目实战]()
     - 11.2 目标检测
-      - 11.2.1 常用网络
-      - 11.2.2 实战项目 9 - 基于PyTorch的YOLO5目标检测项目实战
+      - [11.2.1 常用网络]()
+      - [11.2.2 实战项目 9 - 基于PyTorch的YOLO5目标检测项目实战]()
     - [11.3 实例分割](/2_实战篇/chapter9_检测与分割实战项目/9.3%20实例分割.md)
     - 小结
     - 练习
@@ -143,8 +143,8 @@
     - [12.1 手写字识别](https://blog.csdn.net/Charmve/article/details/108531735)
     - [12.2 文本检测](https://github.com/Charmve/Scene-Text-Detection)
     - [12.3 车道线检测](https://github.com/Charmve/Awesome-Lane-Detection)
-      - 12.3.1 常用网络
-      - 12.3.2 实战项目 11 - 车道线检测项目实战
+      - [12.3.1 常用网络]()
+      - [12.3.2 实战项目 11 - 车道线检测项目实战](https://github.com/Charmve/Awesome-Lane-Detection)
     - [12.4 镜面检测](https://github.com/Charmve/Mirror-Glass-Detection)
     - [12.5 图像抠图 Matting](/2_实战篇/chapter10_计算机视觉课题研究初探/charpter10_5-图像抠图.md)
     - [12.6 图像超分辨率](/2_实战篇/chapter10_计算机视觉课题研究初探/charpter10_6-图像超分辨率.md)
@@ -154,9 +154,9 @@
     - 参考文献
 - <b><h4>进阶篇</h4></b>
   - [第 13 章 可视化和理解卷积神经网络](/3_进阶篇/chapter11-可视化和理解/README.md)
-    - 13.1 特征可视化
-    - 13.2 倒置
-    - 13.3 可视化数据梯度
+    - [13.1 特征可视化]()
+    - [13.2 倒置]()
+    - [13.3 可视化数据梯度]()
     - [13.4 Embeddings](https://nbviewer.jupyter.org/format/slides/github/Charmve/computer-vision-in-action/blob/main/notebooks/chapter13_Understanding-and-Visualizing/Embeddings.ipynb)
     - 13.5 对抗样本
     - [13.6 DeepDream 和风格迁移](/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
@@ -168,11 +168,11 @@
     - 14.1 Pixel RNN/CNN
     - [14.2 自编码器 Auto-encoder](/3_进阶篇/chapter12-生成对抗模型/chapter12_2-自编码器Auto-encoder.md)
     - [14.3 生成对抗网络 GAN](/3_进阶篇/chapter12-生成对抗模型/chapter12.3_生成对抗网络GAN.md)
-      - 14.3.1 概述
-      - 14.3.2 GAN的基本思想
-      - 14.3.3 GAN浅析
-      - 14.3.4 训练相关理论基础
-      - 14.3.5 项目实战案例StyleGAN
+      - [14.3.1 概述]()
+      - [14.3.2 GAN的基本思想]()
+      - [14.3.3 GAN浅析]()
+      - [14.3.4 训练相关理论基础]()
+      - [14.3.5 项目实战案例StyleGAN]()
       - [14.3.6 实战项目 11 - 图像风格迁移](/3_进阶篇/chapter12-生成对抗模型/chapter12.3.3_neural-style.md)
     - [14.4 变分自编码器 Variational Auto-encoder, VAE](/3_进阶篇/chapter12-生成对抗模型/chapter12_4-变分自编码器VAE.md)
       - [14.4.6 实战项目 13 - 旧照片修复](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life)
