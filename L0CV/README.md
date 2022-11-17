@@ -46,8 +46,8 @@
     <p align="center"><img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/l0cv-architecture.png" alt="L0CV architecture" title="L0CV architecture"></p>
     <p align="right">
         <details><summary><b>版权所有，🈲️ 止商用</b></summary>
-        * This image uses independently developed image watermarking technology for copyright certification, <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>as shown in the figure</b></a>.
-        <br>本图片采用作者独立研发的图片水印技术作为版权认证 <kbd>CC-BY-NC 4.0</kbd>（署名可任意转载），<a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>点击查看</b></a>。
+        * This image uses independently developed [image watermarking technology](https://charmve.github.io/steganography.js/examples/showcase/) for copyright certification, <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>as shown in the figure</b></a>.
+        <br>本图片采用[作者独立研发的图片水印技术](https://charmve.github.io/steganography.js/examples/showcase/)作为版权认证 <kbd>CC-BY-NC 4.0</kbd>（署名可任意转载），<a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>点击查看</b></a>。
         </details>
     </p>
 </div>
