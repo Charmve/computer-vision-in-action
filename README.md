@@ -1,6 +1,6 @@
 <p align="right">
 <a href="https://github.com/Charmve">
-    <img src="https://badges.pufler.dev/visits/Charmve/computer-vision-in-action?color=black&logo=github">
+    <img src="https://badges.strrl.dev/visits/Charmve/computer-vision-in-action?color=black&logo=github">
 	<!---- comesfrom https://techsini.com/multi-mockup/index.php --->
 </a>
 </p>
