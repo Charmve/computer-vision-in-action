@@ -141,11 +141,11 @@
     <tr>
         <td colspan="1" rowspan="1" class="ai-notebooks-table-points ai-orange-link">
         <div class="mdl-cell mdl-cell--5-col mdl-cell--middle">
-            <div class="content">
-            <h2 style="text-align:center">每一小节都是可以运行的 <a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/">Jupyter 记事本</a></h2>
-            <p>你可以自由修改代码和超参数来获取及时反馈，从而积累深度学习的实战经验。</p>
+            <div>
+                <h2>每一小节都是可以运行的 <a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/">Jupyter 记事本</a></h2>
+                <p>你可以自由修改代码和超参数来获取及时反馈，从而积累深度学习的实战经验。</p>
             </div>
-            <div class="mdl-grid running" align="center" style="text-align:center">
+            <div class="mdl-grid running" style="text-align:center">
                 <div class="running-item">
                     <a href="https://charmve.github.io/computer-vision-in-action/#/README?id=🔎-如何食用">
                     <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/laptop_jupyter.png" width="60">
@@ -215,11 +215,11 @@
 
 <br>
 <p align="center">
-    <a href="https://charmve.github.io/L0CV-web/door/" target="_blank"><img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/playagame.png" alt="Play a Game with Me" width="300" ></a>
+    <a href="https://charmve.github.io/L0CV-web/door/" target="_blank"><img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/playagame.png" alt="Play a Game with Me" tittle="Play a Game with Me" width="300" ></a>
 </p>
 
 <div align="left">
-    <a href="https://opencollective.com/l0cv#sponsors" target="_blank"><img src="https://opencollective.com/docs/L0CVsponsors.svg?width=200"></a>
+    <a href="https://opencollective.com/l0cv#sponsors" target="_blank"><img src="https://opencollective.com/L0CV/sponsors.svg?width=200"></a>
 </div>
 
 <div id="donateBox" class="absolute center">
@@ -252,45 +252,35 @@
     <h2 align="center">Our Backers</h2>
     <h4 align="center"><em>Waiting for you, code with ❤️ ！</em></h4>
     <!--<h3><em>Waiting for you, Code with ❤️ ！</em></h3>-->
-    <a href="https://opencollective.com/l0cv#backers" target="_blank"><img src="https://opencollective.com/docs/L0CVbackers.svg?width=200"></a>
+    <a href="https://opencollective.com/l0cv#backers" target="_blank"><img src="https://opencollective.com/L0CV/backers.svg?width=200"></a>
     <table align="center">
       <tbody>
-	 <th>
-	   <td>
-		   日期📅 
-	   </td>
-	   <td>
-		   老板👵 
-	   </td>
-	   <td>
-		   金额💰
-	   </td>
-	   <td>
-		   方式♥️
-	   </td>
-	   <td>
-		   留言:speech_balloon:
-	   </td>
-	 </th>
-	 <tr>
-           <td>
-		   01
-	   </td>
-           <td>
-	   </td>
-           <td>
-	   </td>
-           <td>
-	   </td>
-           <td>
-	   </td>
-           <td>
-	   </td>
-         </tr>
+        <th>
+        <td>日期📅 </td>
+        <td>老板👵 </td>
+        <td>金额💰</td>
+        <td>方式♥️</td>
+        <td>留言:speech_balloon:</td>
+        </th>
+        <tr>
+            <td>
+            01
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
       </tbody>
     </table>
     <br>
-    <sup>* 说明：因为微信和支付宝并不支持个人的接口调用，所以赞助名单上的信息都是我手动添加的，可能更新会存在延时。以防万一，您也可以发起 Issue 说明您对应的赞助，以及您希望得到的帮助，添加/解决后我会关闭对应 Issue。</sup>
+    <sup>* 说明：因为微信和支付宝并不支持个人的接口调用，所以赞助名单上的信息都是我手动添加的，可能更新会存在延时。<b>全部列表 <a href="charmve.github.io/sponsor.html" target="_blank">在这显示</a></b>。以防万一，您也可以发起 Issue 说明您对应的赞助，以及您希望得到的帮助，添加/解决后我会关闭对应 Issue。</sup>
 </div>
 
 <div class="sponsor-level">
