@@ -6,7 +6,7 @@
 
 
 <p align="left">
-  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/workswith1.png?raw=true" title="Works with L0CV" width="120"></a>
+  <a href="https://github.com/Charmve/computer-vision-in-action"><img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/workswith1.png?raw=true" title="Works with L0CV" width="120"></a>
 </p>
 <br>
 

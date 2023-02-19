@@ -1,6 +1,6 @@
 # Computer Vison in Action (L0CV)
 #
-# Copyright 2017 Fraunhofer FKIE
+# Copyright 2017 Charmve
 #
 # L0CV is free software: you can redistribute it and/or modify
 # it under the terms of the Apache 2.0 License as published

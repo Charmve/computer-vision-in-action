@@ -1,4 +1,6 @@
 *.DS_Store       # 忽略所有 .DS_Store 结尾的文件
 /TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
 build/    # 忽略 build/ 目录下的所有文件
+*/__pycache__/
 ./L0CV/__pycache__/
+code/L0CV/__pycache__/

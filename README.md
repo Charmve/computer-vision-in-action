@@ -74,12 +74,13 @@
 	<br><a href="https://mybinder.org/v2/gh/Charmve/computer-vision-in-action/main/notebooks/"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
 	<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Run%20on-Colab-000000.svg?logo=googlecolab&color=yellow" alt="Run on Colab"></a>
 	<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/docker"><img src="https://img.shields.io/badge/Docker%20Hub-v1.0.1-000000.svg?logo=Docker&color=blue" alt="Docker"></a>
+  <a href="https://gitpod.io/#https://github.com/Charmve/computer-vision-in-action"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod" alt="Gitpod Ready-to-Code"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/stars/Charmve/computer-vision-in-action?style=social" alt="Stars"></a>
   <a href="https://github.com/Charmve/computer-vision-in-action/edit/master/README.md"><img src="https://img.shields.io/github/forks/Charmve/computer-vision-in-action?style=social" alt="Forks"></a>
 </p>
 
 <div align="center">
-	<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei.png" width="200px" alt="logo:L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
+	<img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/maiwei.png" width="200px" alt="logo:L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
 </div>
 
 <br><br>
@@ -817,13 +818,13 @@ import L0CV
             <div class="mdl-grid running" align="center" style="text-align:center">
                 <div class="running-item">
                     <a href="https://charmve.github.io/computer-vision-in-action/#/README?id=🔎-如何食用">
-                    <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/laptop_jupyter.png" width="60">
+                    <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/laptop_jupyter.png" width="60">
                     <p>Run<br>locally</p>
                     </a>
                 </div>
                 <div class="running-item">
                     <a href="https://charmve.github.io/computer-vision-in-action/#/README?id=🔎-如何食用">
-                    <img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/colab.png" width="60">
+                    <img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/colab.png" width="60">
                     <p>Google<br>Colab</p>
                     </a>
                 </div>
@@ -832,7 +833,7 @@ import L0CV
         </td>
         <td>
             <div class="mdl-cell mdl-cell--7-col">
-                <img class="illustration_img" src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/notebook.gif"/>
+                <img class="illustration_img" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/notebook.gif"/>
             </div>
         </td>
     </tr>
@@ -853,17 +854,17 @@ import L0CV
     <tr>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <img class="illustration_img" src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/eq.jpg"></img>
+                <img class="illustration_img" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/eq.jpg"></img>
                 </div>
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <img class="illustration_img" src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/figure.jpg"/>
+                <img class="illustration_img" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/figure.jpg"/>
                 </div>
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <img class="illustration_img" src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/code.jpg"/>
+                <img class="illustration_img" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/code.jpg"/>
                 </div>
         </td>
     </tr>
@@ -897,7 +898,7 @@ import L0CV
 [Index](#-以用促学先会后懂-)
 
 ## 致谢
-<a href="https://maiweiai.github.io/"><img src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
+<a href="https://maiweiai.github.io/"><img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/maiwei_ai.png" height="36" alt="迈微AI研习社" title="迈微AI研习社"> </a> <a href="https://madewithml.com/"><img src="https://madewithml.com/static/images/logo.png" height="30" alt="Made With ML" title="Made With ML"> </a> &nbsp;&nbsp; <a href="https://www.epubit.com/"><img src="https://cdn.ptpress.cn/pubcloud/3/app/0718A6B0/cover/20191204BD54009A.png" height="30" alt="异步社区" title="异步社区"> </a>  &nbsp;&nbsp; <a href="https://360.cn"><img src="https://p3.ssl.qhimg.com/t011e94f0b9ed8e66b0.png" height="36" alt="奇虎360" title="奇虎360"> </a>
 
 [Index](#-以用促学先会后懂-)
 

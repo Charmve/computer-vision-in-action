@@ -30,7 +30,7 @@
 
 <br>
 
-<a href="https://github.com/Charmve/computer-vision-in-action#-以用促学先会后懂-"><img align="left" alt="Go for it!" src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/frontpage/2020-sponsors.svg" height="120" title="Do what you like, and do it best!"/></a>
+<a href="https://github.com/Charmve/computer-vision-in-action#-以用促学先会后懂-"><img align="left" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/2020-sponsors.svg" height="120" title="Do what you like, and do it best!"/></a>
 
 ## &nbsp;&nbsp; Supporting
 

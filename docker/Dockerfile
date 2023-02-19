@@ -22,8 +22,8 @@ RUN curl ${ANACONDA} -o anaconda.sh && \
 ENV PATH="${HOME}/conda/envs/cv/bin:${PATH}"
 
 # Clone Computer Vision repo
-ARG BRANCH="master"
-RUN git clone --depth 1 --single-branch -b ${BRANCH} https://github.com/microsoft/computervision
+# ARG BRANCH="master"
+# RUN git clone --depth 1 --single-branch -b ${BRANCH} https://github.com/Charmve/computer-vision-in-action
 
 # Setup Jupyter notebook configuration
 ENV NOTEBOOK_CONFIG="${HOME}/.jupyter/jupyter_notebook_config.py"
@@ -50,12 +50,13 @@ ENV PATH="${HOME}/conda/envs/cv/bin:${PATH}"
 FROM $ENV AS final
 
 # Install Conda dependencies
-RUN conda env create -f computervision/environment.yml && \
+COPY environment.yml environment.yml
+RUN conda env create -f environment.yml && \
     conda clean -fay && \
-    python -m ipykernel install --user --name 'cv' --display-name 'python3'
+    python -m ipykernel install --user --name 'charmve' --display-name 'python3'
 
 ARG HOME
-WORKDIR ${HOME}/computervision
+WORKDIR ${HOME}/computer-vision-in-action
 
 EXPOSE 8888
 CMD ["jupyter", "notebook"]

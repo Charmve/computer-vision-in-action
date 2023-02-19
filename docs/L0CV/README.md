@@ -3,7 +3,7 @@
 
 <div align="center">
 	<a href="https://charmve.github.io/L0CV-web">
-		<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/header.svg" width="90%" alt="Click to see the more details">
+		<img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/L0CV/images/header.svg" width="90%" alt="Click to see the more details">
 	</a>
     <br>
     <p>
@@ -27,7 +27,6 @@
 ----
 
 
-
 ### Features <a name="index"></a>
 
 - 📕 [Summary](#📘-summary)
@@ -43,11 +42,11 @@
 ## 📘 Summary<a name="summary"></a>
 
 <div>
-    <p align="center"><img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/l0cv-architecture.png" alt="L0CV architecture" title="L0CV architecture"></p>
+    <p align="center"><img  src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/l0cv-architecture.png" alt="L0CV architecture" title="L0CV architecture"></p>
     <p align="right">
         <details><summary><b>版权所有，🈲️ 止商用</b></summary>
-        * This image uses independently developed <a href="https://charmve.github.io/steganography.js/examples/showcase">image watermarking technology</a> for copyright certification, <a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>as shown in the figure</b></a>.
-        <br>本图片采用作者独立研发的<a href="https://charmve.github.io/steganography.js/examples/showcase">图片水印技术</a>作为版权认证 <kbd>CC-BY-NC 4.0</kbd>（署名可任意转载），<a href="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>点击查看</b></a>。
+        * This image uses independently developed <a href="https://charmve.github.io/steganography.js/examples/showcase">image watermarking technology</a> for copyright certification, <a href="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>as shown in the figure</b></a>.
+        <br>本图片采用作者独立研发的<a href="https://charmve.github.io/steganography.js/examples/showcase">图片水印技术</a>作为版权认证 <kbd>CC-BY-NC 4.0</kbd>（署名可任意转载），<a href="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/arch-encryption.png?raw=true" target="_blank"><b>点击查看</b></a>。
         </details>
     </p>
 </div>
@@ -61,7 +60,7 @@
 The goal of this repo is to build an easy-to-go computer vision tool-chain to realise the basics of MLOps like model building, monitoring, configurations, testing, packaging, deployment, cicd, etc.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/summary.png" alt="MLOps" title="MLOps">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/summary.png" alt="MLOps" title="MLOps">
 </p>
 
 
@@ -72,7 +71,7 @@ The goal of this repo is to build an easy-to-go computer vision tool-chain to re
 DVC usually runs along with Git. Git is used as usual to store and version code (including DVC meta-files). DVC helps to store data and model files seamlessly out of Git, while preserving almost the same user experience as if they were stored in Git itself. To store and share the data cache, DVC supports multiple remotes - any cloud (S3, Azure, Google Cloud, etc) or any on-premise network storage (via SSH, for example).
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/how_dvc_works.gif" alt="DVC" title="DVC">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/how_dvc_works.gif" alt="DVC" title="DVC">
 </p>
 
 The DVC pipelines (computational graph) feature connects code and data together. It is possible to explicitly specify all steps required to produce a model: input dependencies including data, commands to run, and output information to be saved. See the quick start section below or the Get Started tutorial to learn more.
@@ -91,7 +90,7 @@ Why do we need model packaging? Models can be built using any machine learning f
 This is acheived by a community project ``ONNX``.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/onnx.jpeg" width="80%" alt="Model Packaging - ONNX" title="Model Packaging - ONNX">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/onnx.jpeg" width="80%" alt="Model Packaging - ONNX" title="Model Packaging - ONNX">
 </p>
 
 Following tech stack is used:
@@ -118,7 +117,7 @@ By containerizing/packaging the application, we can run the application on any c
 The most prominent tool to do the packaging of application is Docker 🛳
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/docker_flow.png" width="60%" alt="Docker" title="Docker">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/docker_flow.png" width="60%" alt="Docker" title="Docker">
 </p>
 
 [Index](#features)
@@ -135,7 +134,7 @@ CI/CD is a coding philosophy and set of practices with which you can continuousl
 This iterative process helps reduce the chance that you develop new code based on a buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/basic_flow.png" width="80%" alt="CI/CD" title="CI/CD">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/basic_flow.png" width="80%" alt="CI/CD" title="CI/CD">
 </p>
 
 [Index](#features)
@@ -149,7 +148,7 @@ A container registry is a place to store container images. A container image is 
 Amazon Simple Storage Service (S3) is a storage for the internet. It is designed for large-capacity, low-cost storage provision across multiple geographical regions.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/ecr_flow.png" width="80%" alt="AWS ECR" title="AWS ECR">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/ecr_flow.png" width="80%" alt="AWS ECR" title="AWS ECR">
 </p>
 
 
@@ -163,7 +162,7 @@ Amazon Simple Storage Service (S3) is a storage for the internet. It is designed
 A serverless architecture is a way to build and run applications and services without having to manage infrastructure. The application still runs on servers, but all the server management is done by third party service (AWS). We no longer have to provision, scale, and maintain servers to run the applications. By using a serverless architecture, developers can focus on their core product instead of worrying about managing and operating servers or runtimes, either in the cloud or on-premises.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/lambda_flow.png" width="80%" alt="AWS Lambda" title="AWS Lambda">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/lambda_flow.png" width="80%" alt="AWS Lambda" title="AWS Lambda">
 </p>
 
 
@@ -181,7 +180,7 @@ Things we want to monitor during and training and inference are different. Durin
 But, during inference, We like to have confidence that our model is making correct predictions.
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/kibana_flow.png" width="80%" alt="Kibana" title="Kibana">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/kibana_flow.png" width="80%" alt="Kibana" title="Kibana">
 </p>
 
 

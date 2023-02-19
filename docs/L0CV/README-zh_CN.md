@@ -3,7 +3,7 @@
 
 <div align="center">
 	<a href="https://charmve.github.io/L0CV-web">
-		<img src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/header.svg" width="90%" alt="Click to see the more details">
+		<img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/L0CV/images/header.svg" width="90%" alt="Click to see the more details">
 	</a>
     <br>
     <p>
@@ -51,11 +51,11 @@
 
 ## 📘 L0CV 概述
 <p align="center">
-  <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/l0cv-architecture.png" alt="L0CV architecture" title="L0CV architecture">
+  <img  src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/l0cv-architecture.png" alt="L0CV architecture" title="L0CV architecture">
 </p>
 
 > **版权所有，🈲️ 止商用**
-> 本图片采用作者独立研发的图片水印技术作为版权认证 CC-BY-NC 4.0（署名可任意转载），[点击查看](https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/arch-encryption.png?raw=true)。
+> 本图片采用作者独立研发的图片水印技术作为版权认证 CC-BY-NC 4.0（署名可任意转载），[点击查看](https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/arch-encryption.png?raw=true)。
 
 <br>
 
@@ -63,7 +63,7 @@
 DVC 通常与 Git 一起运行。 Git 照常用于存储和版本代码（包括 DVC 元文件）。 DVC 有助于在 Git 之外无缝存储数据和模型文件，同时保留几乎与存储在 Git 本身相同的用户体验。 为了存储和共享数据缓存，DVC 支持多个远程 - 任何云（S3、Azure、Google Cloud 等）或任何本地网络存储（例如，通过 SSH）。
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/how_dvc_works.gif" alt="DVC" title="DVC">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/how_dvc_works.gif" alt="DVC" title="DVC">
 </p>
 
 
@@ -78,7 +78,7 @@ DVC 管道（计算图）功能将代码和数据连接在一起。 可以明确
 这是由社区项目 ONNX 实现的。
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/onnx.jpeg" width="80%" alt="Model Packaging - ONNX" title="Model Packaging - ONNX">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/onnx.jpeg" width="80%" alt="Model Packaging - ONNX" title="Model Packaging - ONNX">
 </p>
 
 所用的框架为：
@@ -102,7 +102,7 @@ DVC 管道（计算图）功能将代码和数据连接在一起。 可以明确
 对应用程序进行打包最突出的工具是 Docker 🛳
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/docker_flow.png" width="60%" alt="Docker" title="Docker">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/docker_flow.png" width="60%" alt="Docker" title="Docker">
 </p>
 
 [Index](#-l0cv-概述)
@@ -116,7 +116,7 @@ CI/CD 是一种编码哲学和一组实践，您可以使用它来持续构建�
 这种迭代过程有助于减少您基于有缺陷或失败的先前版本开发新代码的机会。 使用这种方法，您可以努力减少从开发新代码到部署的人工干预，甚至根本不需要干预。
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/basic_flow.png" width="80%" alt="CI/CD" title="CI/CD">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/basic_flow.png" width="80%" alt="CI/CD" title="CI/CD">
 </p>
 
 [Index](#-l0cv-概述)
@@ -130,7 +130,7 @@ CI/CD 是一种编码哲学和一组实践，您可以使用它来持续构建�
 Amazon Simple Storage Service (S3) 是一种用于 Internet 的存储。 它专为跨多个地理区域提供大容量、低成本的存储而设计。
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/ecr_flow.png" width="80%" alt="AWS ECR" title="AWS ECR">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/ecr_flow.png" width="80%" alt="AWS ECR" title="AWS ECR">
 </p>
 
 ## ⭐️ 无服务器架构 - AWS Lambda
@@ -140,7 +140,7 @@ Amazon Simple Storage Service (S3) 是一种用于 Internet 的存储。 它专�
 无服务器架构是一种无需管理基础架构即可构建和运行应用程序和服务的方法。 该应用程序仍然在服务器上运行，但所有服务器管理都由第三方服务 (AWS) 完成。 我们不再需要配置、扩展和维护服务器来运行应用程序。 通过使用无服务器架构，开发人员可以专注于他们的核心产品，而不必担心在云中或本地管理和操作服务器或运行时。
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/lambda_flow.png" width="80%" alt="AWS Lambda" title="AWS Lambda">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/lambda_flow.png" width="80%" alt="AWS Lambda" title="AWS Lambda">
 </p>
 
 [Index](#-l0cv-概述)
@@ -156,7 +156,7 @@ Amazon Simple Storage Service (S3) 是一种用于 Internet 的存储。 它专�
 但是，在推理过程中，我们希望我们的模型能够做出正确的预测。 
 
 <p align="center">
-    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/L0CV/images/kibana_flow.png" width="80%" alt="Kibana" title="Kibana">
+    <img  src="https://github.com/Charmve/computer-vision-in-action/blob/main/docs/L0CV/images/kibana_flow.png" width="80%" alt="Kibana" title="Kibana">
 </p>
 
 [Index](#-l0cv-概述)

@@ -12,7 +12,7 @@ For example, if you want to build a self learning car. You can spend years to bu
 ### Model visualization
 You can see visualizations of each model's network architecture by using [Netron](https://github.com/lutzroeder/Netron).
 
-![CV logo](https://github.com/Charmve/computer-vision-in-action/blob/main/res/ui/netron.png)
+![CV logo](https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/netron.png)
 
 ### PyTorch <a name="pytorch"/>
 
